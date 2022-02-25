@@ -87,16 +87,6 @@
                             <input type="text" class="form-line" placeholder="오브젝트명을 입력해 주세요">
                             <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
                         </div>
-                        <div class="btn-cell d-none">
-                            <a href="#n" class="btn-add-item">
-                                <span class="material-icons">location_on</span>
-                                POI 가져오기
-                            </a>
-                            <a href="#n" class="btn-add-item text-green">
-                                <span class="material-icons">note_add</span>
-                                자산 엑셀 업로드
-                            </a>
-                        </div>
                     </div>
                     <table class="table table-nowrap table-high">
                         <colgroup>
@@ -297,7 +287,7 @@
     </script>
 
     <!-- Modal -->
-    <div class="modal modal-blank" id="detailItem" tabindex="-1" aria-labelledby="detailItemLabel" aria-hidden="true">
+    <div class="modal fade" id="detailItem" data-backdrop="static" tabindex="-1" aria-labelledby="detailItemLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -343,7 +333,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal modal-blank" id="detailItem02" tabindex="-1" aria-labelledby="detailItemLabel02" aria-hidden="true">
+    <div class="modal fade" id="detailItem02" data-backdrop="static" tabindex="-1" aria-labelledby="detailItemLabel02" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -397,7 +387,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal modal-blank" id="detailItem03" tabindex="-1" aria-labelledby="detailItemLabel03" aria-hidden="true">
+    <div class="modal fade" id="detailItem03" data-backdrop="static" tabindex="-1" aria-labelledby="detailItemLabel03" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -450,7 +440,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal modal-blank" id="detailItem04" tabindex="-1" aria-labelledby="detailItemLabel04" aria-hidden="true">
+    <div class="modal fade" id="detailItem04" data-backdrop="static" tabindex="-1" aria-labelledby="detailItemLabel04" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -498,14 +488,6 @@
     </div>
 
 
-<style>
-    .modal-content{
-        box-shadow: 0 .5rem 1rem rgba(39, 44, 51, .1) !important;
-        border-color: transparent !important;
-    }
-    .modal-backdrop.show{
-        opacity: 0;
-    }
-</style>
+
 @@include('./include/platform-footer.html')
 

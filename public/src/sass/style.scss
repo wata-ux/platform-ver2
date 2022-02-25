@@ -245,7 +245,20 @@ select.form-line{
         align-items: center;
         border-color: $border-color !important;
     }
+    label.custom-control-label{
+        font-size: 1rem;
+    }
+    .radio-tab{
+        .tab-content{
+            display: none;
+        }
+        input[type=radio]:checked + label + .tab-content{
+            display: block;
+            order: 1;
+        }
+    }
 }
+
 .serch-box{
     display: flex;
     align-items: center;
@@ -346,6 +359,25 @@ select.form-line{
             }
         }
     }
+}
+.form-lang {
+    select {
+        padding: 0;
+        border: none;
+        padding-right: 1.75rem;
+        outline: none;
+        font-weight: 600;
+        font-size: 0.875rem;
+        background-color: transparent;
+        background-position: right center;
+    }
+}
+.custom-control-label:before, .custom-control-label:after{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.custom-control-label{
+    cursor: pointer;
 }
 
 /***** button *****/
@@ -788,6 +820,10 @@ a.btn-add-item{
     padding: .125rem .25rem;
     margin-bottom: .25rem;
     white-space: nowrap;
+    &.active{
+        border-color: $identity;
+        color: $identity;
+    }
 }
 
 /***** icon *****/
@@ -951,6 +987,107 @@ ul.state-item{
         border: 2px solid #3FB814;
     }
 }
+.preloader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .preloader-dots {
+        height: 50px;
+        .dot{
+            display: inline-block;
+            background: $identity;
+            margin: 1px;
+            height: 8px;
+            width: 8px;
+            opacity: 0.3;
+            border-radius: 50%;
+            animation: moveit 1.8s infinite;
+            &:nth-child(2){
+                animation-delay: .15s;
+            }
+            &:nth-child(3){
+                animation-delay: .3s;
+            }
+            &:nth-child(4){
+                animation-delay: .45s;
+            }
+            &:nth-child(5){
+                animation-delay: .6s;
+            }
+        }
+    }
+    .preloader-spinner{
+        margin-bottom: 2rem;
+        .spinner-container {
+            -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
+            .path{
+                stroke-dasharray: 1,150; /* 1%, 101% circumference */
+                stroke-dashoffset: 0;
+                stroke: $identity;
+                stroke-linecap: round;
+                -webkit-animation: spinner-dash 1.5s ease-in-out infinite;
+                animation: spinner-dash 1.5s ease-in-out infinite;
+            }
+        }
+    }
+}
+@keyframes moveit {
+    0% {
+      transform: translateY(0px);
+    }
+    35% {
+      transform: translateY(0px);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(-10px);
+      opacity: 0.8;
+    }
+    70% {
+      transform: translateY(3px);
+      opacity: 0.8;
+    }
+    85% {
+      transform: translateY(-3px);
+    }
+}
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate{
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spinner-dash {
+    0% {
+        stroke-dasharray: 1,150;  /* 1%, 101% circumference */
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90,150; /* 70%, 101% circumference */
+        stroke-dashoffset: -35;   /* 25% circumference */
+    }
+    100% {
+        stroke-dasharray: 90,150; /* 70%, 101% circumference */
+        stroke-dashoffset: -124;  /* -99% circumference */
+    }
+}
+@-webkit-keyframes spinner-dash {
+    0% {
+        stroke-dasharray: 1,150;  /* 1%, 101% circumference */
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90,150; /* 70%, 101% circumference */
+        stroke-dashoffset: -35;   /* 25% circumference */
+    }
+    100% {
+        stroke-dasharray: 90,150; /* 70%, 101% circumference */
+        stroke-dashoffset: -124;  /* -99% circumference */
+    }
+}
+
 /* tab menu */
 .tab-menu{
     a{
@@ -1331,13 +1468,13 @@ ul.state-item{
         }
     }
     a.btn-floor{
-        font-size: .75rem;
+        font-size: 1rem;
         color: #303956;
         font-weight: 600;
         padding: .5rem;
         display: flex;
-        width: 34px;
-        height: 40px;
+        width: 48px;
+        height: 48px;
         align-items: center;
         justify-content: center;
         background-color: #fff;
@@ -1688,7 +1825,7 @@ ul.state-item{
     -webkit-align-items: center;
     align-items: center;
     overflow: hidden;
-    min-height: 40px;
+    min-height: 48px;
     img {
         width: 100%;
     }
