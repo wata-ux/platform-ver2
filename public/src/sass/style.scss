@@ -763,6 +763,11 @@ a.btn-add-item{
         vertical-align: top !important;
     }
 }
+.table-head-light{
+    thead th{
+        background-color: $light-gray;
+    }
+}
 
 /***** avatar *****/
 .avatar-md{
