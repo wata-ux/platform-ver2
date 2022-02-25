@@ -1,0 +1,229 @@
+@@include('./include/platform-header.html')
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="project_dashboard.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <div class="project-select">
+                    <select class="form-line">
+                        <option value="">프로젝트를 선택해 주세요</option>
+                        <option value="">프로젝트A</option>
+                        <option value="">프로젝트B</option>
+                        <option value="">프로젝트C</option>
+                    </select>
+                </div>
+                <ul class="top-menu">
+                    <li>
+                        <div class="btn-ico-group">
+                            <a href="user_table.html" class="btn-ico-sm">
+                                <span class="icon material-icons">table_rows</span>
+                                <span class="text"><span>Table View</span></span>
+                            </a>
+                            <a href="user_map.html" class="btn-ico-sm active">
+                                <span class="icon material-icons">map</span>
+                                <span class="text"><span>Map View</span></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="" class="custom-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "", "activeBuilding": "", "activeUser": "active", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
+                <div class="side-contents">
+                    <div class="container-fluid border-bottom-1 py-4">
+                        <div class="d-flex align-items-center">
+                            <h3 class="mb-0">사용자</h3>
+                            <a href="#n" class="btn-add-item text-identity ml-auto p-0">
+                                <span class="material-icons">add</span>
+                                그룹추가
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="serch-box">
+                            <input type="text" class="form-line" placeholder="사용자명을 입력해 주세요">
+                            <a href="#n"><span class="material-icons">search</span></a>
+                        </div>
+                    </div>
+                    <table class="table table-high table-center">
+                        <colgroup>
+                            <col width="*">
+                            <col width="10%">
+                            <col width="30%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-center">그룹</th>
+                                <th class="text-center">사용자</th>
+                                <th class="text-center">층/지오펜스</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Security</td>
+                                <td>4</td>
+                                <td>
+                                    <a href="#n" class="btn-ico-sm">
+                                        <span class="icon material-icons">link</span>
+                                        <span class="text"><span>1층 쇼핑몰</span></span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A Store Event Manager</td>
+                                <td>4</td>
+                                <td>
+                                    <a href="#n" class="btn-ico-sm">
+                                        <span class="icon material-icons">link</span>
+                                        <span class="text">
+                                            <span>1층 쇼핑몰</span>
+                                            <span class="gp-id">1FGF1FNZ1</span>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A Store Event Manager</td>
+                                <td>4</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NT0000</td>
+                                <td>Sensor</td>
+                                <td class="text-center">Tag</td>
+                            </tr>
+                            <tr>
+                                <td>NT0000</td>
+                                <td>Sensor</td>
+                                <td class="text-center">Beacon</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination align-items-center justify-content-center flex">
+                        <a class="page-link btn-prev" href="#" aria-label="Previous">
+                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                            <span>이전</span>
+                        </a>
+                        <div class="d-flex align-items-center justify-content-center px-3">
+                            <select name="" id="" class="form-line">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                            <em>1</em>
+                        </div>
+                        <a class="page-link btn-next" href="#" aria-label="Next">
+                            <span>다음</span>
+                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    <div class="alert-set-guide" style="max-width: 100%">
+                        <div class="alert fade show" role="alert">
+                            <div class="alert-header">
+                                <h4>프로젝트 설정 가이드</h4>
+                                <button type="button" class="alert-close" data-dismiss="alert" aria-label="Close">
+                                    <span class="material-icons" aria-hidden="true">close</span>
+                                </button>
+                            </div>
+                            <div class="alert-contents">
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex cmp-guide">
+                                        <input id="customCheck01" type="checkbox" class="custom-control-input" checked disabled>
+                                        <label for="customCheck01" class="custom-control-label">프로젝트 정보를 입력해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex cmp-guide">
+                                        <input id="customCheck02" type="checkbox" class="custom-control-input" checked disabled>
+                                        <label for="customCheck02" class="custom-control-label">위치를 수집할 대상 주소를 입력해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck03" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck03" class="custom-control-label">공간 정보를 입력해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck04" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck04" class="custom-control-label">평면도 이미지를 업로드해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck05" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck05" class="custom-control-label">지오펜스를 설정해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck06" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck06" class="custom-control-label">위치 정보 수집 경로를 등록해 주세요</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 d-flex align-items-center">
+                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
+                                        <input id="customCheck07" type="checkbox" class="custom-control-input">
+                                        <label for="customCheck07" class="custom-control-label">사용자를 배정하세요</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="alert-footer">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    @@include('./include/platform-tools-map.html')
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@@include('./include/platform-footer.html')
+

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>WATA</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+        
+    <link rel="icon" href="images/icon/favicon.svg">
+	<link rel="apple-touch-icon" href="images/icon/1x/wata_symbol_64dp.png">
+	<link rel="apple-touch-icon" sizes="96x96" href="images/icon/1x/wata_symbol_96dp.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="images/icon/2x/wata_symbol_64dp.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="images/icon/2x/wata_symbol_96dp.png">
+
+    <!-- Preloader -->
+    <link type="text/css" href="vendor/spinkit.css" rel="stylesheet" />
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="vendor/perfect-scrollbar.css" rel="stylesheet" />
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="css/material-icons.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="css/fontawesome.css" rel="stylesheet" />
+
+    <!-- Preloader -->
+    <link type="text/css" href="css/preloader.css" rel="stylesheet" />
+
+    <!-- App CSS -->
+    <link type="text/css" href="css/app.css" rel="stylesheet" />
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="css/flatpickr.css" rel="stylesheet" />
+    <link type="text/css" href="css/flatpickr-airbnb.css" rel="stylesheet" />
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="vendor/daterangepicker.css" rel="stylesheet" />
+
+    <!-- Quill Theme -->
+    <link type="text/css" href="css/quill.css" rel="stylesheet" />
+
+    <!-- Touchspin -->
+    <link type="text/css" href="css/bootstrap-touchspin.css" rel="stylesheet" />
+
+    <!-- Select2 -->
+    <link type="text/css" href="vendor/select2/select2.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/select2.css" rel="stylesheet" />
+
+     <!-- ion Range Slider -->
+     <link type="text/css" href="css/ion-rangeslider.css" rel="stylesheet" />
+
+     <!-- Dragula -->
+     <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
+
+    <!-- custom CSS -->
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=round -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=sharp -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=twotone -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+</head>
+
+<body class="layout-mini-secondary layout-mini-secondary">
+
+    <!-- <div class="preloader">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div> -->
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="project_dashboard.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <h4 class="project-title">프로젝트명을 입력해 주세요</h4>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="custom-select" class="form-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="side-navbar expander" id="side-navbar">
+    <nav class="nav-container">
+        <div class="nav-inner">
+            <div class="nav__list">
+                <a href="project_building.html" class="nav__link active" data-toggle="tooltip"
+                data-title="모니터링" data-placement="right" data-boundary="window">
+                    <span class="material-icons">insert_chart_outlined</span>
+                    <span class="nav_name">모니터링</span>
+                </a>
+                <a href="project_dashboard.html" class="nav__link " data-toggle="tooltip"
+                data-title="프로젝트" data-placement="right" data-boundary="window">
+                    <span class="material-icons">grid_view</span>
+                    <span class="nav_name">프로젝트</span>
+                </a>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="건물" data-placement="right" data-boundary="window">
+                <span class="material-icons-outlined">space_dashboard</span>
+                    <span class="nav_name">건물</span>
+                </a>
+
+                <div href="#" class="nav__link  collapse-item" data-toggle="tooltip"
+                data-title="사용자" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">person_outline</span>
+                    <span class="nav_name">사용자</span>
+
+                    <span class="material-icons collapse__link">expand_more</span>
+
+                    <div class="collapse__menu">
+                        <a href="user_table.html" class="collapse__sublink">사용자</a>
+                        <a href="user_group_table.html" class="collapse__sublink">사용자 그룹</a>
+                    </div>
+                </div>
+
+
+                <a href="assets_map.html" class="nav__link " data-toggle="tooltip"
+                data-title="자산" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">category</span>
+                    <span class="nav_name">자산</span>
+                </a>
+
+                <div href="#" class="nav__link  collapse-item d-none" data-toggle="tooltip"
+                data-title="자산" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">category</span>
+                    <span class="nav_name">자산</span>
+
+                    <span class="material-icons collapse__link">expand_more</span>
+
+                    <div class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Data</a>
+                        <a href="#" class="collapse__sublink">Group</a>
+                        <a href="#" class="collapse__sublink">Members</a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="이벤트" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">event_note</span>
+                    <span class="nav_name">이벤트</span>
+                </a>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="사고" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">warning_amber</span>
+                    <span class="nav_name">사고</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+                <div class="side-contents">
+                    <div class="d-flex flex-column h-100">
+                        <div class="row-tab">
+                            <ul class="list-unstyled custom-scroll">
+                                <li><a href="project_write.html">프로젝트 정보</a></li>
+                                <li><a href="project_write2.html">건물 등록</a></li>
+                                <li><a href="project_write3.html">평면도 등록</a></li>
+                                <li class="active"><a href="project_write4.html">자산 등록</a></li>
+                            </ul>
+                        </div>
+                        <div class="plf-floor-add border-bottom-0">
+                            <div class="form-cell">
+                                <select name="category" class="form-line mb-3">
+                                    <option value="">건물</option>
+                                    <option value="">건물2</option>
+                                    <option value="">건물3</option>
+                                </select>
+                                <select name="category" class="form-line">
+                                    <option value="">평면도 1층</option>
+                                    <option value="">평면도 2층</option>
+                                    <option value="">평면도 3층</option>
+                                </select>
+                            </div>
+                            <div class="btn-cell">
+                                <a href="project_write4_upload.html" class="btn-add-item text-green">
+                                    <span class="material-icons">note_add</span>
+                                    엑셀 업로드
+                                </a>
+                                <a href="project_write4_new.html" class="btn-add-item text-identity">
+                                    <span class="material-icons">add</span>
+                                    자산 등록
+                                </a>
+                            </div>
+                        </div>
+                        <table class="table table-nowrap table-high table-line-none">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="*">
+                                <col width="15%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center pl-4">자산ID</th>
+                                    <th class="text-center">자산명</th>
+                                    <th class="text-center pr-4">유형</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="position-relative px-3" data-perfect-scrollbar>
+                            <table class="table table-nowrap table-high">
+                                <colgroup>
+                                    <col width="15%">
+                                    <col width="*">
+                                    <col width="15%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Ryan</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Beacon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">Beacon</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="empty-state border-top-0 d-none">
+                                <em class="empty-txt mb-4">자산을 등록해 주세요</em>
+                                <!-- <a href="#n" class="btn btn-link">새로운 건물 생성</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                        <!-- map zoom/out -->
+    <div class="btn-widget-holder">
+        <ul>
+            <li class="mb-3"><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="지도 회전" data-placement="left"
+                data-boundary="window"><img src="images/icon/map_rotate.svg" alt=""></a></li>
+            <li class="mb-3"><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="격자" data-placement="left"
+                data-boundary="window"><img src="images/icon/map_grid.svg" alt=""></a></li>
+            <li class="mb-3">
+                <div class="btn-group-vertical">
+                    <a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="2D 보기" data-placement="left"
+                    data-boundary="window">2D</a>
+                    <!-- <button type="button" class="btn btn-white font-size-12pt" data-toggle="tooltip" data-title="2.5D 보기" data-placement="left"
+                            data-boundary="window">2.5D</button> -->
+                    <a href="#layerPopup" class="btn btn-white btn_layerpopup" data-toggle="tooltip" data-title="3D 보기" data-placement="left"
+                    data-boundary="window">3D</a>
+                </div>
+            </li>
+            <li class="mb-3">
+                <div class="btn-group-vertical">
+                    <a href="" class="btn btn-white" data-toggle="tooltip" data-title="확대" data-placement="left"
+                    data-boundary="window"><i class="fas fa-plus"></i></a>
+                    <a href=""  class="btn btn-white" data-toggle="tooltip" data-title="축소" data-placement="left"
+                    data-boundary="window"><i class="fas fa-minus"></i></a>
+                </div>
+            </li>
+            <li><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="현재위치" data-placement="left"
+                data-boundary="window"><img src="images/icon/map_location.svg" alt=""></a></a></li>
+        </ul>
+    </div>
+    <!-- slide button -->
+    <a href="#n" class="side-btn btn-col-left toggle-sidebar-left"><span class="material-icons-outlined">chevron_left</span></a>
+    <!-- map container -->
+    <div id="map" style="width:100%;height:100%;"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(37.54537298405762, 127.2238266278939),
+            level: 1
+        };
+
+        var map = new kakao.maps.Map(container, options);
+        //var mapTypeControl = new kakao.maps.MapTypeControl();
+        //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+    </script>
+    <div class="layer-popup" id="layerPopup">
+        <a href="#n" class="btn_layerpopup btn_close_layer"><span class="material-icons">close</span></a>
+        <div class="layer-map">
+
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3-min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="vendor/popper.min.js"></script>
+    <script src="vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="vendor/material-design-kit.js"></script>
+
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+
+    <!-- Preloader -->
+    <script src="js/preloader.js"></script>
+
+    <!-- Range Slider -->
+    <script src="vendor/ion.rangeSlider.min.js"></script>
+    <script src="js/ion-rangeslider.js"></script>
+
+    <!-- Quill -->
+    <script src="vendor/quill.min.js"></script>
+    <script src="js/quill.js"></script>
+
+    <!-- Global Settings -->
+    <script src="js/settings.js"></script>
+
+    <!-- DateRangePicker -->
+    <script src="vendor/moment.min.js"></script>
+    <script src="vendor/moment-range.js"></script>
+
+    <!-- Flatpickr -->
+    <script src="vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="js/flatpickr.js"></script>
+
+    <script src="vendor/daterangepicker.js"></script>
+    <script src="js/daterangepicker.js"></script>
+
+    <!-- jQuery Mask Plugin -->
+    <script src="vendor/jquery.mask.min.js"></script>
+
+    <!-- modernizr.js -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Sidebar Mini JS -->
+    <script src="js/sidebar-mini.js"></script>
+    <script>
+        (function () {
+            'use strict';
+            // ENABLE sidebar menu tabs
+            $('.js-sidebar-mini-tabs [data-toggle="tab"]').on('click', function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+            $('.js-sidebar-mini-tabs').on('show.bs.tab', function (e) {
+                $('.js-sidebar-mini-tabs > .active').removeClass('active')
+                $(e.target).parent().addClass('active')
+            })
+        })()
+    </script>
+
+    <!-- Dragula -->
+    <script src="vendor/dragula/dragula.min.js"></script>
+
+    <!-- Drag & Drop Page -->
+    <script src="js/dragula.js"></script>
+
+    <!-- List.js -->
+    <script src="vendor/list.min.js"></script>
+    <script src="js/list.js"></script>
+
+    <!-- Tables -->
+    <script src="js/toggle-check-all.js"></script>
+    <script src="js/check-selected-row.js"></script>
+
+    <!-- Select2 -->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
+    
+    <script src="js/custom.js"></script>
+    <script src="js/side-menu.js"></script>
+    <script src="js/jquery.overscroll.min.js"></script>
+    <script>
+        $('.custom-scroll').overscroll({
+            direction: 'horizontal',
+            showThumbs: false,
+            scrollDelta: 5,
+            whiteDelta: 5
+        });
+    </script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function($){
+            $(window).on("load",function(){
+                $(".custom-scroll-bar").mCustomScrollbar({theme:"minimal-dark"});
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>
+
+

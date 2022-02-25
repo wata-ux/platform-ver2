@@ -1,0 +1,300 @@
+@@include('./include/platform-header.html')
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="project_dashboard.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <div class="project-select">
+                    <select class="form-line">
+                        <option value="">프로젝트를 선택해 주세요</option>
+                        <option value="">프로젝트A</option>
+                        <option value="">프로젝트B</option>
+                        <option value="">프로젝트C</option>
+                    </select>
+                </div>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="" class="form-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                @@include('./include/platform-side-menu.html', {"activeMonitoring": "active", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
+                <div class="side-contents">
+                    <div class="container-fluid border-bottom-1 py-4">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row align-items-center mb-1">
+                                <span class="material-icons cp-icon">factory</span>
+                                <p class="m-0 text-64">Factory</p>
+                            </div>
+                            <h3 class="mb-0">Smart Factory Project</h3>
+                        </div>
+                    </div>
+                    <div class="plf-floor-card p-4 position-relative" data-perfect-scrollbar>
+                        <div class="plf-area-card active">
+                            <div class="plf-area-top">
+                                <h4>건물 2</h4>
+                            </div>
+                            <div class="plf-area-content">
+                                <p class="desc">대한민국, 경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>3
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plf-area-card">
+                            <div class="plf-area-top">
+                                <h4>건물</h4>
+                            </div>
+                            <div class="plf-area-content text-50">
+                                <p class="desc">대한민국, 경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plf-area-card">
+                            <div class="plf-area-top">
+                                <h4>건물</h4>
+                            </div>
+                            <div class="plf-area-content text-50">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plf-area-card">
+                            <div class="plf-area-top">
+                                <h4>건물</h4>
+                            </div>
+                            <div class="plf-area-content text-50">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents" data-perfect-scrollbar>
+                    <div class="col-list">
+                        <div class="plf-floor-card">
+                            <div class="plf-area-title">
+                                <div class="inner">
+                                    <h3 class="mb-2">건물 2</h3>
+                                    <p class="text-64 m-0">프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보, 프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보, 프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보, 프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보, 프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보, 프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보 </p>
+                                </div>
+                                <a href="#n" class="btn btn-accent py-3 w-10 ml-auto">수정</a>
+                            </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined text-danger mr-1">upload_file</span>
+                                    <h4>평면도 2층</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">2F</span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <a href="monitoring_project.html">
+                                                <div class="thumb">
+                                                    <img src="images/slider01.jpg" alt="">
+                                                </div>
+                                            </a>
+                                            
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">group</span>
+                                            <span class="text-64 font-size-14pt">고객</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">category</span>
+                                            <span class="text-64 font-size-14pt">자산</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">event_note</span>
+                                            <span class="text-64 font-size-14pt">이벤트</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">warning_amber</span>
+                                            <span class="text-64 font-size-14pt">사고</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">notifications</span>
+                                            <span class="text-64 font-size-14pt">알림</span>
+                                            <em>20</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined mr-1">upload_file</span>
+                                    <h4>평면도 1층</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">1F</span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <div class="thumb">
+                                                <span class="material-icons-outlined text-16">upload_file</span>
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">group</span>
+                                            <span class="text-64 font-size-14pt">고객</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">category</span>
+                                            <span class="text-64 font-size-14pt">자산</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">event_note</span>
+                                            <span class="text-64 font-size-14pt">이벤트</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">warning_amber</span>
+                                            <span class="text-64 font-size-14pt">사고</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">notifications</span>
+                                            <span class="text-64 font-size-14pt">알림</span>
+                                            <em>20</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined text-danger mr-1">upload_file</span>
+                                    <h4>평면도 B1층</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">B1F</span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <div class="thumb">
+                                                <img src="images/slider01.jpg" alt="">
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">group</span>
+                                            <span class="text-64 font-size-14pt">고객</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">category</span>
+                                            <span class="text-64 font-size-14pt">자산</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">event_note</span>
+                                            <span class="text-64 font-size-14pt">이벤트</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">warning_amber</span>
+                                            <span class="text-64 font-size-14pt">사고</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">notifications</span>
+                                            <span class="text-64 font-size-14pt">알림</span>
+                                            <em>20</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#n" class="side-btn btn-col-left toggle-sidebar-left"><span class="material-icons-outlined">chevron_left</span></a>
+                    <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span class="material-icons-outlined">chevron_right</span></a>
+                </div>
+                <div class="pl-col-right" id="sidebar-right">
+                    @@include('./include/platform-right-menu.html')
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@@include('./include/platform-footer.html')

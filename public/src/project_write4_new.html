@@ -1,0 +1,125 @@
+@@include('./include/platform-header.html')
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="project_dashboard.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <h4 class="project-title">프로젝트명을 입력해 주세요</h4>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="custom-select" class="form-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                @@include('./include/platform-side-menu.html', {"activeMonitoring": "active", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
+                <div class="side-contents" data-perfect-scrollbar>
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 mb-4 py-4">
+                            <div class="d-flex align-items-center">
+                                <a href="project_write4.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
+                                <h3 class="mb-0">자산 등록</h3>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">건물</label>
+                                <select name="category" class="form-line">
+                                    <option value="">선택해주세요.</option>
+                                    <option value="">건물1</option>
+                                    <option value="">건물2</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">평면도</label>
+                                <select name="category" class="form-line">
+                                    <option value="">전체</option>
+                                    <option value="">평면도1</option>
+                                    <option value="">평면도2</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">유형</label>
+                                <select name="category" class="form-line">
+                                    <option value="">자산 유형을 선택하세요</option>
+                                    <option value="">Tag</option>
+                                    <option value="">Beacon</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">분류</label>
+                                <select name="category" class="form-line">
+                                    <option value="">분류를 선택하세요</option>
+                                    <option value="">사람</option>
+                                    <option value="">장비</option>
+                                    <option value="">물류</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">자산명</label>
+                                <input type="text" class="form-line" id="" placeholder="자산명을 입력해 주세요">
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label" for="">식별값</label>
+                                <input type="text" class="form-line" id="" placeholder="식별값을 입력해 주세요">
+                            </div>
+                            
+                        </div>
+                        <div class="pub-con">
+                            <div class="pub-inner">
+                                <div class="btn-wrap">
+                                    <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">등록</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    @@include('./include/platform-tools-map.html')
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@@include('./include/platform-footer.html')
+

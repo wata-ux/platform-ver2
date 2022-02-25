@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>WATA</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+        
+    <link rel="icon" href="images/icon/favicon.svg">
+	<link rel="apple-touch-icon" href="images/icon/1x/wata_symbol_64dp.png">
+	<link rel="apple-touch-icon" sizes="96x96" href="images/icon/1x/wata_symbol_96dp.png">
+	<link rel="apple-touch-icon" sizes="128x128" href="images/icon/2x/wata_symbol_64dp.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="images/icon/2x/wata_symbol_96dp.png">
+
+    <!-- Preloader -->
+    <link type="text/css" href="vendor/spinkit.css" rel="stylesheet" />
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="vendor/perfect-scrollbar.css" rel="stylesheet" />
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="css/material-icons.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="css/fontawesome.css" rel="stylesheet" />
+
+    <!-- Preloader -->
+    <link type="text/css" href="css/preloader.css" rel="stylesheet" />
+
+    <!-- App CSS -->
+    <link type="text/css" href="css/app.css" rel="stylesheet" />
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="css/flatpickr.css" rel="stylesheet" />
+    <link type="text/css" href="css/flatpickr-airbnb.css" rel="stylesheet" />
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="vendor/daterangepicker.css" rel="stylesheet" />
+
+    <!-- Quill Theme -->
+    <link type="text/css" href="css/quill.css" rel="stylesheet" />
+
+    <!-- Touchspin -->
+    <link type="text/css" href="css/bootstrap-touchspin.css" rel="stylesheet" />
+
+    <!-- Select2 -->
+    <link type="text/css" href="vendor/select2/select2.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/select2.css" rel="stylesheet" />
+
+     <!-- ion Range Slider -->
+     <link type="text/css" href="css/ion-rangeslider.css" rel="stylesheet" />
+
+     <!-- Dragula -->
+     <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
+
+    <!-- custom CSS -->
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=round -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=sharp -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
+    rel="stylesheet">
+
+    <!-- https://material.io/resources/icons/?style=twotone -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+</head>
+
+<body class="layout-mini-secondary layout-mini-secondary">
+
+    <!-- <div class="preloader">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div> -->
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="project_dashboard.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <div class="project-select">
+                    <select class="form-line">
+                        <option value="">프로젝트를 선택해 주세요</option>
+                        <option value="">프로젝트A</option>
+                        <option value="">프로젝트B</option>
+                        <option value="">프로젝트C</option>
+                    </select>
+                </div>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="" class="form-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="#n">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="side-navbar expander" id="side-navbar">
+    <nav class="nav-container">
+        <div class="nav-inner">
+            <div class="nav__list">
+                <a href="project_building.html" class="nav__link active" data-toggle="tooltip"
+                data-title="모니터링" data-placement="right" data-boundary="window">
+                    <span class="material-icons">insert_chart_outlined</span>
+                    <span class="nav_name">모니터링</span>
+                </a>
+                <a href="project_dashboard.html" class="nav__link " data-toggle="tooltip"
+                data-title="프로젝트" data-placement="right" data-boundary="window">
+                    <span class="material-icons">grid_view</span>
+                    <span class="nav_name">프로젝트</span>
+                </a>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="건물" data-placement="right" data-boundary="window">
+                <span class="material-icons-outlined">space_dashboard</span>
+                    <span class="nav_name">건물</span>
+                </a>
+
+                <div href="#" class="nav__link  collapse-item" data-toggle="tooltip"
+                data-title="사용자" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">person_outline</span>
+                    <span class="nav_name">사용자</span>
+
+                    <span class="material-icons collapse__link">expand_more</span>
+
+                    <div class="collapse__menu">
+                        <a href="user_table.html" class="collapse__sublink">사용자</a>
+                        <a href="user_group_table.html" class="collapse__sublink">사용자 그룹</a>
+                    </div>
+                </div>
+
+
+                <a href="assets_map.html" class="nav__link " data-toggle="tooltip"
+                data-title="자산" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">category</span>
+                    <span class="nav_name">자산</span>
+                </a>
+
+                <div href="#" class="nav__link  collapse-item d-none" data-toggle="tooltip"
+                data-title="자산" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">category</span>
+                    <span class="nav_name">자산</span>
+
+                    <span class="material-icons collapse__link">expand_more</span>
+
+                    <div class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Data</a>
+                        <a href="#" class="collapse__sublink">Group</a>
+                        <a href="#" class="collapse__sublink">Members</a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="이벤트" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">event_note</span>
+                    <span class="nav_name">이벤트</span>
+                </a>
+                <a href="#" class="nav__link " data-toggle="tooltip"
+                data-title="사고" data-placement="right" data-boundary="window">
+                    <span class="material-icons-outlined">warning_amber</span>
+                    <span class="nav_name">사고</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+                <div class="side-contents">
+                    <div class="container-fluid border-bottom-1 py-4">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row align-items-center mb-1">
+                                <span class="material-icons cp-icon">factory</span>
+                                <p class="m-0 text-64">Factory</p>
+                            </div>
+                            <h3 class="mb-0">Smart Factory Project</h3>
+                        </div>
+                    </div>
+                    <div class="plf-floor-card p-4 position-relative" data-perfect-scrollbar>
+                        <div class="plf-area-card active">
+                            <div class="plf-area-top">
+                                <h4>건물 2</h4>
+                            </div>
+                            <div class="plf-area-content">
+                                <p class="desc">대한민국, 경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>3
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plf-area-card">
+                            <div class="plf-area-top">
+                                <h4>건물</h4>
+                            </div>
+                            <div class="plf-area-content text-50">
+                                <p class="desc">대한민국, 경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plf-area-card">
+                            <div class="plf-area-top">
+                                <h4>건물</h4>
+                            </div>
+                            <div class="plf-area-content text-50">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plf-area-card">
+                            <div class="plf-area-top">
+                                <h4>건물</h4>
+                            </div>
+                            <div class="plf-area-content text-50">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents" data-perfect-scrollbar>
+                    <div class="col-list">
+                        <div class="plf-floor-card">
+                            <div class="plf-area-title">
+                                <div class="inner">
+                                    <h3 class="mb-2">건물 2</h3>
+                                    <p class="text-64 m-0">프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보, 프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보, 프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보, 프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보, 프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보, 프로젝트 설명 정보 프로젝트 설명 정보 프로젝트 설명 정보 </p>
+                                </div>
+                                <a href="#n" class="btn btn-accent py-3 w-10 ml-auto">수정</a>
+                            </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined text-danger mr-1">upload_file</span>
+                                    <h4>평면도 2층</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">2F</span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <a href="monitoring_project.html">
+                                                <div class="thumb">
+                                                    <img src="images/slider01.jpg" alt="">
+                                                </div>
+                                            </a>
+                                            
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">group</span>
+                                            <span class="text-64 font-size-14pt">고객</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">category</span>
+                                            <span class="text-64 font-size-14pt">자산</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">event_note</span>
+                                            <span class="text-64 font-size-14pt">이벤트</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">warning_amber</span>
+                                            <span class="text-64 font-size-14pt">사고</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">notifications</span>
+                                            <span class="text-64 font-size-14pt">알림</span>
+                                            <em>20</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined mr-1">upload_file</span>
+                                    <h4>평면도 1층</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">1F</span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <div class="thumb">
+                                                <span class="material-icons-outlined text-16">upload_file</span>
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">group</span>
+                                            <span class="text-64 font-size-14pt">고객</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">category</span>
+                                            <span class="text-64 font-size-14pt">자산</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">event_note</span>
+                                            <span class="text-64 font-size-14pt">이벤트</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">warning_amber</span>
+                                            <span class="text-64 font-size-14pt">사고</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">notifications</span>
+                                            <span class="text-64 font-size-14pt">알림</span>
+                                            <em>20</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined text-danger mr-1">upload_file</span>
+                                    <h4>평면도 B1층</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">B1F</span>
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <div class="thumb">
+                                                <img src="images/slider01.jpg" alt="">
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">group</span>
+                                            <span class="text-64 font-size-14pt">고객</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">category</span>
+                                            <span class="text-64 font-size-14pt">자산</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">event_note</span>
+                                            <span class="text-64 font-size-14pt">이벤트</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">warning_amber</span>
+                                            <span class="text-64 font-size-14pt">사고</span>
+                                            <em>20</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons-outlined">notifications</span>
+                                            <span class="text-64 font-size-14pt">알림</span>
+                                            <em>20</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#n" class="side-btn btn-col-left toggle-sidebar-left"><span class="material-icons-outlined">chevron_left</span></a>
+                    <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span class="material-icons-outlined">chevron_right</span></a>
+                </div>
+                <div class="pl-col-right" id="sidebar-right">
+                    <div class="cd-panel__container">
+    <div class="cd-panel__content" data-perfect-scrollbar>
+        <div class="cd-panel__title">
+            <h3 class="mb-0">NTT팩토리 3F</h3>
+            <p class="text-50 m-0">2021-07-01 13:00:00 기준</p>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3-min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="vendor/popper.min.js"></script>
+    <script src="vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="vendor/material-design-kit.js"></script>
+
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+
+    <!-- Preloader -->
+    <script src="js/preloader.js"></script>
+
+    <!-- Range Slider -->
+    <script src="vendor/ion.rangeSlider.min.js"></script>
+    <script src="js/ion-rangeslider.js"></script>
+
+    <!-- Quill -->
+    <script src="vendor/quill.min.js"></script>
+    <script src="js/quill.js"></script>
+
+    <!-- Global Settings -->
+    <script src="js/settings.js"></script>
+
+    <!-- DateRangePicker -->
+    <script src="vendor/moment.min.js"></script>
+    <script src="vendor/moment-range.js"></script>
+
+    <!-- Flatpickr -->
+    <script src="vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="js/flatpickr.js"></script>
+
+    <script src="vendor/daterangepicker.js"></script>
+    <script src="js/daterangepicker.js"></script>
+
+    <!-- jQuery Mask Plugin -->
+    <script src="vendor/jquery.mask.min.js"></script>
+
+    <!-- modernizr.js -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Sidebar Mini JS -->
+    <script src="js/sidebar-mini.js"></script>
+    <script>
+        (function () {
+            'use strict';
+            // ENABLE sidebar menu tabs
+            $('.js-sidebar-mini-tabs [data-toggle="tab"]').on('click', function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+            $('.js-sidebar-mini-tabs').on('show.bs.tab', function (e) {
+                $('.js-sidebar-mini-tabs > .active').removeClass('active')
+                $(e.target).parent().addClass('active')
+            })
+        })()
+    </script>
+
+    <!-- Dragula -->
+    <script src="vendor/dragula/dragula.min.js"></script>
+
+    <!-- Drag & Drop Page -->
+    <script src="js/dragula.js"></script>
+
+    <!-- List.js -->
+    <script src="vendor/list.min.js"></script>
+    <script src="js/list.js"></script>
+
+    <!-- Tables -->
+    <script src="js/toggle-check-all.js"></script>
+    <script src="js/check-selected-row.js"></script>
+
+    <!-- Select2 -->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery.menu-aim.js"></script> <!-- menu aim -->
+    
+    <script src="js/custom.js"></script>
+    <script src="js/side-menu.js"></script>
+    <script src="js/jquery.overscroll.min.js"></script>
+    <script>
+        $('.custom-scroll').overscroll({
+            direction: 'horizontal',
+            showThumbs: false,
+            scrollDelta: 5,
+            whiteDelta: 5
+        });
+    </script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function($){
+            $(window).on("load",function(){
+                $(".custom-scroll-bar").mCustomScrollbar({theme:"minimal-dark"});
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>

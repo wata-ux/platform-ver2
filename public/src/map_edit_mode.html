@@ -1,0 +1,591 @@
+@@include('./include/platform-header.html')
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <!-- Brand -->
+                <a href="project_dashboard.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <h4 class="project-title text-impact">Editor</h4>
+                <ul class="location-list">
+                    <li>프로젝트</li>
+                    <li>건물</li>
+                    <li>평면도 1층</li>
+                    <li>1F</li>
+                </ul>
+                <a href="#n" class="btn-guide"><span class="material-icons">info</span> 가이드 보기</a>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left col-expand" id="sidebar-left">
+                <div class="side-contents" data-perfect-scrollbar>
+                    <div class="plf-floor-add border-bottom-0">
+                        <div class="d-flex align-items-sm-center py-3">
+                            <div class="item-sort py-0">
+                                <a href="#n" class="items active">전체</a>
+                                <a href="#n" class="items">지오펜스</a>
+                                <a href="#n" class="items">구역</a>
+                                <a href="#n" class="items">수집선</a>
+                                <a href="#n" class="items">측위장비</a>
+                                <a href="#n" class="items">POI</a>
+                            </div>
+                        </div>
+                        <div class="serch-box mb-0">
+                            <input type="text" class="form-line" placeholder="오브젝트명을 입력해 주세요">
+                            <a href="#n"><span class="material-icons">search</span></a>
+                        </div>
+                        <div class="btn-cell d-none">
+                            <a href="#n" class="btn-add-item">
+                                <span class="material-icons">location_on</span>
+                                POI 가져오기
+                            </a>
+                            <a href="#n" class="btn-add-item text-green">
+                                <span class="material-icons">note_add</span>
+                                자산 엑셀 업로드
+                            </a>
+                        </div>
+                    </div>
+
+                    <table class="table table-nowrap table-high table-line-none">
+                        <colgroup>
+                            <col width="15%">
+                            <col width="*">
+                            <col width="15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-center">
+                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">분류</a>
+                                </th>
+                                <th class="text-center">
+                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">오브젝트명</a>
+                                </th>
+                                <th class="text-center">옵션</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list" id="projects">
+                            <tr>
+                                <td><img src="images/poi/object_area.svg" alt="Area"></td>
+                                <td>라이언사무실</td>
+                                <td>
+                                    <div class="option-bundle">
+                                        <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="selected">
+                                <td><img src="images/poi/object_geofence.svg" alt="Geofence"></td>
+                                <td>GF1FNZ1</td>
+                                <td>
+                                    <div class="option-bundle">
+                                        <a href="#n" class="text-20"><span class="material-icons-outlined">visibility_off</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/poi/object_line.svg" alt="선"></td>
+                                <td>Line1</td>
+                                <td>
+                                    <div class="option-bundle">
+                                        <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/poi/food_cafe.svg" alt="카페"></td>
+                                <td>라이언커피</td>
+                                <td>
+                                    <div class="option-bundle">
+                                        <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/poi/food_restaurant.svg" alt="음식점"></td>
+                                <td>라이언떡복이</td>
+                                <td>
+                                    <div class="option-bundle">
+                                        <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/poi/medical_medicine.svg" alt="의료"></td>
+                                <td>라이언성형외과의원</td>
+                                <td>
+                                    <div class="option-bundle">
+                                        <a href="#n" class="text-20"><span class="material-icons-outlined">visibility_off</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/poi/srore_shop.svg" alt="상점"></td>
+                                <td>라이언전자</td>
+                                <td>
+                                    <div class="option-bundle">
+                                        <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/poi/escalator.svg" alt="에스컬레이터"></td>
+                                <td>중앙에스컬레이터</td>
+                                <td>
+                                    <div class="option-bundle">
+                                        <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/poi/sensors_assets.svg" alt="자산"></td>
+                                <td>UWB3</td>
+                                <td>
+                                    <div class="option-bundle">
+                                        <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/poi/sensors_ble.svg" alt="블루투스"></td>
+                                <td>BLE1</td>
+                                <td>
+                                    <div class="option-bundle">
+                                        <a href="#n" class="text-20"><span class="material-icons-outlined">visibility_off</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/poi/sensors_wifi.svg" alt="와이파이"></td>
+                                <td>RTT1</td>
+                                <td>
+                                    <div class="option-bundle">
+                                        <a href="#n"><span class="material-icons-outlined">visibility</span></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 지오펜스 등록 -->
+                <div class="side-contents sidebar-left-sub" data-perfect-scrollbar>
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 mb-4 py-4">
+                            <div class="d-flex align-items-center">
+                                <h3 class="mb-0">지오펜스 등록</h3>
+                                <a href="#n" class="ml-auto"><span class="material-icons">close</span></a>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">오브젝트</label>
+                                <input type="text" class="form-line" id="" value="지오펜스" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">타입</label>
+                                <input type="text" class="form-line" id="" value="직사각형" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">지오펜스명</label>
+                                <input type="text" class="form-line" id="" value="GF1FNZ1">
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">색상</label>
+                                <div class="form-line form-blank"></div>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">위치</label>
+                                <input type="text" class="form-line" id="" value="14672854.412916198 / 14672854.412916198" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">설명</label>
+                                <textarea name="" id="" rows="5" placeholder="내용을 입력해 주세요"></textarea>
+                            </div>
+                        </div>
+                        <div class="pub-con">
+                            <div class="pub-inner">
+                                <div class="btn-wrap">
+                                    <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">수정</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 측위장비 등록 -->
+                <div class="side-contents sidebar-left-sub d-none" data-perfect-scrollbar>
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 mb-4 py-4">
+                            <div class="d-flex align-items-center">
+                                <h3 class="mb-0">측위장비 등록</h3>
+                                <a href="#n" class="ml-auto"><span class="material-icons">close</span></a>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">오브젝트</label>
+                                <input type="text" class="form-line" id="" value="BLE" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">타입</label>
+                                <input type="text" class="form-line" id="" value="Scanner" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">장비명</label>
+                                <input type="text" class="form-line" id="" value="장비명을 입력해 주세요">
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">식별값(UUID, 고유번호)</label>
+                                <input type="text" class="form-line" id="" value="UW2edasDd32D">
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">위치</label>
+                                <input type="text" class="form-line" id="" value="14672854.412916198 / 14672854.412916198" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">설명</label>
+                                <textarea name="" id="" rows="5" placeholder="내용을 입력해 주세요"></textarea>
+                            </div>
+                        </div>
+                        <div class="pub-con">
+                            <div class="pub-inner">
+                                <div class="btn-wrap">
+                                    <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">수정</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 구역 등록 -->
+                <div class="side-contents sidebar-left-sub d-none" data-perfect-scrollbar>
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 mb-4 py-4">
+                            <div class="d-flex align-items-center">
+                                <h3 class="mb-0">구역 등록</h3>
+                                <a href="#n" class="ml-auto"><span class="material-icons">close</span></a>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">오브젝트</label>
+                                <input type="text" class="form-line" id="" value="구역" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">타입</label>
+                                <input type="text" class="form-line" id="" value="정사각형" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">분류</label>
+                                <select name="category" class="form-line">
+                                    <option value="">선택해주세요.</option>
+                                    <option value="">회의실</option>
+                                    <option value="">사무실</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">색상</label>
+                                <div class="form-line form-blank"></div>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">구역명</label>
+                                <input type="text" class="form-line" id="" value="라이언회의실" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">위치</label>
+                                <input type="text" class="form-line" id="" value="14672854.412916198 / 14672854.412916198" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">설명</label>
+                                <textarea name="" id="" rows="5" placeholder="내용을 입력해 주세요"></textarea>
+                            </div>
+                        </div>
+                        <div class="pub-con">
+                            <div class="pub-inner">
+                                <div class="btn-wrap">
+                                    <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">수정</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- POI 등록 -->
+                <div class="side-contents sidebar-left-sub d-none" data-perfect-scrollbar>
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 mb-4 py-4">
+                            <div class="d-flex align-items-center">
+                                <h3 class="mb-0">POI 등록</h3>
+                                <a href="#n" class="ml-auto"><span class="material-icons">close</span></a>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">오브젝트</label>
+                                <input type="text" class="form-line" id="" value="POI" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">타입</label>
+                                <select name="category" class="form-line">
+                                    <option value="">선택해주세요</option>
+                                    <option value="">식품/음료</option>
+                                    <option value="">식품/음료2</option>
+                                    <option value="">식품/음료3</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">분류</label>
+                                <select name="category" class="form-line">
+                                    <option value="">선택해주세요</option>
+                                    <option value="">레스토랑</option>
+                                    <option value="">의료</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">아이콘</label>
+                                <div class="select-dropdown" value="">
+                                    <div class="dropdown__select">
+                                        <div class="dropdown__select-wrap">
+                                            <span class="iconName">아이콘을 선택하세요.</span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__options-wrap">
+                                        <div class="dropdown__cover">
+                                            <div class="dropdown__option">
+                                                <img src="images/poi/food_restaurant.svg" alt="btc" />
+                                            </div>
+                                        </div>
+                                        <div class="dropdown__cover">
+                                            <div class="dropdown__option">
+                                                <img src="images/poi/food_cafe.svg" alt="eth" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">POI명</label>
+                                <input type="text" class="form-line" id="" value="라이언레스토랑">
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">위치</label>
+                                <input type="text" class="form-line" id="" value="14672854.412916198 / 14672854.412916198" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">설명</label>
+                                <textarea name="" id="" rows="5" placeholder="내용을 입력해 주세요"></textarea>
+                            </div>
+                        </div>
+                        <div class="pub-con">
+                            <div class="pub-inner">
+                                <div class="btn-wrap">
+                                    <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">수정</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 수집선 등록 -->
+                <div class="side-contents sidebar-left-sub d-none" data-perfect-scrollbar>
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 mb-4 py-4">
+                            <div class="d-flex align-items-center">
+                                <h3 class="mb-0">수집선 등록</h3>
+                                <a href="#n" class="ml-auto"><span class="material-icons">close</span></a>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">오브젝트</label>
+                                <input type="text" class="form-line" id="" value="수집선" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">수집선명</label>
+                                <input type="text" class="form-line" id="" value="수집선1">
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">색상</label>
+                                <div class="form-line form-blank"></div>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">길이</label>
+                                <input type="text" class="form-line" id="" value="17.94m" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">위치</label>
+                                <input type="text" class="form-line" id="" value="14672854.412916198 / 14672854.412916198" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">설명</label>
+                                <textarea name="" id="" rows="5" placeholder="내용을 입력해 주세요"></textarea>
+                            </div>
+                        </div>
+                        <div class="pub-con">
+                            <div class="pub-inner">
+                                <div class="btn-wrap">
+                                    <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">수정</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    <div class="btn-mid-holder-floor">
+                        <div class="floor-inner">
+                            <div class="swiper-container floor-item">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">B1</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor active">1F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">2F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">3F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">4F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">5F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">6F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">7F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">8F</a></div>
+
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">9F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">10F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">11F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">12F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">13F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">14F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">15F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">16F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">17F</a></div>
+
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">18F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">19F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">20F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">21F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">22F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">23F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">24F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">25F</a></div>
+                                    <div class="swiper-slide"><a href="#n" class="btn-floor">26F</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floor-button floor-button-next"><span class="material-icons">expand_more</span></div>
+                        <div class="floor-button floor-button-prev"><span class="material-icons">expand_less</span></div>
+                    </div>
+                    <!-- edit tool -->
+                    <div class="btn-top-holder map-edit-tools">
+                        <div class="bundle">
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_select_point_white.svg" alt=""></a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_select_object_white.svg" alt=""></a>
+                            </div>
+
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_poi_white.svg" alt=""></a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_line_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-center">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_line.svg" class="mr-2" alt="">수집선 생성</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_line_cut.svg" class="mr-2" alt="">수집선 자르기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_area_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-center">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area.svg" class="mr-2" alt="">공간 생성</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_edit.svg" class="mr-2" alt="">공간 편집</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_rectangle.svg" class="mr-2" alt="">공간 생성(사각형)</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_square.svg" class="mr-2" alt="">공간 생성(정사각형)</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_sensors_white.svg" alt=""></a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item"><img src="images/edit_tools/tool_geofence_white.svg"></a>
+                                <div class="position-relative d-flex">
+                                    <a href="#n" class="btn-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence.svg" class="mr-2" alt="">지오펜스 생성</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_edit.svg" class="mr-2" alt="">지오펜스 편집</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_rectangle.svg" class="mr-2" alt="">지오펜스 생성(사각형)</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_square.svg" class="mr-2" alt="">지오펜스 생성(정사각형)</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_circle.svg" class="mr-2" alt="">지오펜스 생성(원형)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bundle">
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_undo_off.svg" alt=""></a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_redo_off.svg" alt=""></a>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#n" class="btn-item btn-current"><img src="images/edit_tools/tool_save_off.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="context-wrap context-dark row" style="top: 30%; left: 42%;">
+                        <div class="context-menu type-row">
+                            <!-- 지도 클릭시 -->
+                            <div class="nav">
+                                <div class="btn-group dropend">
+                                    <a href="#n" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons icon--left" style="transform: scaleX(-1);">near_me</i> 선택</a>
+                                    <div class="dropdown-menu">
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area.svg" class="mr-2" alt="">공간 생성</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_edit.svg" class="mr-2" alt="">공간 편집</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_rectangle.svg" class="mr-2" alt="">공간 생성(사각형)</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_square.svg" class="mr-2" alt="">공간 생성(정사각형)</a>
+                                    </div>
+                                </div>
+                                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">save</i> 저장</a>
+                                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">delete</i> 삭제</a>
+                            </div>
+                        </div>
+                    </div>
+                    @@include('./include/platform-tools-map.html')
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".floor-item", {
+            // allowTouchMove: false,
+            direction: "vertical",
+            // mousewheel: true,
+            slidesPerView: 10,
+            slidesPerGroup: 10,
+            spaceBetween: 0,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".floor-button-next",
+                prevEl: ".floor-button-prev",
+            },
+        });
+    </script>
+
+@@include('./include/platform-footer.html')
+
