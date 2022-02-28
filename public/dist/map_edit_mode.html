@@ -532,6 +532,53 @@
             </div>
             <div class="pl-col-group">
                 <div class="pl-col-mid" id="main-contents">
+                    <div class="trans-box" style="right:100px;bottom:30px;">
+                        <div class="trans-body">
+                            <h5 class="mb-4">투명도 조정</h5>
+                            <div class="mb-3">
+                                <p class="text-64 mb-1">지오펜스</p>
+                                <div class="cover">
+                                    <div class="range-cover">
+                                        <input 
+                                            type="text"
+                                            data-toggle="ion-rangeslider"
+                                            data-min="0"
+                                            data-max="10"
+                                            data-from="10">
+                                    </div>
+                                    <a href="#n" class="circle-pin-sm"><span class="material-icons">visibility</span></a>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <p class="text-64 mb-1">구역</p>
+                                <div class="cover">
+                                    <div class="range-cover">
+                                        <input 
+                                            type="text"
+                                            data-toggle="ion-rangeslider"
+                                            data-min="0"
+                                            data-max="10"
+                                            data-from="10">
+                                    </div>
+                                    <a href="#n" class="circle-pin-sm"><span class="material-icons">visibility</span></a>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <p class="text-64 mb-1">평면도</p>
+                                <div class="cover">
+                                    <div class="range-cover">
+                                        <input 
+                                            type="text"
+                                            data-toggle="ion-rangeslider"
+                                            data-min="0"
+                                            data-max="10"
+                                            data-from="10">
+                                    </div>
+                                    <a href="#n" class="circle-pin-sm disabled"><span class="material-icons">visibility_off</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="btn-mid-holder-floor">
                         <div class="floor-inner">
                             <div class="swiper-container floor-item">
@@ -656,29 +703,31 @@
                         <!-- map zoom/out -->
     <div class="btn-widget-holder">
         <ul>
-            <li class="mb-3"><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="지도 회전" data-placement="left"
+            <li class="mb-3"><a href="#n" class="widget-btn active" data-toggle="tooltip" data-title="레이어" data-placement="left"
+                data-boundary="window"><img src="images/icon/map_layer_white.svg" alt=""></a></li>
+            <li class="mb-3"><a href="#n" class="widget-btn" data-toggle="tooltip" data-title="지도 회전" data-placement="left"
                 data-boundary="window"><img src="images/icon/map_rotate.svg" alt=""></a></li>
-            <li class="mb-3"><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="격자" data-placement="left"
+            <li class="mb-3"><a href="#n" class="widget-btn" data-toggle="tooltip" data-title="격자" data-placement="left"
                 data-boundary="window"><img src="images/icon/map_grid.svg" alt=""></a></li>
             <li class="mb-3">
                 <div class="btn-group-vertical">
-                    <a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="2D 보기" data-placement="left"
+                    <a href="#n" class="widget-btn" data-toggle="tooltip" data-title="2D 보기" data-placement="left"
                     data-boundary="window">2D</a>
                     <!-- <button type="button" class="btn btn-white font-size-12pt" data-toggle="tooltip" data-title="2.5D 보기" data-placement="left"
                             data-boundary="window">2.5D</button> -->
-                    <a href="#layerPopup" class="btn btn-white btn_layerpopup" data-toggle="tooltip" data-title="3D 보기" data-placement="left"
+                    <a href="#layerPopup" class="widget-btn btn_layerpopup" data-toggle="tooltip" data-title="3D 보기" data-placement="left"
                     data-boundary="window">3D</a>
                 </div>
             </li>
             <li class="mb-3">
                 <div class="btn-group-vertical">
-                    <a href="" class="btn btn-white" data-toggle="tooltip" data-title="확대" data-placement="left"
+                    <a href="" class="widget-btn" data-toggle="tooltip" data-title="확대" data-placement="left"
                     data-boundary="window"><i class="fas fa-plus"></i></a>
-                    <a href=""  class="btn btn-white" data-toggle="tooltip" data-title="축소" data-placement="left"
+                    <a href=""  class="widget-btn" data-toggle="tooltip" data-title="축소" data-placement="left"
                     data-boundary="window"><i class="fas fa-minus"></i></a>
                 </div>
             </li>
-            <li><a href="#n" class="btn btn-white" data-toggle="tooltip" data-title="현재위치" data-placement="left"
+            <li><a href="#n" class="widget-btn" data-toggle="tooltip" data-title="현재위치" data-placement="left"
                 data-boundary="window"><img src="images/icon/map_location.svg" alt=""></a></a></li>
         </ul>
     </div>
@@ -719,8 +768,8 @@
             // allowTouchMove: false,
             direction: "vertical",
             // mousewheel: true,
-            slidesPerView: 10,
-            slidesPerGroup: 10,
+            slidesPerView: 8,
+            slidesPerGroup: 8,
             spaceBetween: 0,
             pagination: {
                 el: ".swiper-pagination",

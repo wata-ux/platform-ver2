@@ -932,10 +932,7 @@ span.cp-icon{
 }
 .trans-box{
     position: absolute;
-    left: 50%;
     z-index: 2;
-    bottom: 10%;
-    transform: translateX(-50%);
     background-color: #fff;
     min-width: 240px;
     border-radius: .25rem;
@@ -943,6 +940,30 @@ span.cp-icon{
     .trans-body{
         padding: 1rem;
         border-bottom: 1px solid $border-color;
+        .cover{
+            display: flex;
+            align-items: flex-end;
+            .range-cover{
+                width: calc(100% - 1rem);
+                margin-right: .75rem;
+            }
+            a{
+                display: inline-flex;
+                position: relative;
+                bottom: -.125rem;
+                font-size: 1rem;
+                padding: .25rem;
+                margin-left: auto;
+                color: rgba(51,51,51,0.64);
+                span{
+                    font-size: inherit;
+                    color: inherit;
+                }
+                &.disabled{
+                    color: rgba(51,51,51,0.16);
+                }
+            }
+        }
     }
     .trans-footer{
         padding: 1rem;
@@ -1523,14 +1544,38 @@ ul.state-item{
         margin: 0;
         list-style-type: none;
     }
-    .btn {
+    a.widget-btn {
+        display: flex;
         width: 48px;
         height: 48px;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
         font-size: 1rem;
+        font-weight: 600;
+        color: #000;
         padding: 0;
         align-items: center;
         justify-content: center;
+        background-color: #fff;
+        border-radius: .25rem;
+        &:hover{
+            background-color: darken(#fff, 3%);
+        }
+        &.active{
+            background-color: $identity;
+        }
+    }
+    .btn-group-vertical{
+        a{
+            border-radius: 0;
+            &:first-of-type{
+                border-top-left-radius: .25rem;
+                border-top-right-radius: .25rem;
+            }
+            &:last-of-type{
+                border-bottom-left-radius: .25rem;
+                border-bottom-right-radius: .25rem;
+            }
+        }
     }
 }
 /* edit tool */
@@ -1807,7 +1852,7 @@ ul.state-item{
 /* swiper slider */
 .swiper-container {
     width: 100%;
-    max-height: 400px;
+    max-height: 384px;
 }
 .swiper-slide {
     position: relative;
