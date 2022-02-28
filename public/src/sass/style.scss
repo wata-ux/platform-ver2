@@ -1092,7 +1092,6 @@ ul.state-item{
         stroke-dashoffset: -124;  /* -99% circumference */
     }
 }
-
 /* tab menu */
 .tab-menu{
     a{
@@ -1147,7 +1146,7 @@ ul.state-item{
         max-width: 20%;
     }
 }
-
+/* history */
 .route-list{
     ul{
         list-style: none;
@@ -1346,7 +1345,6 @@ ul.state-item{
         }
     }
 }
-
 /* card */
 .plf-floor-add{
     padding: 1.25rem 1.5rem;
@@ -1932,7 +1930,26 @@ ul.state-item{
         }
     }
 }
-
+/* popover */
+[dir] .popover{
+    background-color: #5c5c5c;
+    border-color:#5c5c5c;
+}
+.popover-body{
+    color: #fff;
+    ul{
+        li{
+            margin-bottom: .25rem;
+            &:last-child{
+                margin: 0;
+            }
+        }
+    }
+}
+[dir=ltr] .bs-popover-right > .arrow:before,
+[dir=ltr] .bs-popover-right > .arrow:after{
+    border-right-color: #5c5c5c;
+}
 /***** layout *****/
 .pl-container{
     height: 100vh;
