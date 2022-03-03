@@ -1,0 +1,231 @@
+@@include('./include/platform-header.html')
+
+<div class="pl-container">
+    <div class="pl-top">
+        <div class="navbar" id="default-navbar" data-primary>
+            <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+            <!-- Brand -->
+            <a href="project_dashboard.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center"
+                data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+            </a>
+            <div class="project-select">
+                <select class="form-line">
+                    <option value="">프로젝트를 선택해 주세요</option>
+                    <option value="">프로젝트A</option>
+                    <option value="">프로젝트B</option>
+                    <option value="">프로젝트C</option>
+                </select>
+            </div>
+            <ul class="top-menu">
+                <li>
+                    <div class="btn-ico-group">
+                        <a href="event_table.html" class="btn-ico-sm">
+                            <span class="icon material-icons">table_rows</span>
+                            <span class="text"><span>Table View</span></span>
+                        </a>
+                        <a href="event_map.html" class="btn-ico-sm active">
+                            <span class="icon material-icons">map</span>
+                            <span class="text"><span>Map View</span></span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group m-0 ml-4 form-lang">
+                        <select id="" class="custom-line">
+                            <option selected="">KOR</option>
+                            <option value="1">JPN</option>
+                            <option value="2">ENG</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <div class="alert-ico-wrap">
+                        <a href="#n">
+                            <span class="alert-ico material-icons-outlined">notifications</span>
+                            <span class="alert-num">2</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
+                            data-caret="false">
+                            <span class="avatar avatar-md">
+                                <span class="avatar-title rounded-circle">SH</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                            <a class="dropdown-item" href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pl-cover">
+        <div class="pl-col-left" id="sidebar-left">
+            @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "",
+            "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": "active"})
+            <div class="side-contents" data-perfect-scrollbar>
+                <div class="container-fluid py-4">
+                    <div class="mb-3">
+                        <a href="#n" class="badge-gray">Starfield</a>
+                        <a href="#n" class="badge-gray">Hanam Starfield</a>
+                        <a href="#n" class="badge-gray">Avene(1F)</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex flex-column">
+                            <h3 class="mb-0">캠페인 관리</h3>
+                        </div>
+                        <a href="#n" class="btn-add-item text-identity ml-auto mr-n3" data-toggle="modal"
+                            data-target="#detailItem">
+                            <span class="material-icons">add</span>
+                            캠페인 등록
+                        </a>
+                    </div>
+                </div>
+                <table class="table table-high">
+                    <thead>
+                        <tr>
+                            <th class="text-center">캠페인명</th>
+                            <th class="text-center">기간</th>
+                            <th class="text-center">위치</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-identity">
+                            <td>이벤트 A</td>
+                            <td>2022.03.02~2022.03.04</td>
+                            <td class="text-center">
+                                <ul class="state-item">
+                                    <li class="arry01">진행중</li>
+                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="text-identity">
+                            <td>이벤트 B</td>
+                            <td>2022.03.02~2022.03.04</td>
+                            <td class="text-center">
+                                <ul class="state-item">
+                                    <li class="arry01">진행중</li>
+                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="text-identity">
+                            <td>이벤트 C</td>
+                            <td>2022.03.02~2022.03.04</td>
+                            <td class="text-center">
+                                <ul class="state-item">
+                                    <li class="arry01">진행중</li>
+                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="text-identity">
+                            <td>이벤트 D</td>
+                            <td>2022.03.02~2022.03.04</td>
+                            <td class="text-center">
+                                <ul class="state-item">
+                                    <li class="arry01">진행중</li>
+                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="text-40">
+                            <td>이벤트 E</td>
+                            <td>2022.03.02~2022.03.04</td>
+                            <td class="text-center">
+                                <ul class="state-item">
+                                    <li class="arry01">종료됨</li>
+                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="text-40">
+                            <td>이벤트 F</td>
+                            <td>2022.03.02~2022.03.04</td>
+                            <td class="text-center">
+                                <ul class="state-item">
+                                    <li class="arry01">종료됨</li>
+                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="text-40">
+                            <td>이벤트 G</td>
+                            <td>2022.03.02~2022.03.04</td>
+                            <td class="text-center">
+                                <ul class="state-item">
+                                    <li class="arry01">종료됨</li>
+                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="text-40">
+                            <td>이벤트 H</td>
+                            <td>2022.03.02~2022.03.04</td>
+                            <td class="text-center">
+                                <ul class="state-item">
+                                    <li class="arry01">종료됨</li>
+                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination align-items-center justify-content-center">
+                    <a class="page-link btn-prev" href="#" aria-label="Previous">
+                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                        <span>이전</span>
+                    </a>
+                    <div class="d-flex align-items-center justify-content-center px-3">
+                        <select name="" id="" class="form-line">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                        <em>1</em>
+                    </div>
+                    <a class="page-link btn-next" href="#" aria-label="Next">
+                        <span>다음</span>
+                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="pl-col-group">
+            <div class="pl-col-mid" id="main-contents">
+                <div class="btn-mid-holder-floor">
+                    <div class="floor-inner">
+                        <div class="swiper-container floor-item">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">B2</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">B1</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor active">1F</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">2F</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">3F</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">4F</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floor-button floor-button-next"><span class="material-icons">expand_more</span></div>
+                    <div class="floor-button floor-button-prev"><span class="material-icons">expand_less</span></div>
+                </div>
+                <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span
+                        class="material-icons-outlined">chevron_right</span></a>
+                @@include('./include/platform-tools-map.html')
+            </div>
+            <div class="pl-col-right" id="sidebar-right">
+                @@include('./include/platform-right-menu.html')
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./include/platform-footer.html')
