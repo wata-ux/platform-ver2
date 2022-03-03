@@ -535,10 +535,6 @@ a.circle-pin-sm{
         vertical-align: middle;
         text-align: center;
     }
-    span{
-        color: rgba(0,0,0,0.3);
-        @include transition(all, 0.2s, ease-in-out);
-    }
     &:before{
         content: '';
         position: absolute;
