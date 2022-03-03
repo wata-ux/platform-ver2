@@ -569,6 +569,7 @@
                                         <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_edit.svg" class="mr-2" alt="">지오펜스 편집</a>
                                         <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_rectangle.svg" class="mr-2" alt="">지오펜스 생성(사각형)</a>
                                         <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_square.svg" class="mr-2" alt="">지오펜스 생성(정사각형)</a>
+                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_ellipse.svg" class="mr-2" alt="">지오펜스 생성(타원형)</a>
                                         <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_geofence_circle.svg" class="mr-2" alt="">지오펜스 생성(원형)</a>
                                     </div>
                                 </div>
@@ -586,23 +587,93 @@
                             </div>
                         </div>
                     </div>
-                    <div class="context-wrap context-dark row" style="top: 30%; left: 42%;">
-                        <div class="context-menu type-row">
-                            <div class="nav">
-                                <div class="btn-group dropend">
-                                    <a href="#n" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons icon--left" style="transform: scaleX(-1);">near_me</i> 선택</a>
-                                    <div class="dropdown-menu">
-                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area.svg" class="mr-2" alt="">공간 생성</a>
-                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_edit.svg" class="mr-2" alt="">공간 편집</a>
-                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_rectangle.svg" class="mr-2" alt="">공간 생성(사각형)</a>
-                                        <a href="#n" class="dropdown-item"><img src="images/edit_tools/tool_area_square.svg" class="mr-2" alt="">공간 생성(정사각형)</a>
-                                    </div>
+                    <div class="context-wrap context-dark" style="top: 30%; left: 42%;">
+                        <div class="context-menu">
+                            <div class="btn-group dropright">
+                                <a href="#n" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/edit_tools/context_geofence.svg" alt=""> 
+                                    <span class="title">지오펜스</span>
+                                    <span class="count">222</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
                                 </div>
-                                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">save</i> 저장</a>
-                                <a href="#n" class="d-flex align-items-center"><i class="material-icons icon--left">delete</i> 삭제</a>
                             </div>
+                            <div class="btn-group dropright">
+                                <a href="#n" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/edit_tools/context_area.svg" alt=""> 
+                                    <span class="title">구역</span>
+                                    <span class="count">10</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                </div>
+                            </div>
+                            <div class="btn-group dropright">
+                                <a href="#n" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/edit_tools/context_line.svg" alt="">
+                                    <span class="title">수집선</span>
+                                    <span class="count">10</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                </div>
+                            </div>
+                            <div class="btn-group dropright">
+                                <a href="#n" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/edit_tools/context_poi.svg" alt="">
+                                    <span class="title">POI</span>
+                                    <span class="count">10</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                </div>
+                            </div>
+                            <div class="btn-group dropright">
+                                <a href="#n" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/edit_tools/context_category.svg" alt="">
+                                    <span class="title">장비</span>
+                                    <span class="count">10</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                    <a href="#n" class="dropdown-item">POI명</a>
+                                </div>
+                            </div>
+                            <a href="#n">
+                                <img src="images/edit_tools/context_category.svg" alt="">
+                                <span class="title">장비</span>
+                                <span class="count">10</span>
+                            </a>
+                            <a href="#n">
+                                <img src="images/edit_tools/context_undo.svg" alt="">
+                                <span class="title">실행 취소</span>
+                            </a>
+                            <a href="#n" class="disabled">
+                                <img src="images/edit_tools/context_redo.svg" alt="">
+                                <span class="title">다시 실행</span>
+                            </a>
+                            <a href="#n">
+                                <img src="images/edit_tools/context_trash.svg" alt="">
+                                <span class="title">삭제</span>
+                            </a>
                         </div>
                     </div>
+                    
                     @@include('./include/platform-tools-map.html')
                 </div>
             </div>

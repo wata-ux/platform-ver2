@@ -167,63 +167,56 @@
     <nav class="nav-container">
         <div class="nav-inner">
             <div class="nav__list">
-                <a href="project_building.html" class="nav__link " data-toggle="tooltip"
-                data-title="모니터링" data-placement="right" data-boundary="window">
+                <a href="project_building.html" class="nav__link ">
                     <span class="material-icons">insert_chart_outlined</span>
                     <span class="nav_name">모니터링</span>
                 </a>
-                <a href="project_dashboard.html" class="nav__link " data-toggle="tooltip"
-                data-title="프로젝트" data-placement="right" data-boundary="window">
+                <a href="project_dashboard.html" class="nav__link ">
                     <span class="material-icons">grid_view</span>
                     <span class="nav_name">프로젝트</span>
                 </a>
-                <a href="#" class="nav__link " data-toggle="tooltip"
-                data-title="건물" data-placement="right" data-boundary="window">
+                <a href="#" class="nav__link ">
                 <span class="material-icons-outlined">space_dashboard</span>
                     <span class="nav_name">건물</span>
                 </a>
-
-                <div href="#" class="nav__link active collapse-item" data-toggle="tooltip"
-                data-title="사용자" data-placement="right" data-boundary="window">
-                    <span class="material-icons-outlined">person_outline</span>
-                    <span class="nav_name">사용자</span>
-
+                <div class="nav__link active collapse-item">
+                    <div class="popover-menu">
+                        <a href="user_table.html" class="dropdown-side-toggle">
+                            <span class="material-icons-outlined">person_outline</span>
+                        </a>
+                        <div class="popover-container">
+                            <ul>
+                                <li><a href="#n">사용자</a></li>
+                                <li><a href="#n">사용자 그룹</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="user_table.html" class="dropdown-side-toggle"><span class="nav_name">사용자</span></a>
                     <span class="material-icons collapse__link">expand_more</span>
-
                     <div class="collapse__menu">
                         <a href="user_table.html" class="collapse__sublink">사용자</a>
                         <a href="user_group_table.html" class="collapse__sublink">사용자 그룹</a>
                     </div>
                 </div>
-
-
-                <a href="assets_map.html" class="nav__link " data-toggle="tooltip"
-                data-title="자산" data-placement="right" data-boundary="window">
+                <a href="assets_map.html" class="nav__link ">
                     <span class="material-icons-outlined">category</span>
                     <span class="nav_name">자산</span>
                 </a>
-
-                <div href="#" class="nav__link  collapse-item d-none" data-toggle="tooltip"
-                data-title="자산" data-placement="right" data-boundary="window">
-                    <span class="material-icons-outlined">category</span>
-                    <span class="nav_name">자산</span>
-
+                <div class="nav__link  collapse-item d-none">
+                    <a href="user_table.html" class="dropdown-side-toggle"><span class="material-icons-outlined">category</span></a>
+                    <a href="user_table.html" class="dropdown-side-toggle"><span class="nav_name">자산</span></a>
                     <span class="material-icons collapse__link">expand_more</span>
-
                     <div class="collapse__menu">
                         <a href="#" class="collapse__sublink">Data</a>
                         <a href="#" class="collapse__sublink">Group</a>
                         <a href="#" class="collapse__sublink">Members</a>
                     </div>
                 </div>
-
-                <a href="event_map.html" class="nav__link " data-toggle="tooltip"
-                data-title="이벤트" data-placement="right" data-boundary="window">
+                <a href="event_map.html" class="nav__link ">
                     <span class="material-icons-outlined">event_note</span>
                     <span class="nav_name">이벤트</span>
                 </a>
-                <a href="#" class="nav__link " data-toggle="tooltip"
-                data-title="사고" data-placement="right" data-boundary="window">
+                <a href="#" class="nav__link ">
                     <span class="material-icons-outlined">warning_amber</span>
                     <span class="nav_name">사고</span>
                 </a>
@@ -246,7 +239,7 @@
                                     <input type="text" class="form-line" placeholder="사용자명을 입력해 주세요">
                                     <a href="#n"><span class="material-icons">search</span></a>
                                 </div>
-                                <div class="btn-cell ml-auto">
+                                <div class="btn-cell ml-auto mr-n3">
                                     <a href="project_write4_new.html" class="btn-add-item text-identity" data-toggle="modal" data-target="#addUserGroup">
                                         <span class="material-icons">add</span>
                                         사용자 그룹 추가
