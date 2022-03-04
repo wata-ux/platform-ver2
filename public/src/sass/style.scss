@@ -1154,6 +1154,18 @@ ul.state-item{
         stroke-dashoffset: -124;  /* -99% circumference */
     }
 }
+.page-loader{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 9;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* tab menu */
 .tab-menu{
     a{
@@ -1822,7 +1834,6 @@ ul.state-item{
         }
     }
 }
-
 /* swiper slider */
 .swiper-container {
     width: 100%;
