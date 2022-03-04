@@ -1677,6 +1677,62 @@ ul.state-item{
         }
     }
 }
+/* info */
+.info-holder{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    .inner{
+        padding: .5rem 1rem;
+        background-color: #fff;
+        border-radius: 100px;
+        box-shadow: 0 5px 8px 3px rgba(0,0,0,0.05);
+        text-align: center;
+        overflow-y: hidden;
+        strong{
+            font-weight: 700;
+            color: $identity;
+        }
+        &.bg-accent{
+            strong{
+                color: #fff907;
+            }
+            color: #fff;
+        }
+        span{
+            position: relative;
+        }
+        span.wrong-location{
+            padding-left: 20px;
+            &:before{
+                content: '\ef78';
+                position: absolute;
+                font-family: 'Material Icons';
+                left: 0;
+                line-height: 24px;
+                font-size: 18px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .info-panel{
+        background-color: #fff;
+        padding: 1.5rem;
+        border-radius: .25rem;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        .title{
+            display: flex;
+            justify-content: center;
+        }
+        p{
+            word-break: keep-all;
+            color: rgba(51,51,51,0.64);
+        }
+    }
+}
 /* mouse click */
 .context-wrap {
     position: absolute;

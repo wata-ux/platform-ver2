@@ -41218,11 +41218,6 @@ label {
     content: ""
 }
 
-[dir] .dropdown-item.active:after,
-[dir] .dropdown-item:active:after {
-    border-radius: 1px;
-    background-color: #e83b3a
-}
 
 [dir=ltr] .dropdown-item.active:after,
 [dir=ltr] .dropdown-item:active:after {
