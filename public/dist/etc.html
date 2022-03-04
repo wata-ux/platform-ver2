@@ -111,24 +111,22 @@
 <div class="modal fade" id="suspendAccess" data-backdrop="static" tabindex="-1" aria-labelledby="suspendAccessLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="suspendAccessLabel">프로젝트삭제</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true"><i class="material-icons">clear</i></span>
-            </button>
-        </div>
-
-        <div class="modal-body">
-            <div class="py-4">
-                    <p>프로젝트를 삭제할 시 프로젝트에 포함된 건물 및 평면도 정보와 위치데이터도 모두 삭제 됩니다.</p>
-                    <p>프로젝트를 삭제하시겠습니까?</p>
+            <div class="modal-header">
+                <div class="d-flex">
+                    <h4 class="modal-title" id="sdetailItemLabel">등록 취소</h4>
+                </div>
             </div>
-        </div>
 
-        <div class="modal-footer">
-            <button type="button" class="btn btn-link" data-dismiss="modal">취소</button>
-            <button type="button" class="btn btn-accent" data-dismiss="modal">삭제</button>
-        </div>
+            <div class="modal-body">
+                <p class="m-0">
+                    화면 이동시 작성 중인 정보는 저장되지 않습니다.<br> 
+                    진행 중인 내용을 취소하고 화면을 이동하시겠습니까?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">취소</button>
+                <button type="button" class="btn btn-accent" data-dismiss="modal">삭제</button>
+            </div>
         </div>
     </div>
 </div>
