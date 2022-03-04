@@ -225,132 +225,141 @@
     </nav>
 </div>
             <div class="side-contents" data-perfect-scrollbar>
-                <div class="container-fluid py-4">
-                    <div class="mb-3">
-                        <a href="#n" class="badge-gray">Starfield</a>
-                        <a href="#n" class="badge-gray">Hanam Starfield</a>
-                        <a href="#n" class="badge-gray">Avene(1F)</a>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <div class="d-flex flex-column">
-                            <h3 class="mb-0">캠페인 관리</h3>
+                <div class="d-flex flex-column h-100">
+                    <div class="container-fluid py-4">
+                        <div class="mb-3">
+                            <a href="#n" class="badge-gray">프로젝트명</a>
+                            <a href="#n" class="badge-gray">건물명</a>
+                            <a href="#n" class="badge-gray">평면도명</a>
                         </div>
-                        <a href="#n" class="btn-add-item text-identity ml-auto mr-n3" data-toggle="modal"
-                            data-target="#detailItem">
-                            <span class="material-icons">add</span>
-                            캠페인 등록
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex flex-column">
+                                <h3 class="mb-0">사고 관리</h3>
+                            </div>
+                            <a href="#n" class="btn-add-item text-identity ml-auto mr-n3" data-toggle="modal"
+                                data-target="#detailItem">
+                                <span class="material-icons">add</span>
+                                캠페인 등록
+                            </a>
+                        </div>
+                    </div>
+                    <table class="table table-high">
+                        <thead>
+                            <tr>
+                                <th class="text-center">사고 유형</th>
+                                <th class="text-center">일시</th>
+                                <th class="text-center">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="material-icons text-identity">warning</span> 긴급 상황</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01 text-identity">진행중</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="material-icons text-identity">local_fire_department</span> 화재</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01 text-identity">진행중</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="material-icons text-identity">support</span> 구조 요청</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01 text-identity">진행중</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="material-icons text-identity">coronavirus</span> 감염병</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01 text-identity">진행중</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="text-40">
+                                <td><span class="material-icons">warning</span> 긴급 상황</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01">진행중</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="text-40">
+                                <td><span class="material-icons">local_fire_department</span> 화재</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01">진행중</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="text-40">
+                                <td><span class="material-icons">support</span> 구조 요청</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01">진행중</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="text-40">
+                                <td><span class="material-icons">coronavirus</span> 감염병</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01">진행중</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination align-items-center justify-content-center">
+                        <a class="page-link btn-prev" href="#" aria-label="Previous">
+                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                            <span>이전</span>
+                        </a>
+                        <div class="d-flex align-items-center justify-content-center px-3">
+                            <select name="" id="" class="form-line">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                            <em>1</em>
+                        </div>
+                        <a class="page-link btn-next" href="#" aria-label="Next">
+                            <span>다음</span>
+                            <span aria-hidden="true" class="material-icons">chevron_right</span>
                         </a>
                     </div>
-                </div>
-                <table class="table table-high">
-                    <thead>
-                        <tr>
-                            <th class="text-center">캠페인명</th>
-                            <th class="text-center">기간</th>
-                            <th class="text-center">위치</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="text-identity">
-                            <td>이벤트 A</td>
-                            <td>2022.03.02~2022.03.04</td>
-                            <td class="text-center">
-                                <ul class="state-item">
-                                    <li class="arry01">진행중</li>
-                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr class="text-identity">
-                            <td>이벤트 B</td>
-                            <td>2022.03.02~2022.03.04</td>
-                            <td class="text-center">
-                                <ul class="state-item">
-                                    <li class="arry01">진행중</li>
-                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr class="text-identity">
-                            <td>이벤트 C</td>
-                            <td>2022.03.02~2022.03.04</td>
-                            <td class="text-center">
-                                <ul class="state-item">
-                                    <li class="arry01">진행중</li>
-                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr class="text-identity">
-                            <td>이벤트 D</td>
-                            <td>2022.03.02~2022.03.04</td>
-                            <td class="text-center">
-                                <ul class="state-item">
-                                    <li class="arry01">진행중</li>
-                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr class="text-40">
-                            <td>이벤트 E</td>
-                            <td>2022.03.02~2022.03.04</td>
-                            <td class="text-center">
-                                <ul class="state-item">
-                                    <li class="arry01">종료됨</li>
-                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr class="text-40">
-                            <td>이벤트 F</td>
-                            <td>2022.03.02~2022.03.04</td>
-                            <td class="text-center">
-                                <ul class="state-item">
-                                    <li class="arry01">종료됨</li>
-                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr class="text-40">
-                            <td>이벤트 G</td>
-                            <td>2022.03.02~2022.03.04</td>
-                            <td class="text-center">
-                                <ul class="state-item">
-                                    <li class="arry01">종료됨</li>
-                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr class="text-40">
-                            <td>이벤트 H</td>
-                            <td>2022.03.02~2022.03.04</td>
-                            <td class="text-center">
-                                <ul class="state-item">
-                                    <li class="arry01">종료됨</li>
-                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="pagination align-items-center justify-content-center">
-                    <a class="page-link btn-prev" href="#" aria-label="Previous">
-                        <span aria-hidden="true" class="material-icons">chevron_left</span>
-                        <span>이전</span>
-                    </a>
-                    <div class="d-flex align-items-center justify-content-center px-3">
-                        <select name="" id="" class="form-line">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                        </select>
-                        <em>1</em>
+                    <div class="pub-con">
+                        <div class="pub-inner">
+                            <div class="btn-wrap">
+                                <a href="project_write2.html" class="btn btn-accent w-100">사고 등록</a>
+                            </div>
+                        </div>
                     </div>
-                    <a class="page-link btn-next" href="#" aria-label="Next">
-                        <span>다음</span>
-                        <span aria-hidden="true" class="material-icons">chevron_right</span>
-                    </a>
                 </div>
             </div>
         </div>
