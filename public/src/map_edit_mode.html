@@ -21,153 +21,254 @@
         </div>
         <div class="pl-cover">
             <div class="pl-col-left col-expand" id="sidebar-left">
-                <div class="side-contents" data-perfect-scrollbar>
-                    <div class="plf-floor-add border-bottom-0">
-                        <div class="d-flex align-items-sm-center py-3">
-                            <div class="item-sort py-0">
-                                <a href="#n" class="items active">전체</a>
-                                <a href="#n" class="items">지오펜스</a>
-                                <a href="#n" class="items">구역</a>
-                                <a href="#n" class="items">수집선</a>
-                                <a href="#n" class="items">측위장비</a>
-                                <a href="#n" class="items">POI</a>
+                <div class="side-contents">
+                    <div class="d-flex flex-column h-100">
+                        <div class="plf-floor-add border-bottom-0">
+                            <div class="d-flex align-items-sm-center py-3">
+                                <div class="item-sort py-0">
+                                    <a href="#n" class="items active">전체</a>
+                                    <a href="#n" class="items">지오펜스</a>
+                                    <a href="#n" class="items">구역</a>
+                                    <a href="#n" class="items">수집선</a>
+                                    <a href="#n" class="items">측위장비</a>
+                                    <a href="#n" class="items">POI</a>
+                                </div>
+                            </div>
+                            <div class="serch-box mb-0">
+                                <input type="text" class="form-line" placeholder="오브젝트명을 입력해 주세요">
+                                <a href="#n"><span class="material-icons">search</span></a>
+                            </div>
+                            <div class="btn-cell d-none">
+                                <a href="#n" class="btn-add-item">
+                                    <span class="material-icons">location_on</span>
+                                    POI 가져오기
+                                </a>
+                                <a href="#n" class="btn-add-item text-green">
+                                    <span class="material-icons">note_add</span>
+                                    자산 엑셀 업로드
+                                </a>
                             </div>
                         </div>
-                        <div class="serch-box mb-0">
-                            <input type="text" class="form-line" placeholder="오브젝트명을 입력해 주세요">
-                            <a href="#n"><span class="material-icons">search</span></a>
-                        </div>
-                        <div class="btn-cell d-none">
-                            <a href="#n" class="btn-add-item">
-                                <span class="material-icons">location_on</span>
-                                POI 가져오기
-                            </a>
-                            <a href="#n" class="btn-add-item text-green">
-                                <span class="material-icons">note_add</span>
-                                자산 엑셀 업로드
-                            </a>
+
+                        
+                        <div class="scroll-table">
+                            <div class="scroll-inner">
+                                <table class="table table-nowrap table-high table-line-none table-bumper">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">
+                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">분류</a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">오브젝트명</a>
+                                            </th>
+                                            <th class="text-center">옵션</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list" id="projects">
+                                        <tr>
+                                            <td><img src="images/poi/object_area.svg" alt="Area"></td>
+                                            <td>라이언사무실</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="selected">
+                                            <td><img src="images/poi/object_geofence.svg" alt="Geofence"></td>
+                                            <td>GF1FNZ1</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="text-20 circle-pin-sm"><span class="material-icons-outlined">visibility_off</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/object_line.svg" alt="선"></td>
+                                            <td>Line1</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/food_cafe.svg" alt="카페"></td>
+                                            <td>라이언커피</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/food_restaurant.svg" alt="음식점"></td>
+                                            <td>라이언떡복이</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/medical_medicine.svg" alt="의료"></td>
+                                            <td>라이언성형외과의원</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="text-20 circle-pin-sm"><span class="material-icons-outlined">visibility_off</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/srore_shop.svg" alt="상점"></td>
+                                            <td>라이언전자</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/escalator.svg" alt="에스컬레이터"></td>
+                                            <td>중앙에스컬레이터</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/sensors_assets.svg" alt="자산"></td>
+                                            <td>UWB3</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/sensors_ble.svg" alt="블루투스"></td>
+                                            <td>BLE1</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="text-20 circle-pin-sm"><span class="material-icons-outlined">visibility_off</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/sensors_wifi.svg" alt="와이파이"></td>
+                                            <td>RTT1</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/object_area.svg" alt="Area"></td>
+                                            <td>라이언사무실</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="selected">
+                                            <td><img src="images/poi/object_geofence.svg" alt="Geofence"></td>
+                                            <td>GF1FNZ1</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="text-20 circle-pin-sm"><span class="material-icons-outlined">visibility_off</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/object_line.svg" alt="선"></td>
+                                            <td>Line1</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/food_cafe.svg" alt="카페"></td>
+                                            <td>라이언커피</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/food_restaurant.svg" alt="음식점"></td>
+                                            <td>라이언떡복이</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/medical_medicine.svg" alt="의료"></td>
+                                            <td>라이언성형외과의원</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="text-20 circle-pin-sm"><span class="material-icons-outlined">visibility_off</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/srore_shop.svg" alt="상점"></td>
+                                            <td>라이언전자</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/escalator.svg" alt="에스컬레이터"></td>
+                                            <td>중앙에스컬레이터</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/sensors_assets.svg" alt="자산"></td>
+                                            <td>UWB3</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/sensors_ble.svg" alt="블루투스"></td>
+                                            <td>BLE1</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="text-20 circle-pin-sm"><span class="material-icons-outlined">visibility_off</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="images/poi/sensors_wifi.svg" alt="와이파이"></td>
+                                            <td>RTT1</td>
+                                            <td>
+                                                <div class="option-bundle">
+                                                    <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-
-                    <table class="table table-nowrap table-high table-line-none">
-                        <colgroup>
-                            <col width="15%">
-                            <col width="*">
-                            <col width="15%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th class="text-center">
-                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">분류</a>
-                                </th>
-                                <th class="text-center">
-                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">오브젝트명</a>
-                                </th>
-                                <th class="text-center">옵션</th>
-                            </tr>
-                        </thead>
-                        <tbody class="list" id="projects">
-                            <tr>
-                                <td><img src="images/poi/object_area.svg" alt="Area"></td>
-                                <td>라이언사무실</td>
-                                <td>
-                                    <div class="option-bundle">
-                                        <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="selected">
-                                <td><img src="images/poi/object_geofence.svg" alt="Geofence"></td>
-                                <td>GF1FNZ1</td>
-                                <td>
-                                    <div class="option-bundle">
-                                        <a href="#n" class="text-20 circle-pin-sm"><span class="material-icons-outlined">visibility_off</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/poi/object_line.svg" alt="선"></td>
-                                <td>Line1</td>
-                                <td>
-                                    <div class="option-bundle">
-                                        <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/poi/food_cafe.svg" alt="카페"></td>
-                                <td>라이언커피</td>
-                                <td>
-                                    <div class="option-bundle">
-                                        <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/poi/food_restaurant.svg" alt="음식점"></td>
-                                <td>라이언떡복이</td>
-                                <td>
-                                    <div class="option-bundle">
-                                        <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/poi/medical_medicine.svg" alt="의료"></td>
-                                <td>라이언성형외과의원</td>
-                                <td>
-                                    <div class="option-bundle">
-                                        <a href="#n" class="text-20 circle-pin-sm"><span class="material-icons-outlined">visibility_off</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/poi/srore_shop.svg" alt="상점"></td>
-                                <td>라이언전자</td>
-                                <td>
-                                    <div class="option-bundle">
-                                        <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/poi/escalator.svg" alt="에스컬레이터"></td>
-                                <td>중앙에스컬레이터</td>
-                                <td>
-                                    <div class="option-bundle">
-                                        <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/poi/sensors_assets.svg" alt="자산"></td>
-                                <td>UWB3</td>
-                                <td>
-                                    <div class="option-bundle">
-                                        <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/poi/sensors_ble.svg" alt="블루투스"></td>
-                                <td>BLE1</td>
-                                <td>
-                                    <div class="option-bundle">
-                                        <a href="#n" class="text-20 circle-pin-sm"><span class="material-icons-outlined">visibility_off</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/poi/sensors_wifi.svg" alt="와이파이"></td>
-                                <td>RTT1</td>
-                                <td>
-                                    <div class="option-bundle">
-                                        <a href="#n" class="circle-pin-sm"><span class="material-icons-outlined">visibility</span></a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
                 <!-- 지오펜스 등록 -->
                 <div class="side-contents sidebar-left-sub" data-perfect-scrollbar>
