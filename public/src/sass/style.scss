@@ -119,6 +119,7 @@ h6{
 .text-red{
     color: #D92A2A;
 }
+
 /***** form style *****/
 .form-line {
     display: block;
@@ -150,6 +151,26 @@ h6{
     }
     &.is-invalid{
         border-color: $identity;
+    }
+    .att-file{
+        display: flex;
+        align-items: center;
+        .file-name{
+            margin: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .bundle{
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            padding-left: .75rem;
+            a{
+                display: flex;
+                white-space: nowrap;
+            }
+        }
     }
 }
 select.form-line{
@@ -269,7 +290,6 @@ select.form-line{
         }
     }
 }
-
 .serch-box{
     display: flex;
     align-items: center;
