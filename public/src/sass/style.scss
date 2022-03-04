@@ -47,6 +47,17 @@ input::placeholder, textarea::placeholder{
     width: 100%;
     border-radius: 50rem;
 }
+[dir] .irs--flat .irs-bar,
+[dir] .irs--flat .irs-handle>i:first-child,
+[dir] .irs--flat .irs-from, [dir] .irs--flat .irs-single, [dir] .irs--flat .irs-to{
+    background-color: $identity;
+}
+[dir] .irs--flat .irs-handle.state_hover>i:first-child, [dir] .irs--flat .irs-handle:hover>i:first-child{
+    background-color: darken($identity, 10%);
+}
+[dir] .irs--flat .irs-from:before, [dir] .irs--flat .irs-single:before, [dir] .irs--flat .irs-to:before{
+    border-top-color: $identity;
+}
 
 /***** background *****/
 .bg-gray-v1 {
