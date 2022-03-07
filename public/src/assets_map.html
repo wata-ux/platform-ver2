@@ -68,199 +68,200 @@
         <div class="pl-cover">
             <div class="pl-col-left" id="sidebar-left">
                 @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "active", "activeEvent": "", "activeAccident": ""})
-                <div class="side-contents" data-perfect-scrollbar>
-                    <div class="container-fluid border-bottom-1 py-4">
-                        <div class="d-flex align-items-center">
-                            <div class="d-flex flex-column">
-                                <h3 class="mb-0">자산</h3>
+                <div class="side-contents">
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 py-4">
+                            <div class="d-flex align-items-center">
+                                <div class="d-flex flex-column">
+                                    <h3 class="mb-0">자산</h3>
+                                </div>
+                                <a href="#n" class="btn-add-item text-identity ml-auto mr-n3">
+                                    <span class="material-icons">add</span>
+                                    자산 등록
+                                </a>
                             </div>
-                            <a href="#n" class="btn-add-item text-identity ml-auto mr-n3">
-                                <span class="material-icons">add</span>
-                                자산 등록
+                        </div>
+                        <div class="plf-floor-add border-bottom-0">
+                            <div class="d-flex align-items-sm-center pb-3">
+                                <div class="item-sort py-0">
+                                    <a href="#n" class="items active">전체</a>
+                                    <a href="#n" class="items">인적자산(8)</a>
+                                    <a href="#n" class="items">고정자산(9)</a>
+                                    <a href="#n" class="items">센서(34)</a>
+                                    <a href="#n" class="items">배터리</a>
+                                </div>
+                            </div>
+                            <div class="serch-box">
+                                <input type="text" class="form-line" placeholder="자산명 또는 자산ID를 입력해 주세요">
+                                <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
+                            </div>
+                        </div>
+                        <div class="scroll-table">
+                            <div class="scroll-inner">
+                                <table class="table table-nowrap table-high table-line-none table-bumper">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">자산ID</th>
+                                            <th class="text-center">자산명</th>
+                                            <th class="text-center">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">NT0037</td>
+                                            <td>
+                                                <a href="#n" data-toggle="modal" data-target="#detailItem">
+                                                    <div class="d-inline-flex align-items-center">
+                                                        <span class="material-icons-outlined text-40">person</span> 
+                                                        <span class="ml-2">Leo</span> 
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01"><span class="state-dot level-item04"></span></li>
+                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">NT0037</td>
+                                            <td>
+                                                <a href="#n" data-toggle="modal" data-target="#detailItem02">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons-outlined text-40">person</span> 
+                                                        <span class="ml-2">Leo</span> 
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01"><span class="state-dot level-item01"></span></li>
+                                                    <li class="arry02"></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">NT0037</td>
+                                            <td>
+                                                <a href="#n" data-toggle="modal" data-target="#detailItem03">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons-outlined text-40">person</span> 
+                                                        <span class="ml-2">Leo</span> 
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01"><span class="state-dot level-item02"></span></li>
+                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">NT0037</td>
+                                            <td>
+                                                <a href="#n" data-toggle="modal" data-target="#detailItem04">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons-outlined text-40">battery_0_bar</span> 
+                                                        <span class="ml-2">Battery</span> 
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01"><span class="text-green font-size-12pt">100%</span></li>
+                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">NT0037</td>
+                                            <td>
+                                                <a href="#n" data-toggle="modal" data-target="#detailItem05">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons-outlined text-40">person</span> 
+                                                        <span class="ml-2">Leo</span> 
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01"><span class="state-dot level-item03"></span></li>
+                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">NT0037</td>
+                                            <td>
+                                                <a href="#n" data-toggle="modal" data-target="#detailItem06">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons-outlined text-40">person</span> 
+                                                        <span class="ml-2">Leo</span> 
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01"><span class="state-dot level-item01"></span></li>
+                                                    <li class="arry02"></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">NT0037</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons-outlined text-40">person</span> 
+                                                    <span class="ml-2">Leo</span> 
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01"><span class="state-dot level-item02"></span></li>
+                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">NT0037</td>
+                                            <td>
+                                                <div class="d-inline-flex align-items-center">
+                                                    <span class="material-icons-outlined text-40">person</span> 
+                                                    <span class="ml-2">Leo</span> 
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01"><span class="state-dot level-item04"></span></li>
+                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="pagination align-items-center justify-content-center">
+                            <a class="page-link btn-prev" href="#" aria-label="Previous">
+                                <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                <span>이전</span>
+                            </a>
+                            <div class="d-flex align-items-center justify-content-center px-3">
+                                <select name="" id="" class="form-line">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </select>
+                                <em>20</em>
+                            </div>
+                            <a class="page-link btn-next" href="#" aria-label="Next">
+                                <span>다음</span>
+                                <span aria-hidden="true" class="material-icons">chevron_right</span>
                             </a>
                         </div>
-                    </div>
-                    <div class="plf-floor-add border-bottom-0">
-                        <div class="d-flex align-items-sm-center pb-3">
-                            <div class="item-sort py-0">
-                                <a href="#n" class="items active">전체</a>
-                                <a href="#n" class="items">인적자산(8)</a>
-                                <a href="#n" class="items">고정자산(9)</a>
-                                <a href="#n" class="items">센서(34)</a>
-                                <a href="#n" class="items">배터리</a>
-                            </div>
-                        </div>
-                        <div class="serch-box">
-                            <input type="text" class="form-line" placeholder="자산명 또는 자산ID를 입력해 주세요">
-                            <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
-                        </div>
-                    </div>
-                    <table class="table table-nowrap table-high">
-                        <colgroup>
-                            <col width="*">
-                            <col width="*">
-                            <col width="*">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th class="text-center">자산ID</th>
-                                <th class="text-center">자산명</th>
-                                <th class="text-center">상태</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center">NT0037</td>
-                                <td>
-                                    <a href="#n" data-toggle="modal" data-target="#detailItem">
-                                        <div class="d-inline-flex align-items-center">
-                                            <span class="material-icons-outlined text-40">person</span> 
-                                            <span class="ml-2">Leo</span> 
-                                        </div>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <ul class="state-item">
-                                        <li class="arry01"><span class="state-dot level-item04"></span></li>
-                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">NT0037</td>
-                                <td>
-                                    <a href="#n" data-toggle="modal" data-target="#detailItem02">
-                                        <div class="d-flex align-items-center">
-                                            <span class="material-icons-outlined text-40">person</span> 
-                                            <span class="ml-2">Leo</span> 
-                                        </div>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <ul class="state-item">
-                                        <li class="arry01"><span class="state-dot level-item01"></span></li>
-                                        <li class="arry02"></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">NT0037</td>
-                                <td>
-                                    <a href="#n" data-toggle="modal" data-target="#detailItem03">
-                                        <div class="d-flex align-items-center">
-                                            <span class="material-icons-outlined text-40">person</span> 
-                                            <span class="ml-2">Leo</span> 
-                                        </div>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <ul class="state-item">
-                                        <li class="arry01"><span class="state-dot level-item02"></span></li>
-                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">NT0037</td>
-                                <td>
-                                    <a href="#n" data-toggle="modal" data-target="#detailItem04">
-                                        <div class="d-flex align-items-center">
-                                            <span class="material-icons-outlined text-40">battery_0_bar</span> 
-                                            <span class="ml-2">Battery</span> 
-                                        </div>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <ul class="state-item">
-                                        <li class="arry01"><span class="text-green font-size-12pt">100%</span></li>
-                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">NT0037</td>
-                                <td>
-                                    <a href="#n" data-toggle="modal" data-target="#detailItem05">
-                                        <div class="d-flex align-items-center">
-                                            <span class="material-icons-outlined text-40">person</span> 
-                                            <span class="ml-2">Leo</span> 
-                                        </div>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <ul class="state-item">
-                                        <li class="arry01"><span class="state-dot level-item03"></span></li>
-                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">NT0037</td>
-                                <td>
-                                    <a href="#n" data-toggle="modal" data-target="#detailItem06">
-                                        <div class="d-flex align-items-center">
-                                            <span class="material-icons-outlined text-40">person</span> 
-                                            <span class="ml-2">Leo</span> 
-                                        </div>
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <ul class="state-item">
-                                        <li class="arry01"><span class="state-dot level-item01"></span></li>
-                                        <li class="arry02"></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">NT0037</td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons-outlined text-40">person</span> 
-                                        <span class="ml-2">Leo</span> 
-                                    </div>
-                                </td>
-                                <td class="text-center">
-                                    <ul class="state-item">
-                                        <li class="arry01"><span class="state-dot level-item02"></span></li>
-                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">NT0037</td>
-                                <td>
-                                    <div class="d-inline-flex align-items-center">
-                                        <span class="material-icons-outlined text-40">person</span> 
-                                        <span class="ml-2">Leo</span> 
-                                    </div>
-                                </td>
-                                <td class="text-center">
-                                    <ul class="state-item">
-                                        <li class="arry01"><span class="state-dot level-item04"></span></li>
-                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="pagination align-items-center justify-content-center">
-                        <a class="page-link btn-prev" href="#" aria-label="Previous">
-                            <span aria-hidden="true" class="material-icons">chevron_left</span>
-                            <span>이전</span>
-                        </a>
-                        <div class="d-flex align-items-center justify-content-center px-3">
-                            <select name="" id="" class="form-line">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                            </select>
-                            <em>20</em>
-                        </div>
-                        <a class="page-link btn-next" href="#" aria-label="Next">
-                            <span>다음</span>
-                            <span aria-hidden="true" class="material-icons">chevron_right</span>
-                        </a>
                     </div>
                 </div>
             </div>
