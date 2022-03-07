@@ -808,7 +808,7 @@ a.btn-add-item{
         overflow: auto;
         overflow-x: hidden;
         height: 100%;
-        padding: 0 1rem;
+        padding: 0 1.5rem;
     }
     table.table-bumper{
         table-layout: fixed;
@@ -1965,7 +1965,7 @@ ul.state-item{
     }
 }
 .pagination{
-    padding: .75rem 0;
+    padding: 1rem 0;
     .page-link{
         border: none;
         font-size: .875rem;
@@ -2159,6 +2159,10 @@ ul.state-item{
         .pl-col-left{
             flex-grow: 1;
             display: flex;
+            .plf-floor-card{
+                overflow: hidden;
+                overflow-y: auto;
+            }
         }
         .pl-col-group{
             position: relative;
@@ -2174,6 +2178,7 @@ ul.state-item{
             height: 100%;
             padding: .625rem;
             overflow: hidden;
+            overflow-y: auto;
             &.dashboard-body{
                 padding: 3rem;
             }
@@ -2368,6 +2373,7 @@ ul.state-item{
     width: 400px;
     border-right: 1px solid $border-color;
     overflow: hidden;
+    overflow-y: auto;
 }
 
 /***** side GNB *****/
@@ -2720,7 +2726,7 @@ ul.state-item{
     .pub-inner{
         display: flex;
         align-items: center;
-        padding: 1.25rem;
+        padding: 1rem 1.25rem;
         border-top: 1px solid #f2f2f2;
         .pub-txt{
             display: flex;
