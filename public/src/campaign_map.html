@@ -1,0 +1,479 @@
+@@include('./include/platform-header.html')
+
+<div class="pl-container">
+    <div class="pl-top">
+        <div class="navbar" id="default-navbar" data-primary>
+            <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+            <!-- Brand -->
+            <a href="project_dashboard.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center"
+                data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+            </a>
+            <div class="project-select">
+                <select class="form-line">
+                    <option value="">프로젝트를 선택해 주세요</option>
+                    <option value="">프로젝트A</option>
+                    <option value="">프로젝트B</option>
+                    <option value="">프로젝트C</option>
+                </select>
+            </div>
+            <ul class="top-menu">
+                <li>
+                    <div class="btn-ico-group">
+                        <a href="event_table.html" class="btn-ico-sm">
+                            <span class="icon material-icons">table_rows</span>
+                            <span class="text"><span>Table View</span></span>
+                        </a>
+                        <a href="event_map.html" class="btn-ico-sm active">
+                            <span class="icon material-icons">map</span>
+                            <span class="text"><span>Map View</span></span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group m-0 ml-4 form-lang">
+                        <select id="" class="custom-line">
+                            <option selected="">KOR</option>
+                            <option value="1">JPN</option>
+                            <option value="2">ENG</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <div class="alert-ico-wrap">
+                        <a href="#n">
+                            <span class="alert-ico material-icons-outlined">notifications</span>
+                            <span class="alert-num">2</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
+                            data-caret="false">
+                            <span class="avatar avatar-md">
+                                <span class="avatar-title rounded-circle">SH</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                            <a class="dropdown-item" href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pl-cover">
+        <div class="pl-col-left" id="sidebar-left">
+            @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "",
+            "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": "active"})
+            <div class="side-contents">
+                <div class="d-flex flex-column h-100">
+                    <div class="container-fluid py-4">
+                        <div class="mb-3">
+                            <a href="#n" class="badge-gray">프로젝트명</a>
+                            <a href="#n" class="badge-gray">건물명</a>
+                            <a href="#n" class="badge-gray">평면도명</a>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex flex-column">
+                                <h3 class="mb-0">캠페인 관리</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroll-table">
+                        <div class="scroll-inner">
+                            <table class="table table-high table-bumper mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">캠페인명</th>
+                                        <th class="text-center">기간</th>
+                                        <th class="text-center">상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="#n" class="d-flex" data-toggle="modal" data-target="#campaignItem">캠페인 A</a></td>
+                                        <td>2022.03.02 ~ 2022.03.04</td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01 text-identity">진행중</li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>캠페인 A</td>
+                                        <td>2022.03.02 ~ 2022.03.04</td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01 text-identity">진행중</li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>캠페인 A</td>
+                                        <td>2022.03.02 ~ 2022.03.04</td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01 text-identity">진행중</li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>캠페인 A</td>
+                                        <td>2022.03.02 ~ 2022.03.04</td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01 text-identity">진행중</li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-40">
+                                        <td>캠페인 A</td>
+                                        <td>2022.03.02 ~ 2022.03.04</td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">종료됨</li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-40">
+                                        <td>캠페인 A</td>
+                                        <td>2022.03.02 ~ 2022.03.04</td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">종료됨</li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-40">
+                                        <td>캠페인 A</td>
+                                        <td>2022.03.02 ~ 2022.03.04</td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">종료됨</li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-40">
+                                        <td>캠페인 A</td>
+                                        <td>2022.03.02 ~ 2022.03.04</td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">종료됨</li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="pagination align-items-center justify-content-center">
+                        <a class="page-link btn-prev" href="#" aria-label="Previous">
+                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                            <span>이전</span>
+                        </a>
+                        <div class="d-flex align-items-center justify-content-center px-3">
+                            <select name="" id="" class="form-line">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                            <em>4</em>
+                        </div>
+                        <a class="page-link btn-next" href="#" aria-label="Next">
+                            <span>다음</span>
+                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                        </a>
+                    </div>
+                    <div class="pub-con">
+                        <div class="pub-inner">
+                            <div class="btn-wrap">
+                                <a href="accident_write.html" class="btn btn-accent w-100" data-toggle="modal" data-target="#campaignRegist">캠페인 등록</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pl-col-group">
+            <div class="pl-col-mid" id="main-contents">
+                <div class="btn-mid-holder-floor">
+                    <div class="floor-inner">
+                        <div class="swiper-container floor-item">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">B2</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">B1</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor active">1F</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">2F</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">3F</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">4F</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floor-button floor-button-next"><span class="material-icons">expand_more</span></div>
+                    <div class="floor-button floor-button-prev"><span class="material-icons">expand_less</span></div>
+                </div>
+                <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span
+                        class="material-icons-outlined">chevron_right</span></a>
+                @@include('./include/platform-tools-map.html')
+            </div>
+            <div class="pl-col-right" id="sidebar-right">
+                @@include('./include/platform-right-menu.html')
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="campaignRegist" data-backdrop="static" tabindex="-1" aria-labelledby="campaignRegistLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="d-flex">
+                    <h4 class="modal-title" id="campaignRegistLabel">캠페인 등록</h4>
+                </div>
+            </div>
+            <!-- 캠페인 등록 : 메세지 발송  -->
+            <div class="modal-body">
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">캠페인명</label>
+                    <input type="text" class="form-line" id="" placeholder="캠페인 R">
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential">기간</label>
+                    <div class="date-picker-cover">
+                        <input id="flatpickrSample02"
+                               type="hidden"
+                               class="form-line flatpickr-input"
+                               data-toggle="flatpickr"
+                               data-flatpickr-mode="range"
+                               value="today">
+                        <span class="picker-icon material-icons-outlined">date_range</span>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">건물</label>
+                    <select name="category" class="form-line">
+                        <option value="">건물1</option>
+                        <option value="">option1</option>
+                        <option value="">option2</option>
+                    </select>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">지오펜스 또는 구역</label>
+                    <div class="row">
+                        <div class="col-6">
+                            <select name="category" class="form-line">
+                                <option value="">구역</option>
+                                <option value="">option1</option>
+                                <option value="">option2</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <select name="category" class="form-line">
+                                <option value="">구역101</option>
+                                <option value="">option1</option>
+                                <option value="">option2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">캠페인 내용</label>
+                    <div class="d-flex px-3 py-2">
+                        <div class="custom-control custom-radio flex">
+                            <input id="campaign-type01" name="campaign-type" type="radio" class="custom-control-input" checked>
+                            <label for="event-type01" class="custom-control-label">메세지 발송</label>
+                        </div>
+                        <div class="custom-control custom-radio flex">
+                            <input id="campaign-type02" name="campaign-type" type="radio" class="custom-control-input">
+                            <label for="event-type02" class="custom-control-label">URL 발송</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">캠페인 내용</label>
+                    <textarea name="" id="" rows="5" placeholder="내용을 입력해 주세요"></textarea>
+                </div>
+                <!-- 파일 첨부 전 -->
+                <div class="form-group mb-32pt over-txt">
+                    <label class="form-label essential" for="">파일 등록</label>
+                    <input type="text" class="form-line" id="" placeholder="">
+                    <div class="btn-abs btn-file-att">
+                        <label class="btn-light btn-sm m-0 border-1" for="fileAtt">파일 선택</label>
+                        <input type="file" id="fileAtt">
+                    </div>
+                </div>
+                <!-- 파일 첨부 후 -->
+                <div class="form-group mb-32pt over-txt">
+                    <label class="form-label essential" for="">파일 등록</label>
+                    <div class="form-line">
+                        <div class="att-file">
+                            <p class="file-name">여기에 파일 이름이 표시됩니다.</p>
+                            <div class="bundle">
+                                <a href="#n"><span class="material-icons ml-2">close</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 캠페인 등록 : URL 발송  -->
+            <div class="modal-body d-none">
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">캠페인명</label>
+                    <input type="text" class="form-line" id="" placeholder="캠페인 R">
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential">기간</label>
+                    <div class="date-picker-cover">
+                        <input id="flatpickrSample02"
+                               type="hidden"
+                               class="form-line flatpickr-input"
+                               data-toggle="flatpickr"
+                               data-flatpickr-mode="range"
+                               value="today">
+                        <span class="picker-icon material-icons-outlined">date_range</span>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">건물</label>
+                    <select name="category" class="form-line">
+                        <option value="">건물1</option>
+                        <option value="">option1</option>
+                        <option value="">option2</option>
+                    </select>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">지오펜스 또는 구역</label>
+                    <div class="row">
+                        <div class="col-6">
+                            <select name="category" class="form-line">
+                                <option value="">구역</option>
+                                <option value="">option1</option>
+                                <option value="">option2</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <select name="category" class="form-line">
+                                <option value="">구역101</option>
+                                <option value="">option1</option>
+                                <option value="">option2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">캠페인 내용</label>
+                    <div class="d-flex px-3 py-2">
+                        <div class="custom-control custom-radio flex">
+                            <input id="campaign-type01" name="campaign-type" type="radio" class="custom-control-input">
+                            <label for="event-type01" class="custom-control-label">메세지 발송</label>
+                        </div>
+                        <div class="custom-control custom-radio flex">
+                            <input id="campaign-type02" name="campaign-type" type="radio" class="custom-control-input" checked>
+                            <label for="event-type02" class="custom-control-label">URL 발송</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">이벤트 URL</label>
+                    <input type="text" class="form-line is-invalid" id="" placeholder="URL을 입력해 주세요">
+                    <div class="invalid-feedback">URL이 유효하지 않습니다</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-accent" data-dismiss="modal">등록</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="campaignItem" data-backdrop="static"  tabindex="-1" aria-labelledby="campaignItemLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="d-flex">
+                    <h4 class="modal-title" id="campaignItemLabel">캠페인 상세</h4>
+                </div>
+                <a href="#n" class="btn-ico-sm">
+                    <span class="icon material-icons-outlined">open_in_browser</span>
+                    <span class="text"><span>수정</span></span>
+                </a>
+            </div>
+            <div class="modal-body">
+                <div class="mb-4">
+                    <small class="d-flex text-64 mb-2">캠페인명</small>
+                    <p class="m-0">캠페인 R</p>
+                </div>
+                <div class="mb-4">
+                    <small class="d-flex text-64 mb-2">기간</small>
+                    <p class="m-0">2022. 03. 04, 18:00 ~ 2022. 03. 06, 18:00</p>
+                </div>
+                <div class="mb-4">
+                    <small class="d-flex text-64 mb-2">위치</small>
+                    <p class="m-0">건물1</p>
+                    <p class="m-0">구역101</p>
+                </div>
+                <div class="mb-4">
+                    <small class="d-flex text-64 mb-2">메세지</small>
+                    <p>유니클로 타입 핫 딜!<br>잠시후 13:30분 부터 2시간 동안 21년도 F/W 전상품 30% 할인하여 판매 됩니다.</p>
+                </div>
+                <div class="mb-4">
+                    <small class="d-flex text-64 mb-2">파일 첨부</small>
+                    <a href="#n" class="d-flex align-items-center text-identity"><span class="material-icons-outlined mr-1">file_download</span>uniqlo_img0302.jpg</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-darken" data-dismiss="modal">캠페인 종료</button>
+                <button type="button" class="btn btn-accent" data-dismiss="modal">재발송</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<link rel="stylesheet" href="css/swiper.min.css" />
+<!-- Swiper JS -->
+<script src="js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".floor-item", {
+        // allowTouchMove: false,
+        direction: "vertical",
+        // mousewheel: true,
+        slidesPerView: 8,
+        slidesPerGroup: 8,
+        spaceBetween: 0,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".floor-button-next",
+            prevEl: ".floor-button-prev",
+        },
+    });
+</script>
+
+
+
+@@include('./include/platform-footer.html')

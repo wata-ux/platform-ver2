@@ -126,7 +126,7 @@ h6{
     width: 100%;
     font-size: 1rem;
     font-weight: 500;
-    color: #272c33;
+    color: #333;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     padding: 0 .75rem;
     background-color: #fff;
@@ -289,6 +289,25 @@ select.form-line{
             order: 1;
         }
     }
+    .date-picker-cover{
+        position: relative;
+        .picker-icon{
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(51,51,51,0.64);
+        }
+        .flatpickr-input{
+            border: 1px solid $border-color;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+            padding: 0 .75rem;
+            height: auto;
+            line-height: 3rem;
+        }
+    }
 }
 .serch-box{
     display: flex;
@@ -412,17 +431,17 @@ select.form-line{
 }
 
 /***** button *****/
-a.btn-underline {
+.btn-underline {
     text-decoration: underline;
     &:hover{
         text-decoration: none;
     }
 }
-a.btn-default{
+.btn-default{
     color: $primary-bule;
     text-decoration: underline;
 }
-a.btn-ico-sm{
+.btn-ico-sm{
     display: inline-flex;
     align-items: flex-start;
     justify-content: center;
@@ -458,7 +477,7 @@ a.btn-ico-sm{
         }
     }
 }
-a.btn-ico-identity{
+.btn-ico-identity{
     padding: .125rem .5rem;
     font-size: .75rem;
     border: 1px solid $border-color;
@@ -483,7 +502,7 @@ a.btn-ico-identity{
         }
     }
 }
-a.btn-add{
+.btn-add{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -499,7 +518,7 @@ a.btn-add{
         background-color: darken(#eee, 5%);
     }
 }
-a.btn-row-add{
+.btn-row-add{
     border: 1px dashed #dbdee0;
     display: flex;
     width: 100%;
@@ -517,16 +536,21 @@ a.btn-row-add{
         border-color: $primary;
     }
 }
-a.btn-darken{
-    background-color: #333;
-    border-color: #333;
+.btn-darken{
+    color: #fff;
+    background-color: #55585A !important;
+    border-color: #55585A !important;
+    &:hover{
+        color: #fff;
+        background-color: darken(#55585A, 5%) !important;
+    }
 }
-a.btn-light{
+.btn-light{
     color: rgba(0,0,0,0.64);
     box-shadow: none !important;
     font-weight: 500;
 }
-a.circle-pin{
+.circle-pin{
     text-align: center;
     @include transition(all, 0.2s, ease-in-out);
     i.fas, i.far{
@@ -555,7 +579,7 @@ a.circle-pin{
         }
     }
 }
-a.circle-pin-sm{
+.circle-pin-sm{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -590,7 +614,7 @@ a.circle-pin-sm{
         }
     }
 }
-a.circle-iden-icon{
+.circle-iden-icon{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -611,7 +635,7 @@ a.circle-iden-icon{
         box-shadow: 0 0 10px rgba(232, 59, 59, 0.75);
     }
 }
-a.btn-add-item{
+.btn-add-item{
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -809,6 +833,7 @@ a.btn-add-item{
         overflow-x: hidden;
         height: 100%;
         padding: 0 1.5rem;
+        border-top: 1px solid $border-color;
     }
     table.table-bumper{
         table-layout: fixed;
@@ -816,12 +841,14 @@ a.btn-add-item{
             >tr{
                 display: inline-table;
                 table-layout: fixed;
-                width: 100%;
                 position: absolute;
                 top: 0;
-                left: 0;
+                left: 50%;
+                width: 88%;
+                transform: translateX(-50%);
                 th{
                     background-color: #fff;
+                    border-bottom: none;
                 }
             }
         }
@@ -929,7 +956,7 @@ span.cp-icon{
 .modal{
     .modal-header{
         border-bottom: none;
-        padding: 1.25rem;
+        padding: 1rem;
     }
     .modal-body{
         border-top: 1px solid $border-color;
@@ -2006,6 +2033,51 @@ ul.state-item{
 [dir=ltr] .bs-popover-right > .arrow:after{
     border-right-color: #5c5c5c;
 }
+/* list col : 2column, 3column, 4column, 5column */
+.list-row{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    li{
+    }
+    &.column-2{
+        li{
+            width: 50%;
+        }
+    }
+    &.column-3{
+        li{
+            width: 33.3%;
+        }
+    }
+    &.column-4{
+        li{
+            width: 25%;
+        }
+    }
+    &.column-5{
+        li{
+            width: 20%;
+        }
+    }
+}
+
+.list-col{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    li{
+        margin-bottom: .25rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
 /***** layout *****/
 .pl-container{
     height: 100vh;
@@ -2278,10 +2350,9 @@ ul.state-item{
                                         object-fit: cover;
                                     }
                                     span{
-                                        font-size: 2rem;
-                                        padding: 22.9% 0;
+                                        font-size: 3rem;
+                                        padding: 20% 0;
                                         margin: 0;
-                                        max-height: 118px;
                                         height: 100%;
                                     }
                                 }
@@ -2474,9 +2545,8 @@ ul.state-item{
             display: block;
         }
         .collapse__sublink {
-            font-size: .875rem;
             display: block;
-            padding: .25rem 0;
+            padding: .5rem 0;
         }
     }
     &.expander {
@@ -2726,7 +2796,7 @@ ul.state-item{
     .pub-inner{
         display: flex;
         align-items: center;
-        padding: 1rem 1.25rem;
+        padding: 1rem 1.5rem;
         border-top: 1px solid #f2f2f2;
         .pub-txt{
             display: flex;
@@ -2919,4 +2989,46 @@ ul.state-item{
     }
 }
 
-
+/***** accident management *****/
+.emg-stat {
+    position: relative;
+    background: $identity;
+    padding: 1.5rem;
+    .emg-top {
+        margin-bottom: 1rem;
+        .title{
+            margin-bottom:.5rem;
+            h3{
+                color: #fff;
+                line-height: 1.5;
+                
+            }
+            span{
+                color: rgba(255,255,255,0.64);
+            }
+        }
+        a{
+            color: rgba(255,255,255,0.64);
+            line-height: 1.25;
+            span{
+                line-height: 1.25;
+            }
+        }
+    }
+    .emg-con {
+        color: #fff;
+        em.time {
+            display: block;
+            font-size: 3.125rem;
+            line-height: 1;
+            font-weight: 500;
+            font-style: normal;
+        }
+        p.desc {
+            font-size: 1.25rem;
+        }
+    }
+    &.emg-disabled{
+        background: #55585A;
+    }
+}
