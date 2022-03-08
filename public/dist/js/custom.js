@@ -86,6 +86,7 @@ jQuery(document).ready(function ($) {
 		}
 	}
 });
+// poi selectbox 
 jQuery(document).ready(function(){
 	$('.dropdown__select').on('click',function(){
 		$(this).siblings('.dropdown__options-wrap').toggleClass('active');
