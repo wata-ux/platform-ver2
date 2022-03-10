@@ -714,6 +714,7 @@ select.form-line{
             padding: 1rem .75rem;
             letter-spacing: 0;
             line-height: 1.5;
+            font-size: .875rem;
         }
     }
     tbody{
@@ -2045,6 +2046,8 @@ ul.state-item{
     display: flex;
     flex-direction: row;
     li{
+        padding: 0 .75rem;
+        text-align: center;
     }
     &.column-2{
         li{
@@ -2067,7 +2070,6 @@ ul.state-item{
         }
     }
 }
-
 .list-col{
     list-style: none;
     padding: 0;
@@ -2101,7 +2103,6 @@ ul.state-item{
         font-style: normal;
     }
 }
-
 
 /***** layout *****/
 .pl-container{
