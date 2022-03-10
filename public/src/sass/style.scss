@@ -2081,6 +2081,27 @@ ul.state-item{
         }
     }
 }
+.empty-state{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem 0;
+    .empty-icon{
+        font-size: 5rem;
+        color: #e6e6e6;
+        line-height: 1.5;
+        span{
+            font-size: 5rem;
+        }
+    }
+    em.empty-txt{
+        display: block;
+        font-size: 1.5rem;
+        color: #bdbdbd;
+        font-style: normal;
+    }
+}
+
 
 /***** layout *****/
 .pl-container{
