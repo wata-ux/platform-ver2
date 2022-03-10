@@ -1032,6 +1032,9 @@ span.cp-icon{
     min-width: 240px;
     border-radius: .25rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    &.trans-box-sm{
+        min-width: 160px;
+    }
     .trans-body{
         padding: 1rem;
         border-bottom: 1px solid $border-color;
@@ -1064,6 +1067,34 @@ span.cp-icon{
         padding: 1rem;
         display: flex;
         justify-content: flex-end;
+    }
+    .accordion{
+        .accordion__toggle{
+            padding: 1rem;
+        }
+        .accordion__menu-link{
+            padding: 0;
+        }
+    }
+    .custom-checkbox-toggle{
+        .custom-control-label{
+            text-indent: -9999px;
+        }
+    } 
+    .custom-control-label:before, .custom-control-label:after{
+        transform: none;
+    }
+    .list-check-toggle{
+        width: 100%;
+        li{
+            display: flex;
+            align-items: center;
+            padding: .5rem 1rem;
+            margin: 0;
+            strong{
+                color: #333;
+            }
+        }
     }
 }
 ul.state-item{
@@ -2433,6 +2464,14 @@ ul.state-item{
             min-width: 400px;
             background-color: #F8F9FB;
             border-left: 1px solid $border-color;
+            .cd-panel__container{
+                background-color: #fff;
+                .tab-menu{
+                    a{
+                        padding: 1.25rem 0;
+                    }
+                }
+            }
         }
         .pl-col-bottom{
             flex-grow: 1;

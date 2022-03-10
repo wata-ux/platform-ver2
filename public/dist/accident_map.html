@@ -418,12 +418,264 @@
             <div class="pl-col-right" id="sidebar-right">
                 <div class="cd-panel__container">
     <div class="cd-panel__content">
-        <div class="cd-panel__title">
-            <h3 class="mb-0">NTT팩토리 3F</h3>
-            <p class="text-50 m-0">2021-07-01 13:00:00 기준</p>
+        <div class="nav tab-menu the-num02 border-bottom-1" role="tablist">
+            <a href="#panel-tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                <span class="menu-cover"><span>라이다 센서</span></span>
+            </a>
+            <a href="#panel-tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
+                <span class="menu-cover"><span>앱 측위</span></span>
+            </a>
+        </div>
+        <div class="tab-content">
+            <div id="panel-tab01" class="tab-pane active" role="tabpanel">
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">이벤트 유형</label>
+                    <div class="d-flex px-3 py-2">
+                        <div class="custom-control custom-radio flex">
+                            <input id="event-type01" name="event-type" type="radio" class="custom-control-input"
+                                checked="" checked>
+                            <label for="event-type01" class="custom-control-label">공간</label>
+                        </div>
+                        <div class="custom-control custom-radio flex">
+                            <input id="event-type02" name="event-type" type="radio"
+                                class="custom-control-input">
+                            <label for="event-type02" class="custom-control-label">자산</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">이멘트명</label>
+                    <input type="email" class="form-line" id="" placeholder="이벤트명을 입력해 주세요">
+                </div>
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <div class="form-group m-0">
+                            <label class="form-label essential" for="">건물</label>
+                            <select name="category" class="form-line">
+                                <option value="">선택해주세요</option>
+                                <option value="">option1</option>
+                                <option value="">option2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group m-0">
+                            <label class="form-label essential" for="">평면도</label>
+                            <select name="category" class="form-line">
+                                <option value="">선택해주세요</option>
+                                <option value="">option1</option>
+                                <option value="">option2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">지오펜스 또는 구역</label>
+                    <div class="row">
+                        <div class="col-6">
+                            <select name="category" class="form-line">
+                                <option value="">선택해주세요</option>
+                                <option value="">option1</option>
+                                <option value="">option2</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <select name="category" class="form-line">
+                                <option value="">선택해주세요</option>
+                                <option value="">option1</option>
+                                <option value="">option2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">이벤트 분류</label>
+                    <div class="d-flex px-3 py-2">
+                        <div class="custom-control custom-radio flex">
+                            <input id="radioStacked3" name="event-category" type="radio"
+                                class="custom-control-input" checked="">
+                            <label for="radioStacked3" class="custom-control-label">인원수 증감</label>
+                        </div>
+                        <div class="custom-control custom-radio flex">
+                            <input id="event-category01" name="event-category" type="radio"
+                                class="custom-control-input">
+                            <label for="event-category01" class="custom-control-label">인원수 유지</label>
+                        </div>
+                        <div class="custom-control custom-radio flex">
+                            <input id="event-category02" name="event-category" type="radio"
+                                class="custom-control-input">
+                            <label for="event-category02" class="custom-control-label">통제</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">이벤트 유형</label>
+                    <div class="d-flex px-3 py-2">
+                        <div class="custom-control custom-radio flex">
+                            <input id="event-option01" name="event-option" type="radio"
+                                class="custom-control-input" checked="">
+                            <label for="event-option01" class="custom-control-label">초과</label>
+                        </div>
+                        <div class="custom-control custom-radio flex">
+                            <input id="event-option02" name="event-option" type="radio"
+                                class="custom-control-input">
+                            <label for="event-option02" class="custom-control-label">미만</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">인원수</label>
+                    <div class="d-flex align-items-center">
+                        <input type="email" class="form-line" id="" placeholder="입력해 주세요">
+                        <span class="px-2">명</span>
+                    </div>
+                </div>
+            </div>
+            <div id="panel-tab02" class="tab-pane" role="tabpanel">
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">이벤트 수신방법</label>
+                    <select name="category" class="form-line">
+                        <option value="">PUSH</option>
+                        <option value="">option1</option>
+                        <option value="">option2</option>
+                    </select>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label essential" for="">수신인</label>
+                    <div class="row">
+                        <div class="col-4">
+                            <select name="category" class="form-line">
+                                <option value="">사용자</option>
+                                <option value="">option1</option>
+                                <option value="">option2</option>
+                            </select>
+                        </div>
+                        <div class="col-8">
+                            <div class="serch-box">
+                                <input type="text" class="form-line" placeholder="검색어를 입력해 주세요">
+                                <a href="#n" class="btn-search circle-pin"><span
+                                        class="material-icons">search</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label class="form-label" for="">추가된 사용자 및 그룹</label>
+                    <small class="text-identity">8</small>
+                    <table class="table table-head-light">
+                        <colgroup>
+                            <col width="*">
+                            <col width="10%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="text-center">사용자 및 그룹명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="" data-toggle="popover" data-trigger="hover">
+                                        라이언1
+                                    </span>
+                                    <div class="popoverContainer d-none">
+                                        ryan1@watanow.com
+                                    </div>
+                                </td>
+                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="" data-toggle="popover" data-trigger="hover">
+                                        라이언2
+                                    </span>
+                                    <div class="popoverContainer d-none">
+                                        ryan2@watanow.com
+                                    </div>
+                                </td>
+                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="" data-toggle="popover" data-trigger="hover">
+                                        라이언그룹
+                                    </span>
+                                    <div class="popoverContainer d-none">
+                                        <ul class="list-unstyled m-0">
+                                            <li>라이언</li>
+                                            <li>네오</li>
+                                            <li>무지</li>
+                                            <li>제이지</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="" data-toggle="popover" data-trigger="hover">
+                                        라이언3
+                                    </span>
+                                    <div class="popoverContainer d-none">
+                                        ryan3@watanow.com
+                                    </div>
+                                </td>
+                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="" data-toggle="popover" data-trigger="hover">
+                                        라이언4
+                                    </span>
+                                    <div class="popoverContainer d-none">
+                                        ryan4@watanow.com
+                                    </div>
+                                </td>
+                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="" data-toggle="popover" data-trigger="hover">
+                                        라이언5
+                                    </span>
+                                    <div class="popoverContainer d-none">
+                                        ryan5@watanow.com
+                                    </div>
+                                </td>
+                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="" data-toggle="popover" data-trigger="hover">
+                                        라이언6
+                                    </span>
+                                    <div class="popoverContainer d-none">
+                                        ryan6@watanow.com
+                                    </div>
+                                </td>
+                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="" data-toggle="popover" data-trigger="hover">
+                                        라이언7
+                                    </span>
+                                    <div class="popoverContainer d-none">
+                                        ryan7@watanow.com
+                                    </div>
+                                </td>
+                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
+
             </div>
         </div>
     </div>
