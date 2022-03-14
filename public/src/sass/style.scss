@@ -101,6 +101,9 @@ h6{
 .text-16{
     color: rgba(51,51,51,0.16) !important;
 }
+.text-dark{
+    color: #333;
+}
 .text-identity{
     color: $identity;
     &:hover{
@@ -277,6 +280,16 @@ select.form-line{
         display: flex;
         align-items: center;
         border-color: $border-color !important;
+    }
+    .form-control-lg+.select2-container--bootstrap4 .select2-selection--multiple,
+    .form-control-lg+.select2-container--bootstrap4.select2-container--focus .select2-selection--multiple,
+    .form-control-lg+.select2-container .select2-selection--single{
+        padding: 0 .75rem;
+        border-radius: .25rem;
+    }
+    .form-control-lg+.select2-container--bootstrap4 .select2-selection--multiple, 
+    .form-control-lg+.select2-container--bootstrap4.select2-container--focus .select2-selection--multiple{
+        min-height: 50px;
     }
     label.custom-control-label{
         font-size: 1rem;
@@ -841,27 +854,35 @@ select.form-line{
         padding: 0 1.5rem;
         border-top: 1px solid $border-color;
     }
-    table.table-bumper{
-        table-layout: fixed;
-        thead{
-            >tr{
-                display: inline-table;
-                table-layout: fixed;
-                position: absolute;
-                top: 0;
-                left: 50%;
-                width: 88%;
-                transform: translateX(-50%);
-                th{
-                    border-bottom: none;
-                }
-            }
-        }
+}
+.table-cover{
+    position: relative;
+    padding-top: 52px;
+    .table-inner{
+        padding: 0 1.5rem;
+        border-top: 1px solid $border-color;
+    }
+}
+table.table-bumper{
+    table-layout: fixed;
+    thead{
         >tr{
             display: inline-table;
             table-layout: fixed;
-            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 88%;
+            transform: translateX(-50%);
+            >th{
+                border-bottom: none !important;
+            }
         }
+    }
+    >tr{
+        display: inline-table;
+        table-layout: fixed;
+        width: 100%;
     }
 }
 
@@ -2462,13 +2483,57 @@ ul.state-item{
         .pl-col-right{
             flex-grow: 1;
             min-width: 400px;
-            background-color: #F8F9FB;
+            background-color: #fff;
             border-left: 1px solid $border-color;
+            height: 100%;
             .cd-panel__container{
-                background-color: #fff;
+                height: 100%;
+                overflow: hidden;
+                overflow-y: scroll;
                 .tab-menu{
                     a{
                         padding: 1.25rem 0;
+                    }
+                }
+                .tab-content{
+                    .cover{
+                        padding: 1.5rem;
+                        border-bottom: 1px solid $border-color;
+                        a.btn-refresh{
+                            display: flex;
+                            color: $identity;
+                            margin-left: .5rem;
+                            font-size: 1.25rem;
+                            span{
+                                font-size: inherit;
+                            }
+                        }
+                    }
+                }
+                .item-sort{
+                    a{
+                        flex-wrap: nowrap;
+                    }
+                }
+                .accordion{
+                    border-bottom: 1px solid $border-color;
+                    .accordion__toggle{
+                        width: auto;
+                    }
+                    .accordion__menu-link{
+                        padding: 0 1.5rem 1.5rem 1.5rem;
+                        .tab-menu{
+                            width: 100%;
+                        }
+                        .list-col{
+                            li{
+                                padding: .75rem 1rem;
+                                border-bottom: 1px solid $border-color;
+                                &:last-child{
+                                    border-bottom: none;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -2571,6 +2636,7 @@ ul.state-item{
     border-right: 1px solid $border-color;
     overflow: hidden;
     overflow-y: auto;
+    background-color: #fff;
 }
 
 /***** side GNB *****/
@@ -3165,5 +3231,35 @@ ul.state-item{
     }
     &.emg-disabled{
         background: #55585A;
+    }
+}
+
+.resp-wrap{
+    background-color: #F8F9FB;
+    height: 100vh;
+    .side-contents{
+        border: none;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+    }
+    .resp-header{
+        display: flex;
+        align-items: center;
+        padding: 1.5rem;
+        .logo{
+            display: flex;
+            width: 80px;
+        }
+        h4{
+            margin: 0;
+        }
+    }
+}
+@media (min-width:769px){
+    .resp-wrap{
+        .side-contents{
+            width: 400px;
+        }
     }
 }

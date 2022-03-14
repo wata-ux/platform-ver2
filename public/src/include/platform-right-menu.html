@@ -10,247 +10,167 @@
         </div>
         <div class="tab-content">
             <div id="panel-tab01" class="tab-pane active" role="tabpanel">
-                <div class="form-group mb-4">
-                    <label class="form-label essential" for="">이벤트 유형</label>
-                    <div class="d-flex px-3 py-2">
-                        <div class="custom-control custom-radio flex">
-                            <input id="event-type01" name="event-type" type="radio" class="custom-control-input"
-                                checked="" checked>
-                            <label for="event-type01" class="custom-control-label">공간</label>
+                <div class="cover">
+                    <div class="d-flex align-items-center mb-3">
+                        <h4 class="m-0">실시간 현황</h4>
+                        <a href="#n" class="btn-refresh"><span class="material-icons-outlined">refresh</span></a>
+                    </div>
+                    <ul class="list-row column-2 m-0 py-3">
+                        <li class="border-right-1">
+                            <p class="mb-2 text-64">현재</p>
+                            <strong class="font-size-16pt">42</strong>
+                        </li>
+                        <li>
+                            <p class="mb-2 text-64">금일 누적</p>
+                            <strong class="font-size-16pt">242</strong>
+                        </li>
+                    </ul>
+                </div>
+                <div class="accordion js-accordion m-0" id="right-item">
+                    <div class="accordion__item open">
+                        <div class="d-flex align-items-center pl-4 py-2">
+                            <h4 class="m-0">방문 현황</h4>
+                            <div class="d-flex align-items-center ml-auto">
+                                <div class="item-sort py-0">
+                                    <a href="#n" class="items active">오늘</a>
+                                    <a href="#n" class="items">어제</a>
+                                    <a href="#n" class="items">이번주</a>
+                                </div>
+                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse" data-target="#right-item01" data-parent="#right-item">
+                                    <span class="accordion__toggle-icon material-icons text-64">keyboard_arrow_down</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="custom-control custom-radio flex">
-                            <input id="event-type02" name="event-type" type="radio"
-                                class="custom-control-input">
-                            <label for="event-type02" class="custom-control-label">자산</label>
+                        <div class="accordion__menu collapse show" id="right-item01">
+                            <div class="accordion__menu-link">
+                                <div class="d-flex align-items-center justify-content-center w-100">
+                                    <img src="images/graph01.png" alt="" style="width:100%" /> 
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group mb-4">
-                    <label class="form-label essential" for="">이멘트명</label>
-                    <input type="email" class="form-line" id="" placeholder="이벤트명을 입력해 주세요">
-                </div>
-                <div class="row mb-4">
-                    <div class="col-6">
-                        <div class="form-group m-0">
-                            <label class="form-label essential" for="">건물</label>
-                            <select name="category" class="form-line">
-                                <option value="">선택해주세요</option>
-                                <option value="">option1</option>
-                                <option value="">option2</option>
-                            </select>
+                    <div class="accordion__item">
+                        <div class="d-flex align-items-center pl-4 py-2">
+                            <h4 class="m-0">Top3</h4>
+                            <div class="d-flex align-items-center ml-auto">
+                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse" data-target="#right-item02" data-parent="#right-item">
+                                    <span class="accordion__toggle-icon material-icons text-64">keyboard_arrow_down</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="accordion__menu collapse show" id="right-item02">
+                            <div class="accordion__menu-link">
+
+                                <div class="d-flex flex-column w-100">
+                                    <div class="nav tab-menu the-num02 w-100 mb-4" role="tablist">
+                                        <a href="#panel-sub-tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
+                                            <span class="menu-cover"><span>방문 Top</span></span>
+                                        </a>
+                                        <a href="#panel-sub-tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
+                                            <span class="menu-cover"><span>체류 Top</span></span>
+                                        </a>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div id="panel-sub-tab01" class="tab-pane active" role="tabpanel">
+                                            <table class="table table-head-light table-high border-bottom-0 mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>순위</th>
+                                                        <th>지오펜스</th>
+                                                        <th>방문고객(명)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>지오펜스 1-1</td>
+                                                        <td>73</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>구역 1-1</td>
+                                                        <td>60</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>지오펜스 2-1</td>
+                                                        <td>48</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div id="panel-sub-tab02" class="tab-pane" role="tabpanel">
+                                            <table class="table table-head-light table-high border-bottom-0 mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>순위</th>
+                                                        <th>지오펜스</th>
+                                                        <th>방문고객(명)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>지오펜스 1-1</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>구역 1-1</td>
+                                                        <td>23</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>지오펜스 2-1</td>
+                                                        <td>45</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="form-group m-0">
-                            <label class="form-label essential" for="">평면도</label>
-                            <select name="category" class="form-line">
-                                <option value="">선택해주세요</option>
-                                <option value="">option1</option>
-                                <option value="">option2</option>
-                            </select>
+                    <div class="accordion__item">
+                        <div class="d-flex align-items-center pl-4 py-2">
+                            <h4 class="m-0">알림</h4>
+                            <div class="d-flex align-items-center ml-auto">
+                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse" data-target="#right-item03" data-parent="#right-item">
+                                    <span class="accordion__toggle-icon material-icons text-64">keyboard_arrow_down</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="form-group mb-4">
-                    <label class="form-label essential" for="">지오펜스 또는 구역</label>
-                    <div class="row">
-                        <div class="col-6">
-                            <select name="category" class="form-line">
-                                <option value="">선택해주세요</option>
-                                <option value="">option1</option>
-                                <option value="">option2</option>
-                            </select>
-                        </div>
-                        <div class="col-6">
-                            <select name="category" class="form-line">
-                                <option value="">선택해주세요</option>
-                                <option value="">option1</option>
-                                <option value="">option2</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group mb-4">
-                    <label class="form-label essential" for="">이벤트 분류</label>
-                    <div class="d-flex px-3 py-2">
-                        <div class="custom-control custom-radio flex">
-                            <input id="radioStacked3" name="event-category" type="radio"
-                                class="custom-control-input" checked="">
-                            <label for="radioStacked3" class="custom-control-label">인원수 증감</label>
-                        </div>
-                        <div class="custom-control custom-radio flex">
-                            <input id="event-category01" name="event-category" type="radio"
-                                class="custom-control-input">
-                            <label for="event-category01" class="custom-control-label">인원수 유지</label>
-                        </div>
-                        <div class="custom-control custom-radio flex">
-                            <input id="event-category02" name="event-category" type="radio"
-                                class="custom-control-input">
-                            <label for="event-category02" class="custom-control-label">통제</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group mb-4">
-                    <label class="form-label essential" for="">이벤트 유형</label>
-                    <div class="d-flex px-3 py-2">
-                        <div class="custom-control custom-radio flex">
-                            <input id="event-option01" name="event-option" type="radio"
-                                class="custom-control-input" checked="">
-                            <label for="event-option01" class="custom-control-label">초과</label>
-                        </div>
-                        <div class="custom-control custom-radio flex">
-                            <input id="event-option02" name="event-option" type="radio"
-                                class="custom-control-input">
-                            <label for="event-option02" class="custom-control-label">미만</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group mb-4">
-                    <label class="form-label essential" for="">인원수</label>
-                    <div class="d-flex align-items-center">
-                        <input type="email" class="form-line" id="" placeholder="입력해 주세요">
-                        <span class="px-2">명</span>
-                    </div>
-                </div>
-            </div>
-            <div id="panel-tab02" class="tab-pane" role="tabpanel">
-                <div class="form-group mb-4">
-                    <label class="form-label essential" for="">이벤트 수신방법</label>
-                    <select name="category" class="form-line">
-                        <option value="">PUSH</option>
-                        <option value="">option1</option>
-                        <option value="">option2</option>
-                    </select>
-                </div>
-                <div class="form-group mb-4">
-                    <label class="form-label essential" for="">수신인</label>
-                    <div class="row">
-                        <div class="col-4">
-                            <select name="category" class="form-line">
-                                <option value="">사용자</option>
-                                <option value="">option1</option>
-                                <option value="">option2</option>
-                            </select>
-                        </div>
-                        <div class="col-8">
-                            <div class="serch-box">
-                                <input type="text" class="form-line" placeholder="검색어를 입력해 주세요">
-                                <a href="#n" class="btn-search circle-pin"><span
-                                        class="material-icons">search</span></a>
+                        <div class="accordion__menu collapse show" id="right-item03">
+                            <div class="accordion__menu-link">
+                                <div class="d-flex flex-column w-100">
+                                    <ul class="list-col mb-0">
+                                        <li>
+                                            <p class="text-dark mb-0">개발 구역 '비인가 출입'</p>
+                                            <small>1분 전</small>
+                                        </li>
+                                        <li>
+                                            <p class="text-dark mb-0">자산명 ‘고정카트’의 연결이 유실되었습니다.</p>
+                                            <small>5분 전</small>
+                                        </li>
+                                        <li>
+                                            <p class="text-dark mb-0">자산명’배터리23’의 남은 용량이 10% 이하입니다.</p>
+                                            <small>2022.01.29 12:10</small>
+                                        </li>
+                                        <li>
+                                            <p class="text-dark mb-0">자산명’배터리23’의 남은 용량이 10% 이하입니다.</p>
+                                            <small>2022.01.29 12:10</small>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group mb-4">
-                    <label class="form-label" for="">추가된 사용자 및 그룹</label>
-                    <small class="text-identity">8</small>
-                    <table class="table table-head-light">
-                        <colgroup>
-                            <col width="*">
-                            <col width="10%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th colspan="2" class="text-center">사용자 및 그룹명</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <span class="" data-toggle="popover" data-trigger="hover">
-                                        라이언1
-                                    </span>
-                                    <div class="popoverContainer d-none">
-                                        ryan1@watanow.com
-                                    </div>
-                                </td>
-                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="" data-toggle="popover" data-trigger="hover">
-                                        라이언2
-                                    </span>
-                                    <div class="popoverContainer d-none">
-                                        ryan2@watanow.com
-                                    </div>
-                                </td>
-                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="" data-toggle="popover" data-trigger="hover">
-                                        라이언그룹
-                                    </span>
-                                    <div class="popoverContainer d-none">
-                                        <ul class="list-unstyled m-0">
-                                            <li>라이언</li>
-                                            <li>네오</li>
-                                            <li>무지</li>
-                                            <li>제이지</li>
-                                        </ul>
-                                    </div>
-                                </td>
-                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="" data-toggle="popover" data-trigger="hover">
-                                        라이언3
-                                    </span>
-                                    <div class="popoverContainer d-none">
-                                        ryan3@watanow.com
-                                    </div>
-                                </td>
-                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="" data-toggle="popover" data-trigger="hover">
-                                        라이언4
-                                    </span>
-                                    <div class="popoverContainer d-none">
-                                        ryan4@watanow.com
-                                    </div>
-                                </td>
-                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="" data-toggle="popover" data-trigger="hover">
-                                        라이언5
-                                    </span>
-                                    <div class="popoverContainer d-none">
-                                        ryan5@watanow.com
-                                    </div>
-                                </td>
-                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="" data-toggle="popover" data-trigger="hover">
-                                        라이언6
-                                    </span>
-                                    <div class="popoverContainer d-none">
-                                        ryan6@watanow.com
-                                    </div>
-                                </td>
-                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="" data-toggle="popover" data-trigger="hover">
-                                        라이언7
-                                    </span>
-                                    <div class="popoverContainer d-none">
-                                        ryan7@watanow.com
-                                    </div>
-                                </td>
-                                <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            </div>
+            <div id="panel-tab02" class="tab-pane" role="tabpanel">
+                2
             </div>
         </div>
     </div>
