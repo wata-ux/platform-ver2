@@ -67,7 +67,7 @@
         </div>
         <div class="pl-cover">
             <div class="pl-col-left" id="sidebar-left">
-                @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "active", "activeEvent": "", "activeAccident": ""})
+                @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeSensor": "active", "activeEvent": "", "activeAccident": ""})
                 <div class="side-contents">
                     <div class="d-flex flex-column h-100">
                         <div class="container-fluid border-bottom-1 py-4">
@@ -78,11 +78,11 @@
                             </div>
                             <div class="d-flex align-items-center">
                                 <div class="d-flex flex-column">
-                                    <h3 class="mb-0">자산 현황</h3>
+                                    <h3 class="mb-0">센서 현황</h3>
                                 </div>
-                                <a href="project_write4.html" class="btn-add-item text-identity ml-auto mr-n3">
+                                <a href="map_edit_mode.html" target="_blank" class="btn-add-item text-identity ml-auto mr-n3">
                                     <span class="material-icons">add</span>
-                                    자산 등록
+                                    센서 등록
                                 </a>
                             </div>
                         </div>
@@ -90,14 +90,12 @@
                             <div class="d-flex align-items-sm-center pb-3">
                                 <div class="item-sort py-0">
                                     <a href="#n" class="items active">전체</a>
-                                    <a href="#n" class="items">지오펜스(3)</a>
-                                    <a href="#n" class="items">구역(3)</a>
-                                    <a href="#n" class="items">수집선(3)</a>
-                                    <a href="#n" class="items">측위장비(3)</a>
+                                    <a href="#n" class="items">환경(3)</a>
+                                    <a href="#n" class="items">온습도(3)</a>
                                 </div>
                             </div>
                             <div class="serch-box">
-                                <input type="text" class="form-line" placeholder="오브젝트명을 입력해 주세요">
+                                <input type="text" class="form-line" placeholder="센서명을 입력해 주세요">
                                 <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
                             </div>
                         </div>
@@ -106,70 +104,19 @@
                                 <table class="table table-high table-line-none table-bumper mb-0">
                                     <thead>
                                         <tr>
-                                            <th class="text-center">자산ID</th>
-                                            <th class="text-center">자산명</th>
+                                            <th class="text-center">센서 유형</th>
+                                            <th class="text-center">센서명</th>
                                             <th class="text-center">상태</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="text-center">NT0037</td>
+                                            <td class="text-center">온습도</td>
                                             <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem">
+                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem05">
                                                     <div class="d-inline-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">person</span> 
-                                                        <span class="ml-2">Leo</span> 
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01"><span class="state-dot level-item04"></span></li>
-                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">NT0037</td>
-                                            <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem02">
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">handyman</span> 
-                                                        <span class="ml-2">지게차</span> 
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01"><span class="state-dot level-item01"></span></li>
-                                                    <li class="arry02"></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">NT0037</td>
-                                            <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem03">
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">inventory_2</span> 
-                                                        <span class="ml-2">물류</span> 
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01"><span class="state-dot level-item02"></span></li>
-                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">NT0037</td>
-                                            <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem04">
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">battery_0_bar</span> 
-                                                        <span class="ml-2">Battery</span> 
+                                                        <span class="material-icons-outlined text-40">thermostat</span> 
+                                                        <span class="ml-2">Thsensor</span> 
                                                     </div>
                                                 </a>
                                             </td>
@@ -181,24 +128,92 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-center">NT0037</td>
+                                            <td class="text-center">온습도</td>
                                             <td>
                                                 <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem05">
-                                                    <div class="d-flex align-items-center">
+                                                    <div class="d-inline-flex align-items-center">
                                                         <span class="material-icons-outlined text-40">thermostat</span> 
-                                                        <span class="ml-2">온습도</span> 
+                                                        <span class="ml-2">Thsensor</span> 
                                                     </div>
                                                 </a>
                                             </td>
                                             <td class="text-center">
                                                 <ul class="state-item">
-                                                    <li class="arry01"><span class="state-dot level-item03"></span></li>
+                                                    <li class="arry01"><span class="state-dot level-item01"></span></li>
                                                     <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
                                                 </ul>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-center">NT0037</td>
+                                            <td class="text-center">온습도</td>
+                                            <td>
+                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem05">
+                                                    <div class="d-inline-flex align-items-center">
+                                                        <span class="material-icons-outlined text-40">thermostat</span> 
+                                                        <span class="ml-2">Thsensor</span> 
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01"><span class="state-dot level-item01"></span></li>
+                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">온습도</td>
+                                            <td>
+                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem05">
+                                                    <div class="d-inline-flex align-items-center">
+                                                        <span class="material-icons-outlined text-40">thermostat</span> 
+                                                        <span class="ml-2">Thsensor</span> 
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01"><span class="state-dot level-item05"></span></li>
+                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">환경센서</td>
+                                            <td>
+                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem06">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons-outlined text-40">air</span> 
+                                                        <span class="ml-2">환경</span> 
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01"><span class="state-dot level-item04"></span></li>
+                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">환경센서</td>
+                                            <td>
+                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem06">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons-outlined text-40">air</span> 
+                                                        <span class="ml-2">환경</span> 
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01"><span class="state-dot level-item02"></span></li>
+                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">환경센서</td>
                                             <td>
                                                 <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem06">
                                                     <div class="d-flex align-items-center">
@@ -210,36 +225,23 @@
                                             <td class="text-center">
                                                 <ul class="state-item">
                                                     <li class="arry01"><span class="state-dot level-item01"></span></li>
-                                                    <li class="arry02"></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">NT0037</td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="material-icons-outlined text-40">person</span> 
-                                                    <span class="ml-2">Leo</span> 
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01"><span class="state-dot level-item02"></span></li>
                                                     <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
                                                 </ul>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-center">NT0037</td>
+                                            <td class="text-center">환경센서</td>
                                             <td>
-                                                <div class="d-inline-flex align-items-center">
-                                                    <span class="material-icons-outlined text-40">person</span> 
-                                                    <span class="ml-2">Leo</span> 
-                                                </div>
+                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem06">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons-outlined text-40">air</span> 
+                                                        <span class="ml-2">환경</span> 
+                                                    </div>
+                                                </a>
                                             </td>
                                             <td class="text-center">
                                                 <ul class="state-item">
-                                                    <li class="arry01"><span class="state-dot level-item04"></span></li>
+                                                    <li class="arry01"><span class="state-dot level-item03"></span></li>
                                                     <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
                                                 </ul>
                                             </td>
@@ -587,7 +589,7 @@
                             </div>
                             <div class="mb-4">
                                 <small class="d-flex text-64 mb-2">이벤트</small>
-                                <a href="#n"><small class="badge-basics">위치 이동</small></a>
+                                <a href="#n"><small class="badge-basics">층 이탈</small></a>
                             </div>
                         </div>
                         <div id="tab06" class="tab-pane" role="tabpanel">
@@ -819,11 +821,7 @@
                     <div class="tab-content" style="height:550px;">
                         <div id="tab09" class="tab-pane active" role="tabpanel">
                             <div class="mb-4">
-                                <small class="d-flex text-64 mb-2">자산 유형</small>
-                                <p class="m-0">Beacon(고정형)</p>
-                            </div>
-                            <div class="mb-4">
-                                <small class="d-flex text-64 mb-2">분류</small>
+                                <small class="d-flex text-64 mb-2">센서 유형</small>
                                 <p class="m-0">온습도 센서</p>
                             </div>
                             <div class="mb-4">
@@ -831,12 +829,12 @@
                                 <p class="m-0">ble2edasDd32D</p>
                             </div>
                             <div class="mb-4">
-                                <small class="d-flex text-64 mb-2">위치</small>
+                                <small class="d-flex text-64 mb-2">상태</small>
                                 <p class="m-0">
                                     Connect
-                                    <span class="text-blue ml-2">23&#176;, 23%</span>
-                                    <span class="text-green ml-2">30&#176;, 10%</span>
-                                    <span class="text-yellow ml-2">40&#176;, 5%</span>
+                                    <span class="text-blue ml-2">17~24&#176;</span>
+                                    <span class="text-green ml-2">17&#176; 미만</span>
+                                    <span class="text-red ml-2">24&#176; 초과</span>
                                 </p>
                             </div>
                             <div class="mb-4">
@@ -914,7 +912,7 @@
                 <div class="modal-header">
                     <div class="d-flex">
                         <span class="material-icons-outlined text-40 mr-2">air</span>
-                        <h4 class="modal-title" id="sdetailItemLabel06">환경</h4>
+                        <h4 class="modal-title" id="sdetailItemLabel06">Airsensor</h4>
                     </div>
                     <a href="#n" class="btn-ico-sm">
                         <span class="icon material-icons-outlined">open_in_browser</span>
@@ -924,7 +922,7 @@
                 <!-- 음식점 -->
                 <div class="nav tab-menu the-num02" role="tablist">
                     <a href="#tab11" class="active" data-toggle="tab" role="tab" aria-selected="true">
-                        <span class="menu-cover"><span>자산 정보</span></span>
+                        <span class="menu-cover"><span>센서 정보</span></span>
                     </a>
                     <a href="#tab12" class="" data-toggle="tab" role="tab" aria-selected="false">
                         <span class="menu-cover"><span>히스토리</span></span>
@@ -935,29 +933,26 @@
                     <div class="tab-content" style="height:550px;">
                         <div id="tab11" class="tab-pane active" role="tabpanel">
                             <div class="mb-4">
-                                <small class="d-flex text-64 mb-2">자산 유형</small>
-                                <p class="m-0">Beacon(고정형)</p>
-                            </div>
-                            <div class="mb-4">
-                                <small class="d-flex text-64 mb-2">분류</small>
-                                <p class="m-0">환경 센서</p>
+                                <small class="d-flex text-64 mb-2">센서 유형</small>
+                                <p class="m-0">환경센서</p>
                             </div>
                             <div class="mb-4">
                                 <small class="d-flex text-64 mb-2">식별값</small>
                                 <p class="m-0">ble2edasDd32D</p>
                             </div>
                             <div class="mb-4">
-                                <small class="d-flex text-64 mb-2">위치</small>
+                                <small class="d-flex text-64 mb-2">상태</small>
                                 <p class="m-0">
                                     Connect
-                                    <span class="text-blue ml-2">좋음</span>
-                                    <span class="text-green ml-2">보통</span>
-                                    <span class="text-red ml-2">나쁨</span>
+                                    <span class="text-blue ml-2">좋음(24)</span>
+                                    <span class="text-green ml-2">보통(35)</span>
+                                    <span class="text-yellow ml-2">나쁨(00)</span>
+                                    <span class="text-red ml-2">매우나쁨(151)</span>
                                 </p>
                             </div>
                             <div class="mb-4">
                                 <small class="d-flex text-64 mb-2">현재 위치</small>
-                                <p class="m-0">R&D Center</p>
+                                <p class="m-0">구역 01-02</p>
                             </div>
                             <div class="mb-4">
                                 <small class="d-flex text-64 mb-2">수집 시간</small>

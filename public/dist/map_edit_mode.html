@@ -117,6 +117,7 @@
                                     <a href="#n" class="items">구역</a>
                                     <a href="#n" class="items">수집선</a>
                                     <a href="#n" class="items">측위장비</a>
+                                    <a href="#n" class="items">센서</a>
                                     <a href="#n" class="items">POI</a>
                                 </div>
                             </div>
@@ -393,7 +394,7 @@
                             <div class="pub-inner">
                                 <div class="btn-wrap">
                                     <a href="project_write.html" class="btn btn-light mr-4">취소</a>
-                                    <a href="project_write3.html" class="btn btn-accent ml-0">수정</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">등록</a>
                                 </div>
                             </div>
                         </div>
@@ -415,7 +416,12 @@
                             </div>
                             <div class="form-group mb-32pt">
                                 <label class="form-label essential" for="">타입</label>
-                                <input type="text" class="form-line" id="" value="Scanner" disabled>
+                                <select name="category" class="form-line">
+                                    <option value="">UWB</option>
+                                    <option value="">BLE</option>
+                                    <option value="">RTT</option>
+                                    <option value="">LiDar</option>
+                                </select>
                             </div>
                             <div class="form-group mb-32pt">
                                 <label class="form-label essential" for="">장비명</label>
@@ -438,7 +444,7 @@
                             <div class="pub-inner">
                                 <div class="btn-wrap">
                                     <a href="project_write.html" class="btn btn-light mr-4">취소</a>
-                                    <a href="project_write3.html" class="btn btn-accent ml-0">수정</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">등록</a>
                                 </div>
                             </div>
                         </div>
@@ -491,14 +497,14 @@
                             <div class="pub-inner">
                                 <div class="btn-wrap">
                                     <a href="project_write.html" class="btn btn-light mr-4">취소</a>
-                                    <a href="project_write3.html" class="btn btn-accent ml-0">수정</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">등록</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- POI 등록 -->
-                <div class="side-contents sidebar-left-sub">
+                <div class="side-contents sidebar-left-sub d-none">
                     <div class="d-flex flex-column h-100">
                         <div class="container-fluid border-bottom-1 mb-4 py-4">
                             <div class="d-flex align-items-center">
@@ -686,7 +692,7 @@
                             <div class="pub-inner">
                                 <div class="btn-wrap">
                                     <a href="project_write.html" class="btn btn-light mr-4">취소</a>
-                                    <a href="project_write3.html" class="btn btn-accent ml-0">수정</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">등록</a>
                                 </div>
                             </div>
                         </div>
@@ -731,6 +737,114 @@
                             <div class="pub-inner">
                                 <div class="btn-wrap">
                                     <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">등록</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 환경센서 등록 -->
+                <div class="side-contents sidebar-left-sub d-none">
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 mb-4 py-4">
+                            <div class="d-flex align-items-center">
+                                <h3 class="mb-0">환경센서 등록</h3>
+                                <a href="#n" class="ml-auto"><span class="material-icons">close</span></a>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="form-group mb-32pt">
+                                <label class="form-label" for="">오브젝트</label>
+                                <input type="text" class="form-line" id="" value="환경센서" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">타입</label>
+                                <select name="category" class="form-line">
+                                    <option value="">온습도센서</option>
+                                    <option value="">환경센서</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">센서명</label>
+                                <input type="text" class="form-line" id="" placeholder="센서명을 입력해 주세요">
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label" for="">위치</label>
+                                <input type="text" class="form-line" id="" value="14672854.412916198 / 14672854.412916198" disabled>
+                            </div>
+                            <div class="form-group mb-32pt">
+                                <label class="form-label" for="">설명</label>
+                                <textarea name="" id="" rows="5" placeholder="내용을 입력해 주세요"></textarea>
+                            </div>
+                        </div>
+                        <div class="pub-con">
+                            <div class="pub-inner">
+                                <div class="btn-wrap">
+                                    <a href="project_write.html" class="btn btn-light mr-4">취소</a>
+                                    <a href="project_write3.html" class="btn btn-accent ml-0">등록</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 측위장비 상세 -->
+                <div class="side-contents sidebar-left-sub">
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 mb-4 py-4">
+                            <div class="d-flex align-items-center">
+                                <h3 class="mb-0">측위장비 상세</h3>
+                                <a href="#n" class="ml-auto"><span class="material-icons">close</span></a>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">오브젝트</small>
+                                <p class="m-0">측위장비</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">타입</small>
+                                <p class="m-0">BLE</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">장비</small>
+                                <div class="d-flex align-items-center">
+                                    <p class="m-0">측위장비명</p>
+                                    <div class="switch-group btn-group-toggle ml-2" data-toggle="buttons" role="group" >
+                                        <label class="btn btn-switch active">
+                                            <input type="radio"
+                                                    id="payment_cc"
+                                                    name="switch"
+                                                    value="cc"
+                                                    checked=""
+                                                    aria-checked="true" /> <span class="material-icons text-identity">wifi_tethering</span> 시뮬레이션
+                                        </label>
+                                        <label class="btn btn-switch ml-1">
+                                            <input type="radio"
+                                                    id="payment_pp"
+                                                    name="switch"
+                                                    value="pp"
+                                                    aria-checked="true" /> <span class="material-icons text-identity">wifi_tethering</span> 시뮬레이션
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">식별값(UUID, 고유번호)</small>
+                                <p class="m-0">UW2edasDd32D</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">위치</small>
+                                <p class="m-0">14672854.412916198 / 14672854.4129161</p>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-flex text-64 mb-2">내용</small>
+                                <p class="m-0">장비 내용</p>
+                            </div>
+                        </div>
+                        <div class="pub-con">
+                            <div class="pub-inner">
+                                <div class="btn-wrap">
+                                    <a href="project_write.html" class="btn btn-darken mr-4">삭제</a>
                                     <a href="project_write3.html" class="btn btn-accent ml-0">수정</a>
                                 </div>
                             </div>
