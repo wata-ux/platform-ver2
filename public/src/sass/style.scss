@@ -2,10 +2,10 @@
 @import "lib";
 @import "fonts";
 
-html,body{
-    height: 100%;
+[dir] body{
+    height: 100vh;
+    background-color: #F8F9FB;
 }
-
 
 .material-icons-two-tone{
     &.red{
@@ -2169,9 +2169,9 @@ ul.state-item{
     .pl-top{
         position: relative;
         z-index: 4;
+        background-color: #fff;
         .navbar{
             padding: 0 1.25rem !important;
-            min-height: inherit;
             border-bottom: 1px solid $border-color;
             justify-content: flex-start;
             .nav-toggle{
@@ -3238,12 +3238,12 @@ ul.state-item{
 
 .resp-wrap{
     background-color: #F8F9FB;
-    height: 100%;
-    .side-contents{
-        border: none;
+    .resp-contents{
+        position: relative;
         margin: 0 auto;
-        height: 100%;
         width: 100%;
+        background-color: #fff;
+
     }
     .resp-header{
         display: flex;
@@ -3265,7 +3265,7 @@ ul.state-item{
 }
 @media (min-width:769px){
     .resp-wrap{
-        .side-contents{
+        .resp-contents{
             width: 400px;
         }
     }
