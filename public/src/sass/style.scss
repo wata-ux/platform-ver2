@@ -3251,6 +3251,9 @@ ul.state-item{
         .logo{
             display: flex;
             width: 80px;
+            img{
+                width: 100%;
+            }
         }
         h4{
             margin: 0;
