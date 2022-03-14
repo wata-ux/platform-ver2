@@ -2982,6 +2982,7 @@ ul.state-item{
 /***** footer fix btn *****/
 .pub-con{
     position: sticky;
+    position: -webkit-sticky;
     bottom: 0;
     margin-top: auto;
     background-color: #fff;
@@ -3254,6 +3255,8 @@ ul.state-item{
         h4{
             margin: 0;
         }
+    }
+    .pub-con{
     }
 }
 @media (min-width:769px){
