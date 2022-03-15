@@ -193,8 +193,8 @@
                     <span class="nav_name">자산</span>
                 </a>
                 <a href="sensor_map.html" class="nav__link @@activeSensor">
-                    <span class="material-icons-outlined">sensors</span>
-                    <span class="nav_name">센서</span>
+                    <span class="material-icons-outlined">air</span>
+                    <span class="nav_name">환경센서</span>
                 </a>
                 <div class="nav__link  collapse-item d-none">
                     <a href="user_table.html" class="dropdown-side-toggle"><span class="material-icons-outlined">category</span></a>
@@ -210,7 +210,11 @@
                     <span class="material-icons-outlined">event_note</span>
                     <span class="nav_name">이벤트</span>
                 </a>
-                <a href="accident_map.html" class="nav__link active">
+                <a href="campaign_map.html" class="nav__link active">
+                    <span class="material-icons-outlined">redeem</span>
+                    <span class="nav_name">캠페인</span>
+                </a>
+                <a href="accident_map.html" class="nav__link ">
                     <span class="material-icons-outlined">warning_amber</span>
                     <span class="nav_name">사고</span>
                 </a>
@@ -234,7 +238,7 @@
                     </div>
                     <div class="scroll-table">
                         <div class="scroll-inner">
-                            <table class="table table-high table-line-none table-bumper mb-0">
+                            <table class="table table-high table-line-none table-bumper mb-3">
                                 <thead>
                                     <tr>
                                         <th class="text-center">캠페인명</th>
@@ -418,182 +422,45 @@
             <div class="pl-col-right" id="sidebar-right">
                 <div class="cd-panel__container">
     <div class="cd-panel__content">
-        <div class="nav tab-menu the-num02 border-bottom-1" role="tablist">
-            <a href="#panel-tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
-                <span class="menu-cover"><span>라이다 센서</span></span>
-            </a>
-            <a href="#panel-tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
-                <span class="menu-cover"><span>앱 측위</span></span>
-            </a>
+        <div class="container-fluid border-bottom-1 py-4">
+            <h3 class="mb-0">알림</h3>
         </div>
-        <div class="tab-content">
-            <div id="panel-tab01" class="tab-pane active" role="tabpanel">
-                <div class="cover">
-                    <div class="d-flex align-items-center mb-3">
-                        <h4 class="m-0">실시간 현황</h4>
-                        <a href="#n" class="btn-refresh"><span class="material-icons-outlined">refresh</span></a>
-                    </div>
-                    <ul class="list-row column-2 m-0 py-3">
-                        <li class="border-right-1">
-                            <p class="mb-2 text-64">현재</p>
-                            <strong class="font-size-16pt">42</strong>
-                        </li>
-                        <li>
-                            <p class="mb-2 text-64">금일 누적</p>
-                            <strong class="font-size-16pt">242</strong>
-                        </li>
-                    </ul>
+        <div class="container-fluid py-4">
+            <div class="d-flex flex-column w-100">
+                <ul class="list-col mb-0">
+                    <li>
+                        <h5 class="mb-1">인원수 초과</h5>
+                        <p class="text-dark mb-0">S 구역 인원수가 30명을 초과하였습니다.</p>
+                        <small class="text-64">1분 전</small>
+                    </li>
+                    <li>
+                        <h5 class="mb-1">센서 알림</h5>
+                        <p class="text-dark mb-0">N 구역에 환경 센서가 “나쁨”으로 5분이상 탐지 중입니다.</p>
+                        <small class="text-64">5분 전</small>
+                    </li>
+                    <li>
+                        <h5 class="mb-1">배터리 잔여량</h5>
+                        <p class="text-dark mb-0">00 기기의 배터리 잔여량이 25%미만 입니다.</p>
+                        <small class="text-64">2022.01.29 12:10</small>
+                    </li>
+                    <li>
+                        <h5 class="mb-1">배터리 잔여량</h5>
+                        <p class="text-dark mb-0">00 기기의 배터리 잔여량이 25%미만 입니다.</p>
+                        <small class="text-64">2022.01.29 12:10</small>
+                    </li>
+                    <li>
+                        <h5 class="mb-1">배터리 잔여량</h5>
+                        <p class="text-dark mb-0">00 기기의 배터리 잔여량이 25%미만 입니다.</p>
+                        <small class="text-64">2022.01.29 12:10</small>
+                    </li>
+                </ul>
+                <div class="py-3">
+                    <a href="#n" class="btn btn-accent w-100 py-12pt">더보기</a>
                 </div>
-                <div class="accordion js-accordion m-0" id="right-item">
-                    <div class="accordion__item open">
-                        <div class="d-flex align-items-center pl-4 py-2">
-                            <h4 class="m-0">방문 현황</h4>
-                            <div class="d-flex align-items-center ml-auto">
-                                <div class="item-sort py-0">
-                                    <a href="#n" class="items active">오늘</a>
-                                    <a href="#n" class="items">어제</a>
-                                    <a href="#n" class="items">이번주</a>
-                                </div>
-                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse" data-target="#right-item01" data-parent="#right-item">
-                                    <span class="accordion__toggle-icon material-icons text-64">keyboard_arrow_down</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="accordion__menu collapse show" id="right-item01">
-                            <div class="accordion__menu-link">
-                                <div class="d-flex align-items-center justify-content-center w-100">
-                                    <img src="images/graph01.png" alt="" style="width:100%" /> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <div class="d-flex align-items-center pl-4 py-2">
-                            <h4 class="m-0">Top3</h4>
-                            <div class="d-flex align-items-center ml-auto">
-                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse" data-target="#right-item02" data-parent="#right-item">
-                                    <span class="accordion__toggle-icon material-icons text-64">keyboard_arrow_down</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="accordion__menu collapse show" id="right-item02">
-                            <div class="accordion__menu-link">
-
-                                <div class="d-flex flex-column w-100">
-                                    <div class="nav tab-menu the-num02 w-100 mb-4" role="tablist">
-                                        <a href="#panel-sub-tab01" class="active" data-toggle="tab" role="tab" aria-selected="true">
-                                            <span class="menu-cover"><span>방문 Top</span></span>
-                                        </a>
-                                        <a href="#panel-sub-tab02" class="" data-toggle="tab" role="tab" aria-selected="false">
-                                            <span class="menu-cover"><span>체류 Top</span></span>
-                                        </a>
-                                    </div>
-                                    <div class="tab-content">
-                                        <div id="panel-sub-tab01" class="tab-pane active" role="tabpanel">
-                                            <table class="table table-head-light table-high border-bottom-0 mb-0">
-                                                <thead>
-                                                    <tr>
-                                                        <th>순위</th>
-                                                        <th>지오펜스</th>
-                                                        <th>방문고객(명)</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>지오펜스 1-1</td>
-                                                        <td>73</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>구역 1-1</td>
-                                                        <td>60</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>지오펜스 2-1</td>
-                                                        <td>48</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div id="panel-sub-tab02" class="tab-pane" role="tabpanel">
-                                            <table class="table table-head-light table-high border-bottom-0 mb-0">
-                                                <thead>
-                                                    <tr>
-                                                        <th>순위</th>
-                                                        <th>지오펜스</th>
-                                                        <th>방문고객(명)</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>지오펜스 1-1</td>
-                                                        <td>12</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>구역 1-1</td>
-                                                        <td>23</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>지오펜스 2-1</td>
-                                                        <td>45</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <div class="d-flex align-items-center pl-4 py-2">
-                            <h4 class="m-0">알림</h4>
-                            <div class="d-flex align-items-center ml-auto">
-                                <a href="#" class="accordion__toggle collapsed" data-toggle="collapse" data-target="#right-item03" data-parent="#right-item">
-                                    <span class="accordion__toggle-icon material-icons text-64">keyboard_arrow_down</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="accordion__menu collapse show" id="right-item03">
-                            <div class="accordion__menu-link">
-                                <div class="d-flex flex-column w-100">
-                                    <ul class="list-col mb-0">
-                                        <li>
-                                            <p class="text-dark mb-0">개발 구역 '비인가 출입'</p>
-                                            <small>1분 전</small>
-                                        </li>
-                                        <li>
-                                            <p class="text-dark mb-0">자산명 ‘고정카트’의 연결이 유실되었습니다.</p>
-                                            <small>5분 전</small>
-                                        </li>
-                                        <li>
-                                            <p class="text-dark mb-0">자산명’배터리23’의 남은 용량이 10% 이하입니다.</p>
-                                            <small>2022.01.29 12:10</small>
-                                        </li>
-                                        <li>
-                                            <p class="text-dark mb-0">자산명’배터리23’의 남은 용량이 10% 이하입니다.</p>
-                                            <small>2022.01.29 12:10</small>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="panel-tab02" class="tab-pane" role="tabpanel">
-                2
             </div>
         </div>
     </div>
 </div>
-
 
 
             </div>
@@ -626,7 +493,6 @@
                                data-toggle="flatpickr"
                                data-flatpickr-mode="range"
                                value="today">
-                        <span class="picker-icon material-icons-outlined">date_range</span>
                     </div>
                 </div>
                 <div class="form-group mb-4">

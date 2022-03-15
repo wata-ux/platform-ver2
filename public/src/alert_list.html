@@ -1,0 +1,200 @@
+@@include('./include/platform-header.html')
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="project_dashboard.html" class="sidebar-brand p-0 d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <div class="project-select">
+                    <select class="form-line">
+                        <option value="">프로젝트를 선택해 주세요</option>
+                        <option value="">프로젝트A</option>
+                        <option value="">프로젝트B</option>
+                        <option value="">프로젝트C</option>
+                    </select>
+                </div>
+                <ul class="top-menu">
+                    <li>
+                        <div class="btn-ico-group">
+                            <a href="user_table.html" class="btn-ico-sm active">
+                                <span class="icon material-icons">table_rows</span>
+                                <span class="text"><span>Table View</span></span>
+                            </a>
+                            <a href="user_map.html" class="btn-ico-sm">
+                                <span class="icon material-icons">map</span>
+                                <span class="text"><span>Map View</span></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="" class="form-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="alert_list.html">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                @@include('./include/platform-side-menu.html')
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    <div class="contents-section">
+                        <div class="cell">
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <div class="flex">
+                                    <h3 class="d-flex align-items-center mb-0">알림</h3>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="form-group mb-0 w-50">
+                                    <div class="date-picker-cover">
+                                        <input id="flatpickrSample02"
+                                               type="hidden"
+                                               class="form-line flatpickr-input"
+                                               data-toggle="flatpickr"
+                                               data-flatpickr-mode="range"
+                                               value="today">
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table mb-4 table-center table-higher table-head-light">
+                                <thead>
+                                    <tr>
+                                        <th>알림명</th>
+                                        <th>알림 내용</th>
+                                        <th>일시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="6">
+                                            <div class="text-center py-4">
+                                                <span class="material-icons-outlined text-50 font-size-32pt">info</span>
+                                                <p class="m-0 text-50">아직 알림 내역이 없습니다.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>접근 금지 구역 A</td>
+                                        <td>지오펜스-A에 미인가 접근이 감지되었습니다.</td>
+                                        <td>2021.01.01, 17:30:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>접근 금지 구역 A</td>
+                                        <td>지오펜스-A에 미인가 접근이 감지되었습니다.</td>
+                                        <td>2021.01.01, 17:30:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>접근 금지 구역 A</td>
+                                        <td>지오펜스-A에 미인가 접근이 감지되었습니다.</td>
+                                        <td>2021.01.01, 17:30:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>접근 금지 구역 A</td>
+                                        <td>지오펜스-A에 미인가 접근이 감지되었습니다.</td>
+                                        <td>2021.01.01, 17:30:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>접근 금지 구역 A</td>
+                                        <td>지오펜스-A에 미인가 접근이 감지되었습니다.</td>
+                                        <td>2021.01.01, 17:30:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>접근 금지 구역 A</td>
+                                        <td>지오펜스-A에 미인가 접근이 감지되었습니다.</td>
+                                        <td>2021.01.01, 17:30:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>접근 금지 구역 A</td>
+                                        <td>지오펜스-A에 미인가 접근이 감지되었습니다.</td>
+                                        <td>2021.01.01, 17:30:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>접근 금지 구역 A</td>
+                                        <td>지오펜스-A에 미인가 접근이 감지되었습니다.</td>
+                                        <td>2021.01.01, 17:30:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>접근 금지 구역 A</td>
+                                        <td>지오펜스-A에 미인가 접근이 감지되었습니다.</td>
+                                        <td>2021.01.01, 17:30:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>접근 금지 구역 A</td>
+                                        <td>지오펜스-A에 미인가 접근이 감지되었습니다.</td>
+                                        <td>2021.01.01, 17:30:25</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pagination-group">
+                                <div class="pagination align-items-center justify-content-center flex">
+                                    <a class="page-link btn-prev" href="#" aria-label="Previous">
+                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                        <span>이전</span>
+                                    </a>
+                                    <div class="d-flex align-items-center justify-content-center px-3">
+                                        <select name="" id="" class="form-line">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                        </select>
+                                        <em>1</em>
+                                    </div>
+                                    <a class="page-link btn-next" href="#" aria-label="Next">
+                                        <span>다음</span>
+                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                    </a>
+                                </div>
+                                <div class="d-flex view-page">
+                                    <select name="" id="" class="form-line">
+                                        <option value="">10개씩 보기</option>
+                                        <option value="">20개씩 보기</option>
+                                        <option value="">30개씩 보기</option>
+                                        <option value="">40개씩 보기</option>
+                                        <option value="">50개씩 보기</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@@include('./include/platform-footer.html')

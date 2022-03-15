@@ -68,7 +68,7 @@
     <div class="pl-cover">
         <div class="pl-col-left" id="sidebar-left">
             @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "",
-            "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": "active"})
+            "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeCampaign": "active", "activeAccident": ""})
             <div class="side-contents">
                 <div class="d-flex flex-column h-100">
                     <div class="container-fluid border-bottom-1 py-4">
@@ -85,7 +85,7 @@
                     </div>
                     <div class="scroll-table">
                         <div class="scroll-inner">
-                            <table class="table table-high table-line-none table-bumper mb-0">
+                            <table class="table table-high table-line-none table-bumper mb-3">
                                 <thead>
                                     <tr>
                                         <th class="text-center">캠페인명</th>
@@ -230,7 +230,7 @@
                 @@include('./include/platform-tools-map.html')
             </div>
             <div class="pl-col-right" id="sidebar-right">
-                @@include('./include/platform-right-menu.html')
+                @@include('./include/platform-right-alert.html')
             </div>
         </div>
     </div>
@@ -261,7 +261,6 @@
                                data-toggle="flatpickr"
                                data-flatpickr-mode="range"
                                value="today">
-                        <span class="picker-icon material-icons-outlined">date_range</span>
                     </div>
                 </div>
                 <div class="form-group mb-4">

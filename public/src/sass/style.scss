@@ -318,9 +318,11 @@ select.form-line{
             font-size: 1rem;
             font-weight: 500;
             color: #333;
-            padding: 0 .75rem;
+            padding: 0 3rem 0 .75rem;
             height: auto;
             line-height: 3rem;
+            background: url(../images/icon/date_range_dark.svg) no-repeat;
+            background-position: right 10px center;
         }
     }
 }
@@ -864,7 +866,7 @@ select.form-line{
 }
 .scroll-table{
     position: sticky;
-    padding-top: 52px;
+    padding-top: 54px;
     overflow: hidden;
     .scroll-inner{
         overflow: auto;
@@ -2072,7 +2074,6 @@ ul.state-item{
     }
 }
 .pagination{
-    padding: 1rem 0;
     .page-link{
         border: none;
         font-size: .875rem;
@@ -2512,7 +2513,7 @@ ul.state-item{
             .cd-panel__container{
                 height: 100%;
                 overflow: hidden;
-                overflow-y: scroll;
+                overflow-y: auto;
                 .tab-menu{
                     a{
                         padding: 1.25rem 0;
@@ -2548,14 +2549,14 @@ ul.state-item{
                         .tab-menu{
                             width: 100%;
                         }
-                        .list-col{
-                            li{
-                                padding: .75rem 1rem;
-                                border-bottom: 1px solid $border-color;
-                                &:last-child{
-                                    border-bottom: none;
-                                }
-                            }
+                    }
+                }
+                .list-col{
+                    li{
+                        padding: .75rem;
+                        border-bottom: 1px solid $border-color;
+                        &:last-child{
+                            border-bottom: none;
                         }
                     }
                 }
