@@ -454,6 +454,13 @@ select.form-line{
 }
 
 /***** button *****/
+.btn.btn-accent{
+    &.disabled{
+        background-color: #fff;
+        color: rgba(51,51,51,0.16);
+        border-color: #f6f6f6;
+    }
+}
 .btn-underline {
     text-decoration: underline;
     &:hover{
@@ -721,6 +728,15 @@ select.form-line{
         }
     }
 }
+.btn-sm-more{
+    display: inline-flex;
+    border: 1px solid #EAECEF;
+    border-radius: .25rem;
+    color: rgba(51,51,51,0.64);
+    background-color: #F7F8FC;
+    font-size: .75rem;
+    padding: .125rem .25rem;
+}
 .switch-group{
     .btn-switch{
         font-weight: normal;
@@ -964,10 +980,17 @@ table.table-bumper{
     background-color: #fff;
     padding: .125rem .25rem;
     margin-bottom: .25rem;
+    font-size: .75rem;
     &.active{
         border-color: $identity;
         color: $identity;
     }
+}
+.badge-text-accent{
+    border: 1px solid $border-color;
+    color: $identity;
+    border-radius: 50rem;
+    padding: 0 .25rem;
 }
 
 /***** icon *****/
@@ -1169,6 +1192,9 @@ ul.state-item{
         background-color: #0F84E8;
         border: 2px solid #0566bb;
     }
+}
+.cursor-default{
+    cursor: default;
 }
 .preloader-container {
     display: flex;
@@ -1670,6 +1696,7 @@ ul.state-item{
                 margin: 0;
             }
             p{
+                color: rgba(51,51,51,0.64);
             }
         }
         &:hover{
@@ -1682,7 +1709,7 @@ ul.state-item{
         .plf-area-top{
             display: flex;
             align-items: center;
-            margin-bottom: .5rem;
+            margin-bottom: .875rem;
             span.material-icons, span.material-icons-outlined{
                 color: rgba(51,51,51,0.16);
                 font-size: 1.125rem;
@@ -2406,7 +2433,7 @@ ul.state-item{
         .pl-col-left{
             flex-grow: 1;
             display: flex;
-            .plf-floor-card{
+            .plf-floor-card.scroll-list{
                 overflow: hidden;
                 overflow-y: auto;
                 height: 100%;
@@ -3338,6 +3365,15 @@ ul.state-item{
     &.emg-disabled{
         background: #55585A;
     }
+}
+.history-box{
+    border: 1px solid $border-color;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+    border-radius: .25rem;
 }
 
 .resp-wrap{

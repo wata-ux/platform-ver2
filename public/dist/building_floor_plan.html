@@ -96,11 +96,10 @@
                     data-title="대시보드로 이동" data-placement="right" data-boundary="window">
                     <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
                 </a>
-                <h4 class="project-title">프로젝트명을 입력해 주세요</h4>
                 <ul class="top-menu">
                     <li>
                         <div class="form-group m-0 ml-4 form-lang">
-                            <select id="custom-select" class="form-line">
+                            <select id="custom-select" class="custom-line">
                                 <option selected="">KOR</option>
                                 <option value="1">JPN</option>
                                 <option value="2">ENG</option>
@@ -138,7 +137,7 @@
     <nav class="nav-container">
         <div class="nav-inner">
             <div class="nav__list">
-                <a href="project_building.html" class="nav__link active">
+                <a href="project_building.html" class="nav__link ">
                     <span class="material-icons">insert_chart_outlined</span>
                     <span class="nav_name">모니터링</span>
                 </a>
@@ -146,7 +145,7 @@
                     <span class="material-icons">grid_view</span>
                     <span class="nav_name">프로젝트</span>
                 </a>
-                <a href="building_dashboard.html" class="nav__link ">
+                <a href="building_dashboard.html" class="nav__link active">
                 <span class="material-icons-outlined">space_dashboard</span>
                     <span class="nav_name">건물</span>
                 </a>
@@ -205,33 +204,33 @@
 </div>
                 <div class="side-contents">
                     <div class="d-flex flex-column h-100 bg-light">
-                        <div class="row-tab">
-                            <ul class="list-unstyled custom-scroll">
-                                <li><a href="project_write.html">프로젝트 정보</a></li>
-                                <li class="active"><a href="project_write2.html">건물 등록</a></li>
-                                <li><a href="project_write3.html">평면도 등록</a></li>
-                                <li><a href="project_write4.html">자산 등록</a></li>
-                            </ul>
-                        </div>
-                        <div class="plf-floor-add">
-                            <div class="btn-cell">
-                                <a href="project_write2_add.html" class="btn-add-item">
-                                    <span class="material-icons">import_export</span>
-                                    건물 가져오기
-                                </a>
-                                <a href="project_write2_new.html" class="btn-add-item text-identity">
+                        <div class="container-fluid border-bottom-1 py-4">
+                            <div class="d-flex align-items-center">
+                                <h3 class="mb-0">건물 관리</h3>
+                                <a href="building_write.html" class="btn-add-item text-identity ml-auto p-0">
                                     <span class="material-icons">add</span>
                                     건물 등록
                                 </a>
                             </div>
                         </div>
-                        <div class="plf-floor-card scroll-list p-4 position-relative">
+                        <div class="container-fluid border-bottom-1 bg-white">
+                            <div class="d-flex align-items-sm-center py-3">
+                                <div class="swipe-wrap">
+                                    <ul class="swipe-list">
+                                      <li><a href="#" class="active">전체</a></li>
+                                      <li><a href="#">샘플</a></li>
+                                      <li><a href="#">사용자 추가</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plf-floor-card p-4 position-relative">
                             <div class="plf-area-card add-item">
                                 <p>건물 정보를 등록해 주세요</p>
                             </div>
                             <div class="plf-area-card active">
                                 <div class="plf-area-top">
-                                    <h4>건물</h4>
+                                    <h4>사용자 추가 건물</h4>
                                     <div class="left-cell">
                                         <div class="dropdown">
                                             <a href="#" data-toggle="dropdown" data-caret="false"
@@ -250,66 +249,96 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <h4>주차장 샘플</h4>
+                                    <div class="left-cell">
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <div class="d-flex align-items-center">
+                                        <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <h4>사무용 빌딩 샘플</h4>
+                                    <div class="left-cell">
+                                        <div class="dropdown">
+                                            <a href="#" data-toggle="dropdown" data-caret="false"
+                                                class="text-muted"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <div class="d-flex align-items-center">
+                                        <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-contents sidebar-left-sub">
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 mb-4 py-4">
+                            <div class="d-flex align-items-center">
+                                <a href="building_dashboard.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
+                                <h3 class="mb-0">평면도 등록</h3>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="form-group mb-4">
+                                <label class="form-label essential" for="">평면도 등록 건물</label>
+                                <input type="text" class="form-line" id="" placeholder="사용자 추가 건물" disabled>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label class="form-label essential" for="">평면도명</label>
+                                <input type="text" class="form-line" id="" value="평면도 2층">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label class="form-label essential" for="">층</label>
+                                <input type="text" class="form-line" id="" value="2">
+                            </div>
+                            <div class="form-group mb-4 over-txt">
+                                <label class="form-label" for="">평면도 이미지</label>
+                                <div class="form-line">
+                                    <div class="att-file">
+                                        <p class="file-name">2f_floor_shop.png</p>
+                                        <div class="bundle">
+                                            <a href="#n" class="btn-light btn-sm border-1">평면도 조정</a>
+                                            <a href="#n"><span class="material-icons ml-2">close</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pub-con">
+                            <div class="pub-inner">
+                                <div class="btn-wrap">
+                                    <a href="#n" class="btn btn-light mr-4">취소</a>
+                                    <a href="#n" class="btn btn-accent ml-0">등록</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="pl-col-group">
                 <div class="pl-col-mid" id="main-contents">
-                    <div class="alert-set-guide" style="max-width: 100%">
-                        <div class="alert fade show" role="alert">
-                            <div class="alert-header">
-                                <h4>프로젝트 설정 가이드</h4>
-                                <button type="button" class="alert-close" data-dismiss="alert" aria-label="Close">
-                                    <span class="material-icons" aria-hidden="true">close</span>
-                                </button>
-                            </div>
-                            <div class="alert-contents">
-                                <div class="form-group mb-3 d-flex align-items-center">
-                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex cmp-guide">
-                                        <input id="customCheck01" type="checkbox" class="custom-control-input" checked disabled>
-                                        <label for="customCheck01" class="custom-control-label">프로젝트 정보를 입력해 주세요</label>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-3 d-flex align-items-center">
-                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex cmp-guide">
-                                        <input id="customCheck02" type="checkbox" class="custom-control-input" checked disabled>
-                                        <label for="customCheck02" class="custom-control-label">위치를 수집할 대상 주소를 입력해 주세요</label>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-3 d-flex align-items-center">
-                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
-                                        <input id="customCheck03" type="checkbox" class="custom-control-input">
-                                        <label for="customCheck03" class="custom-control-label">공간 정보를 입력해 주세요</label>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-3 d-flex align-items-center">
-                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
-                                        <input id="customCheck04" type="checkbox" class="custom-control-input">
-                                        <label for="customCheck04" class="custom-control-label">평면도 이미지를 업로드해 주세요</label>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-3 d-flex align-items-center">
-                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
-                                        <input id="customCheck05" type="checkbox" class="custom-control-input">
-                                        <label for="customCheck05" class="custom-control-label">지오펜스를 설정해 주세요</label>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-3 d-flex align-items-center">
-                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
-                                        <input id="customCheck06" type="checkbox" class="custom-control-input">
-                                        <label for="customCheck06" class="custom-control-label">위치 정보 수집 경로를 등록해 주세요</label>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-3 d-flex align-items-center">
-                                    <div class="custom-control custom-checkbox checkbox-md checkbox-rounded d-flex">
-                                        <input id="customCheck07" type="checkbox" class="custom-control-input">
-                                        <label for="customCheck07" class="custom-control-label">사용자를 배정하세요</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                         <!-- map zoom/out -->
     <div class="btn-widget-holder">
         <ul>
