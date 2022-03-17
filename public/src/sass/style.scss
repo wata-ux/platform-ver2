@@ -326,7 +326,7 @@ select.form-line{
         }
     }
 }
-.serch-box{
+.search-box{
     position: relative;
     display: flex;
     align-items: center;
@@ -334,6 +334,7 @@ select.form-line{
     border-radius: .25rem;
     input.form-line{
         border: none;
+        padding-right: 3rem;
     }
     a{
         display: flex;
