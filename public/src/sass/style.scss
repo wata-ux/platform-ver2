@@ -138,6 +138,11 @@ h6{
     border: 1px solid #EAECEF;
     border-radius: .25rem;
     line-height: 3rem;
+    &:focus{
+        border-color: #86b7fe;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+    }
     &:disabled{
         background-color: rgba(234,236,239, 0.24);
     }
@@ -159,6 +164,9 @@ h6{
     }
     &.is-invalid{
         border-color: $identity;
+        &:focus{
+            box-shadow: 0 0 0 0.25rem rgba(217, 83, 79, .25);
+        }
     }
     .att-file{
         display: flex;
@@ -270,7 +278,12 @@ select.form-line{
         padding: .75rem;
         resize: none;
         height: 100%;
-
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        &:focus{
+            border-color: #86b7fe;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+        }
     }
     .form-textarea{
         background-color: #fafafb;
