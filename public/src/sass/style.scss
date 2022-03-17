@@ -2166,14 +2166,20 @@ ul.state-item{
 /* pagination */
 .pagination-group{
     position: relative;
+    padding: 1rem 0;
+    .pagination{
+        padding: 0;
+    }
     .view-page{
         position: absolute;
         right: 0;
-        top: 0;
+        top: 50%;
         min-width: 200px;
+        transform: translateY(-50%);
     }
 }
 .pagination{
+    padding: 1rem 0;
     .page-link{
         border: none;
         font-size: .875rem;
@@ -2599,6 +2605,8 @@ ul.state-item{
             background-color: #fff;
             z-index: 3;
             padding: 4rem;
+            overflow: hidden;
+            overflow-y: auto;
             .inner{
                 max-width: 1440px;
                 margin: 0 auto;
