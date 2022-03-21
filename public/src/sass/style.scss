@@ -7,6 +7,7 @@
     background-color: #F8F9FB;
 }
 
+
 .material-icons-two-tone{
     &.red{
         filter: invert(0.5) sepia(1) saturate(150) hue-rotate(20deg);
@@ -28,6 +29,9 @@ select{
 input::placeholder, textarea::placeholder{
     color: rgb(189, 189, 189);
     font-weight: normal;
+}
+.word-keep-all{
+    word-break: keep-all;
 }
 /***** range slider *****/
 .irs--flat .irs-line{
@@ -155,6 +159,10 @@ h6{
     &.form-blank{
         height: 50px;
     }
+    &.form-line-sm{
+        font-size: .875rem;
+        line-height: 2.5rem;
+    }
     &.form-color-picker{
         height: 50px;
         padding: .5rem;
@@ -237,7 +245,6 @@ select.form-line{
                 display: flex;
                 padding: 0 .5rem;
                 justify-content: center;
-                background-color: #fff;
                 border: none;
                 position: relative;
                 .material-icons{
@@ -2304,6 +2311,27 @@ ul.state-item{
     }
 }
 
+.right-bundle{
+    display: flex;
+    height: 2.5rem;
+    margin-left: 2rem;
+    .search-box{
+        .form-line{
+            line-height: inherit;
+            height: 100%;
+            font-size: .875rem;
+            padding-right: 2.5rem;
+        }
+        a{
+            width: 40px;
+            height: 40px;
+            span{
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
 /***** layout *****/
 .pl-container{
     height: 100vh;
@@ -3403,6 +3431,86 @@ ul.state-item{
     overflow: hidden;
     overflow-y: auto;
     border-radius: .25rem;
+}
+
+/***** user page *****/
+.msg-board{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    word-break: keep-all;
+    h2{
+        margin-bottom: 2rem;
+    }
+    em{
+        font-style: normal;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        text-align: center;
+    }
+    img{
+        width: 80px;
+        margin-bottom: 2rem;
+    }
+}
+.group-state{
+    ul{
+        list-style-type: none;
+        padding: 0;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem 1rem;
+            p{
+                font-size: 1rem;
+                font-size: .875rem;
+                margin-bottom: 0;
+            }
+            em{
+                font-size: 2rem;
+                color: $identity;
+                font-style: normal;
+            }
+            a{
+                background-color: #ddd;
+                color: #fff;
+                border-radius: 50%;
+                &:hover{
+                    background-color: #c5c5c5;
+                }
+            }
+            h3{
+                text-transform: none;
+                margin: 0;
+                margin-top: .5rem;
+            }
+        }
+        &.col-wide{
+            li{
+                flex: 0 0 100%;
+                max-width: 100%;
+                border-top: 1px solid $border-color;
+                &:first-child{
+                    border-top: none;
+                }
+            }
+        }
+        &.col-half{
+            li{
+                flex: 0 0 50%;
+                max-width: 50%;
+                &:first-child{
+                    border-right: 1px solid $border-color;
+                }
+            }
+        }
+    }
 }
 
 .resp-wrap{

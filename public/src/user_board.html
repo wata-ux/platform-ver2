@@ -1,0 +1,453 @@
+@@include('./include/platform-header.html')
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            @@include('./include/platform-top.html')
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="side-navbar expander" id="side-navbar">
+                    <nav class="nav-container">
+                        <div class="nav-inner">
+                            <div class="nav__list">
+                                <a href="project_building.html" class="nav__link">
+                                    <span class="material-icons">insert_chart_outlined</span>
+                                    <span class="nav_name">모니터링</span>
+                                </a>
+                                <a href="project_dashboard.html" class="nav__link">
+                                    <span class="material-icons">grid_view</span>
+                                    <span class="nav_name">프로젝트</span>
+                                </a>
+                                <a href="building_dashboard.html" class="nav__link">
+                                <span class="material-icons-outlined">space_dashboard</span>
+                                    <span class="nav_name">건물</span>
+                                </a>
+                                <div class="nav__link active collapse-item">
+                                    <div class="popover-menu">
+                                        <a href="user_list.html" class="dropdown-side-toggle">
+                                            <span class="material-icons-outlined">people</span>
+                                        </a>
+                                        <div class="popover-container">
+                                            <ul>
+                                                <li><a href="user_list.html">사용자 관리</a></li>
+                                                <li><a href="user_group_list.html">사용자 그룹 관리</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="user_list.html" class="dropdown-side-toggle"><span class="nav_name">사용자</span></a>
+                                    <span class="material-icons collapse__link rotate">expand_more</span>
+                                    <div class="collapse__menu showCollapse">
+                                        <a href="user_list.html" class="collapse__sublink active">사용자 관리</a>
+                                        <a href="user_group_list.html" class="collapse__sublink">사용자 그룹 관리</a>
+                                    </div>
+                                </div>
+                                <a href="assets_map.html" class="nav__link">
+                                    <span class="material-icons-outlined">category</span>
+                                    <span class="nav_name">자산</span>
+                                </a>
+                                <a href="sensor_map.html" class="nav__link">
+                                    <span class="material-icons-outlined">air</span>
+                                    <span class="nav_name">환경센서</span>
+                                </a>
+                                <div class="nav__link @@activeAssets collapse-item d-none">
+                                    <a href="user_list.html" class="dropdown-side-toggle"><span class="material-icons-outlined">category</span></a>
+                                    <a href="user_list.html" class="dropdown-side-toggle"><span class="nav_name">자산</span></a>
+                                    <span class="material-icons collapse__link">expand_more</span>
+                                    <div class="collapse__menu">
+                                        <a href="#" class="collapse__sublink">Data</a>
+                                        <a href="#" class="collapse__sublink">Group</a>
+                                        <a href="#" class="collapse__sublink">Members</a>
+                                    </div>
+                                </div>
+                                <a href="event_map.html" class="nav__link">
+                                    <span class="material-icons-outlined">event_note</span>
+                                    <span class="nav_name">이벤트</span>
+                                </a>
+                                <a href="campaign_map.html" class="nav__link">
+                                    <span class="material-icons-outlined">redeem</span>
+                                    <span class="nav_name">캠페인</span>
+                                </a>
+                                <a href="accident_map.html" class="nav__link">
+                                    <span class="material-icons-outlined">warning_amber</span>
+                                    <span class="nav_name">사고</span>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+
+                    <div class="contents-section">
+                        <div class="row align-items-start">
+                            <div class="col-md-4">
+                                <div class="cell">
+                                    <div class="d-flex align-items-center mb-5">
+                                        <a href="#n" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
+                                        <div class="dropdown ml-auto">
+                                            <a href="#n" class="d-flex" data-toggle="dropdown" data-caret="false"><i class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#n" class="dropdown-item">조직 역할 업데이트</a>
+                                                <a href="#n" class="dropdown-item">액세스 일시 중단</a>
+                                                <a href="#n" class="dropdown-item text-danger">사용자 삭제</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-5 align-items-center">
+                                        <span class="avatar avatar-lg mr-3">
+                                            <span class="avatar-title rounded-circle font-size-32pt">LJ</span>
+                                        </span>
+                                        <div class="flex">
+                                            <h2 class="mb-0">Leo jeong</h2>
+                                            <p class="text-50 mb-0">2021년 6월 17일에 마지막 활성이었습니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="group-state">
+                                        <ul class="col-wide">
+                                            <li>
+                                                <p>전체이름</p>
+                                                <h3>leo jeong</h3>
+                                            </li>
+                                            <li>
+                                                <p>이메일 주소</p>
+                                                <h3>leo.jeong@watanow.com</h3>
+                                            </li>
+                                            <li>
+                                                <p>회사명</p>
+                                                <h3>WATA,Inc</h3>
+                                            </li>
+                                            <li>
+                                                <p>부서</p>
+                                                <h3>디자인팀</h3>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="mb-32pt">
+                                        <a href="#n" class="btn btn-block btn-lg btn-accent">정보수정</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="cell mb-4">
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="flex">
+                                            <h3 class="mb-0">그룹 </h3>
+                                            <p class="text-64 mb-0">그룹을 사용하여 이 사용자의 권한, 제한 사항 및 프로젝트 액세스를 관리합니다.</p>
+                                        </div>
+                                        <div class="right-bundle">
+                                            <a href="#n" class="btn btn-accent ml-4 align-items-center" data-toggle="modal" data-target="#groupAdd">그룹에 추가</a>
+                                        </div>
+                                    </div>
+
+                                    <table class="table mb-0 table-nowrap table-head-light">
+                                        <colgroup>
+                                            <col width="*" />
+                                            <col width="20%" />
+                                            <col width="5%" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th  class="text-center">
+                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">그룹</a>
+                                                </th>
+                                                <th  class="text-center">
+                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-link">권한</a>
+                                                </th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="list" id="projects">
+                                            <tr>
+                                                <td colspan="3">
+                                                    <div class="text-center py-4">
+                                                        <span class="material-icons-outlined text-50 font-size-32pt">info</span>
+                                                        <p class="m-0 text-50">아직 소속한 그룹이 없습니다.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="user_group_board.html" class="media-body">
+                                                        <strong class="text-dark">A동 생산관리팀</strong>
+                                                        <div class="text-muted small">A동 생산라인 관제</div>
+                                                    </a>
+                                                </td>
+                                                <td>사용자</td>
+                                                <td class="text-right">
+                                                    <div class="dropdown">
+                                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a href="user_group_board.html" class="dropdown-item">그룹 세부 정보 보기</a>
+                                                            <a href="#n" class="dropdown-item text-danger" data-toggle="modal" data-target="#deleteGroup">그룹에서 사용자 제외</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="user_group_board.html" class="media-body">
+                                                        <strong class="text-dark">B동 생산관리팀</strong>
+                                                        <div class="text-muted small">B동 생산라인 관제</div>
+                                                    </a>
+                                                </td>
+                                                <td>관리자</td>
+                                                <td class="text-right">
+                                                    <div class="dropdown">
+                                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a href="user_group_board.html" class="dropdown-item">그룹 세부 정보 보기</a>
+                                                            <a href="#n" class="dropdown-item text-danger" data-toggle="modal" data-target="#deleteGroup">그룹에서 사용자 제외</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="pagination align-items-center justify-content-center">
+                                        <a class="page-link btn-prev" href="#" aria-label="Previous">
+                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                            <span>이전</span>
+                                        </a>
+                                        <div class="d-flex align-items-center justify-content-center px-3">
+                                            <select name="" id="" class="form-line">
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                                <option value="">4</option>
+                                            </select>
+                                            <em>20</em>
+                                        </div>
+                                        <a class="page-link btn-next" href="#" aria-label="Next">
+                                            <span>다음</span>
+                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cell mb-4">
+                                    <div class="d-flex flex-row align-items-sm-center mb-4">
+                                        <div class="flex title-row">
+                                            <h3 class="mb-0">프로젝트</h3>
+                                            <p class="text-64 mb-0">이 사용자의 역할을 관리하고 액세스 권한을 부여합니다.</p>
+                                        </div>
+                                    </div>
+                                    <table class="table mb-0 table-nowrap table-head-light">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">
+                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">프로젝트</a>
+                                                </th>
+                                                <th class="text-center">
+                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-link">기본 그룹</a>
+                                                </th>
+                                                <th class="text-center">
+                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">권한</a>
+                                                </th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="list" id="projects">
+                                            <tr>
+                                                <td colspan="4">
+                                                    <div class="text-center py-4">
+                                                        <span class="material-icons-outlined text-50 font-size-32pt">info</span>
+                                                        <p class="m-0 text-50">아직 연결된 프로젝트가 없습니다.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex d-flex align-items-center mr-16pt">
+                                                        <a href="#n" target="_blank" class="avatar mr-12pt">
+                                                            <img src="images/slider01.jpg" title="새창열림" class="avatar-img rounded">
+                                                        </a>
+                                                        <div class="flex list-els">
+                                                            <a class="card-title" target="_blank" title="새창열림" href="#n">판교 H스퀘어</a>
+                                                            <div class="text-muted small">Jaeyong Lee</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="user_group_board.html" class="media-body">
+                                                        <strong class="text-dark">A동 생산관리팀</strong>
+                                                        <div class="text-muted small">A동 생산라인 관제</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <select name="" class="form-line form-line-sm">
+                                                        <option value="">사용자</option>
+                                                        <option value="">관리자</option>
+                                                    </select>                                            
+                                                </td>
+                                                <td class="text-right">
+                                                    <div class="dropdown">
+                                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a href="#n" class="dropdown-item text-danger" data-toggle="modal" data-target="#deleteProject">프로젝트에서 사용자 제외</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flex d-flex align-items-center mr-16pt">
+                                                        <a href="#n" target="_blank" class="avatar mr-12pt">
+                                                            <img src="images/slider02.jpg" title="새창열림" class="avatar-img rounded">
+                                                        </a>
+                                                        <div class="flex list-els">
+                                                            <a class="card-title" target="_blank" title="새창열림" href="#n">강남역 지하상가</a>
+                                                            <div class="text-muted small">Jaeyong Lee</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="user_group_board.html" class="media-body">
+                                                        <strong class="text-dark">B동 생산관리팀</strong>
+                                                        <div class="text-muted small">B동 생산라인 관제</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <select name="" class="form-line form-line-sm">
+                                                        <option value="">사용자</option>
+                                                        <option value="">관리자</option>
+                                                    </select>                                            
+                                                </td>
+                                                <td class="text-right">
+                                                    <div class="dropdown">
+                                                        <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a href="#n" class="dropdown-item text-danger" data-toggle="modal" data-target="#deleteProject">프로젝트에서 사용자 제외</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="pagination align-items-center justify-content-center">
+                                        <a class="page-link btn-prev" href="#" aria-label="Previous">
+                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                            <span>이전</span>
+                                        </a>
+                                        <div class="d-flex align-items-center justify-content-center px-3">
+                                            <select name="" id="" class="form-line">
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                                <option value="">4</option>
+                                            </select>
+                                            <em>20</em>
+                                        </div>
+                                        <a class="page-link btn-next" href="#" aria-label="Next">
+                                            <span>다음</span>
+                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="groupAdd" data-backdrop="static" tabindex="-1" aria-labelledby="groupAddLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="saddUserLabel">사용자 추가</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-4 font-size-14pt">그룹 구성원은 동일한 권한, 제한 및 제품 액세스를 보유하고 있습니다.<br>기존 그룹을 검색하고 선택하세요.</p>
+                <div class="form-group">
+                    <label class="form-label" for="">그룹 검색</label>
+                    <select id="" class="form-line" data-toggle="select" multiple >
+                        <option>프로젝트5</option>
+                        <option>프로젝트4</option>
+                        <option>프로젝트3</option>
+                        <option>프로젝트2</option>
+                        <option>프로젝트1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">취소</button>
+                <!-- 비활성화  -->
+                <button type="button" class="btn btn-light" data-dismiss="modal" disabled>확인</button>
+                <!-- 활성화 -->
+                <!-- <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteGroup" data-backdrop="static" tabindex="-1" aria-labelledby="deleteGroupLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="deleteGroupLabel">알림</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="material-icons">clear</i></span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="py-4">
+                <div class="text-center">
+                    <h3>선택한 그룹에서 사용자를 제외 하시겠습니까?</h3>
+                    <p class="m-0 text-50 font-size-16pt"><mark>A동 생산관리팀</mark> 그룹에서 해당 사용자가 제외 됩니다. </p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteProject" data-backdrop="static" tabindex="-1" aria-labelledby="deleteProjectLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="deleteProjectLabel">알림</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="material-icons">clear</i></span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="py-4">
+                <div class="text-center">
+                    <h3>선택한 프로젝트에서 사용자를 제외 하시겠습니까?</h3>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="media flex-nowrap align-items-center border-1 p-3">
+                        <a href="#n" target="_blank" class="avatar mr-12pt">
+                            <img src="images/slider01.jpg" title="새창열림" class="avatar-img rounded">
+                        </a>
+                        <div class="flex list-els">
+                            <a class="card-title" target="_blank" title="새창열림" href="#n">판교 H스퀘어</a>
+                            <div class="text-muted small">Jaeyong Lee</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-accent" data-dismiss="modal">확인</button>
+        </div>
+        </div>
+    </div>
+</div>
+@@include('./include/platform-footer.html')
