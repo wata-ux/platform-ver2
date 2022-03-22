@@ -785,6 +785,9 @@ select.form-line{
     background-color: #F7F8FC;
     font-size: .75rem;
     padding: .125rem .25rem;
+    &:hover{
+        border-color: darken(#F7F8FC, 10%);
+    }
 }
 .switch-group{
     .btn-switch{
@@ -802,6 +805,11 @@ select.form-line{
             color: $identity;
             border-color: $identity;
         }
+    }
+}
+a{
+    .badge-basics:hover{
+        border-color: darken($border-color, 10%);
     }
 }
 
