@@ -471,6 +471,104 @@
 </div>
 
 
+
+<!-- Modal : POI 정보 -->
+<div class="modal fade" id="poiDetail" data-backdrop="static" tabindex="-1" aria-labelledby="poiDetailLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="d-flex">
+                    <span class="material-icons-outlined text-40 mr-2">person</span>
+                    <h4 class="modal-title" id="detailItemLabel">Leo</h4>
+                </div>
+                <a href="#n" class="btn-ico-sm">
+                    <span class="icon material-icons-outlined">open_in_browser</span>
+                    <span class="text"><span>수정</span></span>
+                </a>
+            </div>
+            <div class="modal-body">
+                <div class="mb-4">
+                    <small class="d-flex text-64 mb-2">사용자 아이디</small>
+                    <p class="m-0">leo.ux@watanow.com</p>
+                </div>
+                <div class="mb-4">
+                    <small class="d-flex text-64 mb-2">사용자명</small>
+                    <p class="m-0">Leo</p>
+                </div>
+                <div class="mb-4">
+                    <small class="d-flex text-64 mb-2">그룹</small>
+                    <p class="m-0">Security</p>
+                </div>
+                <div class="mb-4">
+                    <small class="d-flex text-64 mb-2">상태</small>
+                    <p class="m-0">detected</p>
+                </div>
+                <div class="mb-4">
+                    <small class="d-flex text-64 mb-2">현재 위치</small>
+                    <p class="m-0">1F > 지오펜스1-1</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-accent btn-second-modal within-first-modal" data-toggle="modal" data-target="#sendMessegeUser">메세지 발송</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal : 메세지 전송 -->
+<div class="modal fade" id="sendMessegeUser" data-backdrop="static" tabindex="-1" aria-labelledby="sendMessegeUserLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="d-flex">
+                    <span class="material-icons-outlined text-40 mr-2">person</span>
+                    <h4 class="modal-title" id="sendMessegeLabel">Leo</h4>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div style="height:550px;">
+                    <div class="form-group mb-4">
+                        <label class="form-label essential" for="">메세지 제목</label>
+                        <input type="text" class="form-line" id="" placeholder="제목을 입력해 주세요">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label essential" for="">메세지 내용</label>
+                        <textarea name="" id="" rows="5" placeholder="내용을 입력해 주세요"></textarea>
+                    </div>
+                    <!-- 파일 첨부 전 -->
+                    <div class="form-group mb-4 over-txt">
+                        <label class="form-label" for="">파일 첨부</label>
+                        <input type="text" class="form-line" id="" placeholder="">
+                        <div class="btn-abs btn-file-att">
+                            <label class="btn-light btn-sm m-0 border-1" for="fileAtt">파일 업로드</label>
+                            <input type="file" id="fileAtt">
+                        </div>
+                    </div>
+                    <!-- 파일 첨부 후 -->
+                    <div class="form-group mb-4 over-txt">
+                        <label class="form-label" for="">파일 첨부</label>
+                        <div class="form-line">
+                            <div class="att-file">
+                                <p class="file-name">여기에 파일 이름이 표시됩니다.</p>
+                                <div class="bundle">
+                                    <a href="#n"><span class="material-icons ml-2">close</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">취소</button>
+                <button type="button" class="btn btn-accent" data-dismiss="modal">발송</button>
+            </div>
+        </div>
+    </div>
+</div>
     
     <!-- jQuery -->
     <script src="js/jquery-1.11.3-min.js"></script>

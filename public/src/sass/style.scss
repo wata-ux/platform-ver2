@@ -64,6 +64,30 @@ input::placeholder, textarea::placeholder{
     border-top-color: $identity;
 }
 
+/***** poi *****/
+.mouse-point {
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: .875rem;
+    @include transition(all, 0.2s, ease-in-out);
+    &.user{
+        background: url(../images/poi/person_pin.svg) no-repeat center;
+        background-size: 1.5rem;
+    }
+    &:hover{
+        -moz-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25);
+        z-index: 3;
+    }
+}
+
+
+
 /***** background *****/
 .bg-gray-v1 {
     background-color: #fafafa;
