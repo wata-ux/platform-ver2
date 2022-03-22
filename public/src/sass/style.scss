@@ -2310,7 +2310,31 @@ ul.state-item{
         font-style: normal;
     }
 }
-
+/* toast alert */
+#toast-container{
+    >.toast{
+        background-image: none !important;
+        padding: 1rem;
+    }
+    >div{
+        color: var(--dark);
+    }
+    .toast-success{
+        background-color: #fff;
+    }
+    .toast-message{
+        color: var(--dark);
+        
+        &:before{
+            content: '\e86c';
+            font-family: 'Material Icons';
+            vertical-align: middle;
+            color: var(--green);
+            font-size: 1.5rem;
+            margin-right: .5rem;
+        }
+    }
+}
 .right-bundle{
     display: flex;
     height: 2.5rem;

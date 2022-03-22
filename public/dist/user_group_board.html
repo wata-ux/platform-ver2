@@ -57,6 +57,11 @@
      <!-- Dragula -->
      <link type="text/css" href="vendor/dragula/dragula.min.css" rel="stylesheet" />
 
+    <!-- Toastr -->
+	<link type="text/css" href="vendor/toastr.min.css" rel="stylesheet">
+	<link type="text/css" href="css/toastr.css" rel="stylesheet">
+
+
     <!-- custom CSS -->
     <link type="text/css" href="css/style.css" rel="stylesheet" />
     
@@ -529,6 +534,17 @@
                                         </a>
                                     </div>
                                 </div>
+                                <div class="col-auto">
+                                    <button type="button"
+                                            class="btn btn-success"
+                                            data-toggle="toastr"
+                                            data-toastr-type="success"
+                                            data-toastr-title="null"
+                                            data-toastr-progress-bar="false"
+                                            data-toastr-message="권한 설정을 변경하였습니다.">
+                                        권한 설정 셀렉트 박스 액션 참고 (참고 후 버튼은 삭제해 주세요) 
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -931,6 +947,10 @@
     <!-- Tables -->
     <script src="js/toggle-check-all.js"></script>
     <script src="js/check-selected-row.js"></script>
+
+    <!-- Toastr -->
+    <script src="vendor/toastr.min.js"></script>
+    <script src="js/toastr.js"></script>
 
     <!-- Select2 -->
     <script src="vendor/select2/select2.min.js"></script>
