@@ -208,6 +208,7 @@ h6{
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            height: 3rem;
         }
         .bundle{
             margin-left: auto;
@@ -217,6 +218,9 @@ h6{
             a{
                 display: flex;
                 white-space: nowrap;
+            }
+            input{
+                display: none;
             }
         }
     }

@@ -318,15 +318,19 @@
                 <!-- 파일 첨부 전 -->
                 <div class="form-group mb-32pt over-txt">
                     <label class="form-label essential" for="">파일 첨부</label>
-                    <input type="text" class="form-line" id="" placeholder="">
-                    <div class="btn-abs btn-file-att">
-                        <label class="btn-light btn-sm m-0 border-1" for="fileAtt">파일 업로드</label>
-                        <input type="file" id="fileAtt">
+                    <div class="form-line">
+                        <div class="att-file">
+                            <p class="file-name"></p>
+                            <div class="bundle">
+                                <label class="btn-light btn-sm m-0 border-1" for="fileAtt">파일 업로드</label>
+                                <input type="file" id="fileAtt">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- 파일 첨부 후 -->
                 <div class="form-group mb-32pt over-txt">
-                    <label class="form-label essential" for="">파일 등록</label>
+                    <label class="form-label essential" for="">파일 첨부</label>
                     <div class="form-line">
                         <div class="att-file">
                             <p class="file-name">여기에 파일 이름이 표시됩니다.</p>
@@ -352,7 +356,6 @@
                                data-toggle="flatpickr"
                                data-flatpickr-mode="range"
                                value="today">
-                        <span class="picker-icon material-icons-outlined">date_range</span>
                     </div>
                 </div>
                 <div class="form-group mb-4">
