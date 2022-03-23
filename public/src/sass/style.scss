@@ -139,18 +139,25 @@ h6{
         color: darken($identity, 10%);
     }
 }
-.text-blue{
-    color: #32A1FF;
+
+.text-gray, .level-text-item01{
+    color: #6B7380;
 }
-.text-green{
-    color: #2BA400;
-}
-.text-yellow{
-    color: #FDA60E;
-}
-.text-red{
+.text-red, .level-text-item02{
     color: #D92A2A;
 }
+.text-yellow, .level-text-item03{
+    color: #FDA60E;
+}
+.text-green, .level-text-item04{
+    color: #2BA400;
+}
+.text-blue, .level-text-item05{
+    color: #32A1FF;
+}
+
+
+
 
 /***** form style *****/
 .form-line {
@@ -2391,6 +2398,32 @@ ul.state-item{
         }
     }
 }
+
+/* sensor poi */
+.sensor-cover{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .sensor-circle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        background-color: #6B7380;
+        color: #fff;
+        border-radius: 5rem;
+        border: 2px solid #48505c;
+        margin-bottom: .25rem;
+    }
+    p{
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        
+    }
+}
+
 
 /***** layout *****/
 .pl-container{
