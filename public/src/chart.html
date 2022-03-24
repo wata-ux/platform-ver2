@@ -1,0 +1,1840 @@
+@@include('./include/platform-header.html')
+
+
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="project_dashboard.html" class="sidebar-brand p-0 d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <div class="project-select">
+                    <select class="form-line">
+                        <option value="">프로젝트를 선택해 주세요</option>
+                        <option value="">프로젝트A</option>
+                        <option value="">프로젝트B</option>
+                        <option value="">프로젝트C</option>
+                    </select>
+                </div>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="" class="form-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="alert_list.html">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": "", "activeChart": "active"})
+                <div class="side-contents">
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 py-4">
+                            <div class="d-flex flex-column">
+                                <h3 class="mb-0">통계</h3>
+                            </div>
+                        </div>
+                        <div class="plf-floor-card p-4 position-relative">
+                            <div class="plf-area-card active">
+                                <div class="plf-area-top">
+                                    <h4>건물 2</h4>
+                                </div>
+                                <div class="plf-area-content">
+                                    <p class="desc">대한민국, 경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                    <div class="d-flex align-items-center">
+                                        <span class="material-icons-outlined font-size-16pt mr-1">map</span>3
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <h4>건물</h4>
+                                </div>
+                                <div class="plf-area-content text-50">
+                                    <p class="desc">대한민국, 경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                    <div class="d-flex align-items-center">
+                                        <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <h4>건물</h4>
+                                </div>
+                                <div class="plf-area-content text-50">
+                                    <div class="d-flex align-items-center">
+                                        <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <h4>건물</h4>
+                                </div>
+                                <div class="plf-area-content text-50">
+                                    <div class="d-flex align-items-center">
+                                        <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    <div class="contents-section chart-section">
+                        <div class="cell">
+                            <div class="nav tab-menu the-num03 border-bottom-1 mb-4" role="tablist">
+                                <a href="#tab01" class="btn-style_underline active" data-toggle="tab" role="tab" aria-selected="true">
+                                    <span class="menu-cover"><span>Main</span></span>
+                                </a>
+                                <a href="#tab02" class="btn-style_underline" data-toggle="tab" role="tab" aria-selected="false">
+                                    <span class="menu-cover"><span>Visitor / Material / Asset</span></span>
+                                </a>
+                                <a href="#tab03" class="btn-style_underline" data-toggle="tab" role="tab" aria-selected="false">
+                                    <span class="menu-cover"><span>tracking</span></span>
+                                </a>
+                            </div>
+                            <div class="tab-content">
+                                <div id="tab01" class="tab-pane active" role="tabpanel">
+                                    <div class="ch-group">
+                                        <div class="row">
+                                            <div class="col-3 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Total / Average number of visitors</h6>
+                                                        <div class="cover keyword">
+                                                            <em>66,734</em>
+                                                            <em class="text-dark">214</em>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Total / Average number of used materials</h6>
+                                                        <div class="cover keyword">
+                                                            <em>5,600</em>
+                                                            <em class="text-dark">253</em>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Average number of used assets</h6>
+                                                        <div class="cover keyword">
+                                                            <em>60</em>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Average residence time</h6>
+                                                        <div class="cover keyword">
+                                                            <em>8.32</em>
+                                                            <span class="text-muted">hour</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>누적 사용자 이동 수 (Area)</h6>
+                                                        <div class="graph-box" style="height: 500px;">
+                                                            여기 지도
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Number of entry per area</h6>
+                                                        <div class="graph-box" style="height:300px;">
+                                                            <div class="d-flex align-items-center justify-content-center h-100">
+                                                                <p class="no-data">照会されたデータがありません。</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Residence time per area</h6>
+                                                        <div class="graph-box">
+                                                            여기 그래프
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Visitor move rate</h6>
+                                                        <div class="graph-box">
+                                                            여기 그래프
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Material move rate</h6>
+                                                        <div class="graph-box">
+                                                            여기 그래프
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Asset move rate</h6>
+                                                        <div class="graph-box">
+                                                            여기 그래프
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab02" class="tab-pane" role="tabpanel">
+                                    <div class="nav tab-menu the-num03 mb-3" role="tablist">
+                                        <div class="tab-menu-sub">
+                                            <a href="#sidebar-sub-menu01" class="btn-style_rect active" data-toggle="tab" role="tab" aria-selected="true">
+                                                <span class="menu-cover"><span>Main</span></span>
+                                            </a>
+                                            <a href="#sidebar-sub-menu02" class="btn-style_rect" data-toggle="tab" role="tab" aria-selected="false">
+                                                <span class="menu-cover"><span>Visitor / Material / Asset</span></span>
+                                            </a>
+                                            <a href="#sidebar-sub-menu03" class="btn-style_rect" data-toggle="tab" role="tab" aria-selected="false">
+                                                <span class="menu-cover"><span>tracking</span></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div id="sidebar-sub-menu01" class="tab-pane active" role="tabpanel">
+                                            <div class="ch-group">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <div class="nav tab-menu card-tab-menu" role="tablist">
+                                                                    <a href="#card-tap-menu01" class="btn-style_common active"
+                                                                        data-toggle="tab">누적 이동 수</a>
+                                                                    <a href="#card-tap-menu02" class="btn-style_common"
+                                                                        data-toggle="tab">체류시간</a>
+                                                                </div>
+                                                                <div class="tab-content">
+                                                                    <div id="card-tap-menu01" class="tab-pane active"
+                                                                        role="tabpanel">
+                                                                        <div class="graph-box" style="height: 500px;">
+                                                                            누적 이동 수 지도
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="card-tap-menu02" class="tab-pane" role="tabpanel">
+                                                                        <div class="graph-box" style="height: 500px;">
+                                                                            체류시간 지도
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Visiter category</h6>
+                                                                <div class="graph-box">
+                                                                    여기 그래프
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Visitor sub category</h6>
+                                                                <div class="graph-box">
+                                                                    여기 그래프
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Visitor congestion by hour</h6>
+                                                                <div class="graph-box">
+                                                                    여기 그래프
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 d-flex">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Comparison of visitor's residence time range</h6>
+                                                                <div class="d-flex flex-row mb-4">
+                                                                    <div class="custom-control custom-radio mr-3">
+                                                                        <input id="time-range-r01" name="time-range" type="radio"
+                                                                            class="custom-control-input" checked="">
+                                                                        <label for="time-range-r01"
+                                                                            class="custom-control-label">Area</label>
+                                                                    </div>
+                                                                    <div class="custom-control custom-radio mr-3">
+                                                                        <input id="time-range-r02" name="time-range" type="radio"
+                                                                            class="custom-control-input" checked="">
+                                                                        <label for="time-range-r02"
+                                                                            class="custom-control-label">Catagory</label>
+                                                                    </div>
+                                                                    <div class="custom-control custom-radio mr-3">
+                                                                        <input id="time-range-r03" name="time-range" type="radio"
+                                                                            class="custom-control-input" checked="">
+                                                                        <label for="time-range-r03" class="custom-control-label">Sub
+                                                                            category</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="graph-box">
+                                                                    여기 그래프
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Visitor congestion by day & hour</h6>
+                                                                <div class="graph-box">
+                                                                    <div class="scroll-table">
+                                                                        <div class="scroll-inner" style="height: 260px;">
+                                                                            <table class="table table-center table-bumper sm-table mb-0">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>hour</th>
+                                                                                        <th>Monday</th>
+                                                                                        <th>Tuesday</th>
+                                                                                        <th>Wednesday</th>
+                                                                                        <th>Thursday</th>
+                                                                                        <th>Friday</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="sidebar-sub-menu02" class="tab-pane" role="tabpanel">
+                                            <div class="ch-group">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <div class="nav tab-menu card-tab-menu" role="tablist">
+                                                                    <a href="#card-tap-menu03" class="btn-style_common active"
+                                                                        data-toggle="tab">누적 이동 수</a>
+                                                                    <a href="#card-tap-menu04" class="btn-style_common"
+                                                                        data-toggle="tab">체류시간</a>
+                                                                </div>
+                                                                <div class="tab-content">
+                                                                    <div id="card-tap-menu03" class="tab-pane active"
+                                                                        role="tabpanel">
+                                                                        <div class="graph-box" style="height: 500px;">
+                                                                            누적 이동 수 지도
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="card-tap-menu04" class="tab-pane" role="tabpanel">
+                                                                        <div class="graph-box" style="height: 500px;">
+                                                                            체류시간 지도
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Visiter category</h6>
+                                                                <div class="graph-box">
+                                                                    여기 그래프
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Visitor sub category</h6>
+                                                                <div class="graph-box">
+                                                                    여기 그래프
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Visitor congestion by hour</h6>
+                                                                <div class="graph-box">
+                                                                    여기 그래프
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 d-flex">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Comparison of visitor's residence time range</h6>
+                                                                <div class="graph-box">
+                                                                    여기 그래프
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Visitor congestion by day & hour</h6>
+                                                                <div class="graph-box">
+                                                                    <div class="scroll-table">
+                                                                        <div class="scroll-inner" style="height: 260px;">
+                                                                            <table class="table table-center table-bumper sm-table mb-0">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>hour</th>
+                                                                                        <th>Monday</th>
+                                                                                        <th>Tuesday</th>
+                                                                                        <th>Wednesday</th>
+                                                                                        <th>Thursday</th>
+                                                                                        <th>Friday</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="sidebar-sub-menu03" class="tab-pane" role="tabpanel">
+                                            <div class="ch-group">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <div class="nav tab-menu card-tab-menu" role="tablist">
+                                                                    <a href="#card-tap-menu05" class="btn-style_common active"
+                                                                        data-toggle="tab">누적 이동 수</a>
+                                                                    <a href="#card-tap-menu06" class="btn-style_common"
+                                                                        data-toggle="tab">체류시간</a>
+                                                                </div>
+                                                                <div class="tab-content">
+                                                                    <div id="card-tap-menu05" class="tab-pane active"
+                                                                        role="tabpanel">
+                                                                        <div class="graph-box" style="height: 500px;">
+                                                                            누적 이동 수 지도
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="card-tap-menu06" class="tab-pane" role="tabpanel">
+                                                                        <div class="graph-box" style="height: 500px;">
+                                                                            체류시간 지도
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Visiter category</h6>
+                                                                <div class="graph-box">
+                                                                    여기 그래프
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Visitor sub category</h6>
+                                                                <div class="graph-box">
+                                                                    여기 그래프
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Visitor congestion by hour</h6>
+                                                                <div class="graph-box">
+                                                                    여기 그래프
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 d-flex">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Comparison of visitor's residence time range</h6>
+                                                                <div class="graph-box">
+                                                                    여기 그래프
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h6>Visitor congestion by day & hour</h6>
+                                                                <div class="graph-box">
+                                                                    <div class="scroll-table">
+                                                                        <div class="scroll-inner" style="height: 260px;">
+                                                                            <table class="table table-center table-bumper sm-table mb-0">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>hour</th>
+                                                                                        <th>Monday</th>
+                                                                                        <th>Tuesday</th>
+                                                                                        <th>Wednesday</th>
+                                                                                        <th>Thursday</th>
+                                                                                        <th>Friday</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>0</td>
+                                                                                        <td>92.00</td>
+                                                                                        <td>62.75</td>
+                                                                                        <td>65.78</td>
+                                                                                        <td>61.10</td>
+                                                                                        <td>62.44</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab03" class="tab-pane" role="tabpanel">
+                                    <div class="ch-group">
+                                        <div class="row">
+                                            <div class="col-2 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Type</h6>
+                                                        <div class="d-flex flex-column">
+                                                            <div class="custom-control custom-radio mb-2">
+                                                                <input id="radioStacked1" name="tracking-r01" type="radio"
+                                                                    class="custom-control-input" checked="">
+                                                                <label for="radioStacked1"
+                                                                    class="custom-control-label">asset</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio mb-2">
+                                                                <input id="radioStacked2" name="tracking-r01" type="radio"
+                                                                    class="custom-control-input">
+                                                                <label for="radioStacked2"
+                                                                    class="custom-control-label">material</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio mb-2">
+                                                                <input id="radioStacked3" name="tracking-r01" type="radio"
+                                                                    class="custom-control-input">
+                                                                <label for="radioStacked3"
+                                                                    class="custom-control-label">worker</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Category</h6>
+                                                        <div class="d-flex flex-column">
+                                                            <div class="custom-control custom-radio mb-2">
+                                                                <input id="radioStacked4" name="tracking-r02" type="radio"
+                                                                    class="custom-control-input" checked="">
+                                                                <label for="radioStacked4"
+                                                                    class="custom-control-label">(All)</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio mb-2">
+                                                                <input id="radioStacked5" name="tracking-r02" type="radio"
+                                                                    class="custom-control-input">
+                                                                <label for="radioStacked5" class="custom-control-label">cart</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h6>Sub Category</h6>
+                                                        <div class="d-flex flex-column">
+                                                            <div class="custom-control custom-radio mb-2">
+                                                                <input id="radioStacked6" name="tracking-r03" type="radio"
+                                                                    class="custom-control-input" checked="">
+                                                                <label for="radioStacked6"
+                                                                    class="custom-control-label">(All)</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio mb-2">
+                                                                <input id="radioStacked7" name="tracking-r03" type="radio"
+                                                                    class="custom-control-input">
+                                                                <label for="radioStacked7"
+                                                                    class="custom-control-label">cart(L)</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>ID</h6>
+                                                        <div class="d-flex flex-column">
+                                                            <div class="custom-control custom-radio mb-2">
+                                                                <input id="radioStacked8" name="tracking-r04" type="radio"
+                                                                    class="custom-control-input" checked="">
+                                                                <label for="radioStacked8"
+                                                                    class="custom-control-label">(All)</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio mb-2">
+                                                                <input id="radioStacked9" name="tracking-r04" type="radio"
+                                                                    class="custom-control-input">
+                                                                <label for="radioStacked9"
+                                                                    class="custom-control-label">cart(L)_000</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio mb-2">
+                                                                <input id="radioStacked10" name="tracking-r04" type="radio"
+                                                                    class="custom-control-input">
+                                                                <label for="radioStacked10"
+                                                                    class="custom-control-label">cart(L)_001</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio mb-2">
+                                                                <input id="radioStacked11" name="tracking-r04" type="radio"
+                                                                    class="custom-control-input">
+                                                                <label for="radioStacked11"
+                                                                    class="custom-control-label">cart(L)_002</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio mb-2">
+                                                                <input id="radioStacked12" name="tracking-r04" type="radio"
+                                                                    class="custom-control-input">
+                                                                <label for="radioStacked12"
+                                                                    class="custom-control-label">cart(L)_003</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Result list</h6>
+                                                        <div class="graph-box">
+                                                            <div class="scroll-table">
+                                                                <div class="scroll-inner" style="height: 260px;">
+                                                                    <table class="table table-center table-bumper sm-table mb-0 valign-top">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Id</th>
+                                                                                <th>Cate</th>
+                                                                                <th>Sub Cate</th>
+                                                                                <th>Day of Date</th>
+                                                                                <th>Area</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td rowspan="7" class="valign-top">cart(L)_000</td>
+                                                                                <td rowspan="7" class="valign-top">cart</td>
+                                                                                <td rowspan="7" class="valign-top">cart(L)</td>
+                                                                                <td rowspan="3" class="valign-top">September 1, 2021
+                                                                                </td>
+                                                                                <td>B</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>C</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>D</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td rowspan="4" class="valign-top">September 2, 2021
+                                                                                </td>
+                                                                                <td>A</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>B</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>C</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>D</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                                <td>-</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Total residence time (min)</h6>
+                                                        <div class="graph-box" style="height: 500px;">
+                                                            여기 지도
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-8 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Route by time</h6>
+                                                        <div class="graph-box">
+                                                            <div class="scroll-table">
+                                                                <div class="scroll-inner" style="height: 260px;">
+                                                                    <table class="table table-center table-bumper sm-table mb-0">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Id</th>
+                                                                                <th>Cate</th>
+                                                                                <th>Sub Cate</th>
+                                                                                <th>Second of In Time</th>
+                                                                                <th>Residence time min</th>
+                                                                                <th>Order</th>
+                                                                                <th>Area</th>
+                                                                                <th></th>
+                                                                            </tr>
+                                                                        </thead>
+            
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td rowspan="15" class="valign-top"><span
+                                                                                        class="text-els">cart(L)_cart(L)_001cart(L)_001001</span>
+                                                                                </td>
+                                                                                <td rowspan="15" class="valign-top">cart</td>
+                                                                                <td rowspan="15" class="valign-top">cart(L)</td>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #94ae4e;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #a3964b;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #ab8a4a;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #bb7347;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #b37e49;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #ca5b44;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #e83b3a;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #bb7347;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #77c13a;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #94ae4e;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #ca5b44;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #e83b3a;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #bb7347;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #77c13a;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2021-09-01 00:00:00</td>
+                                                                                <td>309</td>
+                                                                                <td>1</td>
+                                                                                <td>D</td>
+                                                                                <td>
+                                                                                    <span
+                                                                                        style="display: flex; width:1rem; height:1rem; background-color: #94ae4e;"></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 d-flex">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Total residence time (min)</h6>
+                                                        <div class="graph-box">
+                                                            여기 그래프
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#n" class="side-btn btn-col-left toggle-sidebar-left"><span class="material-icons-outlined">chevron_left</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@@include('./include/platform-footer.html')
