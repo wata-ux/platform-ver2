@@ -117,16 +117,63 @@
                 <div class="pl-col-mid" id="main-contents">
                     <div class="contents-section chart-section">
                         <div class="cell">
-                            <div class="nav tab-menu the-num03 border-bottom-1 mb-4" role="tablist">
-                                <a href="#tab01" class="btn-style_underline active" data-toggle="tab" role="tab" aria-selected="true">
-                                    <span class="menu-cover"><span>Main</span></span>
-                                </a>
-                                <a href="#tab02" class="btn-style_underline" data-toggle="tab" role="tab" aria-selected="false">
-                                    <span class="menu-cover"><span>Visitor / Material / Asset</span></span>
-                                </a>
-                                <a href="#tab03" class="btn-style_underline" data-toggle="tab" role="tab" aria-selected="false">
-                                    <span class="menu-cover"><span>tracking</span></span>
-                                </a>
+                            <div class="nav tab-menu border-bottom-1 mb-4" role="tablist">
+                                <div class="d-flex">
+                                    <a href="#tab01" class="btn-style_underline px-5 py-3 active" data-toggle="tab" role="tab" aria-selected="true">
+                                        <span>Main</span> 
+                                    </a>
+                                    <a href="#tab02" class="btn-style_underline px-5 py-3" data-toggle="tab" role="tab" aria-selected="false">
+                                        <span>Visitor / Material / Asset</span> 
+                                    </a>
+                                    <a href="#tab03" class="btn-style_underline px-5 py-3" data-toggle="tab" role="tab" aria-selected="false">
+                                        <span>tracking</span> 
+                                    </a>
+                                </div>
+                                <div class="sort-cover">
+                                    <div class="form-group mb-0 mr-2 d-none">
+                                        <select name="category" class="form-line">
+                                            <option value="">지오펜스 선택</option>
+                                            <option value="">option1</option>
+                                            <option value="">option2</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="dropdown mr-3">
+                                        <a href="#" class="dropdown-toggle d-flex align-items-center" data-toggle="dropdown" data-caret="false" data-auto-close="false">
+                                            <img src="images/edit_tools/tool_geofence.svg" class="icon-geo" alt="">
+                                            <strong class="text-dark font-size-14pt">
+                                                지오펜스 선택 <span class="text-identity">(2)</span>
+                                            </strong>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked="" id="geo-item01">
+                                                    <label class="custom-control-label font-size-14pt" for="geo-item01">지오펜스1</label>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" checked="" id="geo-item02">
+                                                    <label class="custom-control-label font-size-14pt" for="geo-item02">지오펜스2</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-0">
+                                        <div class="date-picker-cover">
+                                            <input id="flatpickrSample02"
+                                                   type="hidden"
+                                                   class="form-line flatpickr-input"
+                                                   data-toggle="flatpickr"
+                                                   data-flatpickr-mode="range"
+                                                   value="today">
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                             <div class="tab-content">
                                 <div id="tab01" class="tab-pane active" role="tabpanel">
@@ -247,18 +294,16 @@
                                     </div>
                                 </div>
                                 <div id="tab02" class="tab-pane" role="tabpanel">
-                                    <div class="nav tab-menu the-num03 mb-3" role="tablist">
-                                        <div class="tab-menu-sub">
-                                            <a href="#sidebar-sub-menu01" class="btn-style_rect active" data-toggle="tab" role="tab" aria-selected="true">
-                                                <span class="menu-cover"><span>Main</span></span>
-                                            </a>
-                                            <a href="#sidebar-sub-menu02" class="btn-style_rect" data-toggle="tab" role="tab" aria-selected="false">
-                                                <span class="menu-cover"><span>Visitor / Material / Asset</span></span>
-                                            </a>
-                                            <a href="#sidebar-sub-menu03" class="btn-style_rect" data-toggle="tab" role="tab" aria-selected="false">
-                                                <span class="menu-cover"><span>tracking</span></span>
-                                            </a>
-                                        </div>
+                                    <div class="nav tab-menu mb-2" role="tablist">
+                                        <a href="#sidebar-sub-menu01" class="btn-style_rect active" data-toggle="tab" role="tab" aria-selected="true">
+                                            <span class="menu-cover"><span>Main</span></span>
+                                        </a>
+                                        <a href="#sidebar-sub-menu02" class="btn-style_rect" data-toggle="tab" role="tab" aria-selected="false">
+                                            <span class="menu-cover"><span>Material</span></span>
+                                        </a>
+                                        <a href="#sidebar-sub-menu03" class="btn-style_rect" data-toggle="tab" role="tab" aria-selected="false">
+                                            <span class="menu-cover"><span>Asset</span></span>
+                                        </a>
                                     </div>
                                     <div class="tab-content">
                                         <div id="sidebar-sub-menu01" class="tab-pane active" role="tabpanel">

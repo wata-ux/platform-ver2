@@ -1476,8 +1476,6 @@ ul.state-item{
     a.btn-style_underline{
         position: relative;
         display: flex;
-        flex: 0 0 25%;
-        max-width: 25%;
         padding: .5rem;
         align-items: center;
         justify-content: center;
@@ -1488,10 +1486,11 @@ ul.state-item{
             i{
                 font-size: 1.5rem;
             }
-            span{
-                font-size: .875rem;
-                font-weight: 600;
-            }
+        }
+        span{
+            font-size: .875rem;
+            font-weight: 600;
+            white-space: nowrap;
         }
         &.active{
             color: $identity;
@@ -1549,6 +1548,27 @@ ul.state-item{
     &.the-num05 a{
         flex: 0 0 20%;
         max-width: 20%;
+    }
+    
+}
+.sort-cover{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    .form-group{
+        .form-line, .flatpickr-input{
+            line-height: 2.25rem;
+            font-size: .75rem;
+        }
+        .flatpickr-input{
+            background-size: 1rem;
+            padding-right: 2.25rem;
+            width: 250px;
+        }
+    }
+    .icon-geo{
+        width: 1rem;
+        margin-right: .25rem;
     }
 }
 /* history */
