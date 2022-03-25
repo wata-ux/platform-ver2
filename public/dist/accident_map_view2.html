@@ -101,7 +101,6 @@
 <body class="layout-mini-secondary layout-mini-secondary">
 
 
-
 <div class="pl-container">
     <div class="pl-top">
         <div class="navbar" id="default-navbar" data-primary>
@@ -121,6 +120,18 @@
             </div>
             <ul class="top-menu">
                 <li>
+                    <div class="btn-ico-group">
+                        <a href="event_table.html" class="btn-ico-sm">
+                            <span class="icon material-icons">table_rows</span>
+                            <span class="text"><span>Table View</span></span>
+                        </a>
+                        <a href="event_map.html" class="btn-ico-sm active">
+                            <span class="icon material-icons">map</span>
+                            <span class="text"><span>Map View</span></span>
+                        </a>
+                    </div>
+                </li>
+                <li>
                     <div class="form-group m-0 ml-4 form-lang">
                         <select id="" class="custom-line">
                             <option selected="">KOR</option>
@@ -131,7 +142,7 @@
                 </li>
                 <li>
                     <div class="alert-ico-wrap">
-                        <a href="alert_list.html">
+                        <a href="#n">
                             <span class="alert-ico material-icons-outlined">notifications</span>
                             <span class="alert-num">2</span>
                         </a>
@@ -161,7 +172,7 @@
     <nav class="nav-container">
         <div class="nav-inner">
             <div class="nav__list">
-                <a href="project_building.html" class="nav__link active">
+                <a href="project_building.html" class="nav__link ">
                     <span class="material-icons">insert_chart_outlined</span>
                     <span class="nav_name">모니터링</span>
                 </a>
@@ -218,7 +229,7 @@
                     <span class="material-icons-outlined">redeem</span>
                     <span class="nav_name">캠페인</span>
                 </a>
-                <a href="accident_map.html" class="nav__link ">
+                <a href="accident_map.html" class="nav__link active">
                     <span class="material-icons-outlined">warning_amber</span>
                     <span class="nav_name">사고</span>
                 </a>
@@ -232,220 +243,137 @@
 </div>
             <div class="side-contents">
                 <div class="d-flex flex-column h-100">
+                    <!-- 상황 종료 상태 -->
+                    <div class="emg-stat emg-disabled">
+                        <div class="emg-top d-flex align-items-center">
+                            <div class="d-flex align-items-start">
+                                <a href="accident_map.html" class="pr-2"><span class="material-icons">arrow_back</span></a>
+                                <div class="title">
+                                    <h3 class="mb-0">최초 감지 시간</h3>
+                                    <span class="mb-0">2020.01.13 06:42:58</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emg-con text-center">
+                            <em class="time mb-2">00:01:24</em>
+                            <p class="desc m-0">종료됨</p>
+                        </div>
+                    </div>
                     <div class="container-fluid border-bottom-1 py-4">
-                        <div class="mb-3">
-                            <small class="badge-gray">프로젝트명</small>
-                            <small class="badge-gray">건물명</small>
+                        <ul class="list-row column-2 mb-0">
+                            <li class="d-flex flex-column align-items-center border-right-1">
+                                <span class="material-icons-outlined mb-2 text-64">warning_amber</span>
+                                <h5 class="mb-2 text-64">사고 종류</h5>
+                                <strong class="text-identity m-0">긴급 상황</strong>
+                            </li>
+                            <li class="d-flex flex-column align-items-center">
+                                <span class="material-icons-outlined mb-2 text-64">group</span>
+                                <h5 class="mb-2 text-64">재실 인원</h5>
+                                <strong class="text-identity m-0">42</strong>
+                            </li>
+                        </ul>
+                        <a href="#n" class="btn btn-darken w-100 py-3 mt-4">사고 종료</a>
+                    </div>
+                    <!-- 메세지 입력 -->
+                    <div class="container-fluid py-4">
+                        <h4>메세지</h4>
+                        <ul class="list-col history-box bg-light">
+                            <li>
+                                <a href="#n" class="d-flex">
+                                    2022.03.02 15:40:00 <span class="text-identity ml-1">최초</span>
+                                    <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" class="d-flex">
+                                    2022.03.02 15:40:00
+                                    <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" class="d-flex">
+                                    2022.03.02 15:40:00
+                                    <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" class="d-flex">
+                                    2022.03.02 15:40:00
+                                    <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" class="d-flex">
+                                    2022.03.02 15:40:00
+                                    <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" class="d-flex">
+                                    2022.03.02 15:40:00
+                                    <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" class="d-flex">
+                                    2022.03.02 15:40:00
+                                    <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" class="d-flex">
+                                    2022.03.02 15:40:00
+                                    <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" class="d-flex">
+                                    2022.03.02 15:40:00
+                                    <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" class="d-flex">
+                                    2022.03.02 15:40:00
+                                    <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" class="d-flex">
+                                    2022.03.02 15:40:00
+                                    <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" class="d-flex">
+                                    2022.03.02 15:40:00
+                                    <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">메세지 내용 입력</label>
+                            <textarea name="" id="" rows="5" disabled>
+긴급상황이 발생하였습니다. 신속하게 대피해 주시기 바랍니다.
+                            </textarea>
                         </div>
-                        <div class="d-flex align-items-center">
-                            <div class="d-flex flex-column">
-                                <h3 class="mb-0">평면도 2층</h3>
-                                <span class="text-64">2F</span>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">URL</label>
+                            <input type="text" class="form-line" id="" value="" disabled>
+                        </div>
+
+                        <!-- 파일 첨부 후 -->
+                        <div class="form-group mb-32pt over-txt">
+                            <label class="form-label essential" for="">파일 등록</label>
+                            <div class="form-line disabled">
+                                <div class="att-file">
+                                    <p class="file-name">대피경로.png</p>
+                                    <div class="bundle">
+                                        <a href="#n"><span class="material-icons-outlined ml-2">file_download</span></a>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#n" class="btn-add-item text-identity ml-auto mr-n3">
-                                <span class="material-icons">edit</span>
-                                수정
-                            </a>
                         </div>
-                    </div>
-                    <div class="plf-floor-add border-bottom-0">
-                        <div class="d-flex align-items-sm-center pb-3">
-                            <div class="swipe-wrap">
-                                <ul class="swipe-list">
-                                  <li><a href="#" class="active">전체</a></li>
-                                  <li><a href="#">지오펜스</a></li>
-                                  <li><a href="#">구역</a></li>
-                                  <li><a href="#">POI</a></li>
-                                  <li><a href="#">장비</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="search-box mb-0">
-                            <input type="search" class="form-line" placeholder="오브젝트명을 입력해 주세요">
-                            <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
-                        </div>
-                    </div>
-                    <div class="scroll-table">
-                        <div class="scroll-inner">
-                            <table class="table table-high table-line-none table-bumper m-0">
-                                <colgroup>
-                                    <col width="25%">
-                                    <col width="*">
-                                    <col width="10%">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">
-                                            <a href="javascript:void(0)" class="sort"
-                                                data-sort="js-lists-values-project">분류</a>
-                                        </th>
-                                        <th colspan="2" class="text-center">
-                                            <a href="javascript:void(0)" class="sort"
-                                                data-sort="js-lists-values-lead">오브젝트명</a>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="3">
-                                            <div class="text-center py-4">
-                                                <span class="material-icons-outlined text-50 font-size-32pt">info</span>
-                                                <p class="m-0 text-50">등록된 데이터가 없습니다.</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="collapse" data-target="#table-ac01" class="clickable collapsed">
-                                        <td class="text-center"><img src="images/poi/object_geofence.svg" alt=""></td>
-                                        <td>GF1FNZ1
-                                            <div class="d-flex mt-2">
-                                                <a href="#n" class="btn-ico-identity active"><span
-                                                        class="material-icons">warning</span></a>
-                                                <a href="#n" class="btn-ico-identity"><span
-                                                        class="material-icons-outlined">event_note</span><small>4</small></a>
-                                                <a href="#n" class="btn-ico-identity"><span
-                                                        class="material-icons-outlined">redeem</span><small>4</small></a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <a href="#n" class="ac-arrow d-flex"><span
-                                                        class="material-icons-outlined font-size-24pt">expand_less</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="ac-body">
-                                        <td colspan="3">
-                                            <div id="table-ac01" class="collapse">
-                                                <div class="border-top-1">
-                                                    <table class="table-sub">
-                                                        <colgroup>
-                                                            <col width="25%">
-                                                            <col width="*">
-                                                        </colgroup>
-                                                        <tr>
-                                                            <td class="text-center"><img src="images/poi/food_cafe.svg"
-                                                                    alt=""></td>
-                                                            <td>
-                                                                <a href="#n" data-toggle="modal"
-                                                                    data-target="#detailItem">라이언커피</a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><img
-                                                                    src="images/poi/sensors_wifi.svg" alt=""></td>
-                                                            <td><a href="#n" data-toggle="modal"
-                                                                    data-target="#detailItem02">UWB3</a>
-                                                                <div class="d-flex mt-2">
-                                                                    <a href="#n" class="btn-ico-identity"><span
-                                                                            class="material-icons-outlined">event_note</span><small>4</small></a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><img
-                                                                    src="images/poi/medical_medicine.svg" alt=""></td>
-                                                            <td><a href="#n" data-toggle="modal"
-                                                                    data-target="#detailItem03">청담라이언성형외과의원</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><img src="images/poi/srore_shop.svg"
-                                                                    alt=""></td>
-                                                            <td><a href="#n" data-toggle="modal"
-                                                                    data-target="#detailItem04">라이언전자</a></td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="collapse" data-target="#table-ac02" class="clickable collapsed">
-                                        <td class="text-center"><img src="images/poi/object_area.svg" alt=""></td>
-                                        <td>라이언사무실
-                                            <div class="d-flex mt-2">
-                                                <a href="#n" class="btn-ico-identity active"><span
-                                                        class="material-icons">warning</span></a>
-                                                <a href="#n" class="btn-ico-identity"><span
-                                                        class="material-icons-outlined">event_note</span><small>4</small></a>
-                                                <a href="#n" class="btn-ico-identity"><span
-                                                        class="material-icons-outlined">redeem</span><small>4</small></a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex justify-content-center">
-                                                <a href="#n" class="ac-arrow d-flex"><span
-                                                        class="material-icons-outlined font-size-24pt">expand_less</span></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="ac-body">
-                                        <td colspan="3">
-                                            <div id="table-ac02" class="collapse">
-                                                <div class="border-top-1">
-                                                    <table class="table-sub">
-                                                        <colgroup>
-                                                            <col width="25%">
-                                                            <col width="*">
-                                                        </colgroup>
-                                                        <tr>
-                                                            <td class="text-center"><img src="images/poi/food_cafe.svg"
-                                                                    alt=""></td>
-                                                            <td>
-                                                                <a href="#n" data-toggle="modal"
-                                                                    data-target="#detailItem">라이언커피</a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><img
-                                                                    src="images/poi/sensors_wifi.svg" alt=""></td>
-                                                            <td>UWB3
-                                                                <div class="d-flex mt-2">
-                                                                    <a href="#n" class="btn-ico-identity"><span
-                                                                            class="material-icons-outlined">event_note</span><small>4</small></a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><img
-                                                                    src="images/poi/medical_medicine.svg" alt=""></td>
-                                                            <td>청담라이언성형외과의원</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-center"><img src="images/poi/srore_shop.svg"
-                                                                    alt=""></td>
-                                                            <td>라이언전자</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center"><img src="images/poi/food_restaurant.svg" alt=""></td>
-                                        <td>40년손맛원조라이언분식</td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="pagination align-items-center justify-content-center">
-                        <a class="page-link btn-prev" href="#" aria-label="Previous">
-                            <span aria-hidden="true" class="material-icons">chevron_left</span>
-                            <span>이전</span>
-                        </a>
-                        <div class="d-flex align-items-center justify-content-center px-3">
-                            <select name="" id="" class="form-line">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                            </select>
-                            <em>1</em>
-                        </div>
-                        <a class="page-link btn-next" href="#" aria-label="Next">
-                            <span>다음</span>
-                            <span aria-hidden="true" class="material-icons">chevron_right</span>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -456,61 +384,17 @@
                     <div class="floor-inner">
                         <div class="swiper-container floor-item">
                             <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">B2</a></div>
                                 <div class="swiper-slide"><a href="#n" class="btn-floor">B1</a></div>
                                 <div class="swiper-slide"><a href="#n" class="btn-floor active">1F</a></div>
                                 <div class="swiper-slide"><a href="#n" class="btn-floor">2F</a></div>
                                 <div class="swiper-slide"><a href="#n" class="btn-floor">3F</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">4F</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="floor-button floor-button-next"><span class="material-icons">expand_more</span></div>
                     <div class="floor-button floor-button-prev"><span class="material-icons">expand_less</span></div>
-                </div>
-                <div class="trans-box trans-box-sm" style="left:50%;top:10%;transform: translateX(-50%);">
-                    <div class="accordion js-accordion m-0" id="parent">
-                        <div class="accordion__item open">
-                            <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
-                                data-target="#trans-box-option" data-parent="#parent">
-                                <span class="material-icons-outlined">visibility</span>
-                                <span class="flex mx-2">보기 옵션</span>
-                                <span class="accordion__toggle-icon material-icons text-64">keyboard_arrow_down</span>
-                            </a>
-                            <div class="accordion__menu collapse show" id="trans-box-option">
-                                <div class="accordion__menu-link">
-                                    <ul class="list-col list-check-toggle">
-                                        <li class="mb-2">
-                                            <strong>시각화</strong>
-                                            <div class="custom-checkbox-toggle ml-auto">
-                                                <input type="checkbox" id="visualization" class="custom-control-input" checked>
-                                                <label class="custom-control-label" for="visualization">Yes</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span>히트맵</span>
-                                            <div class="custom-checkbox-toggle ml-auto">
-                                                <input type="checkbox" id="heatMap" class="custom-control-input" checked>
-                                                <label class="custom-control-label" for="heatMap">Yes</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span>카운트</span>
-                                            <div class="custom-checkbox-toggle ml-auto">
-                                                <input type="checkbox" id="count" class="custom-control-input" checked>
-                                                <label class="custom-control-label" for="count">Yes</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <span>마커</span>
-                                            <div class="custom-checkbox-toggle ml-auto">
-                                                <input  type="checkbox" id="marker" class="custom-control-input">
-                                                <label class="custom-control-label" for="marker">Yes</label>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span
                         class="material-icons-outlined">chevron_right</span></a>
@@ -780,214 +664,6 @@
         },
     });
 </script>
-
-<!-- Modal -->
-<div class="modal fade" id="detailItem" data-backdrop="static" tabindex="-1" aria-labelledby="detailItemLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="sdetailItemLabel"><img src="images/poi/food_cafe.svg" class="mr-2"
-                        alt="">라이언핸드드롭감성커피</h4>
-                <a href="#n" class="btn-ico-sm">
-                    <span class="icon material-icons-outlined">open_in_browser</span>
-                    <span class="text"><span>수정</span></span>
-                </a>
-            </div>
-            <!-- 음식점 -->
-            <div class="modal-body">
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">타입</small>
-                    <p class="m-0">음식점업</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">분류</small>
-                    <p class="m-0">일반음식점</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">세부 분류</small>
-                    <p class="m-0">카페</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">위치</small>
-                    <p class="m-0">14672854.412916198 / 14672854.412916198</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">설명</small>
-                    <p class="m-0">라이언핸드드롭감성커피</p>
-                </div>
-                <div class="place-thumb">
-                    <img src="images/thumb01.jpg" alt="">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
-                <button type="button" class="btn btn-accent" data-dismiss="modal">캠페인 설정</button>
-                <button type="button" class="btn btn-accent" data-dismiss="modal">이벤트 설정</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="detailItem02" data-backdrop="static" tabindex="-1" aria-labelledby="detailItemLabel02"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="sdetailItemLabel02"><img src="images/poi/object_geofence.svg" class="mr-2"
-                        alt="">지오펜스 1-1</h4>
-                <a href="#n" class="btn-ico-sm">
-                    <span class="icon material-icons-outlined">open_in_browser</span>
-                    <span class="text"><span>수정</span></span>
-                </a>
-            </div>
-            <div class="modal-body">
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">위치</small>
-                    <p class="m-0">14672854.412916198 / 14672854.412916198</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">설명</small>
-                    <p class="m-0">라이언 조심</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">이벤트</small>
-                    <div class="badge-cover">
-                        <a href="#n"><small class="badge-basics">밀집도 증가 (100이상)</small></a>
-                        <a href="#n"><small class="badge-basics">밀집도 증가 (200이상)</small></a>
-                        <a href="#n"><small class="badge-basics">밀집도 증가 (300이상)</small></a>
-                        <a href="#n"><small class="badge-basics">밀집도 증가 (400이상)</small></a>
-                        <a href="#n"><small class="badge-basics">밀집도 증가 (500이상)</small></a>
-                        <a href="#n" class="btn-sm-more">더보기</a>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">캠페인</small>
-                    <div class="badge-cover">
-                        <a href="#n"><small class="badge-basics">침구셋트 1+1</small></a>
-                        <a href="#n"><small class="badge-basics">침구셋트 1+1</small></a>
-                        <a href="#n"><small class="badge-basics">수면안대 1+1</small></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
-                <button type="button" class="btn btn-accent" data-dismiss="modal">캠페인 설정</button>
-                <button type="button" class="btn btn-accent" data-dismiss="modal">이벤트 설정</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="detailItem03" data-backdrop="static" tabindex="-1" aria-labelledby="detailItemLabel03"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="sdetailItemLabel03"><img src="images/poi/object_area.svg" class="mr-2"
-                        alt="">구역 1-1</h4>
-                <a href="#n" class="btn-ico-sm">
-                    <span class="icon material-icons-outlined">open_in_browser</span>
-                    <span class="text"><span>수정</span></span>
-                </a>
-            </div>
-            <div class="modal-body">
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">분류</small>
-                    <p class="m-0">휴게실</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">위치</small>
-                    <p class="m-0">14672854.412916198 / 14672854.412916198</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">설명</small>
-                    <p class="m-0">라이언 사무실</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">이벤트</small>
-                    <div class="badge-cover">
-                        <a href="#n"><small class="badge-basics">제한구역 출입</small></a>
-                        <a href="#n"><small class="badge-basics">밀집도 증가 (200이상)</small></a>
-                        
-                        
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">캠페인</small>
-                    <div class="badge-cover">
-                        <a href="#n"><small class="badge-basics">침구셋트 1+1</small></a>
-                        <a href="#n"><small class="badge-basics">이월상품</small></a>
-                        <a href="#n"><small class="badge-basics">수면안대 1+1</small></a>
-                        <a href="#n"><small class="badge-basics">신학기 맞이 이벤트</small></a>
-                        <a href="#n"><small class="badge-basics">봄 신상품 할인</small></a>
-                        <a href="#n" class="btn-sm-more">더보기</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
-                <button type="button" class="btn btn-accent" data-dismiss="modal">캠페인 설정</button>
-                <button type="button" class="btn btn-accent" data-dismiss="modal">이벤트 설정</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="detailItem04" data-backdrop="static" tabindex="-1" aria-labelledby="detailItemLabel04"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="sdetailItemLabel04"><img src="images/poi/sensors_assets.svg" class="mr-2"
-                        alt="">Scanner 1-1</h4>
-                <a href="#n" class="btn-ico-sm">
-                    <span class="icon material-icons-outlined">open_in_browser</span>
-                    <span class="text"><span>수정</span></span>
-                </a>
-            </div>
-            <div class="modal-body">
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">오브젝트</small>
-                    <p class="m-0">측위자산</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">식별값</small>
-                    <p class="m-0">ble2edasDd32D</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">타입</small>
-                    <p class="m-0">UWB</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">위치</small>
-                    <p class="m-0">14672854.412916198 / 14672854.412916198</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">설명</small>
-                    <p class="m-0">1층 첫번째 스캐너</p>
-                </div>
-                <div class="mb-4">
-                    <small class="d-flex text-64 mb-2">이벤트</small>
-                    <div class="badge-cover">
-                        <a href="#n"><small class="badge-basics">베터리 잔량 부족</small></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
-                <button type="button" class="btn btn-accent" data-dismiss="modal">이벤트 설정</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 
 <div class="page-loader d-none">
