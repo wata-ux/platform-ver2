@@ -1799,7 +1799,6 @@ ul.state-item{
         background-color: #fff;
         padding: 1rem;
         border-radius: .25rem;
-        cursor: pointer;
         &.add-item{
             text-align: center;
             padding: 1.5rem 1rem;
@@ -1829,7 +1828,6 @@ ul.state-item{
             align-items: center;
             margin-bottom: .875rem;
             span.material-icons, span.material-icons-outlined{
-                color: rgba(51,51,51,0.16);
                 font-size: 1.125rem;
             }
             h4{
@@ -1841,7 +1839,6 @@ ul.state-item{
                 margin-left: auto;
                 align-items: center;
                 .floor-num{
-                    margin-right: .5rem;
                     font-weight: 500;
                 }
             }
