@@ -2472,7 +2472,6 @@ ul.state-item{
         }
     }
 }
-
 /* sensor poi */
 .sensor-cover{
     position: absolute;
@@ -2496,6 +2495,36 @@ ul.state-item{
     p{
         text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
         
+    }
+}
+
+.geofence-select{
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid $border-color;
+    .form-group{
+        display: flex;
+        .form-line{
+            position: relative;
+            padding: 0;
+        }
+        .att-file{
+            cursor: pointer;
+            padding: 0 .75rem;
+        }
+        .file-name{
+            max-width: 200px;
+        }
+        .dropdown-item{
+            line-height: 2rem;
+            width: 267px;
+        }
+        .custom-control-label{
+            line-height: 2rem;
+        }
+    }
+    a.btn{
+        white-space: nowrap;
+        align-items: center;
     }
 }
 
