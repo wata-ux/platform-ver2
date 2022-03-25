@@ -102,66 +102,65 @@
 
 
 
-<div class="pl-container">
-    <div class="pl-top">
-        <div class="navbar" id="default-navbar" data-primary>
-            <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
-            <!-- Brand -->
-            <a href="project_dashboard.html" class="sidebar-brand p-0 d-flex justify-content-center"
-                data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
-                <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
-            </a>
-            <div class="project-select">
-                <select class="form-line">
-                    <option value="">프로젝트를 선택해 주세요</option>
-                    <option value="">프로젝트A</option>
-                    <option value="">프로젝트B</option>
-                    <option value="">프로젝트C</option>
-                </select>
-            </div>
-            <ul class="top-menu">
-                <li>
-                    <div class="form-group m-0 ml-4 form-lang">
-                        <select id="" class="custom-line">
-                            <option selected="">KOR</option>
-                            <option value="1">JPN</option>
-                            <option value="2">ENG</option>
-                        </select>
-                    </div>
-                </li>
-                <li>
-                    <div class="alert-ico-wrap">
-                        <a href="alert_list.html">
-                            <span class="alert-ico material-icons-outlined">notifications</span>
-                            <span class="alert-num">2</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
-                            data-caret="false">
-                            <span class="avatar avatar-md">
-                                <span class="avatar-title rounded-circle">SH</span>
-                            </span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <div class="dropdown-header"><strong>Account</strong></div>
-                            <a class="dropdown-item" href="my_profile.html">내 프로필</a>
-                            <a class="dropdown-item" href="login.html">Logout</a>
+    <div class="pl-container">
+        <div class="pl-top">
+            <div class="navbar" id="default-navbar" data-primary>
+                <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+                <!-- Brand -->
+                <a href="project_dashboard.html" class="sidebar-brand p-0 d-flex justify-content-center" data-toggle="tooltip"
+                    data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                    <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+                </a>
+                <div class="project-select">
+                    <select class="form-line">
+                        <option value="">프로젝트를 선택해 주세요</option>
+                        <option value="">프로젝트A</option>
+                        <option value="">프로젝트B</option>
+                        <option value="">프로젝트C</option>
+                    </select>
+                </div>
+                <ul class="top-menu">
+                    <li>
+                        <div class="form-group m-0 ml-4 form-lang">
+                            <select id="" class="form-line">
+                                <option selected="">KOR</option>
+                                <option value="1">JPN</option>
+                                <option value="2">ENG</option>
+                            </select>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                    <li>
+                        <div class="alert-ico-wrap">
+                            <a href="alert_list.html">
+                                <span class="alert-ico material-icons-outlined">notifications</span>
+                                <span class="alert-num">2</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                <span class="avatar avatar-md">
+                                    <span class="avatar-title rounded-circle">SH</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                                <a class="dropdown-item" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="pl-cover">
-        <div class="pl-col-left" id="sidebar-left">
-            <div class="side-navbar expander" id="side-navbar">
+        <div class="pl-cover">
+            <div class="pl-col-left" id="sidebar-left">
+                <div class="side-navbar expander" id="side-navbar">
     <nav class="nav-container">
         <div class="nav-inner">
             <div class="nav__list">
-                <a href="project_building.html" class="nav__link active">
+                <a href="project_building.html" class="nav__link ">
                     <span class="material-icons">insert_chart_outlined</span>
                     <span class="nav_name">모니터링</span>
                 </a>
@@ -196,7 +195,7 @@
                     <span class="material-icons-outlined">category</span>
                     <span class="nav_name">자산</span>
                 </a>
-                <a href="sensor_dashboard.html" class="nav__link @@activeSensor">
+                <a href="sensor_dashboard.html" class="nav__link active">
                     <span class="material-icons-outlined">air</span>
                     <span class="nav_name">환경센서</span>
                 </a>
@@ -214,7 +213,7 @@
                     <span class="material-icons-outlined">notifications</span>
                     <span class="nav_name">알림 설정</span>
                 </a>
-                <a href="campaign_dashboard.html" class="nav__link @@activeCampaign">
+                <a href="campaign_dashboard.html" class="nav__link ">
                     <span class="material-icons-outlined">redeem</span>
                     <span class="nav_name">캠페인</span>
                 </a>
@@ -230,233 +229,169 @@
         </div>
     </nav>
 </div>
-            <div class="side-contents">
-                <div class="d-flex flex-column h-100">
-                    <div class="container-fluid border-bottom-1 py-4">
-                        <div class="mb-3">
-                            <small class="badge-gray">프로젝트명</small>
-                            <small class="badge-gray">건물명</small>
-                        </div>
-                        <div class="d-flex align-items-center">
+                <div class="side-contents">
+                    <div class="d-flex flex-column h-100">
+                        <div class="container-fluid border-bottom-1 py-4">
                             <div class="d-flex flex-column">
-                                <h3 class="mb-0">평면도 2층</h3>
-                                <span class="text-64">2F</span>
-                            </div>
-                            <a href="#n" class="btn-add-item text-identity ml-auto mr-n3">
-                                <span class="material-icons">edit</span>
-                                수정
-                            </a>
-                        </div>
-                    </div>
-                    <div class="plf-floor-add border-bottom-0">
-                        <div class="d-flex align-items-sm-center pb-3">
-                            <div class="swipe-wrap">
-                                <ul class="swipe-list">
-                                  <li><a href="#" class="active">전체</a></li>
-                                </ul>
+                                <div class="d-flex flex-row align-items-center mb-1">
+                                    <span class="material-icons cp-icon">apartment</span>
+                                    <p class="m-0 text-64">Office</p>
+                                </div>
+                                <h3 class="mb-0">스마트오피스 프로젝트</h3>
                             </div>
                         </div>
-                        <div class="search-box mb-0">
-                            <input type="search" class="form-line" placeholder="오브젝트명을 입력해 주세요">
-                            <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
+                        <div class="plf-floor-card p-4 position-relative">
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <h4>에이치 스퀘어 N동</h4>
+                                </div>
+                                <div class="plf-area-content">
+                                    <p class="desc">대한민국, 경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                    <div class="d-flex align-items-center">
+                                        <span class="material-icons-outlined font-size-16pt mr-1">map</span>3
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="plf-area-card active">
+                                <div class="plf-area-top">
+                                    <h4>에이치 스퀘어 S동</h4>
+                                </div>
+                                <div class="plf-area-content text-50">
+                                    <p class="desc">대한민국, 경기 성남시 분당구 판교역로 231(삼평동, 에이치스퀘어 에스동)</p>
+                                    <div class="d-flex align-items-center">
+                                        <span class="material-icons-outlined font-size-16pt mr-1">map</span>4
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="scroll-table">
-                        <div class="scroll-inner">
-                            <table class="table table-high table-line-none table-bumper table-center m-0">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">
-                                            <a href="javascript:void(0)" class="sort"
-                                                data-sort="js-lists-values-project">그룹</a>
-                                        </th>
-                                        <th class="text-center">
-                                            <a href="javascript:void(0)" class="sort"
-                                                data-sort="js-lists-values-lead">사용자명</a>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">
-                                            <div class="text-center py-4">
-                                                <span class="material-icons-outlined text-50 font-size-32pt">info</span>
-                                                <p class="m-0 text-50">등록된 데이터가 없습니다.</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Security</td>
-                                        <td>Doe. John</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Event Manager</td>
-                                        <td>Doe. John</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1F Manager</td>
-                                        <td>Doe. John</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Security</td>
-                                        <td>Doe. John</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Security</td>
-                                        <td>Doe. John</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Security</td>
-                                        <td>Doe. John</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Security</td>
-                                        <td>Doe. John</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Security</td>
-                                        <td>Doe. John</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="pagination align-items-center justify-content-center">
-                        <a class="page-link btn-prev" href="#" aria-label="Previous">
-                            <span aria-hidden="true" class="material-icons">chevron_left</span>
-                            <span>이전</span>
-                        </a>
-                        <div class="d-flex align-items-center justify-content-center px-3">
-                            <select name="" id="" class="form-line">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                            </select>
-                            <em>1</em>
-                        </div>
-                        <a class="page-link btn-next" href="#" aria-label="Next">
-                            <span>다음</span>
-                            <span aria-hidden="true" class="material-icons">chevron_right</span>
-                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="pl-col-group">
-            <div class="pl-col-mid" id="main-contents">
-                <div class="btn-mid-holder-floor">
-                    <div class="floor-inner">
-                        <div class="swiper-container floor-item">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">B1</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor active">1F</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">2F</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">3F</a></div>
+            <div class="pl-col-group">
+                <div class="pl-col-mid" id="main-contents">
+                    <div class="col-list">
+                        <div class="plf-floor-card">
+                            <div class="plf-area-title">
+                                <div class="inner">
+                                    <h3 class="mb-2">에이치 스퀘어 S동</h3>
+                                    <p class="text-64 m-0">센서 모니터링현황</p>
+                                </div>
+                                <a href="#n" class="btn btn-accent py-3 w-10 ml-auto">수정</a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="floor-button floor-button-next"><span class="material-icons">expand_more</span></div>
-                    <div class="floor-button floor-button-prev"><span class="material-icons">expand_less</span></div>
-                </div>
-                <div class="trans-box trans-box-sm" style="left:50%;top:10%;transform: translateX(-50%);">
-                    <div class="accordion js-accordion m-0" id="parent">
-                        <div class="accordion__item open">
-                            <a href="#" class="accordion__toggle collapsed" data-toggle="collapse"
-                                data-target="#trans-box-option" data-parent="#parent">
-                                <span class="material-icons-outlined">visibility</span>
-                                <span class="flex mx-2">보기 옵션</span>
-                                <span class="accordion__toggle-icon material-icons text-64">keyboard_arrow_down</span>
-                            </a>
-                            <div class="accordion__menu collapse show" id="trans-box-option">
-                                <div class="accordion__menu-link">
-                                    <ul class="list-col list-check-toggle">
-                                        <li class="mb-2">
-                                            <strong>시각화</strong>
-                                            <div class="custom-checkbox-toggle ml-auto">
-                                                <input type="checkbox" id="visualization" class="custom-control-input" checked>
-                                                <label class="custom-control-label" for="visualization">Yes</label>
-                                            </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined text-danger mr-1">upload_file</span>
+                                    <h4>평면도 2층</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">2F</span>
+                                        <a href="#n" class="btn-ico-sm ml-3">
+                                            <span class="icon material-icons-outlined">open_in_browser</span>
+                                            <span class="text"><span>지도 편집</span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <a href="sensor_map.html">
+                                                <div class="thumb">
+                                                    <img src="images/slider01.jpg" alt="">
+                                                </div>
+                                            </a>
                                         </li>
                                         <li>
-                                            <span>히트맵</span>
-                                            <div class="custom-checkbox-toggle ml-auto">
-                                                <input type="checkbox" id="heatMap" class="custom-control-input" checked>
-                                                <label class="custom-control-label" for="heatMap">Yes</label>
-                                            </div>
+                                            <span class="icon material-icons">air</span>
+                                            <span class="text-64 font-size-14pt">환경센서</span>
+                                            <em>16</em>
                                         </li>
                                         <li>
-                                            <span>카운트</span>
-                                            <div class="custom-checkbox-toggle ml-auto">
-                                                <input type="checkbox" id="count" class="custom-control-input" checked>
-                                                <label class="custom-control-label" for="count">Yes</label>
+                                            <span class="icon material-icons">thermostat</span>
+                                            <span class="text-64 font-size-14pt">온습도센서</span>
+                                            <em>16</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined text-16 mr-1">upload_file</span>
+                                    <h4>평면도 1층</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">1F</span>
+                                        <a href="#n" class="btn-ico-sm ml-3">
+                                            <span class="icon material-icons-outlined">open_in_browser</span>
+                                            <span class="text"><span>지도 편집</span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <div class="thumb">
+                                                <span class="material-icons-outlined text-16">upload_file</span>
                                             </div>
+                                            
                                         </li>
                                         <li>
-                                            <span>마커</span>
-                                            <div class="custom-checkbox-toggle ml-auto">
-                                                <input  type="checkbox" id="marker" class="custom-control-input">
-                                                <label class="custom-control-label" for="marker">Yes</label>
-                                            </div>
+                                            <span class="icon material-icons">air</span>
+                                            <span class="text-64 font-size-14pt">환경센서</span>
+                                            <em>16</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons">thermostat</span>
+                                            <span class="text-64 font-size-14pt">온습도센서</span>
+                                            <em>16</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plf-area-card">
+                                <div class="plf-area-top">
+                                    <span class="material-icons-outlined text-danger mr-1">upload_file</span>
+                                    <h4>평면도 B1층</h4>
+                                    <div class="left-cell">
+                                        <span class="floor-num">B1F</span>
+                                        <a href="#n" class="btn-ico-sm ml-3">
+                                            <span class="icon material-icons-outlined">open_in_browser</span>
+                                            <span class="text"><span>지도 편집</span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="plf-area-content">
+                                    <ul class="plf-floor-card-info">
+                                        <li>
+                                            <a href="sensor_map.html">
+                                                <div class="thumb">
+                                                    <img src="images/slider01.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons">air</span>
+                                            <span class="text-64 font-size-14pt">환경센서</span>
+                                            <em>16</em>
+                                        </li>
+                                        <li>
+                                            <span class="icon material-icons">thermostat</span>
+                                            <span class="text-64 font-size-14pt">온습도센서</span>
+                                            <em>16</em>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="empty-state d-none">
+                        <p class="empty-icon m-0"><i class="far fa-map"></i></p>
+                        <em class="empty-txt m-0">아직 등록한 평면도가 없습니다.</em>
+                        <!-- <a href="#n" class="btn btn-link">새로운 프로젝트 생성</a> -->
+                    </div>
+                    <a href="#n" class="side-btn btn-col-left toggle-sidebar-left"><span class="material-icons-outlined">chevron_left</span></a>
+                    <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span class="material-icons-outlined">chevron_right</span></a>
                 </div>
-                <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span
-                        class="material-icons-outlined">chevron_right</span></a>
-                    <!-- map zoom/out -->
-    <div class="btn-widget-holder">
-        <ul>
-            <li class="mb-3"><a href="#n" class="widget-btn active"><img src="images/icon/map_layer_white.svg" alt=""></a></li>
-            <li class="mb-3"><a href="#n" class="widget-btn"><img src="images/icon/map_rotate.svg" alt=""></a></li>
-            <li class="mb-3"><a href="#n" class="widget-btn"><img src="images/icon/map_grid.svg" alt=""></a></li>
-            <li class="mb-3"><a href="#layerPopup" class="widget-btn btn_layerpopup" >3D</a></li>
-            <li class="mb-3">
-                <div class="btn-group-vertical">
-                    <a href="" class="widget-btn"><i class="fas fa-plus"></i></a>
-                    <a href=""  class="widget-btn"><i class="fas fa-minus"></i></a>
-                </div>
-            </li>
-            <li><a href="#n" class="widget-btn"><img src="images/icon/map_location.svg" alt=""></a></a></li>
-        </ul>
-    </div> 
-
-    <!-- mouse pointer -->
-    <div class="pointer-wrap">
-        <div class="mouse-point user" style="left: 45%; top: 51.5%;" data-toggle="modal" data-target="#poiDetail"></div>
-        <div class="mouse-point user active" style="left: 45%; top: 45.5%;" data-toggle="modal" data-target="#poiDetail"></div>
-    </div>
-
-
-
-    <!-- slide button -->
-    <a href="#n" class="side-btn btn-col-left toggle-sidebar-left"><span class="material-icons-outlined">chevron_left</span></a>
-    <!-- map container -->
-    <div id="map" style="width:100%;height:100%;"></div>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=929301b664a35cf1f7bfa0a302efa160"></script>
-    <script>
-        var container = document.getElementById('map');
-        var options = {
-            center: new kakao.maps.LatLng(37.54537298405762, 127.2238266278939),
-            level: 1
-        };
-
-        var map = new kakao.maps.Map(container, options);
-        //var mapTypeControl = new kakao.maps.MapTypeControl();
-        //map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-    </script>
-    <div class="layer-popup" id="layerPopup">
-        <a href="#n" class="btn_layerpopup btn_close_layer"><span class="material-icons">close</span></a>
-        <div class="layer-map">
-
-        </div>
-    </div>
-            </div>
-            <div class="pl-col-right" id="sidebar-right">
-                <div class="cd-panel__container">
+                <div class="pl-col-right" id="sidebar-right">
+                    <div class="cd-panel__container">
     <div class="cd-panel__content">
         <div class="nav tab-menu the-num02 border-bottom-1" role="tablist">
             <a href="#panel-tab01" class="btn-style_underline active" data-toggle="tab" role="tab" aria-selected="true">
@@ -645,35 +580,10 @@
 
 
 
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<link rel="stylesheet" href="css/swiper.min.css" />
-<!-- Swiper JS -->
-<script src="js/swiper.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper(".floor-item", {
-        // allowTouchMove: false,
-        direction: "vertical",
-        // mousewheel: true,
-        slidesPerView: 8,
-        slidesPerGroup: 8,
-        spaceBetween: 0,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
-        },
-        navigation: {
-            nextEl: ".floor-button-next",
-            prevEl: ".floor-button-prev",
-        },
-    });
-</script>
-
 
 
 <div class="page-loader d-none">
