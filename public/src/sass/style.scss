@@ -2514,6 +2514,11 @@ ul.state-item{
         .file-name{
             max-width: 200px;
         }
+        .dropdown-menu{
+            max-height: 400px;
+            overflow: hidden;
+            overflow-y: auto;
+        }
         .dropdown-item{
             line-height: 2rem;
             width: 267px;
@@ -3706,7 +3711,6 @@ ul.state-item{
     justify-content: center;
     flex-direction: column;
     margin-bottom: 4rem;
-    word-break: keep-all;
     h2{
         margin-bottom: 2rem;
     }
