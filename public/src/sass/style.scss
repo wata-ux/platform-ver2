@@ -1021,6 +1021,9 @@ table.table-bumper{
         table-layout: fixed;
         width: 100%;
     }
+    td{
+        padding: .5rem !important;
+    }
 }
 
 /***** avatar *****/
@@ -4079,9 +4082,3 @@ ul.state-item{
         }
     }
 }
-
-
-
-
-
-
