@@ -214,10 +214,26 @@
                     <span class="material-icons-outlined">warning_amber</span>
                     <span class="nav_name">사고</span>
                 </a>
-                <a href="chart.html" class="nav__link @@activeChart">
-                    <span class="material-icons-outlined">bar_chart</span>
-                    <span class="nav_name">통계</span>
-                </a>
+
+                <div class="nav__link @@activeChart collapse-item">
+                    <div class="popover-menu">
+                        <a href="chart.html" class="dropdown-side-toggle">
+                            <span class="material-icons-outlined">bar_chart</span>
+                        </a>
+                        <div class="popover-container">
+                            <ul>
+                                <li><a href="chart.html">분석1</a></li>
+                                <li><a href="#n">분석2</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="chart.html" class="dropdown-side-toggle"><span class="nav_name">통계</span></a>
+                    <span class="material-icons collapse__link">expand_more</span>
+                    <div class="collapse__menu">
+                        <a href="chart.html" class="collapse__sublink">분석1</a>
+                        <a href="#n" class="collapse__sublink">분석2</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
