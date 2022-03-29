@@ -55,7 +55,38 @@
         </div>
         <div class="pl-cover">
             <div class="pl-col-left" id="sidebar-left">
-                @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "active", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
+                <div class="side-navbar expander" id="side-navbar">
+                    <nav class="nav-container">
+                        <div class="nav-inner">
+                            <div class="nav__list">
+                                <a href="project_dashboard.html" class="nav__link @@activeProjects">
+                                    <span class="material-icons">grid_view</span>
+                                    <span class="nav_name">프로젝트</span>
+                                </a>
+                                <div class="nav__link @@activeUser collapse-item">
+                                    <div class="popover-menu">
+                                        <a href="user_list.html" class="dropdown-side-toggle">
+                                            <span class="material-icons-outlined">people</span>
+                                        </a>
+                                        <div class="popover-container">
+                                            <ul>
+                                                <li><a href="user_list.html">사용자 관리</a></li>
+                                                <li><a href="user_group_list.html">사용자 그룹 관리</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="user_list.html" class="dropdown-side-toggle"><span class="nav_name">사용자</span></a>
+                                    <span class="material-icons collapse__link">expand_more</span>
+                                    <div class="collapse__menu">
+                                        <a href="user_list.html" class="collapse__sublink">사용자 관리</a>
+                                        <a href="user_group_list.html" class="collapse__sublink">사용자 그룹 관리</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
             <div class="pl-col-group">
                 <div class="pl-col-mid" id="main-contents">
@@ -68,7 +99,7 @@
                             </div>
                             <div class="row card-group-row">
                                 <div class="col-3 card-group-row__col">
-                                    <a href="#n" class="card card-latest">
+                                    <a href="project_building.html" class="card card-latest">
                                         <div class="card-caption">
                                             <span class="material-icons cp-icon">factory</span>
                                             <h5 class="m-0">Factory</h5>
@@ -90,7 +121,7 @@
                                     </a>
                                 </div>
                                 <div class="col-3 card-group-row__col">
-                                    <a href="#n" class="card card-latest">
+                                    <a href="project_building.html" class="card card-latest">
                                         <div class="card-caption">
                                             <span class="material-icons cp-icon">factory</span>
                                             <h5 class="m-0">Retail</h5>
@@ -112,7 +143,7 @@
                                     </a>
                                 </div>
                                 <div class="col-3 card-group-row__col">
-                                    <a href="#n" class="card card-latest">
+                                    <a href="project_building.html" class="card card-latest">
                                         <div class="card-caption">
                                             <span class="material-icons cp-icon">apartment</span>
                                             <h5 class="m-0">Office</h5>
