@@ -1268,10 +1268,12 @@ ul.state-item{
             justify-content: flex-end;
             margin-right: .25rem;
             white-space: nowrap;
+            width: 40px;
         }
         &.arry02{
             justify-content: flex-start;
             color: rgba(51,51,51,0.64);
+            width: 30px;
         }
         a{
             color: inherit;
