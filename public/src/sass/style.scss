@@ -2514,7 +2514,7 @@ ul.state-item{
         }
         &.selected{
             border-color: $identity;
-            outline: 3px solid $identity;
+            box-shadow: 0 0 0 3px $identity;
         }
     }
     p{
