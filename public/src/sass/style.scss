@@ -885,7 +885,7 @@ a.btn-refresh{
     tbody{
         .ac-body{
             >td{
-                padding: 0;
+                padding: 0 !important;
                 border-top: none;
             }
         }
