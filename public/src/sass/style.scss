@@ -169,22 +169,20 @@ h6{
 }
 
 .text-gray, .level-text-item01{
-    color: #6B7380;
+    color: $level-item01;
 }
 .text-red, .level-text-item02{
-    color: #D92A2A;
+    color: $level-item02;
 }
 .text-yellow, .level-text-item03{
-    color: #FDA60E;
+    color: $level-item03;
 }
 .text-green, .level-text-item04{
-    color: #2BA400;
+    color: $level-item04;
 }
 .text-blue, .level-text-item05{
-    color: #32A1FF;
+    color: $level-item05;
 }
-
-
 
 
 /***** form style *****/
@@ -2515,24 +2513,43 @@ ul.state-item{
     align-items: center;
     flex-direction: column;
     .sensor-circle{
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 3rem;
-        height: 1.75rem;
+        width: 2.5rem;
+        height: 2.5rem;
         background-color: #6B7380;
         color: #fff;
         border-radius: 5rem;
         border: 2px solid #48505c;
         margin-bottom: .25rem;
         font-size: .75rem;
-        &.active{
+        &.active-good{
             background-color: #2BA400;
             border-color: #1f7500;
+        }
+        &.active-poor{
+            background-color: #FFA800;
+            border-color: #EC8000;
         }
         &.selected{
             border-color: $identity;
             box-shadow: 0 0 0 3px $identity;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            width: 8.5rem;
+            height: 8.5rem;
+            background-color: rgba(50,161,255,0.08);
+            border: 1px solid rgba(50,161,255,64);
+            border-radius: 50rem;
+        }
+        &.disconnect{
+            &:before{
+                display: none;
+            }
         }
     }
     p{
