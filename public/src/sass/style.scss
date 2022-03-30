@@ -944,6 +944,13 @@ a.btn-refresh{
         white-space: nowrap;
         max-width: 100px;
     }
+    &.table-bumper{
+        tbody{
+            td{
+                padding: .5rem;
+            }
+        }
+    }
 }
 .table-sub{
     width: 100%;
@@ -1046,9 +1053,6 @@ table.table-bumper{
         display: inline-table;
         table-layout: fixed;
         width: 100%;
-    }
-    td{
-        padding: .5rem !important;
     }
 }
 
