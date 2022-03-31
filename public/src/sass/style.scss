@@ -2512,49 +2512,89 @@ ul.state-item{
     display: flex;
     align-items: center;
     flex-direction: column;
+    .sensor-cell{
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: .25rem .75rem .25rem .25rem;
+        border-radius: 50rem;
+        border: 1px solid $border-color;
+        cursor: pointer;
+        &.selected{
+            border-color: $identity;
+            box-shadow: 0 0 0 3px rgba(232,59,59,0.75);
+        }
+        &.active-good{
+            .sensor-circle{
+                background-color: #2BA400;
+                border-color: #1f7500;
+                &:before{
+                    background-color: rgba(50,161,255,0.08);
+                    border-color: rgba(50,161,255,64);
+                }
+            }
+        }
+        &.active-poor{
+            .sensor-circle{
+                background-color: #FFA800;
+                border-color: #EC8000;
+                &:before{
+                    background-color: rgba(255,138,0,0.06);
+                    border-color: rgba(255,138,0,0.64);
+                }
+            }
+        }
+        &.disconnect{
+            .sensor-circle{
+                &:before{
+                    display: none;
+                }
+            }
+        }
+    }
     .sensor-circle{
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
         background-color: #6B7380;
         color: #fff;
         border-radius: 5rem;
         border: 2px solid #48505c;
-        margin-bottom: .25rem;
         font-size: .75rem;
-        &.active-good{
-            background-color: #2BA400;
-            border-color: #1f7500;
-        }
-        &.active-poor{
-            background-color: #FFA800;
-            border-color: #EC8000;
-        }
-        &.selected{
-            border-color: $identity;
-            box-shadow: 0 0 0 3px $identity;
-        }
         &:before{
             content: '';
             position: absolute;
             width: 8.5rem;
             height: 8.5rem;
-            background-color: rgba(50,161,255,0.08);
-            border: 1px solid rgba(50,161,255,64);
             border-radius: 50rem;
+            z-index: -1;
+            border-width: 1px;
+            border-style: solid;
+            cursor: auto;
+            animation: sensor-circle 2.5s infinite alternate;
         }
-        &.disconnect{
-            &:before{
-                display: none;
-            }
+
+        span{
+            font-size: 1rem;
         }
     }
-    p{
+    .desc{
         text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-        
+        margin: 0;
+        padding-left: .5rem;
+        font-size: .875rem;
+    }
+}
+@keyframes sensor-circle {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.4;
     }
 }
 
