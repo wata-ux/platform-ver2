@@ -2529,6 +2529,7 @@ ul.state-item{
             border-color: darken($border-color, 10%);
         }
         &.selected{
+            background-color: #FFF3F3;
             border-color: $identity;
             box-shadow: 0 0 0 3px rgba(232,59,59,0.75);
         }
@@ -2584,7 +2585,6 @@ ul.state-item{
             cursor: auto;
             animation: sensor-circle 2.5s infinite alternate;
         }
-
         span{
             font-size: 1rem;
         }
@@ -2601,7 +2601,7 @@ ul.state-item{
         opacity: 1;
     }
     100% {
-        opacity: 0.4;
+        opacity: 0.3;
     }
 }
 
