@@ -2538,8 +2538,8 @@ ul.state-item{
                 background-color: #2BA400;
                 border-color: #1f7500;
                 &:before{
-                    background-color: rgba(50,161,255,0.08);
-                    border-color: rgba(50,161,255,64);
+                    background-color: rgba(50,161,255,0.2);
+                    border-color: rgba(50,161,255,0.9);
                 }
             }
         }
@@ -2548,8 +2548,8 @@ ul.state-item{
                 background-color: #FFA800;
                 border-color: #EC8000;
                 &:before{
-                    background-color: rgba(255,138,0,0.06);
-                    border-color: rgba(255,138,0,0.64);
+                    background-color: rgba(255,138,0,0.2);
+                    border-color: rgba(255,138,0,0.9);
                 }
             }
         }
