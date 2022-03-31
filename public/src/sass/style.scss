@@ -2508,11 +2508,15 @@ ul.state-item{
 /* sensor poi */
 .sensor-cover{
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     display: flex;
     align-items: center;
     flex-direction: column;
+    &:hover{
+        z-index: 2;
+    }
     .sensor-cell{
+        position: relative;
         background-color: #fff;
         display: flex;
         flex-direction: row;
@@ -2521,6 +2525,9 @@ ul.state-item{
         border-radius: 50rem;
         border: 1px solid $border-color;
         cursor: pointer;
+        &:hover{
+            border-color: darken($border-color, 10%);
+        }
         &.selected{
             border-color: $identity;
             box-shadow: 0 0 0 3px rgba(232,59,59,0.75);
