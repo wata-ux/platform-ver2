@@ -217,6 +217,31 @@
             });
         })(jQuery);
     </script>
+
+
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".floor-item", {
+            // allowTouchMove: false,
+            direction: "vertical",
+            // mousewheel: true,
+            slidesPerView: 8,
+            slidesPerGroup: 8,
+            spaceBetween: 0,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".floor-button-next",
+                prevEl: ".floor-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>

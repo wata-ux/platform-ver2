@@ -232,27 +232,7 @@
         </div>
         <div class="pl-col-group">
             <div class="pl-col-mid" id="main-contents">
-                <div class="btn-mid-holder-floor">
-                    <div class="floor-inner">
-                        <div class="swiper-container floor-item">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">B2</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">B1</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor active">1F</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">2F</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">3F</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">4F</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="floor-button floor-button-next"><span class="material-icons">expand_more</span></div>
-                    <div class="floor-button floor-button-prev"><span class="material-icons">expand_less</span></div>
-                </div>
-
-                <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span
-                        class="material-icons-outlined">chevron_right</span></a>
                 @@include('./include/platform-tools-map.html')
-
                 <div class="pointer-wrap">
                     <div class="mouse-point warning-fire" style="left: 50%; top: 65%;"></div>
                     <div class="mouse-point warning-cau" style="left: 53%; top: 65%;"></div>
@@ -260,36 +240,9 @@
                     <div class="mouse-point warning-emg" style="left: 59%; top: 65%;"></div>
                 </div>
             </div>
-            <div class="pl-col-right" id="sidebar-right">
-                @@include('./include/platform-right-menu.html')
-            </div>
         </div>
     </div>
 </div>
-
-<link rel="stylesheet" href="css/swiper.min.css" />
-<!-- Swiper JS -->
-<script src="js/swiper.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper(".floor-item", {
-        // allowTouchMove: false,
-        direction: "vertical",
-        // mousewheel: true,
-        slidesPerView: 8,
-        slidesPerGroup: 8,
-        spaceBetween: 0,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
-        },
-        navigation: {
-            nextEl: ".floor-button-next",
-            prevEl: ".floor-button-prev",
-        },
-    });
-</script>
 
 
 @@include('./include/platform-footer.html')

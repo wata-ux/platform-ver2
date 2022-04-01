@@ -313,7 +313,6 @@
             </div>
             <div class="pl-col-group">
                 <div class="pl-col-mid" id="main-contents">
-                    <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span class="material-icons-outlined">chevron_right</span></a>
                     @@include('./include/platform-tools-map.html')
                     <div class="sensor-cover" style="left: 25%; top: 30%;">
                         <div class="sensor-cell active-good">
@@ -371,9 +370,71 @@
                             <p class="desc"><strong>Beacon3</strong></p>
                         </div>
                     </div>
-                </div>
-                <div class="pl-col-right" id="sidebar-right">
-                    @@include('./include/platform-right-menu.html')
+                    <!-- alert -->
+                    <div class="map-alert-container"> 
+                        <div class="alert alert-white alert-dismissible p-0 mb-0 mt-3" role="alert">
+                            <div class="nav tab-menu the-num02 border-bottom-1 mb-2" role="tablist">
+                                <a href="#alert-panel-tab01" class="btn-style_underline py-3 active" data-toggle="tab" role="tab" aria-selected="true">
+                                    <span class="menu-cover"><span>라이다 센서</span></span>
+                                </a>
+                                <a href="#alert-panel-tab02" class="btn-style_underline py-3" data-toggle="tab" role="tab" aria-selected="false">
+                                    <span class="menu-cover"><span>앱 측위</span></span>
+                                </a>
+                            </div>
+                            <div class="tab-content">
+                                <div id="alert-panel-tab01" class="tab-pane active" role="tabpanel">
+                                    <div class="d-flex flex-wrap align-items-start p-3">
+                                        <div class="d-flex align-items-center">
+                                            <h4 class="m-0">실시간 현황</h4>
+                                            <a href="#n" class="btn-refresh"><span class="material-icons-outlined">refresh</span></a>
+                                        </div>
+                                        <ul class="list-row m-0 py-3 border-bottom-1">
+                                            <li>
+                                                <p class="mb-2 text-64">현재</p>
+                                                <strong class="font-size-16pt">42</strong>
+                                            </li>
+                                        </ul>
+                                        <ul class="list-row column-4 m-0 py-3">
+                                            <li class="border-right-1">
+                                                <p class="mb-2 text-64">사람</p>
+                                                <strong class="font-size-16pt">42</strong>
+                                            </li>
+                                            <li class="border-right-1">
+                                                <p class="mb-2 text-64">장비</p>
+                                                <strong class="font-size-16pt">242</strong>
+                                            </li>
+                                            <li class="border-right-1">
+                                                <p class="mb-2 text-64">차</p>
+                                                <strong class="font-size-16pt">242</strong>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2 text-64">기타</p>
+                                                <strong class="font-size-16pt">242</strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="alert-panel-tab02" class="tab-pane" role="tabpanel">
+                                    <div class="d-flex flex-wrap align-items-start p-3">
+                                        <div class="d-flex align-items-center">
+                                            <h4 class="m-0">실시간 현황</h4>
+                                            <a href="#n" class="btn-refresh"><span class="material-icons-outlined">refresh</span></a>
+                                        </div>
+                                        <ul class="list-row column-2 m-0 py-3">
+                                            <li class="border-right-1">
+                                                <p class="mb-2 text-64">차</p>
+                                                <strong class="font-size-16pt">242</strong>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2 text-64">기타</p>
+                                                <strong class="font-size-16pt">242</strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -411,24 +411,6 @@
         </div>
         <div class="pl-col-group">
             <div class="pl-col-mid" id="main-contents">
-                <div class="btn-mid-holder-floor">
-                    <div class="floor-inner">
-                        <div class="swiper-container floor-item">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">B2</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">B1</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor active">1F</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">2F</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">3F</a></div>
-                                <div class="swiper-slide"><a href="#n" class="btn-floor">4F</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="floor-button floor-button-next"><span class="material-icons">expand_more</span></div>
-                    <div class="floor-button floor-button-prev"><span class="material-icons">expand_less</span></div>
-                </div>
-                <a href="#n" class="side-btn btn-col-right toggle-sidebar-right"><span
-                        class="material-icons-outlined">chevron_right</span></a>
                     <!-- map zoom/out -->
     <div class="btn-widget-holder">
         <ul>
@@ -452,7 +434,21 @@
         <div class="mouse-point user active" style="left: 45%; top: 75.5%;" data-toggle="modal" data-target="#poiDetail"></div>
     </div>
 
-
+    <!-- floor -->
+    <div class="btn-mid-holder-floor">
+        <div class="floor-inner">
+            <div class="swiper-container floor-item">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#n" class="btn-floor">B1</a></div>
+                    <div class="swiper-slide"><a href="#n" class="btn-floor active">1F</a></div>
+                    <div class="swiper-slide"><a href="#n" class="btn-floor">2F</a></div>
+                    <div class="swiper-slide"><a href="#n" class="btn-floor">3F</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="floor-button floor-button-next"><span class="material-icons">expand_more</span></div>
+        <div class="floor-button floor-button-prev"><span class="material-icons">expand_less</span></div>
+    </div>
 
     <!-- slide button -->
     <a href="#n" class="side-btn btn-col-left toggle-sidebar-left"><span class="material-icons-outlined">chevron_left</span></a>
@@ -479,7 +475,7 @@
 
 
     <!-- alert -->
-    <div class="map-alert-container"> 
+    <div class="map-alert-container d-none"> 
         <div class="map-alert alert bg-accent text-white fade show" role="alert">
             <div class="d-flex align-items-center">
                 <div class="mr-8pt">
@@ -560,115 +556,8 @@
                 </button>
             </div>
         </div>
-        <div class="alert alert-white alert-dismissible p-0 mb-0 mt-3" role="alert">
-            <div class="nav tab-menu the-num02 border-bottom-1 mb-2" role="tablist">
-                <a href="#alert-panel-tab01" class="btn-style_underline py-3 active" data-toggle="tab" role="tab" aria-selected="true">
-                    <span class="menu-cover"><span>라이다 센서</span></span>
-                </a>
-                <a href="#alert-panel-tab02" class="btn-style_underline py-3" data-toggle="tab" role="tab" aria-selected="false">
-                    <span class="menu-cover"><span>앱 측위</span></span>
-                </a>
-            </div>
-            <div class="tab-content">
-                <div id="alert-panel-tab01" class="tab-pane active" role="tabpanel">
-                    <div class="d-flex flex-wrap align-items-start p-3">
-                        <div class="d-flex align-items-center">
-                            <h4 class="m-0">실시간 현황</h4>
-                            <a href="#n" class="btn-refresh"><span class="material-icons-outlined">refresh</span></a>
-                        </div>
-                        <ul class="list-row m-0 py-3 border-bottom-1">
-                            <li>
-                                <p class="mb-2 text-64">현재</p>
-                                <strong class="font-size-16pt">42</strong>
-                            </li>
-                        </ul>
-                        <ul class="list-row column-4 m-0 py-3">
-                            <li class="border-right-1">
-                                <p class="mb-2 text-64">사람</p>
-                                <strong class="font-size-16pt">42</strong>
-                            </li>
-                            <li class="border-right-1">
-                                <p class="mb-2 text-64">장비</p>
-                                <strong class="font-size-16pt">242</strong>
-                            </li>
-                            <li class="border-right-1">
-                                <p class="mb-2 text-64">차</p>
-                                <strong class="font-size-16pt">242</strong>
-                            </li>
-                            <li>
-                                <p class="mb-2 text-64">기타</p>
-                                <strong class="font-size-16pt">242</strong>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="alert-panel-tab02" class="tab-pane" role="tabpanel">
-                    <div class="d-flex flex-wrap align-items-start p-3">
-                        <div class="d-flex align-items-center">
-                            <h4 class="m-0">실시간 현황</h4>
-                            <a href="#n" class="btn-refresh"><span class="material-icons-outlined">refresh</span></a>
-                        </div>
-                        <ul class="list-row column-2 m-0 py-3">
-                            <li class="border-right-1">
-                                <p class="mb-2 text-64">차</p>
-                                <strong class="font-size-16pt">242</strong>
-                            </li>
-                            <li>
-                                <p class="mb-2 text-64">기타</p>
-                                <strong class="font-size-16pt">242</strong>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     
-            </div>
-            <div class="pl-col-right" id="sidebar-right">
-                <div class="cd-panel__container">
-    <div class="cd-panel__content">
-        <div class="container-fluid border-bottom-1 py-4">
-            <h3 class="mb-0">알림</h3>
-        </div>
-        <div class="container-fluid py-4">
-            <div class="d-flex flex-column w-100">
-                <ul class="list-col mb-0">
-                    <li>
-                        <h5 class="mb-1">인원수 초과</h5>
-                        <p class="text-dark mb-0">S 구역 인원수가 30명을 초과하였습니다.</p>
-                        <small class="text-64">1분 전</small>
-                    </li>
-                    <li>
-                        <h5 class="mb-1">센서 알림</h5>
-                        <p class="text-dark mb-0">N 구역에 환경 센서가 “나쁨”으로 5분이상 탐지 중입니다.</p>
-                        <small class="text-64">5분 전</small>
-                    </li>
-                    <li>
-                        <h5 class="mb-1">배터리 잔여량</h5>
-                        <p class="text-dark mb-0">00 기기의 배터리 잔여량이 25%미만 입니다.</p>
-                        <small class="text-64">2022.01.29 12:10</small>
-                    </li>
-                    <li>
-                        <h5 class="mb-1">배터리 잔여량</h5>
-                        <p class="text-dark mb-0">00 기기의 배터리 잔여량이 25%미만 입니다.</p>
-                        <small class="text-64">2022.01.29 12:10</small>
-                    </li>
-                    <li>
-                        <h5 class="mb-1">배터리 잔여량</h5>
-                        <p class="text-dark mb-0">00 기기의 배터리 잔여량이 25%미만 입니다.</p>
-                        <small class="text-64">2022.01.29 12:10</small>
-                    </li>
-                </ul>
-                <div class="py-3">
-                    <a href="alert_list.html" class="btn btn-accent w-100 py-12pt">더보기</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
             </div>
         </div>
     </div>
@@ -890,34 +779,6 @@
 </div>
 
 
-
-
-<link rel="stylesheet" href="css/swiper.min.css" />
-<!-- Swiper JS -->
-<script src="js/swiper.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper(".floor-item", {
-        // allowTouchMove: false,
-        direction: "vertical",
-        // mousewheel: true,
-        slidesPerView: 8,
-        slidesPerGroup: 8,
-        spaceBetween: 0,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
-        },
-        navigation: {
-            nextEl: ".floor-button-next",
-            prevEl: ".floor-button-prev",
-        },
-    });
-</script>
-
-
-
 <div class="page-loader d-none">
     <div class="preloader-container">
         <div class="preloader-spinner">
@@ -1136,6 +997,31 @@
                 $(".custom-scroll-bar").mCustomScrollbar({theme:"minimal-dark"});
             });
         })(jQuery);
+    </script>
+
+
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".floor-item", {
+            // allowTouchMove: false,
+            direction: "vertical",
+            // mousewheel: true,
+            slidesPerView: 8,
+            slidesPerGroup: 8,
+            spaceBetween: 0,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".floor-button-next",
+                prevEl: ".floor-button-prev",
+            },
+        });
     </script>
 </body>
 
