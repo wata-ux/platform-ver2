@@ -773,7 +773,7 @@
                     </div>
                 </div>
                 <!-- 환경센서 등록 -->
-                <div class="side-contents sidebar-left-sub d-none">
+                <div class="side-contents sidebar-left-sub">
                     <div class="d-flex flex-column h-100">
                         <div class="container-fluid border-bottom-1 mb-4 py-4">
                             <div class="d-flex align-items-center">
@@ -798,6 +798,10 @@
                                 <input type="text" class="form-line" id="" placeholder="센서명을 입력해 주세요">
                             </div>
                             <div class="form-group mb-32pt">
+                                <label class="form-label essential" for="">식별값(UUID, 고유번호)</label>
+                                <input type="text" class="form-line" id="" placeholder="">
+                            </div>
+                            <div class="form-group mb-32pt">
                                 <label class="form-label" for="">위치</label>
                                 <input type="text" class="form-line" id="" value="14672854.412916198 / 14672854.412916198" disabled>
                             </div>
@@ -817,7 +821,7 @@
                     </div>
                 </div>
                 <!-- 측위장비 상세 -->
-                <div class="side-contents sidebar-left-sub">
+                <div class="side-contents sidebar-left-sub d-none">
                     <div class="d-flex flex-column h-100">
                         <div class="container-fluid border-bottom-1 mb-4 py-4">
                             <div class="d-flex align-items-center">
@@ -1177,22 +1181,6 @@
     <div class="pointer-wrap">
         <div class="mouse-point user" style="left: 45%; top: 71.5%;" data-toggle="modal" data-target="#poiDetail"></div>
         <div class="mouse-point user active" style="left: 45%; top: 75.5%;" data-toggle="modal" data-target="#poiDetail"></div>
-    </div>
-
-    <!-- floor -->
-    <div class="btn-mid-holder-floor">
-        <div class="floor-inner">
-            <div class="swiper-container floor-item">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="#n" class="btn-floor">B1</a></div>
-                    <div class="swiper-slide"><a href="#n" class="btn-floor active">1F</a></div>
-                    <div class="swiper-slide"><a href="#n" class="btn-floor">2F</a></div>
-                    <div class="swiper-slide"><a href="#n" class="btn-floor">3F</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="floor-button floor-button-next"><span class="material-icons">expand_more</span></div>
-        <div class="floor-button floor-button-prev"><span class="material-icons">expand_less</span></div>
     </div>
 
     <!-- slide button -->

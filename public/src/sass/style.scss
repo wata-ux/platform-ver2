@@ -1290,6 +1290,9 @@ ul.state-item{
             margin-right: .25rem;
             white-space: nowrap;
             width: 40px;
+            span{
+                cursor: default;
+            }
         }
         &.arry02{
             justify-content: flex-start;
@@ -3871,6 +3874,7 @@ ul.state-item{
         font-size: 1.5rem;
         font-weight: lighter;
         text-align: center;
+        word-break: break-all;
     }
     img{
         width: 80px;
