@@ -1087,7 +1087,7 @@ table.table-bumper{
     font-weight: bolder;
     margin-left: .5rem;
 }
-.badge-gray{
+.badge-white, .badge-gray{
     display: inline-flex;
     font-size: .75rem;
     border: 1px solid #EAECEF;
@@ -1095,9 +1095,14 @@ table.table-bumper{
     padding: .25rem .5rem;
     color: #bfbfbf;
     font-weight: bolder;
-    background-color: #F7F8FC;
     color: rgba(51,51,51,0.64);
     margin-bottom: .25rem;
+}
+.badge-white{
+    background-color: #ffffff;
+}
+.badge-gray{
+    background-color: #F7F8FC;
 }
 .badge-mg{
     padding: 4px 8px !important;
