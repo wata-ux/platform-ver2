@@ -2700,7 +2700,7 @@ ul.state-item{
 
 /***** layout *****/
 .pl-container{
-    height: 100vh;
+    height: 100%;
     .cell{
         border: 1px solid $border-color;
         padding: 2rem;
@@ -2708,7 +2708,8 @@ ul.state-item{
         background-color: #fff;
     }
     .pl-top{
-        position: relative;
+        position: absolute;
+        width: 100%;
         z-index: 4;
         background-color: #fff;
         .navbar{
@@ -2847,10 +2848,12 @@ ul.state-item{
         overflow-x: hidden;
         display: flex;
         flex-direction: row;
-        height: calc(100% - 64px);
+        height: 100%;
+        padding-top: 64px;
         .pl-col-left{
             flex-grow: 1;
             display: flex;
+            background-color: #fff;
             .plf-floor-card.scroll-list{
                 overflow: hidden;
                 overflow-y: auto;
@@ -3540,8 +3543,10 @@ ul.state-item{
 .pub-con{
     position: -webkit-sticky;
     position: sticky;
-    bottom: 0;
     margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
     background-color: #fff;
     .pub-inner{
         display: flex;
