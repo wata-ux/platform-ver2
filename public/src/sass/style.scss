@@ -2536,23 +2536,29 @@ ul.state-item{
         &:hover{
             border-color: darken($border-color, 10%);
         }
-        &.selected{
+    }
+    &.selected{
+        z-index: 2;
+        .sensor-cell{
             background-color: #FFF3F3;
             border-color: $identity;
             box-shadow: 0 0 0 3px rgba(232,59,59,0.75);
         }
-        &.active-good{
+    }
+    &.active-good{
+        .sensor-cell{
             .sensor-circle{
                 background-color: #2BA400;
                 border-color: #1f7500;
                 &:before{
                     background-color: rgba(50,161,255,0.2);
                     border-color: rgba(50,161,255,0.9);
-                    pointer-events: none;
                 }
             }
         }
-        &.active-poor{
+    }
+    &.active-poor{
+        .sensor-cell{
             .sensor-circle{
                 background-color: #FFA800;
                 border-color: #EC8000;
@@ -2562,7 +2568,9 @@ ul.state-item{
                 }
             }
         }
-        &.disconnect{
+    }
+    &.disconnect{
+        .sensor-cell{
             .sensor-circle{
                 &:before{
                     display: none;
@@ -2593,9 +2601,13 @@ ul.state-item{
             border-style: solid;
             cursor: auto;
             animation: sensor-circle 2.5s infinite alternate;
+            pointer-events: none;
         }
         span{
             font-size: 1rem;
+        }
+        img{
+            width: 16px;
         }
     }
     .desc{

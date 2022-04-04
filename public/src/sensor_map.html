@@ -153,8 +153,8 @@
                                             <td>
                                                 <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem04">
                                                     <div class="d-inline-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">bluetooth</span> 
-                                                        <span class="ml-2 ellipsis">Beacon2</span> 
+                                                        <span class="material-icons-outlined text-40">sensors</span> 
+                                                        <span class="ml-2 ellipsis">UWB</span> 
                                                     </div>
                                                 </a>
                                             </td>
@@ -174,8 +174,29 @@
                                             <td>
                                                 <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem04">
                                                     <div class="d-inline-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">bluetooth</span> 
-                                                        <span class="ml-2 ellipsis">Beacon3</span> 
+                                                        <span class="material-icons-outlined text-40">wifi</span> 
+                                                        <span class="ml-2 ellipsis">RTT</span> 
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <ul class="state-item">
+                                                    <li class="arry01">
+                                                        <span class="text-64" data-toggle="tooltip" data-title="2분전" data-placement="top" data-boundary="window">연결끊김</span>
+                                                    </li>
+                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem04">측위센서</a>
+                                            </td>
+                                            <td>
+                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem04">
+                                                    <div class="d-inline-flex align-items-center">
+                                                        <img src="images/icon/sensor_lidar_off.svg" width="24" alt="">
+                                                        <span class="ml-2 ellipsis">LiDAR</span> 
                                                     </div>
                                                 </a>
                                             </td>
@@ -351,56 +372,80 @@
                         <div class="floor-button floor-button-prev"><span class="material-icons">expand_less</span></div>
                     </div>
                     @@include('./include/platform-tools-map.html')
-                    <div class="sensor-cover" style="left: 25%; top: 30%;">
-                        <div class="sensor-cell active-good">
+                    <div class="sensor-cover active-good" style="left: 10%; top: 20%;">
+                        <div class="sensor-cell">
                             <div class="sensor-circle">
                                 <span class="material-icons-outlined">bluetooth</span> 
                             </div>
                             <p class="desc"><strong>Beacon1 <span class="level-text-item05">86%</span></strong></p>
                         </div>
                     </div>
-                    <div class="sensor-cover" style="left: 25%; top: 46%;">
-                        <div class="sensor-cell active-good selected">
+                    <div class="sensor-cover active-good" style="left: 30%; top: 20%;">
+                        <div class="sensor-cell">
+                            <div class="sensor-circle">
+                                <span class="material-icons-outlined">sensors</span> 
+                            </div>
+                            <p class="desc"><strong>UWB <span class="level-text-item05">86%</span></strong></p>
+                        </div>
+                    </div>
+                    <div class="sensor-cover active-good" style="left: 50%; top: 20%;">
+                        <div class="sensor-cell">
+                            <div class="sensor-circle">
+                                <span class="material-icons-outlined">wifi</span> 
+                            </div>
+                            <p class="desc"><strong>RTT <span class="level-text-item05">86%</span></strong></p>
+                        </div>
+                    </div>
+                    <div class="sensor-cover active-good" style="left: 70%; top: 20%;">
+                        <div class="sensor-cell">
+                            <div class="sensor-circle">
+                                <img src="images/icon/sensor_lidar.svg" alt="">
+                            </div>
+                            <p class="desc"><strong>LiDAR <span class="level-text-item05">86%</span></strong></p>
+                        </div>
+                    </div>
+                    <div class="sensor-cover active-good selected" style="left: 25%; top: 46%;">
+                        <div class="sensor-cell">
                             <div class="sensor-circle">
                                 <span class="material-icons-outlined">air</span> 
                             </div>
                             <p class="desc"><strong>Airsensor1 <span class="level-text-item05">86%</span></strong> / 24</p>
                         </div>
                     </div>
-                    <div class="sensor-cover" style="left: 25%; top: 62%;">
-                        <div class="sensor-cell disconnect">
+                    <div class="sensor-cover disconnect" style="left: 25%; top: 62%;">
+                        <div class="sensor-cell">
                             <div class="sensor-circle">
                                 <span class="material-icons-outlined">thermostat</span> 
                             </div>
                             <p class="desc"><strong>Thsensor2</strong></p>
                         </div>
                     </div>
-                    <div class="sensor-cover" style="left: 45%; top: 55%;">
-                        <div class="sensor-cell disconnect">
+                    <div class="sensor-cover disconnect" style="left: 45%; top: 55%;">
+                        <div class="sensor-cell">
                             <div class="sensor-circle">
                                 <span class="material-icons-outlined">air</span> 
                             </div>
                             <p class="desc"><strong>Airsensor2</strong></p>
                         </div>
                     </div>
-                    <div class="sensor-cover" style="left: 45%; top: 30%;">
-                        <div class="sensor-cell active-good">
+                    <div class="sensor-cover active-good" style="left: 45%; top: 30%;">
+                        <div class="sensor-cell">
                             <div class="sensor-circle">
                                 <span class="material-icons-outlined">thermostat</span> 
                             </div>
                             <p class="desc"><strong>Thsensor1 <span class="level-text-item05">86%</span></strong> / 20.5&#176;, 20%</p>
                         </div>
                     </div>
-                    <div class="sensor-cover" style="left: 45%; top: 45%;">
-                        <div class="sensor-cell active-poor">
+                    <div class="sensor-cover active-poor" style="left: 45%; top: 45%;">
+                        <div class="sensor-cell">
                             <div class="sensor-circle">
                                 <span class="material-icons-outlined">bluetooth</span> 
                             </div>
                             <p class="desc"><strong>Beacon2 <span class="level-text-item05">86%</span></strong></p>
                         </div>
                     </div>
-                    <div class="sensor-cover" style="left: 45%; top: 60%;">
-                        <div class="sensor-cell disconnect">
+                    <div class="sensor-cover disconnect" style="left: 45%; top: 60%;">
+                        <div class="sensor-cell">
                             <div class="sensor-circle">
                                 <span class="material-icons-outlined">bluetooth</span> 
                             </div>
