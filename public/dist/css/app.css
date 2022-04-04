@@ -4452,8 +4452,8 @@ fieldset:disabled a.btn {
 [dir] .btn-accent:not(:disabled):not(.disabled).active,
 [dir] .btn-accent:not(:disabled):not(.disabled):active,
 [dir] .show > .btn-accent.dropdown-toggle {
-    background-color: #bc093c;
-    border-color: #b00838
+    background-color: #BE0F0F;
+    border-color: #BE0F0F
 }
 
 [dir] .btn-accent:not(:disabled):not(.disabled).active:focus,
