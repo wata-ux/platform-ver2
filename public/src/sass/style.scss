@@ -2548,6 +2548,7 @@ ul.state-item{
                 &:before{
                     background-color: rgba(50,161,255,0.2);
                     border-color: rgba(50,161,255,0.9);
+                    pointer-events: none;
                 }
             }
         }
