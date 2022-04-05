@@ -2726,7 +2726,10 @@ ul.state-item{
         background-color: #fff;
     }
     .pl-top{
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
         z-index: 4;
         background-color: #fff;
         .navbar{
@@ -2865,7 +2868,8 @@ ul.state-item{
         overflow-x: hidden;
         display: flex;
         flex-direction: row;
-        height: calc(100% - 64px);
+        padding-top: 64px;
+        height: 100%;
         .pl-col-left{
             flex-grow: 1;
             display: flex;
@@ -3196,6 +3200,8 @@ ul.state-item{
     overflow: hidden;
     overflow-y: auto;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 /***** side GNB *****/
