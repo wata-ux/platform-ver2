@@ -1,0 +1,632 @@
+@@include('./include/platform-header.html')
+
+
+<div class="pl-container">
+    <div class="pl-top">
+        <div class="navbar" id="default-navbar" data-primary>
+            <span class="material-icons mr-4 nav-toggle" id="nav-toggle">menu</span>
+            <!-- Brand -->
+            <a href="project_dashboard.html" class="sidebar-brand p-0 d-flex justify-content-center"
+                data-toggle="tooltip" data-title="대시보드로 이동" data-placement="right" data-boundary="window">
+                <img src="images/logo/logo.svg" class="img-fluid" alt="logo" />
+            </a>
+            <div class="project-select">
+                <select class="form-line">
+                    <option value="">프로젝트를 선택해 주세요</option>
+                    <option value="">프로젝트A</option>
+                    <option value="">프로젝트B</option>
+                    <option value="">프로젝트C</option>
+                </select>
+            </div>
+            <ul class="top-menu">
+                <li>
+                    <div class="btn-ico-group">
+                        <a href="event_table.html" class="btn-ico-sm">
+                            <span class="icon material-icons">table_rows</span>
+                            <span class="text"><span>Table View</span></span>
+                        </a>
+                        <a href="event_map.html" class="btn-ico-sm active">
+                            <span class="icon material-icons">map</span>
+                            <span class="text"><span>Map View</span></span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group m-0 ml-4 form-lang">
+                        <select id="" class="custom-line">
+                            <option selected="">KOR</option>
+                            <option value="1">JPN</option>
+                            <option value="2">ENG</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <div class="alert-ico-wrap">
+                        <a href="#n">
+                            <span class="alert-ico material-icons-outlined">notifications</span>
+                            <span class="alert-num">2</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
+                            data-caret="false">
+                            <span class="avatar avatar-md">
+                                <span class="avatar-title rounded-circle">SH</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item" href="my_profile.html">내 프로필</a>
+                            <a class="dropdown-item" href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pl-cover">
+        <div class="pl-col-left" id="sidebar-left">
+            @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "",
+            "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "active", "activeAccident": ""})
+            <div class="side-contents">
+            </div>
+        </div>
+        <div class="pl-col-group">
+            <div class="pl-col-mid" id="main-contents">
+                <!-- floor -->
+                <div class="btn-mid-holder-floor">
+                    <div class="floor-inner">
+                        <div class="swiper-container floor-item">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">B1</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor active">1F</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">2F</a></div>
+                                <div class="swiper-slide"><a href="#n" class="btn-floor">3F</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floor-button floor-button-next"><span class="material-icons">expand_more</span></div>
+                    <div class="floor-button floor-button-prev"><span class="material-icons">expand_less</span></div>
+                </div>
+                @@include('./include/platform-tools-map.html')
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal : 등록 -->
+<div class="modal fade" id="eventWrite" data-backdrop="static" tabindex="-1" aria-labelledby="deventWriteLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="d-flex">
+                    <h4 class="modal-title">알림 등록</h4>
+                </div>
+            </div>
+            <div class="nav tab-menu the-num02" role="tablist">
+                <a href="#tab01" class="btn-style_underline active" data-toggle="tab" role="tab" aria-selected="true">
+                    <span class="menu-cover"><span>알림 정보</span></span>
+                </a>
+                <a href="#tab02" class="btn-style_underline" data-toggle="tab" role="tab" aria-selected="false">
+                    <span class="menu-cover"><span>수신 설정</span></span>
+                </a>
+            </div>
+            <div class="modal-body">
+                <div class="tab-content">
+                    <!-- 이벤트등록 : 공간 > 인원수 알림 -->
+                    <div id="tab01" class="tab-pane d-none" role="tabpanel">
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">알림 유형</label>
+                            <div class="d-flex px-3 py-2">
+                                <div class="custom-control custom-radio flex">
+                                    <input id="event-type01" name="event-type" type="radio" class="custom-control-input"
+                                        checked="" checked>
+                                    <label for="event-type01" class="custom-control-label">공간</label>
+                                </div>
+                                <div class="custom-control custom-radio flex">
+                                    <input id="event-type02" name="event-type" type="radio"
+                                        class="custom-control-input">
+                                    <label for="event-type02" class="custom-control-label">자산</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">알림명</label>
+                            <input type="email" class="form-line" id="" placeholder="이벤트명을 입력해 주세요">
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <div class="form-group m-0">
+                                    <label class="form-label essential" for="">건물</label>
+                                    <select name="category" class="form-line" required>
+                                        <option value="" disabled selected>선택해주세요</option>
+                                        <option value="">option1</option>
+                                        <option value="">option2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group m-0">
+                                    <label class="form-label essential" for="">평면도</label>
+                                    <select name="category" class="form-line" required>
+                                        <option value="" disabled selected>선택해주세요</option>
+                                        <option value="">option1</option>
+                                        <option value="">option2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">지오펜스 또는 구역</label>
+                            <div class="row">
+                                <div class="col-6">
+                                    <select name="category" class="form-line" required>
+                                        <option value="" disabled selected>선택해주세요</option>
+                                        <option value="">option1</option>
+                                        <option value="">option2</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <select name="category" class="form-line" required>
+                                        <option value="" disabled selected>선택해주세요</option>
+                                        <option value="">option1</option>
+                                        <option value="">option2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">알림 분류</label>
+                            <div class="d-flex px-3 py-2">
+                                <div class="custom-control custom-radio flex">
+                                    <input id="radioStacked3" name="event-category" type="radio"
+                                        class="custom-control-input" checked="">
+                                    <label for="radioStacked3" class="custom-control-label">인원수 알림</label>
+                                </div>
+                                <div class="custom-control custom-radio flex">
+                                    <input id="event-category02" name="event-category" type="radio"
+                                        class="custom-control-input">
+                                    <label for="event-category02" class="custom-control-label">공간 출입 알림</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">인원수</label>
+                            <div class="d-flex align-items-center">
+                                <input type="email" class="form-line" id="" placeholder="입력해 주세요">
+                                <span class="px-2">명</span>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">알림 유형</label>
+                            <div class="d-flex px-3 py-2">
+                                <div class="custom-control custom-radio flex">
+                                    <input id="event-option01" name="event-option" type="radio"
+                                        class="custom-control-input" checked="">
+                                    <label for="event-option01" class="custom-control-label">이상</label>
+                                </div>
+                                <div class="custom-control custom-radio flex">
+                                    <input id="event-option02" name="event-option" type="radio"
+                                        class="custom-control-input">
+                                    <label for="event-option02" class="custom-control-label">이하</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 이벤트등록 : 공간 > 인원수 공간 출입 알림 -->
+                    <div id="" class="tab-pane active" role="tabpanel">
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">알림 유형</label>
+                            <div class="d-flex px-3 py-2">
+                                <div class="custom-control custom-radio flex">
+                                    <input id="event-type01" name="event-type" type="radio" class="custom-control-input"
+                                        checked="" checked>
+                                    <label for="event-type01" class="custom-control-label">공간</label>
+                                </div>
+                                <div class="custom-control custom-radio flex">
+                                    <input id="event-type02" name="event-type" type="radio"
+                                        class="custom-control-input">
+                                    <label for="event-type02" class="custom-control-label">자산</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">알림명</label>
+                            <input type="email" class="form-line" id="" placeholder="이벤트명을 입력해 주세요">
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <div class="form-group m-0">
+                                    <label class="form-label essential" for="">건물</label>
+                                    <select name="category" class="form-line" required>
+                                        <option value="" disabled selected>선택해주세요</option>
+                                        <option value="">option1</option>
+                                        <option value="">option2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group m-0">
+                                    <label class="form-label essential" for="">평면도</label>
+                                    <select name="category" class="form-line" required>
+                                        <option value="" disabled selected>선택해주세요</option>
+                                        <option value="">option1</option>
+                                        <option value="">option2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">지오펜스 또는 구역</label>
+                            <div class="row">
+                                <div class="col-6">
+                                    <select name="category" class="form-line" required>
+                                        <option value="" disabled selected>선택해주세요</option>
+                                        <option value="">option1</option>
+                                        <option value="">option2</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <select name="category" class="form-line" required>
+                                        <option value="" disabled selected>선택해주세요</option>
+                                        <option value="">option1</option>
+                                        <option value="">option2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">알림 분류</label>
+                            <div class="d-flex px-3 py-2">
+                                <div class="custom-control custom-radio flex">
+                                    <input id="radioStacked3" name="event-category" type="radio"
+                                        class="custom-control-input" checked="">
+                                    <label for="radioStacked3" class="custom-control-label">인원수 알림</label>
+                                </div>
+                                <div class="custom-control custom-radio flex">
+                                    <input id="event-category02" name="event-category" type="radio"
+                                        class="custom-control-input">
+                                    <label for="event-category02" class="custom-control-label">공간 출입 알림</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">알림 옵션</label>
+                            <div class="d-flex px-3 py-2">
+                                <div class="custom-control custom-radio flex">
+                                    <input id="event-option01" name="event-option" type="radio"
+                                        class="custom-control-input" checked="">
+                                    <label for="event-option01" class="custom-control-label">출입 알림</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab02" class="tab-pane" role="tabpanel">
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">알림 수신방법</label>
+                            <select name="category" class="form-line">
+                                <option value="">PUSH</option>
+                                <option value="">option1</option>
+                                <option value="">option2</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">수신인</label>
+                            <div class="row">
+                                <div class="col-4">
+                                    <select name="category" class="form-line">
+                                        <option value="">사용자</option>
+                                        <option value="">option1</option>
+                                        <option value="">option2</option>
+                                    </select>
+                                </div>
+                                <div class="col-8">
+                                    <div class="search-box">
+                                        <input type="search" class="form-line" placeholder="검색어를 입력해 주세요">
+                                        <a href="#n" class="btn-search circle-pin"><span
+                                                class="material-icons">search</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label" for="">추가된 사용자 및 그룹</label>
+                            <small class="text-identity">8</small>
+                            <table class="table table-head-light">
+                                <colgroup>
+                                    <col width="*">
+                                    <col width="10%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" class="text-center">사용자 및 그룹명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언1
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan1@watanow.com
+                                            </div>
+                                        </td>
+                                        <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언2
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan2@watanow.com
+                                            </div>
+                                        </td>
+                                        <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언그룹
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                <ul class="list-unstyled m-0">
+                                                    <li>라이언</li>
+                                                    <li>네오</li>
+                                                    <li>무지</li>
+                                                    <li>제이지</li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언3
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan3@watanow.com
+                                            </div>
+                                        </td>
+                                        <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언4
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan4@watanow.com
+                                            </div>
+                                        </td>
+                                        <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언5
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan5@watanow.com
+                                            </div>
+                                        </td>
+                                        <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언6
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan6@watanow.com
+                                            </div>
+                                        </td>
+                                        <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언7
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan7@watanow.com
+                                            </div>
+                                        </td>
+                                        <td class="text-center"><a href="#n" class="text-dark"><span class="material-icons">remove_circle</span></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-accent" data-dismiss="modal">등록</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal : 상세 -->
+<div class="modal fade" id="detailItem" data-backdrop="static" tabindex="-1" aria-labelledby="detailItemLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="d-flex">
+                    <h4 class="modal-title">알림 상세</h4>
+                </div>
+                <div class="d-flex ml-auto">
+                    <a href="#n" class="btn-ico-sm btn-del">
+                        <span class="icon material-icons-outlined">delete_forever</span>
+                        <span class="text"><span>삭제</span></span>
+                    </a>
+                    <a href="#n" class="btn-ico-sm ml-2">
+                        <span class="icon material-icons-outlined">open_in_browser</span>
+                        <span class="text"><span>수정</span></span>
+                    </a>
+                </div>
+            </div>
+            <div class="nav tab-menu the-num02" role="tablist">
+                <a href="#tab03" class="btn-style_underline active" data-toggle="tab" role="tab" aria-selected="true">
+                    <span class="menu-cover"><span>이벤트 정보</span></span>
+                </a>
+                <a href="#tab04" class="btn-style_underline" data-toggle="tab" role="tab" aria-selected="false">
+                    <span class="menu-cover"><span>수신 설정</span></span>
+                </a>
+            </div>
+            <div class="modal-body">
+                <div class="tab-content">
+                    <!-- 이벤트 상세 -->
+                    <div id="tab03" class="tab-pane active" role="tabpanel">
+                        <div class="mb-4">
+                            <small class="d-flex text-64 mb-2">이벤트 유형</small>
+                            <p class="m-0">공간</p>
+                        </div>
+                        <div class="mb-4">
+                            <small class="d-flex text-64 mb-2">이벤트 명</small>
+                            <p class="m-0">밀집도 증가</p>
+                        </div>
+                        <div class="mb-4">
+                            <small class="d-flex text-64 mb-2">건물</small>
+                            <p class="m-0">건물1</p>
+                        </div>
+                        <div class="mb-4">
+                            <small class="d-flex text-64 mb-2">평면도</small>
+                            <p class="m-0">평면도 1층(1F)</p>
+                        </div>
+                        <div class="mb-4">
+                            <small class="d-flex text-64 mb-2">지오펜스 또는 구역</small>
+                            <p class="m-0">구역</p>
+                            <p class="m-0">구역101</p>
+                        </div>
+                        <div class="mb-4">
+                            <small class="d-flex text-64 mb-2">이벤트 분류</small>
+                            <p class="m-0">인원수 증감</p>
+                        </div>
+                        <div class="mb-4">
+                            <small class="d-flex text-64 mb-2">이벤트 옵션</small>
+                            <p class="m-0">200명 초과</p>
+                        </div>
+                    </div>
+                    <div id="tab04" class="tab-pane" role="tabpanel">
+                        <div class="mb-4">
+                            <small class="d-flex text-64 mb-2">이벤트 수신</small>
+                            <p class="m-0">PUSH</p>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label" for="">추가된 사용자 및 그룹</label>
+                            <small class="text-identity">8</small>
+                            <table class="table table-head-light">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">사용자 및 그룹명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언1
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan1@watanow.com
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언2
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan2@watanow.com
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언그룹
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                <ul class="list-unstyled m-0">
+                                                    <li>라이언</li>
+                                                    <li>네오</li>
+                                                    <li>무지</li>
+                                                    <li>제이지</li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언3
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan3@watanow.com
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언4
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan4@watanow.com
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언5
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan5@watanow.com
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언6
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan6@watanow.com
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="cursor-default" data-toggle="popover" data-trigger="hover">
+                                                라이언7
+                                            </span>
+                                            <div class="popoverContainer d-none">
+                                                ryan7@watanow.com
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">닫기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@@include('./include/platform-footer.html')
