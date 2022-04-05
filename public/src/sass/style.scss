@@ -2,6 +2,11 @@
 @import "lib";
 @import "fonts";
 
+html, body{
+    height: 100%;
+    min-height: initial;
+}
+
 [dir] body{
     background-color: #F8F9FB;
 }
