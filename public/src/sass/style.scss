@@ -3196,6 +3196,8 @@ ul.state-item{
     overflow: hidden;
     overflow-y: auto;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 /***** side GNB *****/

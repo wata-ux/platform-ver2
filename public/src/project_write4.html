@@ -50,181 +50,179 @@
             <div class="pl-col-left" id="sidebar-left">
                 @@include('./include/platform-side-menu.html', {"activeMonitoring": "active", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
                 <div class="side-contents">
-                    <div class="d-flex flex-column h-100">
-                        <div class="row-tab">
-                            <ul class="list-unstyled custom-scroll">
-                                <li><a href="project_write.html">프로젝트 정보</a></li>
-                                <li><a href="project_write2.html">건물 등록</a></li>
-                                <li><a href="project_write3.html">평면도 등록</a></li>
-                                <li class="active"><a href="project_write4.html">자산 등록</a></li>
-                            </ul>
+                    <div class="row-tab">
+                        <ul class="list-unstyled custom-scroll">
+                            <li><a href="project_write.html">프로젝트 정보</a></li>
+                            <li><a href="project_write2.html">건물 등록</a></li>
+                            <li><a href="project_write3.html">평면도 등록</a></li>
+                            <li class="active"><a href="project_write4.html">자산 등록</a></li>
+                        </ul>
+                    </div>
+                    <div class="plf-floor-add border-bottom-0">
+                        <div class="form-cell">
+                            <select name="category" class="form-line mb-3">
+                                <option value="">건물</option>
+                                <option value="">건물2</option>
+                                <option value="">건물3</option>
+                            </select>
+                            <select name="category" class="form-line">
+                                <option value="">평면도 1층</option>
+                                <option value="">평면도 2층</option>
+                                <option value="">평면도 3층</option>
+                            </select>
                         </div>
-                        <div class="plf-floor-add border-bottom-0">
-                            <div class="form-cell">
-                                <select name="category" class="form-line mb-3">
-                                    <option value="">건물</option>
-                                    <option value="">건물2</option>
-                                    <option value="">건물3</option>
-                                </select>
-                                <select name="category" class="form-line">
-                                    <option value="">평면도 1층</option>
-                                    <option value="">평면도 2층</option>
-                                    <option value="">평면도 3층</option>
-                                </select>
-                            </div>
-                            <div class="btn-cell">
-                                <a href="project_write4_upload.html" class="btn-add-item text-green">
-                                    <span class="material-icons">note_add</span>
-                                    엑셀 업로드
-                                </a>
-                                <a href="project_write4_new.html" class="btn-add-item text-identity">
-                                    <span class="material-icons">add</span>
-                                    자산 등록
-                                </a>
-                            </div>
+                        <div class="btn-cell">
+                            <a href="project_write4_upload.html" class="btn-add-item text-green">
+                                <span class="material-icons">note_add</span>
+                                엑셀 업로드
+                            </a>
+                            <a href="project_write4_new.html" class="btn-add-item text-identity">
+                                <span class="material-icons">add</span>
+                                자산 등록
+                            </a>
                         </div>
-                        <div class="scroll-table">
-                            <div class="scroll-inner">
-                                <table class="table table-high table-line-none table-bumper mb-5">
-                                    <thead>
-                                        <tr>
-                                            <th class="text-center">자산ID</th>
-                                            <th class="text-center">자산명</th>
-                                            <th class="text-center">유형</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="3">
-                                                <div class="text-center py-4">
-                                                    <span class="material-icons-outlined text-50 font-size-32pt">info</span>
-                                                    <p class="m-0 text-50">등록된 자산이 없습니다.</p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Ryan</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Main battery</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Main battery</td>
-                                            <td class="text-center">Beacon</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Sensor</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Ryan</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Main battery</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Main battery</td>
-                                            <td class="text-center">Beacon</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Sensor</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Ryan</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Main battery</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Main battery</td>
-                                            <td class="text-center">Beacon</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Sensor</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Ryan</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Main battery</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Main battery</td>
-                                            <td class="text-center">Beacon</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Sensor</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Ryan</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Main battery</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Main battery</td>
-                                            <td class="text-center">Beacon</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Sensor</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Ryan</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Main battery</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Main battery</td>
-                                            <td class="text-center">Beacon</td>
-                                        </tr>
-                                        <tr>
-                                            <td>NT0000</td>
-                                            <td>Sensor</td>
-                                            <td class="text-center">Tag</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                    </div>
+                    <div class="scroll-table">
+                        <div class="scroll-inner">
+                            <table class="table table-high table-line-none table-bumper mb-5">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">자산ID</th>
+                                        <th class="text-center">자산명</th>
+                                        <th class="text-center">유형</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="3">
+                                            <div class="text-center py-4">
+                                                <span class="material-icons-outlined text-50 font-size-32pt">info</span>
+                                                <p class="m-0 text-50">등록된 자산이 없습니다.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Ryan</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Beacon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Ryan</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Beacon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Ryan</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Beacon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Ryan</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Beacon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Ryan</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Beacon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Ryan</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Main battery</td>
+                                        <td class="text-center">Beacon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NT0000</td>
+                                        <td>Sensor</td>
+                                        <td class="text-center">Tag</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

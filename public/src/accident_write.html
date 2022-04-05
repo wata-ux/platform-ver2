@@ -70,65 +70,63 @@
             @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "",
             "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": "active"})
             <div class="side-contents">
-                <div class="d-flex flex-column h-100">
-                    <div class="container-fluid border-bottom-1 mb-4 py-4">
+                <div class="container-fluid border-bottom-1 mb-4 py-4">
+                    <div class="d-flex align-items-center">
+                        <a href="accident_map.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
+                        <h3 class="mb-0">사고 등록</h3>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="form-group mb-4">
+                        <label class="form-label essential" for="">사고 종류</label>
+                        <select name="category" class="form-line" required>
+                            <option value="" disabled selected>사고 종류를 선택해 주세요</option>
+                            <option value="">긴급 상황</option>
+                            <option value="">화재</option>
+                            <option value="">구조 요청</option>
+                            <option value="">감염병</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label essential" for="">사고 위치 유형</label>
+                        <select name="category" class="form-line" required>
+                            <option value="" disabled selected>사고 위치 유형을 선택해 주세요</option>
+                            <option value="">층 전체</option>
+                            <option value="">건물 전체</option>
+                            <option value="">반경(원)</option>
+                            <option value="">범위(사각)</option>
+                            <option value="">위치</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label essential" for="">사고 위치</label>
+                        <input type="text" class="form-line" id="" value="" placeholder="오른쪽 지도위에 사고 위치를 선택해 주세요">
+                    </div>
+                    <div class="form-group mb-4 over-txt">
+                        <label class="form-label essential" for="">사고 위치</label>
+                        <input type="text" class="form-line" id="" placeholder="">
+                        <a href="#n" class="btn-abs btn-light btn-sm border-1">변경</a>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label essential" for="">반경</label>
                         <div class="d-flex align-items-center">
-                            <a href="accident_map.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
-                            <h3 class="mb-0">사고 등록</h3>
-                        </div>
-                    </div>
-                    <div class="container-fluid">
-                        <div class="form-group mb-4">
-                            <label class="form-label essential" for="">사고 종류</label>
-                            <select name="category" class="form-line" required>
-                                <option value="" disabled selected>사고 종류를 선택해 주세요</option>
-                                <option value="">긴급 상황</option>
-                                <option value="">화재</option>
-                                <option value="">구조 요청</option>
-                                <option value="">감염병</option>
-                            </select>
-                        </div>
-                        <div class="form-group mb-4">
-                            <label class="form-label essential" for="">사고 위치 유형</label>
-                            <select name="category" class="form-line" required>
-                                <option value="" disabled selected>사고 위치 유형을 선택해 주세요</option>
-                                <option value="">층 전체</option>
-                                <option value="">건물 전체</option>
-                                <option value="">반경(원)</option>
-                                <option value="">범위(사각)</option>
-                                <option value="">위치</option>
-                            </select>
-                        </div>
-                        <div class="form-group mb-4">
-                            <label class="form-label essential" for="">사고 위치</label>
                             <input type="text" class="form-line" id="" value="" placeholder="오른쪽 지도위에 사고 위치를 선택해 주세요">
-                        </div>
-                        <div class="form-group mb-4 over-txt">
-                            <label class="form-label essential" for="">사고 위치</label>
-                            <input type="text" class="form-line" id="" placeholder="">
-                            <a href="#n" class="btn-abs btn-light btn-sm border-1">변경</a>
-                        </div>
-                        <div class="form-group mb-4">
-                            <label class="form-label essential" for="">반경</label>
-                            <div class="d-flex align-items-center">
-                                <input type="text" class="form-line" id="" value="" placeholder="오른쪽 지도위에 사고 위치를 선택해 주세요">
-                                <!-- 미터 -->
-                                <span class="px-2">m</span>
-                                <!-- 제곱 미터 -->
-                                <span class="px-2">m<sup>2</sup></span>
-                            </div>
-                        </div>
-                        <div class="form-group mb-4">
-                            <label class="form-label essential" for="">사고 메세지</label>
-                            <textarea name="" id="" rows="5" placeholder="사고 유형을 선택 하면 설정된 사고 메세지가 표시됩니다."></textarea>
+                            <!-- 미터 -->
+                            <span class="px-2">m</span>
+                            <!-- 제곱 미터 -->
+                            <span class="px-2">m<sup>2</sup></span>
                         </div>
                     </div>
-                    <div class="pub-con">
-                        <div class="pub-inner">
-                            <div class="btn-wrap">
-                                <a href="#n" class="btn btn-light mr-4">취소</a>
-                                <a href="#n" class="btn btn-accent ml-0">등록</a>
-                            </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label essential" for="">사고 메세지</label>
+                        <textarea name="" id="" rows="5" placeholder="사고 유형을 선택 하면 설정된 사고 메세지가 표시됩니다."></textarea>
+                    </div>
+                </div>
+                <div class="pub-con">
+                    <div class="pub-inner">
+                        <div class="btn-wrap">
+                            <a href="#n" class="btn btn-light mr-4">취소</a>
+                            <a href="#n" class="btn btn-accent ml-0">등록</a>
                         </div>
                     </div>
                 </div>

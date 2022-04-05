@@ -69,288 +69,286 @@
             <div class="pl-col-left" id="sidebar-left">
                 @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "", "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeSensor": "active", "activeEvent": "", "activeAccident": ""})
                 <div class="side-contents">
-                    <div class="d-flex flex-column h-100">
-                        <div class="container-fluid border-bottom-1 py-4">
-                            <div class="mb-3">
-                                <a href="project_dashboard.html" class="badge-gray">프로젝트명</a>
-                                <a href="sensor_dashboard.html" class="badge-gray">건물명</a>
-                                <small class="badge-white">평면도명</small>
+                    <div class="container-fluid border-bottom-1 py-4">
+                        <div class="mb-3">
+                            <a href="project_dashboard.html" class="badge-gray">프로젝트명</a>
+                            <a href="sensor_dashboard.html" class="badge-gray">건물명</a>
+                            <small class="badge-white">평면도명</small>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex flex-column">
+                                <h3 class="mb-0">센서 현황</h3>
                             </div>
-                            <div class="d-flex align-items-center">
-                                <div class="d-flex flex-column">
-                                    <h3 class="mb-0">센서 현황</h3>
-                                </div>
-                                <a href="map_edit_mode.html" target="_blank" class="btn-add-item text-identity ml-auto mr-n3">
-                                    <span class="material-icons">add</span>
-                                    센서 등록
-                                </a>
+                            <a href="map_edit_mode.html" target="_blank" class="btn-add-item text-identity ml-auto mr-n3">
+                                <span class="material-icons">add</span>
+                                센서 등록
+                            </a>
+                        </div>
+                    </div>
+                    <div class="plf-floor-add border-bottom-0">
+                        <div class="d-flex align-items-sm-center pb-3">
+                            <div class="swipe-wrap">
+                                <ul class="swipe-list">
+                                    <li><a href="#" class="active">전체</a></li>
+                                    <li><a href="#">환경(3)</a></li>
+                                    <li><a href="#">온습도(3)</a></li>
+                                    <li><a href="#">측위센서(1)</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="plf-floor-add border-bottom-0">
-                            <div class="d-flex align-items-sm-center pb-3">
-                                <div class="swipe-wrap">
-                                    <ul class="swipe-list">
-                                      <li><a href="#" class="active">전체</a></li>
-                                      <li><a href="#">환경(3)</a></li>
-                                      <li><a href="#">온습도(3)</a></li>
-                                      <li><a href="#">측위센서(1)</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="search-box">
-                                <input type="search" class="form-line" placeholder="센서명을 입력해 주세요">
-                                <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
-                            </div>
+                        <div class="search-box">
+                            <input type="search" class="form-line" placeholder="센서명을 입력해 주세요">
+                            <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
                         </div>
-                        <div class="scroll-table">
-                            <div class="scroll-inner">
-                                <table class="table table-high table-line-none table-bumper mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th class="text-center" style="width: 30%;">센서 유형</th>
-                                            <th class="text-center" style="width: 40%;">센서명</th>
-                                            <th class="text-center" style="width: 20%;">상태</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="3">
-                                                <div class="text-center py-4">
-                                                    <span class="material-icons-outlined text-50 font-size-32pt">info</span>
-                                                    <p class="m-0 text-50">등록된 센서가 없습니다.</p>
+                    </div>
+                    <div class="scroll-table">
+                        <div class="scroll-inner">
+                            <table class="table table-high table-line-none table-bumper mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" style="width: 30%;">센서 유형</th>
+                                        <th class="text-center" style="width: 40%;">센서명</th>
+                                        <th class="text-center" style="width: 20%;">상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="3">
+                                            <div class="text-center py-4">
+                                                <span class="material-icons-outlined text-50 font-size-32pt">info</span>
+                                                <p class="m-0 text-50">등록된 센서가 없습니다.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="selected">
+                                        <td style="width: 30%;" class="text-center">
+                                            <a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem04">측위센서</a>
+                                        </td>
+                                        <td style="width: 40%;">
+                                            <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem04">
+                                                <div class="d-inline-flex align-items-center">
+                                                    <span class="material-icons-outlined text-green">bluetooth</span> 
+                                                    <span class="ml-2 ellipsis">Beacon1</span> 
                                                 </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="selected">
-                                            <td style="width: 30%;" class="text-center">
-                                                <a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem04">측위센서</a>
-                                            </td>
-                                            <td style="width: 40%;">
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem04">
-                                                    <div class="d-inline-flex align-items-center">
-                                                        <span class="material-icons-outlined text-green">bluetooth</span> 
-                                                        <span class="ml-2 ellipsis">Beacon1</span> 
+                                            </a>
+                                        </td>
+                                        <td style="width: 20%;" class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">
+                                                    <span class="text-64" data-toggle="tooltip" data-title="5분전" data-placement="top" data-boundary="window">안정</span>
+                                                </li>
+                                                <li class="arry02">
+                                                    <a href="#n" class="d-flex">
+                                                        <span class="material-icons-sharp">place</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem04">측위센서</a>
+                                        </td>
+                                        <td>
+                                            <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem04">
+                                                <div class="d-inline-flex align-items-center">
+                                                    <span class="material-icons-outlined text-40">sensors</span> 
+                                                    <span class="ml-2 ellipsis">UWB</span> 
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">
+                                                    <span class="text-64" data-toggle="tooltip" data-title="2분전" data-placement="top" data-boundary="window">불안정</span>
+                                                </li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem04">측위센서</a>
+                                        </td>
+                                        <td>
+                                            <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem04">
+                                                <div class="d-inline-flex align-items-center">
+                                                    <span class="material-icons-outlined text-40">wifi</span> 
+                                                    <span class="ml-2 ellipsis">RTT</span> 
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">
+                                                    <span class="text-64" data-toggle="tooltip" data-title="2분전" data-placement="top" data-boundary="window">연결끊김</span>
+                                                </li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem04">측위센서</a>
+                                        </td>
+                                        <td>
+                                            <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem04">
+                                                <div class="d-inline-flex align-items-center">
+                                                    <img src="images/icon/sensor_lidar_off.svg" width="24" alt="">
+                                                    <span class="ml-2 ellipsis">LiDAR</span> 
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">
+                                                    <span class="text-64" data-toggle="tooltip" data-title="2분전" data-placement="top" data-boundary="window">연결끊김</span>
+                                                </li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center"><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem05">온습도센서</a></td>
+                                        <td>
+                                            <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem05">
+                                                <div class="d-inline-flex align-items-center" data-toggle="tooltip" data-title="Thsensor1Thsensor1" data-placement="top" data-boundary="window">
+                                                    <span class="material-icons-outlined text-40">thermostat</span> 
+                                                    <span class="ml-2 ellipsis">Thsensor1Thsensor1</span> 
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">
+                                                    <span class="text-64" data-toggle="tooltip" data-title="2분전" data-placement="top" data-boundary="window">불안정</span>
+                                                </li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center"><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem05">온습도센서</a></td>
+                                        <td>
+                                            <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem05">
+                                                <div class="d-inline-flex align-items-center">
+                                                    <span class="material-icons-outlined text-40">thermostat</span> 
+                                                    <span class="ml-2 ellipsis">Thsensor2</span> 
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">
+                                                    <div class="d-flex flex-column" data-toggle="tooltip" data-title="5분전" data-placement="top" data-boundary="window">
+                                                        <span class="text-64">20.5&#176;</span>
+                                                        <span class="text-64">20.%</span>
                                                     </div>
-                                                </a>
-                                            </td>
-                                            <td style="width: 20%;" class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01">
-                                                        <span class="text-64" data-toggle="tooltip" data-title="5분전" data-placement="top" data-boundary="window">안정</span>
-                                                    </li>
-                                                    <li class="arry02">
-                                                        <a href="#n" class="d-flex">
-                                                            <span class="material-icons-sharp">place</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">
-                                                <a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem04">측위센서</a>
-                                            </td>
-                                            <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem04">
-                                                    <div class="d-inline-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">sensors</span> 
-                                                        <span class="ml-2 ellipsis">UWB</span> 
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01">
-                                                        <span class="text-64" data-toggle="tooltip" data-title="2분전" data-placement="top" data-boundary="window">불안정</span>
-                                                    </li>
-                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">
-                                                <a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem04">측위센서</a>
-                                            </td>
-                                            <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem04">
-                                                    <div class="d-inline-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">wifi</span> 
-                                                        <span class="ml-2 ellipsis">RTT</span> 
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01">
-                                                        <span class="text-64" data-toggle="tooltip" data-title="2분전" data-placement="top" data-boundary="window">연결끊김</span>
-                                                    </li>
-                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">
-                                                <a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem04">측위센서</a>
-                                            </td>
-                                            <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem04">
-                                                    <div class="d-inline-flex align-items-center">
-                                                        <img src="images/icon/sensor_lidar_off.svg" width="24" alt="">
-                                                        <span class="ml-2 ellipsis">LiDAR</span> 
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01">
-                                                        <span class="text-64" data-toggle="tooltip" data-title="2분전" data-placement="top" data-boundary="window">연결끊김</span>
-                                                    </li>
-                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center"><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem05">온습도센서</a></td>
-                                            <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem05">
-                                                    <div class="d-inline-flex align-items-center" data-toggle="tooltip" data-title="Thsensor1Thsensor1" data-placement="top" data-boundary="window">
-                                                        <span class="material-icons-outlined text-40">thermostat</span> 
-                                                        <span class="ml-2 ellipsis">Thsensor1Thsensor1</span> 
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01">
-                                                        <span class="text-64" data-toggle="tooltip" data-title="2분전" data-placement="top" data-boundary="window">불안정</span>
-                                                    </li>
-                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center"><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem05">온습도센서</a></td>
-                                            <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem05">
-                                                    <div class="d-inline-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">thermostat</span> 
-                                                        <span class="ml-2 ellipsis">Thsensor2</span> 
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01">
-                                                        <div class="d-flex flex-column" data-toggle="tooltip" data-title="5분전" data-placement="top" data-boundary="window">
-                                                            <span class="text-64">20.5&#176;</span>
-                                                            <span class="text-64">20.%</span>
-                                                        </div>
-                                                    </li>
-                                                    <li class="arry02">
-                                                        <a href="map_edit_mode.html" class="d-flex" target="_blank"><span class="material-icons-outlined text-identity">add_location</span></a>
-                                                    </li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center"><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem06">환경센서</a></td>
-                                            <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem06">
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">air</span> 
-                                                        <span class="ml-2 ellipsis">Airsensor1</span> 
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01">
-                                                        <span class="text-64" data-toggle="tooltip" data-title="5분전" data-placement="top" data-boundary="window">20.5&#176;</span>
-                                                    </li>
-                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center"><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem06">환경센서</a></td>
-                                            <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem06">
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">air</span> 
-                                                        <span class="ml-2 ellipsis">Airsensor2</span> 
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01">
-                                                        <span class="text-64" data-toggle="tooltip" data-title="5분전" data-placement="top" data-boundary="window">20.5&#176;</span>
-                                                    </li>
-                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center"><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem06">환경센서</a></td>
-                                            <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem06">
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">air</span> 
-                                                        <span class="ml-2 ellipsis">Airsensor3</span> 
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01">
-                                                        <span class="text-64" data-toggle="tooltip" data-title="5분전" data-placement="top" data-boundary="window">20.5&#176;</span>
-                                                    </li>
-                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center"><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem06">환경센서</a></td>
-                                            <td>
-                                                <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem06">
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="material-icons-outlined text-40">air</span> 
-                                                        <span class="ml-2 ellipsis">Airsensor4</span> 
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="text-center">
-                                                <ul class="state-item">
-                                                    <li class="arry01">
-                                                        <span class="text-64" data-toggle="tooltip" data-title="5분전" data-placement="top" data-boundary="window">20.5&#176;</span>
-                                                    </li>
-                                                    <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                                </li>
+                                                <li class="arry02">
+                                                    <a href="map_edit_mode.html" class="d-flex" target="_blank"><span class="material-icons-outlined text-identity">add_location</span></a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center"><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem06">환경센서</a></td>
+                                        <td>
+                                            <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem06">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons-outlined text-40">air</span> 
+                                                    <span class="ml-2 ellipsis">Airsensor1</span> 
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">
+                                                    <span class="text-64" data-toggle="tooltip" data-title="5분전" data-placement="top" data-boundary="window">20.5&#176;</span>
+                                                </li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center"><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem06">환경센서</a></td>
+                                        <td>
+                                            <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem06">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons-outlined text-40">air</span> 
+                                                    <span class="ml-2 ellipsis">Airsensor2</span> 
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">
+                                                    <span class="text-64" data-toggle="tooltip" data-title="5분전" data-placement="top" data-boundary="window">20.5&#176;</span>
+                                                </li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center"><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem06">환경센서</a></td>
+                                        <td>
+                                            <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem06">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons-outlined text-40">air</span> 
+                                                    <span class="ml-2 ellipsis">Airsensor3</span> 
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">
+                                                    <span class="text-64" data-toggle="tooltip" data-title="5분전" data-placement="top" data-boundary="window">20.5&#176;</span>
+                                                </li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center"><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem06">환경센서</a></td>
+                                        <td>
+                                            <a href="#n" class="d-flex" data-toggle="modal" data-target="#detailItem06">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons-outlined text-40">air</span> 
+                                                    <span class="ml-2 ellipsis">Airsensor4</span> 
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            <ul class="state-item">
+                                                <li class="arry01">
+                                                    <span class="text-64" data-toggle="tooltip" data-title="5분전" data-placement="top" data-boundary="window">20.5&#176;</span>
+                                                </li>
+                                                <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="pagination align-items-center justify-content-center">
-                            <a class="page-link btn-prev" href="#" aria-label="Previous">
-                                <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                <span>이전</span>
-                            </a>
-                            <div class="d-flex align-items-center justify-content-center px-3">
-                                <select name="" id="" class="form-line">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                </select>
-                                <em>20</em>
-                            </div>
-                            <a class="page-link btn-next" href="#" aria-label="Next">
-                                <span>다음</span>
-                                <span aria-hidden="true" class="material-icons">chevron_right</span>
-                            </a>
+                    </div>
+                    <div class="pagination align-items-center justify-content-center">
+                        <a class="page-link btn-prev" href="#" aria-label="Previous">
+                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                            <span>이전</span>
+                        </a>
+                        <div class="d-flex align-items-center justify-content-center px-3">
+                            <select name="" id="" class="form-line">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                            <em>20</em>
                         </div>
+                        <a class="page-link btn-next" href="#" aria-label="Next">
+                            <span>다음</span>
+                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                        </a>
                     </div>
                 </div>
             </div>

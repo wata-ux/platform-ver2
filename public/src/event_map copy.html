@@ -71,121 +71,119 @@
             @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "",
             "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "active", "activeAccident": ""})
             <div class="side-contents">
-                <div class="d-flex flex-column h-100">
-                    <div class="container-fluid border-bottom-1 py-4">
-                        <div class="mb-3">
-                            <a href="#n" class="badge-gray">프로젝트명</a>
-                            <a href="#n" class="badge-gray">건물명</a>
-                            <a href="#n" class="badge-gray">평면도명</a>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="d-flex flex-column">
-                                <h3 class="mb-0">이벤트</h3>
-                            </div>
+                <div class="container-fluid border-bottom-1 py-4">
+                    <div class="mb-3">
+                        <a href="#n" class="badge-gray">프로젝트명</a>
+                        <a href="#n" class="badge-gray">건물명</a>
+                        <a href="#n" class="badge-gray">평면도명</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex flex-column">
+                            <h3 class="mb-0">이벤트</h3>
                         </div>
                     </div>
-                    <div class="plf-floor-add border-bottom-0">
-                        <div class="d-flex align-items-sm-center pb-3">
-                            <div class="swipe-wrap">
-                                <ul class="swipe-list">
-                                  <li><a href="#" class="active">전체</a></li>
-                                  <li><a href="#">공간(8)</a></li>
-                                  <li><a href="#">자산(24)</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="search-box mb-0">
-                            <input type="search" class="form-line" placeholder="이벤트명을 입력해 주세요">
-                            <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
+                </div>
+                <div class="plf-floor-add border-bottom-0">
+                    <div class="d-flex align-items-sm-center pb-3">
+                        <div class="swipe-wrap">
+                            <ul class="swipe-list">
+                                <li><a href="#" class="active">전체</a></li>
+                                <li><a href="#">공간(8)</a></li>
+                                <li><a href="#">자산(24)</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="scroll-table">
-                        <div class="scroll-inner">
-                            <table class="table table-high table-line-none table-bumper mb-0">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">이벤트명</th>
-                                        <th class="text-center">대상</th>
-                                        <th class="text-center">조건</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="3">
-                                            <div class="text-center py-4">
-                                                <span class="material-icons-outlined text-50 font-size-32pt">info</span>
-                                                <p class="m-0 text-50">등록된 이벤트가 없습니다.</p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem">Row alert</td>
-                                        <td><a href="#n" class="badge-basics m-0">1층 배터리 외 24</a></td>
-                                        <td class="text-center">20% 이하</td>
-                                    </tr>
-                                    <tr>
-                                        <td>대기 탐지</td>
-                                        <td><a href="#n" class="badge-basics m-0">1층 DSQ센서 외 3</a></td>
-                                        <td class="text-center">나쁨</td>
-                                    </tr>
-                                    <tr>
-                                        <td>B1층 통제구역</td>
-                                        <td><a href="#n" class="badge-basics m-0">B1층 GF1FNZ2</a></td>
-                                        <td class="text-center">Check-In</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Row alert</td>
-                                        <td><a href="#n" class="badge-basics m-0">1층 배터리 외 24</a></td>
-                                        <td class="text-center">20% 이하</td>
-                                    </tr>
-                                    <tr>
-                                        <td>사무실 이탈</td>
-                                        <td><a href="#n" class="badge-basics m-0 active">직원3</a></td>
-                                        <td class="text-center">Check-Out</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3층 통제구역</td>
-                                        <td><a href="#n" class="badge-basics m-0">2층 GF1FNZ2</a></td>
-                                        <td class="text-center">Check-In</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2층 통제구역</td>
-                                        <td><a href="#n" class="badge-basics m-0">2층 GF1FNZ2</a></td>
-                                        <td class="text-center">Check-In</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1층 통제구역</td>
-                                        <td><a href="#n" class="badge-basics m-0">2층 GF1FNZ2</a></td>
-                                        <td class="text-center">Check-In</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div class="search-box mb-0">
+                        <input type="search" class="form-line" placeholder="이벤트명을 입력해 주세요">
+                        <a href="#n" class="btn-search circle-pin"><span class="material-icons">search</span></a>
                     </div>
-                    <div class="pagination align-items-center justify-content-center">
-                        <a class="page-link btn-prev" href="#" aria-label="Previous">
-                            <span aria-hidden="true" class="material-icons">chevron_left</span>
-                            <span>이전</span>
-                        </a>
-                        <div class="d-flex align-items-center justify-content-center px-3">
-                            <select name="" id="" class="form-line">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                            </select>
-                            <em>1</em>
-                        </div>
-                        <a class="page-link btn-next" href="#" aria-label="Next">
-                            <span>다음</span>
-                            <span aria-hidden="true" class="material-icons">chevron_right</span>
-                        </a>
+                </div>
+                <div class="scroll-table">
+                    <div class="scroll-inner">
+                        <table class="table table-high table-line-none table-bumper mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">이벤트명</th>
+                                    <th class="text-center">대상</th>
+                                    <th class="text-center">조건</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="text-center py-4">
+                                            <span class="material-icons-outlined text-50 font-size-32pt">info</span>
+                                            <p class="m-0 text-50">등록된 이벤트가 없습니다.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#n" class="d-inline-flex" data-toggle="modal" data-target="#detailItem">Row alert</td>
+                                    <td><a href="#n" class="badge-basics m-0">1층 배터리 외 24</a></td>
+                                    <td class="text-center">20% 이하</td>
+                                </tr>
+                                <tr>
+                                    <td>대기 탐지</td>
+                                    <td><a href="#n" class="badge-basics m-0">1층 DSQ센서 외 3</a></td>
+                                    <td class="text-center">나쁨</td>
+                                </tr>
+                                <tr>
+                                    <td>B1층 통제구역</td>
+                                    <td><a href="#n" class="badge-basics m-0">B1층 GF1FNZ2</a></td>
+                                    <td class="text-center">Check-In</td>
+                                </tr>
+                                <tr>
+                                    <td>Row alert</td>
+                                    <td><a href="#n" class="badge-basics m-0">1층 배터리 외 24</a></td>
+                                    <td class="text-center">20% 이하</td>
+                                </tr>
+                                <tr>
+                                    <td>사무실 이탈</td>
+                                    <td><a href="#n" class="badge-basics m-0 active">직원3</a></td>
+                                    <td class="text-center">Check-Out</td>
+                                </tr>
+                                <tr>
+                                    <td>3층 통제구역</td>
+                                    <td><a href="#n" class="badge-basics m-0">2층 GF1FNZ2</a></td>
+                                    <td class="text-center">Check-In</td>
+                                </tr>
+                                <tr>
+                                    <td>2층 통제구역</td>
+                                    <td><a href="#n" class="badge-basics m-0">2층 GF1FNZ2</a></td>
+                                    <td class="text-center">Check-In</td>
+                                </tr>
+                                <tr>
+                                    <td>1층 통제구역</td>
+                                    <td><a href="#n" class="badge-basics m-0">2층 GF1FNZ2</a></td>
+                                    <td class="text-center">Check-In</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="pub-con">
-                        <div class="pub-inner">
-                            <div class="btn-wrap">
-                                <a href="#n" class="btn btn-accent w-100" data-toggle="modal" data-target="#eventWrite">이벤트 등록</a>
-                            </div>
+                </div>
+                <div class="pagination align-items-center justify-content-center">
+                    <a class="page-link btn-prev" href="#" aria-label="Previous">
+                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                        <span>이전</span>
+                    </a>
+                    <div class="d-flex align-items-center justify-content-center px-3">
+                        <select name="" id="" class="form-line">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                        <em>1</em>
+                    </div>
+                    <a class="page-link btn-next" href="#" aria-label="Next">
+                        <span>다음</span>
+                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                    </a>
+                </div>
+                <div class="pub-con">
+                    <div class="pub-inner">
+                        <div class="btn-wrap">
+                            <a href="#n" class="btn btn-accent w-100" data-toggle="modal" data-target="#eventWrite">이벤트 등록</a>
                         </div>
                     </div>
                 </div>

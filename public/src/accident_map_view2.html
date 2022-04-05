@@ -70,135 +70,133 @@
             @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "",
             "activeBuilding": "", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": "active"})
             <div class="side-contents">
-                <div class="d-flex flex-column h-100">
-                    <!-- 상황 종료 상태 -->
-                    <div class="emg-stat emg-disabled">
-                        <div class="emg-top d-flex align-items-center">
-                            <div class="d-flex align-items-start">
-                                <a href="accident_map.html" class="pr-2"><span class="material-icons">arrow_back</span></a>
-                                <div class="title">
-                                    <h3 class="mb-0">최초 감지 시간</h3>
-                                    <span class="mb-0">2020.01.13 06:42:58</span>
-                                </div>
+                <!-- 상황 종료 상태 -->
+                <div class="emg-stat emg-disabled">
+                    <div class="emg-top d-flex align-items-center">
+                        <div class="d-flex align-items-start">
+                            <a href="accident_map.html" class="pr-2"><span class="material-icons">arrow_back</span></a>
+                            <div class="title">
+                                <h3 class="mb-0">최초 감지 시간</h3>
+                                <span class="mb-0">2020.01.13 06:42:58</span>
                             </div>
                         </div>
-                        <div class="emg-con text-center">
-                            <em class="time mb-2">00:01:24</em>
-                            <p class="desc m-0">종료됨</p>
-                        </div>
                     </div>
-                    <div class="container-fluid border-bottom-1 py-4">
-                        <ul class="list-row column-2 mb-0">
-                            <li class="d-flex flex-column align-items-center border-right-1">
-                                <span class="material-icons-outlined mb-2 text-64">warning_amber</span>
-                                <h5 class="mb-2 text-64">사고 종류</h5>
-                                <strong class="text-identity m-0">긴급 상황</strong>
-                            </li>
-                            <li class="d-flex flex-column align-items-center">
-                                <span class="material-icons-outlined mb-2 text-64">group</span>
-                                <h5 class="mb-2 text-64">재실 인원</h5>
-                                <strong class="text-identity m-0">42</strong>
-                            </li>
-                        </ul>
-                        <a href="#n" class="btn btn-darken w-100 py-3 mt-4">사고 종료</a>
+                    <div class="emg-con text-center">
+                        <em class="time mb-2">00:01:24</em>
+                        <p class="desc m-0">종료됨</p>
                     </div>
-                    <!-- 메세지 입력 -->
-                    <div class="container-fluid py-4">
-                        <h4>메세지</h4>
-                        <ul class="list-col history-box bg-light">
-                            <li>
-                                <a href="#n" class="d-flex">
-                                    2022.03.02 15:40:00 <span class="text-identity ml-1">최초</span>
-                                    <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n" class="d-flex">
-                                    2022.03.02 15:40:00
-                                    <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n" class="d-flex">
-                                    2022.03.02 15:40:00
-                                    <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n" class="d-flex">
-                                    2022.03.02 15:40:00
-                                    <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n" class="d-flex">
-                                    2022.03.02 15:40:00
-                                    <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n" class="d-flex">
-                                    2022.03.02 15:40:00
-                                    <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n" class="d-flex">
-                                    2022.03.02 15:40:00
-                                    <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n" class="d-flex">
-                                    2022.03.02 15:40:00
-                                    <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n" class="d-flex">
-                                    2022.03.02 15:40:00
-                                    <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n" class="d-flex">
-                                    2022.03.02 15:40:00
-                                    <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n" class="d-flex">
-                                    2022.03.02 15:40:00
-                                    <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n" class="d-flex">
-                                    2022.03.02 15:40:00
-                                    <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="form-group mb-4">
-                            <label class="form-label essential" for="">메세지 내용 입력</label>
-                            <textarea name="" id="" rows="5" disabled>
+                </div>
+                <div class="container-fluid border-bottom-1 py-4">
+                    <ul class="list-row column-2 mb-0">
+                        <li class="d-flex flex-column align-items-center border-right-1">
+                            <span class="material-icons-outlined mb-2 text-64">warning_amber</span>
+                            <h5 class="mb-2 text-64">사고 종류</h5>
+                            <strong class="text-identity m-0">긴급 상황</strong>
+                        </li>
+                        <li class="d-flex flex-column align-items-center">
+                            <span class="material-icons-outlined mb-2 text-64">group</span>
+                            <h5 class="mb-2 text-64">재실 인원</h5>
+                            <strong class="text-identity m-0">42</strong>
+                        </li>
+                    </ul>
+                    <a href="#n" class="btn btn-darken w-100 py-3 mt-4">사고 종료</a>
+                </div>
+                <!-- 메세지 입력 -->
+                <div class="container-fluid py-4">
+                    <h4>메세지</h4>
+                    <ul class="list-col history-box bg-light">
+                        <li>
+                            <a href="#n" class="d-flex">
+                                2022.03.02 15:40:00 <span class="text-identity ml-1">최초</span>
+                                <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n" class="d-flex">
+                                2022.03.02 15:40:00
+                                <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n" class="d-flex">
+                                2022.03.02 15:40:00
+                                <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n" class="d-flex">
+                                2022.03.02 15:40:00
+                                <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n" class="d-flex">
+                                2022.03.02 15:40:00
+                                <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n" class="d-flex">
+                                2022.03.02 15:40:00
+                                <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n" class="d-flex">
+                                2022.03.02 15:40:00
+                                <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n" class="d-flex">
+                                2022.03.02 15:40:00
+                                <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n" class="d-flex">
+                                2022.03.02 15:40:00
+                                <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n" class="d-flex">
+                                2022.03.02 15:40:00
+                                <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n" class="d-flex">
+                                2022.03.02 15:40:00
+                                <span class="ml-auto"><span class="text-identity">42건</span> 발송됨</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#n" class="d-flex">
+                                2022.03.02 15:40:00
+                                <span class="ml-auto"><span class="text-identity">200건</span> 발송됨</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="form-group mb-4">
+                        <label class="form-label essential" for="">메세지 내용 입력</label>
+                        <textarea name="" id="" rows="5" disabled>
 긴급상황이 발생하였습니다. 신속하게 대피해 주시기 바랍니다.
-                            </textarea>
-                        </div>
-                        <div class="form-group mb-4">
-                            <label class="form-label essential" for="">URL</label>
-                            <input type="text" class="form-line" id="" value="" disabled>
-                        </div>
+                        </textarea>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label essential" for="">URL</label>
+                        <input type="text" class="form-line" id="" value="" disabled>
+                    </div>
 
-                        <!-- 파일 첨부 후 -->
-                        <div class="form-group mb-32pt over-txt">
-                            <label class="form-label essential" for="">파일 등록</label>
-                            <div class="form-line disabled">
-                                <div class="att-file">
-                                    <p class="file-name">대피경로.png</p>
-                                    <div class="bundle">
-                                        <a href="#n"><span class="material-icons-outlined ml-2">file_download</span></a>
-                                    </div>
+                    <!-- 파일 첨부 후 -->
+                    <div class="form-group mb-32pt over-txt">
+                        <label class="form-label essential" for="">파일 등록</label>
+                        <div class="form-line disabled">
+                            <div class="att-file">
+                                <p class="file-name">대피경로.png</p>
+                                <div class="bundle">
+                                    <a href="#n"><span class="material-icons-outlined ml-2">file_download</span></a>
                                 </div>
                             </div>
                         </div>

@@ -49,49 +49,47 @@
             <div class="pl-col-left" id="sidebar-left">
                 @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "", "activeBuilding": "active", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
                 <div class="side-contents">
-                    <div class="d-flex flex-column h-100">
-                        <div class="container-fluid border-bottom-1 mb-4 py-4">
-                            <div class="d-flex align-items-center">
-                                <a href="building_dashboard.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
-                                <h3 class="mb-0">건물 등록</h3>
-                            </div>
+                    <div class="container-fluid border-bottom-1 mb-4 py-4">
+                        <div class="d-flex align-items-center">
+                            <a href="building_dashboard.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
+                            <h3 class="mb-0">건물 등록</h3>
                         </div>
-                        <div class="container-fluid">
-                            <div class="form-group mb-4">
-                                <label class="form-label essential" for="">건물명</label>
-                                <input type="text" class="form-line" id="" placeholder="프로젝트명을 입력해주세요.">
-                            </div>
-                            <div class="form-group mb-4">
-                                <label class="form-label essential" for="">국가</label>
-                                <select name="category" class="form-line">
-                                    <option value="">선택해주세요.</option>
-                                    <option value="">대한민국</option>
-                                    <option value="">일본</option>
-                                </select>
-                            </div>
-                            <div class="form-group mb-4 over-txt">
-                                <label class="form-label essential" for="">주소</label>
-                                <input type="text" class="form-line" id="" placeholder="">
-                                <a href="jp_address.html" class="btn-abs btn-light btn-sm border-1">주소검색</a>
-                            </div>
-
-                            <div class="form-group mb-4 over-txt">
-                                <label class="form-label essential" for="">상세 주소</label>
-                                <input type="text" class="form-line" id="" placeholder="">
-                                <a href="#n" class="btn-abs btn-light btn-sm border-1">위치 검색</a>
-                            </div>
-
-                            <div class="form-group mb-4">
-                                <label class="form-label" for="">추가 주소</label>
-                                <input type="text" class="form-line" id="" placeholder="">
-                            </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">건물명</label>
+                            <input type="text" class="form-line" id="" placeholder="프로젝트명을 입력해주세요.">
                         </div>
-                        <div class="pub-con">
-                            <div class="pub-inner">
-                                <div class="btn-wrap">
-                                    <a href="#n" class="btn btn-light mr-4">취소</a>
-                                    <a href="#n" class="btn btn-accent ml-0">등록</a>
-                                </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">국가</label>
+                            <select name="category" class="form-line">
+                                <option value="">선택해주세요.</option>
+                                <option value="">대한민국</option>
+                                <option value="">일본</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-4 over-txt">
+                            <label class="form-label essential" for="">주소</label>
+                            <input type="text" class="form-line" id="" placeholder="">
+                            <a href="jp_address.html" class="btn-abs btn-light btn-sm border-1">주소검색</a>
+                        </div>
+
+                        <div class="form-group mb-4 over-txt">
+                            <label class="form-label essential" for="">상세 주소</label>
+                            <input type="text" class="form-line" id="" placeholder="">
+                            <a href="#n" class="btn-abs btn-light btn-sm border-1">위치 검색</a>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label class="form-label" for="">추가 주소</label>
+                            <input type="text" class="form-line" id="" placeholder="">
+                        </div>
+                    </div>
+                    <div class="pub-con">
+                        <div class="pub-inner">
+                            <div class="btn-wrap">
+                                <a href="#n" class="btn btn-light mr-4">취소</a>
+                                <a href="#n" class="btn btn-accent ml-0">등록</a>
                             </div>
                         </div>
                     </div>

@@ -49,133 +49,131 @@
             <div class="pl-col-left" id="sidebar-left">
                 @@include('./include/platform-side-menu.html', {"activeMonitoring": "", "activeProjects": "", "activeBuilding": "active", "activeUser": "", "activeAssets": "", "activeEvent": "", "activeAccident": ""})
                 <div class="side-contents">
-                    <div class="d-flex flex-column h-100">
-                        <div class="container-fluid border-bottom-1 mb-4 py-4">
-                            <div class="d-flex align-items-center">
-                                <a href="building_dashboard.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
-                                <h3 class="mb-0">건물 수정</h3>
-                            </div>
+                    <div class="container-fluid border-bottom-1 mb-4 py-4">
+                        <div class="d-flex align-items-center">
+                            <a href="building_dashboard.html" class="circle-pin pr-2"><i class="material-icons">arrow_back</i></a>
+                            <h3 class="mb-0">건물 수정</h3>
                         </div>
-                        <div class="container-fluid">
-                            <div class="form-group mb-4">
-                                <label class="form-label essential" for="">건물명</label>
-                                <input type="text" class="form-line" id="" value="사용자 추가 건물">
-                            </div>
-                            <div class="form-group mb-4">
-                                <label class="form-label essential" for="">국가</label>
-                                <select name="category" class="form-line" disabled>
-                                    <option value="">선택해주세요.</option>
-                                    <option value="" selected>대한민국</option>
-                                    <option value="">일본</option>
-                                </select>
-                            </div>
-                            <div class="form-group mb-4 over-txt">
-                                <label class="form-label essential" for="">주소</label>
-                                <input type="text" class="form-line" id="" value="경기 성남시 분당구 판교역로 231" disabled>
-                            </div>
-
-                            <div class="form-group mb-4 over-txt">
-                                <label class="form-label essential" for="">상세 주소</label>
-                                <input type="text" class="form-line" id="" value="에이치스퀘어 에스동" disabled>
-                            </div>
-
-                            <div class="form-group mb-4">
-                                <label class="form-label" for="">추가 주소</label>
-                                <input type="text" class="form-line" id="" placeholder="">
-                            </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">건물명</label>
+                            <input type="text" class="form-line" id="" value="사용자 추가 건물">
                         </div>
-                        <div class="plf-floor-card p-4 position-relative">
-                            <div class="d-flex align-items-center mb-3">
-                                <small class="d-flex text-64">평면도</small>
-                            </div>
+                        <div class="form-group mb-4">
+                            <label class="form-label essential" for="">국가</label>
+                            <select name="category" class="form-line" disabled>
+                                <option value="">선택해주세요.</option>
+                                <option value="" selected>대한민국</option>
+                                <option value="">일본</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-4 over-txt">
+                            <label class="form-label essential" for="">주소</label>
+                            <input type="text" class="form-line" id="" value="경기 성남시 분당구 판교역로 231" disabled>
+                        </div>
 
-                            <div class="plf-area-card">
-                                <div class="plf-area-top">
-                                    <span class="material-icons-outlined mr-1">upload_file</span>
-                                    <h4>평면도 2층</h4>
-                                    <div class="left-cell">
-                                        <span class="floor-num">2F</span>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false"
-                                                class="text-muted"><i class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
-                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
-                                            </div>
+                        <div class="form-group mb-4 over-txt">
+                            <label class="form-label essential" for="">상세 주소</label>
+                            <input type="text" class="form-line" id="" value="에이치스퀘어 에스동" disabled>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label class="form-label" for="">추가 주소</label>
+                            <input type="text" class="form-line" id="" placeholder="">
+                        </div>
+                    </div>
+                    <div class="plf-floor-card p-4 position-relative">
+                        <div class="d-flex align-items-center mb-3">
+                            <small class="d-flex text-64">평면도</small>
+                        </div>
+
+                        <div class="plf-area-card">
+                            <div class="plf-area-top">
+                                <span class="material-icons-outlined mr-1">upload_file</span>
+                                <h4>평면도 2층</h4>
+                                <div class="left-cell">
+                                    <span class="floor-num">2F</span>
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle="dropdown" data-caret="false"
+                                            class="text-muted"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                            <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="plf-area-content">
-                                    <div class="d-flex justify-content-end align-items-center">
-                                        <small class="text-40 mr-2">편집 전</small>
-                                        <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm">
-                                            <span class="icon material-icons-outlined">open_in_browser</span>
-                                            <span class="text"><span>지도 편집</span></span>
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
-
-                            <div class="plf-area-card active">
-                                <div class="plf-area-top">
-                                    <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
-                                    <h4>평면도 1층</h4>
-                                    <div class="left-cell">
-                                        <span class="floor-num">1F</span>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false"
-                                                class="text-muted"><i class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
-                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="plf-area-content">
-                                    <div class="d-flex justify-content-end align-items-center">
-                                        <small class="text-40 mr-2">2022.02.11 수정됨</small>
-                                        <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm">
-                                            <span class="icon material-icons-outlined">open_in_browser</span>
-                                            <span class="text"><span>지도 편집</span></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="plf-area-card">
-                                <div class="plf-area-top">
-                                    <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
-                                    <h4>평면도 B2층</h4>
-                                    <div class="left-cell">
-                                        <span class="floor-num">B2F</span>
-                                        <div class="dropdown">
-                                            <a href="#" data-toggle="dropdown" data-caret="false"
-                                                class="text-muted"><i class="material-icons">more_vert</i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
-                                                <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="plf-area-content">
-                                    <div class="d-flex justify-content-end align-items-center">
-                                        <small class="text-40 mr-2">편집 전</small>
-                                        <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm">
-                                            <span class="icon material-icons-outlined">open_in_browser</span>
-                                            <span class="text"><span>지도 편집</span></span>
-                                        </a>
-                                    </div>
+                            <div class="plf-area-content">
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <small class="text-40 mr-2">편집 전</small>
+                                    <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm">
+                                        <span class="icon material-icons-outlined">open_in_browser</span>
+                                        <span class="text"><span>지도 편집</span></span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="pub-con">
-                            <div class="pub-inner">
-                                <div class="btn-wrap">
-                                    <a href="#n" class="btn btn-light mr-4">취소</a>
-                                    <a href="#n" class="btn btn-accent ml-0">등록</a>
+
+                        <div class="plf-area-card active">
+                            <div class="plf-area-top">
+                                <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
+                                <h4>평면도 1층</h4>
+                                <div class="left-cell">
+                                    <span class="floor-num">1F</span>
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle="dropdown" data-caret="false"
+                                            class="text-muted"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                            <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="plf-area-content">
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <small class="text-40 mr-2">2022.02.11 수정됨</small>
+                                    <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm">
+                                        <span class="icon material-icons-outlined">open_in_browser</span>
+                                        <span class="text"><span>지도 편집</span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plf-area-card">
+                            <div class="plf-area-top">
+                                <span class="material-icons-outlined mr-1 text-danger">upload_file</span>
+                                <h4>평면도 B2층</h4>
+                                <div class="left-cell">
+                                    <span class="floor-num">B2F</span>
+                                    <div class="dropdown">
+                                        <a href="#" data-toggle="dropdown" data-caret="false"
+                                            class="text-muted"><i class="material-icons">more_vert</i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="#n" class="dropdown-item"><span class="material-icons-outlined icon--left">edit</span> 수정</a>
+                                            <a href="#N" class="dropdown-item"><span class="material-icons-outlined icon--left">delete</span> 삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="plf-area-content">
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <small class="text-40 mr-2">편집 전</small>
+                                    <a href="map_edit_mode.html" target="_blank" class="btn-ico-sm">
+                                        <span class="icon material-icons-outlined">open_in_browser</span>
+                                        <span class="text"><span>지도 편집</span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-con">
+                        <div class="pub-inner">
+                            <div class="btn-wrap">
+                                <a href="#n" class="btn btn-light mr-4">취소</a>
+                                <a href="#n" class="btn btn-accent ml-0">등록</a>
                             </div>
                         </div>
                     </div>
