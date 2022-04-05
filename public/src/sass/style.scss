@@ -1180,6 +1180,11 @@ span.cp-icon{
             object-fit: cover;
         }
     }
+    .modal-dialog{
+        top: 50%;
+        transform: translateY(-50%) !important;
+        margin: 0 auto !important;
+    }
 }
 
 /***** UI *****/
