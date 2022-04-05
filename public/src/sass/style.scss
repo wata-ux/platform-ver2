@@ -2726,10 +2726,7 @@ ul.state-item{
         background-color: #fff;
     }
     .pl-top{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+        position: relative;
         z-index: 4;
         background-color: #fff;
         .navbar{
@@ -2868,8 +2865,7 @@ ul.state-item{
         overflow-x: hidden;
         display: flex;
         flex-direction: row;
-        padding-top: 64px;
-        height: 100%;
+        height: calc(100% - 64px);
         .pl-col-left{
             flex-grow: 1;
             display: flex;
