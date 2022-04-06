@@ -2727,13 +2727,18 @@ ul.state-item{
     z-index: 2;
     button{
         display: flex;
-        width: 48px;
-        height: 48px;
-        background: url(../images/icon/compass_dark_default.png) no-repeat;
-        background-size: 100%;
         border: none;
-        &:hover{
-            background-image: url(../images/icon/compass_dark_hover.png);
+        background-color: transparent;
+        padding: 0;
+        .ol-compass{
+            display: flex;
+            width: 3rem;
+            height: 3rem;
+            background: url(../images/icon/compass_dark_default.png) no-repeat;
+            background-size: 100%;
+            &:hover{
+                background-image: url(../images/icon/compass_dark_hover.png);
+            }
         }
     }
 }
