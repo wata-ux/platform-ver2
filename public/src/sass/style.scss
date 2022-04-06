@@ -2730,6 +2730,10 @@ ul.state-item{
         border: none;
         background-color: transparent;
         padding: 0;
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
         .ol-compass{
             display: flex;
             width: 3rem;
