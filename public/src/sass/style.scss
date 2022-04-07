@@ -3055,12 +3055,27 @@ ul.state-item{
             height: 100%;
             background-color: #fff;
             z-index: 3;
-            padding: 4rem;
             overflow: hidden;
             overflow-y: auto;
             .inner{
                 max-width: 1440px;
                 margin: 0 auto;
+                padding: 4rem;
+                .table-bumper{
+                    thead{
+                        tr{
+                            th{
+                                background-color: $light-gray;
+                                &:first-child{
+                                    &:before{
+                                        left: 0;
+                                        border: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .btn-wrap{
                 max-width: 420px;
