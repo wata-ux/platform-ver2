@@ -1096,6 +1096,12 @@
                 prevEl: ".floor-button-prev",
             },
         });
+
+        (function($){
+            $(window).on("load",function(){
+                $("#custom-scroller").mCustomScrollbar({theme:"minimal-dark"});
+            });
+        })(jQuery);
     </script>
 </body>
 
