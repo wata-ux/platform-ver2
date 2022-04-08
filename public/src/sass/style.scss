@@ -1036,6 +1036,7 @@ table.table-sticky{
                 position: sticky;
                 top: -1px;
                 background-color: #fff;
+                z-index: 1;
                 &:before{
                     content: '';
                     position: absolute;
