@@ -244,112 +244,110 @@
                         </div>
                     </div>
                 </div>
-                <div class="scroll-table">
-                    <div class="scroll-inner">
-                        <table class="table table-high table-line-none table-bumper mb-0">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">사고 유형</th>
-                                    <th class="text-center">일시</th>
-                                    <th class="text-center">상태</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td colspan="3">
-                                        <div class="text-center py-4">
-                                            <span class="material-icons-outlined text-50 font-size-32pt">info</span>
-                                            <p class="m-0 text-50">등록된 내역이 없습니다.</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="accident_map_view.html">
-                                            <span class="material-icons text-identity">warning</span> 긴급 상황
-                                        </a>
-                                    </td>
-                                    <td>2022.03.02</td>
-                                    <td class="text-center">
-                                        <ul class="state-item">
-                                            <li class="arry01 text-identity">진행중</li>
-                                            <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-sharp">place</span></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span class="material-icons text-identity">local_fire_department</span> 화재</td>
-                                    <td>2022.03.02</td>
-                                    <td class="text-center">
-                                        <ul class="state-item">
-                                            <li class="arry01 text-identity">진행중</li>
-                                            <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span class="material-icons text-identity">support</span> 구조 요청</td>
-                                    <td>2022.03.02</td>
-                                    <td class="text-center">
-                                        <ul class="state-item">
-                                            <li class="arry01 text-identity">진행중</li>
-                                            <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span class="material-icons text-identity">coronavirus</span> 감염병</td>
-                                    <td>2022.03.02</td>
-                                    <td class="text-center">
-                                        <ul class="state-item">
-                                            <li class="arry01 text-identity">진행중</li>
-                                            <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr class="disabled">
-                                    <td><span class="material-icons">warning</span> 긴급 상황</td>
-                                    <td>2022.03.02</td>
-                                    <td class="text-center">
-                                        <ul class="state-item">
-                                            <li class="arry01">종료됨</li>
-                                            <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr class="disabled">
-                                    <td><span class="material-icons">local_fire_department</span> 화재</td>
-                                    <td>2022.03.02</td>
-                                    <td class="text-center">
-                                        <ul class="state-item">
-                                            <li class="arry01">종료됨</li>
-                                            <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr class="disabled">
-                                    <td><span class="material-icons">support</span> 구조 요청</td>
-                                    <td>2022.03.02</td>
-                                    <td class="text-center">
-                                        <ul class="state-item">
-                                            <li class="arry01">종료됨</li>
-                                            <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr class="disabled">
-                                    <td><span class="material-icons">coronavirus</span> 감염병</td>
-                                    <td>2022.03.02</td>
-                                    <td class="text-center">
-                                        <ul class="state-item">
-                                            <li class="arry01">종료됨</li>
-                                            <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="table-bumper">
+                    <table class="table table-high table-line-none table-sticky mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-center">사고 유형</th>
+                                <th class="text-center">일시</th>
+                                <th class="text-center">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="text-center py-4">
+                                        <span class="material-icons-outlined text-50 font-size-32pt">info</span>
+                                        <p class="m-0 text-50">등록된 내역이 없습니다.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="accident_map_view.html">
+                                        <span class="material-icons text-identity">warning</span> 긴급 상황
+                                    </a>
+                                </td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01 text-identity">진행중</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-sharp">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="material-icons text-identity">local_fire_department</span> 화재</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01 text-identity">진행중</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="material-icons text-identity">support</span> 구조 요청</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01 text-identity">진행중</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="material-icons text-identity">coronavirus</span> 감염병</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01 text-identity">진행중</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="disabled">
+                                <td><span class="material-icons">warning</span> 긴급 상황</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01">종료됨</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="disabled">
+                                <td><span class="material-icons">local_fire_department</span> 화재</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01">종료됨</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="disabled">
+                                <td><span class="material-icons">support</span> 구조 요청</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01">종료됨</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="disabled">
+                                <td><span class="material-icons">coronavirus</span> 감염병</td>
+                                <td>2022.03.02</td>
+                                <td class="text-center">
+                                    <ul class="state-item">
+                                        <li class="arry01">종료됨</li>
+                                        <li class="arry02"><a href="#n" class="d-flex"><span class="material-icons-outlined text-64">place</span></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="pagination align-items-center justify-content-center">
                     <a class="page-link btn-prev" href="#" aria-label="Previous">

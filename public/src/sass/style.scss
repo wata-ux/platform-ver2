@@ -946,7 +946,7 @@ a.btn-refresh{
         white-space: nowrap;
         max-width: 100px;
     }
-    &.table-bumper{
+    &.table-sticky{
         tbody{
             td{
                 padding: .5rem;
@@ -1016,16 +1016,8 @@ a.btn-refresh{
         background-color: $light-gray;
     }
 }
-.scroll-table{
-    position: sticky;
-    overflow: hidden;
-    .scroll-inner{
-        overflow: auto;
-        overflow-x: hidden;
-        height: 100%;
-        padding: 0 1.5rem;
-        border-top: 1px solid $border-color;
-    }
+.table-bumper{
+    padding: 0 1.5rem;
 }
 .table-cover{
     position: relative;
@@ -1035,25 +1027,32 @@ a.btn-refresh{
         border-top: 1px solid $border-color;
     }
 }
-table.table-bumper{
+table.table-sticky{
     thead{
         position: relative;
         >tr{
             >th{
                 position: -webkit-sticky;
                 position: sticky;
-                top: 0;
-                z-index: 2;
+                top: -1px;
                 background-color: #fff;
-                &:first-child{
-                    &:before{
-                        content: '';
-                        position: absolute;
-                        border-bottom: 1px solid $border-color;
-                        bottom: -1px;
-                        width: 400px;
-                        left: -1.5rem;
-                    }
+                &:before{
+                    content: '';
+                    position: absolute;
+                    border-bottom: 1px solid $border-color;
+                    bottom: -1px;
+                    width: 100%;
+                    left: 0;
+                    height: 100%;
+                }
+                &:first-child:before{
+                    left: -1.5rem;
+                    width: calc(100% + 1.5rem);
+                }
+                &:last-child:before{
+                    left: inherit;
+                    width: calc(100% + 1.5rem);
+                    right: -1.5rem;
                 }
             }
         }
@@ -3061,18 +3060,14 @@ ul.state-item{
                 max-width: 1440px;
                 margin: 0 auto;
                 padding: 4rem;
-                .table-bumper{
-                    thead{
-                        tr{
-                            th{
-                                background-color: $light-gray;
-                                &:first-child{
-                                    &:before{
-                                        left: 0;
-                                        border: none;
-                                    }
-                                }
-                            }
+                .table-sticky{
+                    thead tr th{
+                        background-color: $light-gray;
+                        &:first-child:before{
+                            left: 0;
+                        }
+                        &:last-child:before{
+                            right: 0;
                         }
                     }
                 }
@@ -3145,23 +3140,6 @@ ul.state-item{
                 flex-direction: column;
                 max-width: 1440px;
                 margin: 0 auto;
-                .scroll-table {
-                    .scroll-inner{
-                        padding: 0;
-                    }
-                    table.table-bumper{
-                        thead{
-                            tr{
-                                left: 0;
-                                width: 100%;
-                                transform: none;
-                                th{
-                                    border-bottom: 1px solid $border-color;
-                                }
-                            }
-                        }
-                    }
-                }
             }
             .pub-con{
                 position: absolute;
@@ -4263,22 +4241,16 @@ ul.state-item{
         overflow: hidden;
         overflow-y: auto;
     }
-    .scroll-table{
-        padding-top: 35px;
-        .scroll-inner{
-            padding: 0;
-            table{
-                thead{
-                    tr{
-                        width: 100%;
+    .table-sticky{
+        thead{
+            tr{
+                th{
+                    &:first-child:before{
+                        left: 0;
                     }
-                }
-                tbody{
-                    tr{
-                        &:first-child td{
-                            border-top: none;
-                        }
-                    } 
+                    &:last-child:before{
+                        right: 0;
+                    }
                 }
             }
         }
