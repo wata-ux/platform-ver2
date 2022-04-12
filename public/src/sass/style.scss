@@ -11,6 +11,11 @@ html, body{
     background-color: #F8F9FB;
 }
 
+#root {
+    height: 100%;
+    min-height: initial;
+}
+
 
 .material-icons-two-tone{
     &.red{
@@ -1635,6 +1640,7 @@ ul.state-item{
     display: flex;
     align-items: center;
     margin-left: auto;
+    padding: .5rem 0;
     .form-group{
         .form-line, .flatpickr-input{
             line-height: 2.25rem;
@@ -2894,6 +2900,7 @@ ul.state-item{
                         border: none;
                         font-size: .875rem;
                         font-weight: 600;
+                        color: #333;
                     }
                 }
             }
