@@ -1024,6 +1024,18 @@ a.btn-refresh{
 .table-bumper{
     padding: 0 1.5rem;
 }
+.table-trans{
+    width: 100%;
+    th,td{
+        font-size: 1rem;
+        padding: .75rem;
+        align-items: center;
+    }
+    th{
+        font-weight: normal;
+        color: rgba(51, 51, 51, 0.64);
+    }
+}
 .table-cover{
     position: relative;
     padding-top: 52px;
@@ -1064,6 +1076,7 @@ table.table-sticky{
         }
     }
 }
+
 
 /***** avatar *****/
 .avatar-md{
@@ -1323,7 +1336,6 @@ ul.state-item{
         }
     }
 }
-
 .state-dot{
     display: flex;
     width: .875rem;
@@ -2469,6 +2481,10 @@ ul.state-item{
             width: 20%;
         }
     }
+    .ic-speed{
+        width: 2rem;
+        margin-bottom: .5rem;
+    }
 }
 .list-col{
     list-style: none;
@@ -2483,6 +2499,10 @@ ul.state-item{
         }
     }
 }
+@media (min-width: 769px){
+
+}
+
 .empty-state{
     display: flex;
     flex-direction: column;
@@ -2770,6 +2790,24 @@ ul.state-item{
                 background-image: url(../images/icon/compass_dark_hover.png);
             }
         }
+    }
+}
+dl.basic-info{
+    display: flex;
+    flex-wrap: wrap;
+    dt, dd{
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: .75rem;
+        font-size: 1rem;
+    }
+    dt{
+        width: 32%;
+        color: rgba(51,51,51,0.64);
+    }
+    dd{
+        width: 68%;
     }
 }
 
