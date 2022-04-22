@@ -2751,7 +2751,7 @@ ul.state-item{
         height: 67px;
         margin: 0;
         margin-top: 1rem;
-        width: 360px;
+        width: 420px;
         display: flex;
         &:not(.show){
             display: none;
@@ -2767,6 +2767,7 @@ ul.state-item{
             color: rgba(255,255,255,0.8);
             border: 1px solid rgba(255,255,255,0.8);
             font-weight: 700;
+            white-space: nowrap;
             &:hover{
                 color: rgba(255,255,255,1);
                 border-color: rgba(255,255,255,1);
@@ -2775,10 +2776,7 @@ ul.state-item{
         }
         .map-alert-title{
             flex: 1 1 0%;
-            max-width: 180px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            max-width: 420px;
         }
     }
     .level-list{
@@ -3239,7 +3237,7 @@ dl.basic-info{
             justify-content: center;
             width: 1.5rem;
             height: 3rem;
-            margin-top: -1.25rem;
+            margin-top: -1.5rem;
             border-radius: 2px;
             &.active{
                 span{
