@@ -2592,6 +2592,38 @@ ul.state-item{
             border-color: darken($border-color, 10%);
         }
     }
+    .sensor-circle{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #6B7380;
+        color: #fff;
+        border-radius: 5rem;
+        border: 2px solid #48505c;
+        font-size: .75rem;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 8.5rem;
+            height: 8.5rem;
+            border-radius: 50rem;
+            z-index: -1;
+            border-width: 1px;
+            border-style: solid;
+            cursor: auto;
+            animation: sensor-circle 2.5s infinite alternate;
+            pointer-events: none;
+        }
+        span{
+            font-size: 1rem;
+        }
+        img{
+            width: 16px;
+        }
+    }
     &.selected{
         z-index: 2;
         .sensor-cell{
@@ -2624,6 +2656,31 @@ ul.state-item{
             }
         }
     }
+    &.active-caution{
+        .sensor-cell{
+            background-color: transparent;
+            border-color: transparent;
+            .sensor-circle{
+                background-color: transparent;
+                border-color: transparent;
+                width: inherit;
+                height: inherit;
+                &:before{
+                    background-color: rgba(232,59,59,.24);
+                    border-color: rgba(232,59,59, 0.8);
+                    border-style: dashed;
+                    animation: sensor-circle .5s infinite alternate;
+                }
+                em{
+                    color: $identity;
+                    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+                    font-size: 1.75rem;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
     &.disconnect{
         .sensor-cell{
             .sensor-circle{
@@ -2631,38 +2688,6 @@ ul.state-item{
                     display: none;
                 }
             }
-        }
-    }
-    .sensor-circle{
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 1.5rem;
-        height: 1.5rem;
-        background-color: #6B7380;
-        color: #fff;
-        border-radius: 5rem;
-        border: 2px solid #48505c;
-        font-size: .75rem;
-        &:before{
-            content: '';
-            position: absolute;
-            width: 8.5rem;
-            height: 8.5rem;
-            border-radius: 50rem;
-            z-index: -1;
-            border-width: 1px;
-            border-style: solid;
-            cursor: auto;
-            animation: sensor-circle 2.5s infinite alternate;
-            pointer-events: none;
-        }
-        span{
-            font-size: 1rem;
-        }
-        img{
-            width: 16px;
         }
     }
     .desc{
