@@ -192,6 +192,9 @@ h6{
 .text-blue, .level-text-item05{
     color: $level-item05;
 }
+.text-deep-blue{
+    color: #356AD1;
+}
 
 
 /***** form style *****/
@@ -2753,6 +2756,7 @@ ul.state-item{
         margin-top: 1rem;
         width: 420px;
         display: flex;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         &:not(.show){
             display: none;
         }
@@ -2785,7 +2789,7 @@ ul.state-item{
     .alert-white{
         width: 360px;
         background-color: #fff;
-        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 }
 /* compass */
