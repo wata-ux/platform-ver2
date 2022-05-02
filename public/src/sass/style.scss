@@ -1099,6 +1099,17 @@ table.table-sticky{
         }
     }
 }
+.table-scroll-wrap{
+    overflow-x: auto;
+    .table-scroll{
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100%;
+        table{
+            min-width: 1200px;
+        }
+    }
+}
 
 
 /***** avatar *****/
