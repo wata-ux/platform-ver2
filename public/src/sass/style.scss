@@ -2899,6 +2899,10 @@ dl.basic-info{
         padding: 2rem;
         border-radius: .5rem;
         background-color: #fff;
+        margin-bottom: .75rem;
+        @media (min-width:1400px) {
+            margin-bottom: 3rem;
+        }
     }
     .pl-top{
         position: relative;
