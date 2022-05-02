@@ -3058,7 +3058,7 @@ dl.basic-info{
             position: relative;
             display: flex;
             flex-grow: 1;
-            width: 100%;
+            width: calc(100% - 200px);
             transition: .5s;
             background-color: #F8F9FB;
             &.contents-column{
