@@ -1,102 +1,156 @@
 @font-face {
-     font-family: 'Spoqa Han Sans';
-     font-weight: 700;
-     font-display: swap;
-     src: local('Spoqa Han Sans Bold'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf') format('truetype');
- }
- 
- @font-face {
-     font-family: 'Spoqa Han Sans';
-     font-weight: 500;
-     font-display: swap;
-     src: local('Spoqa Han Sans Medium'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff') format('woff'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.ttf') format('truetype');
- }
- 
- @font-face {
-     font-family: 'Spoqa Han Sans';
-     font-weight: 400;
-     font-display: swap;
-     src: local('Spoqa Han Sans Regular'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff') format('woff'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf') format('truetype');
- }
- 
- @font-face {
-     font-family: 'Spoqa Han Sans';
-     font-weight: 300;
-     font-display: swap;
-     src: local('Spoqa Han Sans Light'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff2') format('woff2'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff') format('woff'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.ttf') format('truetype');
- }
- 
- @font-face {
-     font-family: 'Spoqa Han Sans';
-     font-weight: 100;
-     font-display: swap;
-     src: local('Spoqa Han Sans Thin'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff2') format('woff2'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff') format('woff'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.ttf') format('truetype');
- }
- 
- @font-face {
-     font-family: 'Spoqa Han Sans Neo';
-     font-weight: 700;
-     font-display: swap;
-     src: local('Spoqa Han Sans Neo Bold'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf') format('truetype');
- }
- 
- @font-face {
-     font-family: 'Spoqa Han Sans Neo';
-     font-weight: 500;
-     font-display: swap;
-     src: local('Spoqa Han Sans Neo Medium'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff') format('woff'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.ttf') format('truetype');
- }
- 
- @font-face {
-     font-family: 'Spoqa Han Sans Neo';
-     font-weight: 400;
-     font-display: swap;
-     src: local('Spoqa Han Sans Neo Regular'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff') format('woff'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf') format('truetype');
- }
- 
- @font-face {
-     font-family: 'Spoqa Han Sans Neo';
-     font-weight: 300;
-     font-display: swap;
-     src: local('Spoqa Han Sans Neo Light'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff2') format('woff2'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff') format('woff'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.ttf') format('truetype');
- }
- 
- @font-face {
-     font-family: 'Spoqa Han Sans Neo';
-     font-weight: 100;
-     font-display: swap;
-     src: local('Spoqa Han Sans Neo Thin'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff2') format('woff2'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff') format('woff'),
-     url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.ttf') format('truetype');
- }
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Neo Bold'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+}
 
 
- 
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    src: local('Spoqa Han Sans Neo Medium'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff') format('woff'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 400;
+    src: local('Spoqa Han Sans Neo Regular'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff') format('woff'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 300;
+    src: local('Spoqa Han Sans Neo Light'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff2') format('woff2'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff') format('woff'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 100;
+    src: local('Spoqa Han Sans Neo Thin'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff2') format('woff2'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff') format('woff'),
+    url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.ttf') format('truetype');
+}
+
+
+// .material-icons {
+//     font-family: 'Material Icons';
+//     font-weight: normal;
+//     font-style: normal;
+//     font-size: 24px;
+//     line-height: 1;
+//     letter-spacing: normal;
+//     text-transform: none;
+//     display: inline-block;
+//     white-space: nowrap;
+//     word-wrap: normal;
+//     direction: ltr;
+//     -webkit-font-feature-settings: 'liga';
+//     -webkit-font-smoothing: antialiased;
+// }
+// .material-icons-outlined {
+//     font-family: 'Material Icons Outlined';
+//     font-weight: normal;
+//     font-style: normal;
+//     font-size: 24px;
+//     line-height: 1;
+//     letter-spacing: normal;
+//     text-transform: none;
+//     display: inline-block;
+//     white-space: nowrap;
+//     word-wrap: normal;
+//     direction: ltr;
+//     -webkit-font-feature-settings: 'liga';
+//     -webkit-font-smoothing: antialiased;
+// }
+// .material-icons-round {
+//     font-family: 'Material Icons Round';
+//     font-weight: normal;
+//     font-style: normal;
+//     font-size: 24px;
+//     line-height: 1;
+//     letter-spacing: normal;
+//     text-transform: none;
+//     display: inline-block;
+//     white-space: nowrap;
+//     word-wrap: normal;
+//     direction: ltr;
+//     -webkit-font-feature-settings: 'liga';
+//     -webkit-font-smoothing: antialiased;
+// }
+// .material-icons-sharp {
+//     font-family: 'Material Icons Sharp';
+//     font-weight: normal;
+//     font-style: normal;
+//     font-size: 24px;
+//     line-height: 1;
+//     letter-spacing: normal;
+//     text-transform: none;
+//     display: inline-block;
+//     white-space: nowrap;
+//     word-wrap: normal;
+//     direction: ltr;
+//     -webkit-font-feature-settings: 'liga';
+//     -webkit-font-smoothing: antialiased;
+// }
+// .material-icons-two-tone {
+//     font-family: 'Material Icons Two Tone';
+//     font-weight: normal;
+//     font-style: normal;
+//     font-size: 24px;
+//     line-height: 1;
+//     letter-spacing: normal;
+//     text-transform: none;
+//     display: inline-block;
+//     white-space: nowrap;
+//     word-wrap: normal;
+//     direction: ltr;
+//     -webkit-font-feature-settings: 'liga';
+//     -webkit-font-smoothing: antialiased;
+// }
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/material-icons/MaterialIcons-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Material Icons Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/material-icons/MaterialIconsOutlined-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/material-icons/MaterialIconsRound-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Material Icons Sharp';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/material-icons/MaterialIconsSharp-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Material Icons Two Tone';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/material-icons/MaterialIconsTwoTone-Regular.woff2') format('woff2');
+}
